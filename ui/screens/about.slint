@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 
 import { Button } from "../components/button.slint";
+import { AboutLogic } from "../logic/about.slint";
 import { AppLogic } from "../logic/app.slint";
 
 export component About {
@@ -88,7 +89,7 @@ export component About {
             width: 180px;
             height: 38px;
             text: @tr("View License");
-            clicked => { AppLogic.open_url("https://github.com/Spencer-0003/aletheia/blob/master/LICENSE"); }
+            clicked => { AppLogic.display_modal("License", AboutLogic.read_license()); }
           }
 
           Button {

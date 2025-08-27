@@ -4,7 +4,7 @@
 slint::include_modules!();
 
 use crate::config::Config as AletheiaConfig;
-use super::{games, settings};
+use super::{about, games, settings};
 use std::cell::RefCell;
 use std::process::Command;
 use std::rc::Rc;
@@ -53,6 +53,7 @@ pub fn run(config: &AletheiaConfig) {
     slint::set_xdg_app_id("moe.spencer.Aletheia").unwrap();
 
     setup_app_handlers(&app);
+    about::setup(&app_weak);
     games::setup(&app_weak, &cfg);
     settings::setup(&app_weak, &cfg);
 
