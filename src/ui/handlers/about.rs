@@ -10,7 +10,7 @@ pub fn setup(app: &slint::Weak<App>) {
         match read_to_string("/usr/share/licenses/aletheia/LICENSE") {
             Ok(license_content) => license_content.into(),
             Err(e) => {
-                log::error!("Failed to read license file: {}", e);
+                log::error!("Failed to read license file: {e}");
                 "License file could not be read".into()
             }
         }
