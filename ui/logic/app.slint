@@ -2,6 +2,8 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 
 export global AppLogic {
+  in property <string> button_pressed;
+  in property <string> current_screen: "games";
   in property <string> version;
   callback open_url(string);
 }

@@ -21,8 +21,6 @@ export { AppLogic, GamesScreenLogic, GameLogic, NotificationLogic, SettingsScree
 export { Updater, UpdaterLogic }
 
 export component App inherits Window {
-  private property <string> current_screen: "games";
-
   preferred-width: 1280px;
   preferred-height: 900px;
   min-width: 650px;
@@ -41,28 +39,28 @@ export component App inherits Window {
         NavItem {
           text: @tr("Games");
           icon: @image-url("./assets/joystick.svg");
-          active: root.current_screen == "games";
+          active: AppLogic.current_screen == "games";
           clicked => {
-            if (root.current_screen != "games") {
+            if (AppLogic.current_screen != "games") {
               GamesScreenLogic.filter(""); // Lazy hack to reset search, waiting for https://github.com/slint-ui/slint/pull/6657 to be merged.
             }
 
-            root.current_screen = "games";
+            AppLogic.current_screen = "games";
           }
         }
 
         NavItem {
           text: @tr("Settings");
           icon: @image-url("./assets/settings.svg");
-          active: root.current_screen == "settings";
-          clicked => { root.current_screen = "settings"; }
+          active: AppLogic.current_screen == "settings";
+          clicked => { AppLogic.current_screen = "settings"; }
         }
 
         NavItem {
           text: @tr("About");
           icon: @image-url("./assets/about.svg");
-          active: root.current_screen == "about";
-          clicked => { root.current_screen = "about"; }
+          active: AppLogic.current_screen == "about";
+          clicked => { AppLogic.current_screen = "about"; }
         }
       }
 
@@ -70,9 +68,9 @@ export component App inherits Window {
         background: #282838;
         border-radius: 8px;
 
-        if (root.current_screen == "games"): Games {}
-        if (root.current_screen == "settings"): Settings {}
-        if (root.current_screen == "about"): About {}
+        if (AppLogic.current_screen == "games"): Games {}
+        if (AppLogic.current_screen == "settings"): Settings {}
+        if (AppLogic.current_screen == "about"): About {}
       }
     }
   }
