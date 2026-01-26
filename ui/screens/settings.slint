@@ -150,7 +150,7 @@ export component Settings {
             }
 
             Dropdown {
-              property <bool> has_accounts: SettingsScreenLogic.steam_account_options.length > 0;
+              private property <bool> has_accounts: SettingsScreenLogic.steam_account_options.length > 0;
               width: 200px;
               height: 36px;
               enabled: has_accounts;

@@ -8,18 +8,18 @@ component ForEach {}
 
 export component Dropdown {
   in property <bool> enabled: true;
-  in property <bool> expandable: root.options.length > 1;
   in property <[DropdownOption]> options: [];
   in property <string> placeholder: @tr("Select an option…");
   in-out property <string> value: "";
   out property <string> label: "";
   out property <bool> expanded <=> dropdown_menu.visible;
+  private property <bool> expandable: root.options.length > 1;
   callback changed(string);
 
-  for option in root.options: ForEach {
+  for option in options: ForEach {
     init => {
-      if root.value == option.value {
-        root.label = option.label;
+      if value == option.value {
+        label = option.label;
       }
     }
   }
@@ -45,7 +45,7 @@ export component Dropdown {
       alignment: space-between;
 
       Text {
-        property <bool> show_label: !root.label.is-empty;
+        private property <bool> show_label: !root.label.is-empty;
         text: show_label ? root.label : root.placeholder;
         color: show_label ? ThemeLogic.colors.text_primary : ThemeLogic.colors.text_placeholder;
         opacity: root.enabled ? (show_label ? 65% : 40%) : 50%;
@@ -99,7 +99,7 @@ export component Dropdown {
         padding: 4px;
 
         for option[index] in root.options: Rectangle {
-          property <bool> is_current_value: option.value == root.value;
+          private property <bool> is_current_value: option.value == root.value;
           width: 100%;
           height: 32px;
           background: touch_area.has-hover ? ThemeLogic.colors.surface_hover :
