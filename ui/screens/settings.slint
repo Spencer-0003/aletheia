@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Spencer
+// SPDX-FileCopyrightText: 2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
 import { Scrollable } from "../components/scrollable.slint";
@@ -18,8 +18,8 @@ export global SettingsScreenLogic {
   in property <string> previous_steam_account_id;
   in property <bool> previous_check_for_updates: false;
   in property <bool> dirty: config.save_dir != previous_save_dir ||
-                               config.steam_account_id != previous_steam_account_id ||
-                               config.check_for_updates != previous_check_for_updates;
+                            config.steam_account_id != previous_steam_account_id ||
+                            config.check_for_updates != previous_check_for_updates;
   callback browse();
   callback get_steam_users();
   callback update_gamedb();
@@ -150,11 +150,13 @@ export component Settings {
             }
 
             Dropdown {
+              property <bool> has_accounts: SettingsScreenLogic.steam_account_options.length > 0;
               width: 200px;
               height: 36px;
-              options: SettingsScreenLogic.steam_account_options;
+              enabled: has_accounts;
+              placeholder: has_accounts ? @tr("Select an account…") : @tr("No accounts found…");
               value: SettingsScreenLogic.config.steam_account_id;
-              placeholder: @tr("Select an account…");
+              options: SettingsScreenLogic.steam_account_options;
               changed(value) => { SettingsScreenLogic.config.steam_account_id = value; }
             }
           }
