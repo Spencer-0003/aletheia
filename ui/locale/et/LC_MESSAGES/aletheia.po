@@ -1,47 +1,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-01-17 08:38+0000\n"
+"POT-Creation-Date: 2026-01-27 04:10+0000\n"
 "PO-Revision-Date: 2026-01-19 15:01+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Estonian <https://hosted.weblate.org/projects/aletheia/ui/et/>"
-"\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/aletheia/ui/et/"
+">\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.16-dev\n"
-
-#: ui/updater.slint:29
-msgctxt "Updater"
-msgid "Update Available"
-msgstr "Uus versioon on saadaval"
-
-#: ui/updater.slint:52
-msgctxt "Updater"
-msgid "Current"
-msgstr "Praegune"
-
-#: ui/updater.slint:82
-msgctxt "Updater"
-msgid "New"
-msgstr "Uus"
-
-#: ui/updater.slint:106
-msgctxt "Updater"
-msgid "What's New"
-msgstr "Mida on meil uut"
-
-#: ui/updater.slint:143
-msgctxt "Updater"
-msgid "Skip"
-msgstr "Jäta vahele"
-
-#: ui/updater.slint:150
-msgctxt "Updater"
-msgid "Download"
-msgstr "Laadi alla"
 
 #: ui/screens/settings.slint:60
 msgctxt "Settings"
@@ -78,37 +48,45 @@ msgctxt "Settings"
 msgid "Select an account…"
 msgstr "Vali kasutajakonto…"
 
-#: ui/screens/settings.slint:184
+#: ui/screens/settings.slint:157
+#, fuzzy
+#| msgctxt "NotificationLogic"
+#| msgid "No backups found"
+msgctxt "Settings"
+msgid "No accounts found…"
+msgstr "Varukoopiaid ei leidu"
+
+#: ui/screens/settings.slint:186
 msgctxt "Settings"
 msgid "GameDB"
 msgstr "GameDB"
 
-#: ui/screens/settings.slint:198
+#: ui/screens/settings.slint:200
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
 msgstr "Laadi alla GameDB viimane versioon"
 
-#: ui/screens/settings.slint:207
+#: ui/screens/settings.slint:209
 msgctxt "Settings"
 msgid "Update GameDB"
 msgstr "Uuenda GameDB-d"
 
-#: ui/screens/settings.slint:234
+#: ui/screens/settings.slint:236
 msgctxt "Settings"
 msgid "Updates"
 msgstr "Uuendused"
 
-#: ui/screens/settings.slint:248
+#: ui/screens/settings.slint:250
 msgctxt "Settings"
 msgid "Configure automatic update checking"
 msgstr "Seadista uuenduste olemasolu automaatset kontrollimist"
 
-#: ui/screens/settings.slint:259
+#: ui/screens/settings.slint:261
 msgctxt "Settings"
 msgid "Check for updates automatically"
 msgstr "Kontrolli uuendusi automaatselt"
 
-#: ui/screens/settings.slint:277
+#: ui/screens/settings.slint:279
 msgctxt "Settings"
 msgid "Save"
 msgstr "Salvesta"
@@ -200,6 +178,51 @@ msgctxt "About"
 msgid "Support the Project"
 msgstr "Toeta meie projekti"
 
+#: ui/updater.slint:29
+msgctxt "Updater"
+msgid "Update Available"
+msgstr "Uus versioon on saadaval"
+
+#: ui/updater.slint:52
+msgctxt "Updater"
+msgid "Current"
+msgstr "Praegune"
+
+#: ui/updater.slint:82
+msgctxt "Updater"
+msgid "New"
+msgstr "Uus"
+
+#: ui/updater.slint:106
+msgctxt "Updater"
+msgid "What's New"
+msgstr "Mida on meil uut"
+
+#: ui/updater.slint:143
+msgctxt "Updater"
+msgid "Skip"
+msgstr "Jäta vahele"
+
+#: ui/updater.slint:150
+msgctxt "Updater"
+msgid "Download"
+msgstr "Laadi alla"
+
+#: ui/components/dropdown.slint:12
+msgctxt "Dropdown"
+msgid "Select an option…"
+msgstr "Vali oma eelistus…"
+
+#: ui/components/dropdown.slint:90
+msgctxt "Dropdown"
+msgid "Dropdown options"
+msgstr "Allalaadimise valikud"
+
+#: ui/components/dropdown.slint:136
+msgctxt "Dropdown"
+msgid "Selected"
+msgstr "Valitud"
+
 #: ui/app.slint:43
 msgctxt "App"
 msgid "Games"
@@ -269,21 +292,6 @@ msgstr "Arhiivifaili versioon pole toetatud"
 msgctxt "NotificationLogic"
 msgid "No backups found"
 msgstr "Varukoopiaid ei leidu"
-
-#: ui/components/dropdown.slint:12
-msgctxt "Dropdown"
-msgid "Select an option…"
-msgstr "Vali oma eelistus…"
-
-#: ui/components/dropdown.slint:89
-msgctxt "Dropdown"
-msgid "Dropdown options"
-msgstr "Allalaadimise valikud"
-
-#: ui/components/dropdown.slint:135
-msgctxt "Dropdown"
-msgid "Selected"
-msgstr "Valitud"
 
 #~ msgctxt "About"
 #~ msgid "Built with Slint"

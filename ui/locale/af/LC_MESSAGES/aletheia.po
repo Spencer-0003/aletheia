@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-01-17 08:38+0000\n"
+"POT-Creation-Date: 2026-01-27 04:10+0000\n"
 "PO-Revision-Date: 2025-10-24 15:38+0000\n"
 "Last-Translator: Feike Donia <feikedonia@proton.me>\n"
 "Language-Team: Afrikaans <https://hosted.weblate.org/projects/aletheia/ui/af/"
@@ -12,36 +12,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.14.1-dev\n"
-
-#: ui/updater.slint:29
-msgctxt "Updater"
-msgid "Update Available"
-msgstr "Bywerkings beskikbaar"
-
-#: ui/updater.slint:52
-msgctxt "Updater"
-msgid "Current"
-msgstr "Huidig"
-
-#: ui/updater.slint:82
-msgctxt "Updater"
-msgid "New"
-msgstr "Nuut"
-
-#: ui/updater.slint:106
-msgctxt "Updater"
-msgid "What's New"
-msgstr "Dis nuut"
-
-#: ui/updater.slint:143
-msgctxt "Updater"
-msgid "Skip"
-msgstr "Slaan oor"
-
-#: ui/updater.slint:150
-msgctxt "Updater"
-msgid "Download"
-msgstr "Laai af"
 
 #: ui/screens/settings.slint:60
 msgctxt "Settings"
@@ -79,37 +49,42 @@ msgctxt "Settings"
 msgid "Select an account…"
 msgstr "Kies 'n rekening…"
 
-#: ui/screens/settings.slint:184
+#: ui/screens/settings.slint:157
+msgctxt "Settings"
+msgid "No accounts found…"
+msgstr ""
+
+#: ui/screens/settings.slint:186
 msgctxt "Settings"
 msgid "GameDB"
 msgstr ""
 
-#: ui/screens/settings.slint:198
+#: ui/screens/settings.slint:200
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
 msgstr "Laai die nuutste weergawe van GameDB af"
 
-#: ui/screens/settings.slint:207
+#: ui/screens/settings.slint:209
 msgctxt "Settings"
 msgid "Update GameDB"
 msgstr "Werk GameDB by"
 
-#: ui/screens/settings.slint:234
+#: ui/screens/settings.slint:236
 msgctxt "Settings"
 msgid "Updates"
 msgstr "Opdaterings"
 
-#: ui/screens/settings.slint:248
+#: ui/screens/settings.slint:250
 msgctxt "Settings"
 msgid "Configure automatic update checking"
 msgstr "Stel dit op om outomaties vir opdaterings te soek"
 
-#: ui/screens/settings.slint:259
+#: ui/screens/settings.slint:261
 msgctxt "Settings"
 msgid "Check for updates automatically"
 msgstr ""
 
-#: ui/screens/settings.slint:277
+#: ui/screens/settings.slint:279
 msgctxt "Settings"
 msgid "Save"
 msgstr ""
@@ -199,6 +174,51 @@ msgctxt "About"
 msgid "Support the Project"
 msgstr ""
 
+#: ui/updater.slint:29
+msgctxt "Updater"
+msgid "Update Available"
+msgstr "Bywerkings beskikbaar"
+
+#: ui/updater.slint:52
+msgctxt "Updater"
+msgid "Current"
+msgstr "Huidig"
+
+#: ui/updater.slint:82
+msgctxt "Updater"
+msgid "New"
+msgstr "Nuut"
+
+#: ui/updater.slint:106
+msgctxt "Updater"
+msgid "What's New"
+msgstr "Dis nuut"
+
+#: ui/updater.slint:143
+msgctxt "Updater"
+msgid "Skip"
+msgstr "Slaan oor"
+
+#: ui/updater.slint:150
+msgctxt "Updater"
+msgid "Download"
+msgstr "Laai af"
+
+#: ui/components/dropdown.slint:12
+msgctxt "Dropdown"
+msgid "Select an option…"
+msgstr ""
+
+#: ui/components/dropdown.slint:90
+msgctxt "Dropdown"
+msgid "Dropdown options"
+msgstr ""
+
+#: ui/components/dropdown.slint:136
+msgctxt "Dropdown"
+msgid "Selected"
+msgstr ""
+
 #: ui/app.slint:43
 msgctxt "App"
 msgid "Games"
@@ -267,19 +287,4 @@ msgstr ""
 #: ui/logic/notification.slint:40
 msgctxt "NotificationLogic"
 msgid "No backups found"
-msgstr ""
-
-#: ui/components/dropdown.slint:12
-msgctxt "Dropdown"
-msgid "Select an option…"
-msgstr ""
-
-#: ui/components/dropdown.slint:89
-msgctxt "Dropdown"
-msgid "Dropdown options"
-msgstr ""
-
-#: ui/components/dropdown.slint:135
-msgctxt "Dropdown"
-msgid "Selected"
 msgstr ""

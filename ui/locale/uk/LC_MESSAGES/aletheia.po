@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-01-17 08:38+0000\n"
+"POT-Creation-Date: 2026-01-27 04:10+0000\n"
 "PO-Revision-Date: 2026-01-18 10:24+0000\n"
 "Last-Translator: Максим Горпиніч <gorpinicmaksim0@gmail.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/aletheia/ui/"
-"uk/>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/aletheia/ui/uk/"
+">\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,36 +13,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.15.2\n"
-
-#: ui/updater.slint:29
-msgctxt "Updater"
-msgid "Update Available"
-msgstr "Доступне оновлення"
-
-#: ui/updater.slint:52
-msgctxt "Updater"
-msgid "Current"
-msgstr "Поточне"
-
-#: ui/updater.slint:82
-msgctxt "Updater"
-msgid "New"
-msgstr "Нове"
-
-#: ui/updater.slint:106
-msgctxt "Updater"
-msgid "What's New"
-msgstr "Що нового"
-
-#: ui/updater.slint:143
-msgctxt "Updater"
-msgid "Skip"
-msgstr "Пропустити"
-
-#: ui/updater.slint:150
-msgctxt "Updater"
-msgid "Download"
-msgstr "Завантажити"
 
 #: ui/screens/settings.slint:60
 msgctxt "Settings"
@@ -79,37 +49,45 @@ msgctxt "Settings"
 msgid "Select an account…"
 msgstr "Виберіть обліковий запис…"
 
-#: ui/screens/settings.slint:184
+#: ui/screens/settings.slint:157
+#, fuzzy
+#| msgctxt "NotificationLogic"
+#| msgid "No backups found"
+msgctxt "Settings"
+msgid "No accounts found…"
+msgstr "Резервних копій не знайдено"
+
+#: ui/screens/settings.slint:186
 msgctxt "Settings"
 msgid "GameDB"
 msgstr "GameDB"
 
-#: ui/screens/settings.slint:198
+#: ui/screens/settings.slint:200
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
 msgstr "Завантажити останню версію GameDB"
 
-#: ui/screens/settings.slint:207
+#: ui/screens/settings.slint:209
 msgctxt "Settings"
 msgid "Update GameDB"
 msgstr "Оновити GameDB"
 
-#: ui/screens/settings.slint:234
+#: ui/screens/settings.slint:236
 msgctxt "Settings"
 msgid "Updates"
 msgstr "Оновлення"
 
-#: ui/screens/settings.slint:248
+#: ui/screens/settings.slint:250
 msgctxt "Settings"
 msgid "Configure automatic update checking"
 msgstr "Налаштування автоматичної перевірки оновлень"
 
-#: ui/screens/settings.slint:259
+#: ui/screens/settings.slint:261
 msgctxt "Settings"
 msgid "Check for updates automatically"
 msgstr "Автоматично перевіряти наявність оновлень"
 
-#: ui/screens/settings.slint:277
+#: ui/screens/settings.slint:279
 msgctxt "Settings"
 msgid "Save"
 msgstr "Зберегти"
@@ -201,6 +179,51 @@ msgctxt "About"
 msgid "Support the Project"
 msgstr "Підтримати проєкт"
 
+#: ui/updater.slint:29
+msgctxt "Updater"
+msgid "Update Available"
+msgstr "Доступне оновлення"
+
+#: ui/updater.slint:52
+msgctxt "Updater"
+msgid "Current"
+msgstr "Поточне"
+
+#: ui/updater.slint:82
+msgctxt "Updater"
+msgid "New"
+msgstr "Нове"
+
+#: ui/updater.slint:106
+msgctxt "Updater"
+msgid "What's New"
+msgstr "Що нового"
+
+#: ui/updater.slint:143
+msgctxt "Updater"
+msgid "Skip"
+msgstr "Пропустити"
+
+#: ui/updater.slint:150
+msgctxt "Updater"
+msgid "Download"
+msgstr "Завантажити"
+
+#: ui/components/dropdown.slint:12
+msgctxt "Dropdown"
+msgid "Select an option…"
+msgstr "Оберіть варіант…"
+
+#: ui/components/dropdown.slint:90
+msgctxt "Dropdown"
+msgid "Dropdown options"
+msgstr "Параметри випадаючих списків"
+
+#: ui/components/dropdown.slint:136
+msgctxt "Dropdown"
+msgid "Selected"
+msgstr "Вибрано"
+
 #: ui/app.slint:43
 msgctxt "App"
 msgid "Games"
@@ -270,21 +293,6 @@ msgstr "Непідтримувана версія архіву"
 msgctxt "NotificationLogic"
 msgid "No backups found"
 msgstr "Резервних копій не знайдено"
-
-#: ui/components/dropdown.slint:12
-msgctxt "Dropdown"
-msgid "Select an option…"
-msgstr "Оберіть варіант…"
-
-#: ui/components/dropdown.slint:89
-msgctxt "Dropdown"
-msgid "Dropdown options"
-msgstr "Параметри випадаючих списків"
-
-#: ui/components/dropdown.slint:135
-msgctxt "Dropdown"
-msgid "Selected"
-msgstr "Вибрано"
 
 #~ msgctxt "About"
 #~ msgid "Built with Slint"
