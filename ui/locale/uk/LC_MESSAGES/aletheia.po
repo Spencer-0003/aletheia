@@ -2,17 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2026-01-27 04:10+0000\n"
-"PO-Revision-Date: 2026-01-18 10:24+0000\n"
+"PO-Revision-Date: 2026-01-28 05:01+0000\n"
 "Last-Translator: Максим Горпиніч <gorpinicmaksim0@gmail.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/aletheia/ui/uk/"
-">\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/aletheia/ui/"
+"uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.15.2\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 #: ui/screens/settings.slint:60
 msgctxt "Settings"
@@ -50,12 +50,9 @@ msgid "Select an account…"
 msgstr "Виберіть обліковий запис…"
 
 #: ui/screens/settings.slint:157
-#, fuzzy
-#| msgctxt "NotificationLogic"
-#| msgid "No backups found"
 msgctxt "Settings"
 msgid "No accounts found…"
-msgstr "Резервних копій не знайдено"
+msgstr "Облікових записів не знайдено…"
 
 #: ui/screens/settings.slint:186
 msgctxt "Settings"
