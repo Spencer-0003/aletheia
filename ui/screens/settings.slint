@@ -17,6 +17,9 @@ export global SettingsScreenLogic {
   in property <string> previous_save_dir;
   in property <string> previous_steam_account_id;
   in property <bool> previous_check_for_updates: false;
+  out property <bool> dirty: config.save_dir != previous_save_dir ||
+                               config.steam_account_id != previous_steam_account_id ||
+                               config.check_for_updates != previous_check_for_updates;
   callback browse();
   callback get_steam_users();
   callback update_gamedb();
@@ -271,13 +274,10 @@ export component Settings {
       alignment: end;
 
       Button {
-        private property <bool> dirty: config.save_dir != previous_save_dir ||
-                                       config.steam_account_id != previous_steam_account_id ||
-                                       config.check_for_updates != previous_check_for_updates;
         width: 120px;
         height: 40px;
         text: @tr("Save");
-        enabled: dirty;
+        enabled: SettingsScreenLogic.dirty;
         clicked => SettingsScreenLogic.save_config(SettingsScreenLogic.config);
       }
     }
