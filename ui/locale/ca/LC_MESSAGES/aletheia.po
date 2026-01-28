@@ -2,16 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2026-01-27 04:10+0000\n"
-"PO-Revision-Date: 2026-01-03 12:01+0000\n"
-"Last-Translator: World170 <world170_@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Catalan <https://hosted.weblate.org/projects/aletheia/ui/ca/"
-">\n"
+"PO-Revision-Date: 2026-01-29 10:17+0000\n"
+"Last-Translator: Laura Quintana Marín <2001lauraquintana@gmail.com>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/aletheia/ui/ca/>"
+"\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 #: ui/screens/settings.slint:60
 msgctxt "Settings"
@@ -49,12 +49,9 @@ msgid "Select an account…"
 msgstr "Selecciona un compte…"
 
 #: ui/screens/settings.slint:157
-#, fuzzy
-#| msgctxt "Games"
-#| msgid "No games found"
 msgctxt "Settings"
 msgid "No accounts found…"
-msgstr "No s'han trobat jocs"
+msgstr "No s'han trobat comptes…"
 
 #: ui/screens/settings.slint:186
 msgctxt "Settings"
@@ -216,15 +213,12 @@ msgstr "Selecciona una opció…"
 #: ui/components/dropdown.slint:90
 msgctxt "Dropdown"
 msgid "Dropdown options"
-msgstr ""
+msgstr "Opcions desplegables"
 
 #: ui/components/dropdown.slint:136
-#, fuzzy
-#| msgctxt "Games"
-#| msgid "Select All"
 msgctxt "Dropdown"
 msgid "Selected"
-msgstr "Seleccionar tots"
+msgstr "Seleccionats"
 
 #: ui/app.slint:43
 msgctxt "App"
@@ -274,27 +268,24 @@ msgstr "Hi ha hagut un error en actualitzar GameDB"
 #: ui/logic/notification.slint:36
 msgctxt "NotificationLogic"
 msgid "Archive corrupted"
-msgstr ""
+msgstr "Arxiu corrupte"
 
 #: ui/logic/notification.slint:37
 msgctxt "NotificationLogic"
 msgid "Invalid archive"
-msgstr ""
+msgstr "Arxiu no vàlid"
 
 #: ui/logic/notification.slint:38
 msgctxt "NotificationLogic"
 msgid "I/O error"
-msgstr ""
+msgstr "Error I/O"
 
 #: ui/logic/notification.slint:39
 msgctxt "NotificationLogic"
 msgid "Unsupported archive version"
-msgstr ""
+msgstr "Versió d'arxiu no admesa"
 
 #: ui/logic/notification.slint:40
-#, fuzzy
-#| msgctxt "Games"
-#| msgid "No games found"
 msgctxt "NotificationLogic"
 msgid "No backups found"
-msgstr "No s'han trobat jocs"
+msgstr "No s'han trobat còpies de seguretat"
