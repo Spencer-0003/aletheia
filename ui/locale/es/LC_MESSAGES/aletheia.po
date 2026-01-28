@@ -2,16 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2026-01-27 04:10+0000\n"
-"PO-Revision-Date: 2025-09-07 00:28+0000\n"
-"Last-Translator: Spencer <git@spencer.moe>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/aletheia/ui/es/"
-">\n"
+"PO-Revision-Date: 2026-01-29 10:17+0000\n"
+"Last-Translator: Laura Quintana Marín <2001lauraquintana@gmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/aletheia/ui/es/>"
+"\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14-dev\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 #: ui/screens/settings.slint:60
 msgctxt "Settings"
@@ -53,7 +53,7 @@ msgstr "Seleccione una cuenta…"
 #: ui/screens/settings.slint:157
 msgctxt "Settings"
 msgid "No accounts found…"
-msgstr ""
+msgstr "No se han encontrado cuentas…"
 
 #: ui/screens/settings.slint:186
 msgctxt "Settings"
@@ -88,92 +88,94 @@ msgstr "Comprobar las actualizaciones automáticamente"
 #: ui/screens/settings.slint:279
 msgctxt "Settings"
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #: ui/screens/games.slint:31
 msgctxt "Games"
 msgid "No games found"
-msgstr ""
+msgstr "No se han encontrado juegos"
 
 #: ui/screens/games.slint:45
 msgctxt "Games"
 msgid "Refresh"
-msgstr ""
+msgstr "Refrescar"
 
 #: ui/screens/games.slint:62
 msgctxt "Games"
 msgid "Search games…"
-msgstr ""
+msgstr "Buscar juegos…"
 
 #: ui/screens/games.slint:68
 msgctxt "Games"
 msgid "Selecting {} / {} games"
-msgstr ""
+msgstr "Seleccionando {} / {} juegos"
 
 #: ui/screens/games.slint:82
 msgctxt "Games"
 msgid "Backup"
-msgstr ""
+msgstr "Copia de seguridad"
 
 #: ui/screens/games.slint:90
 msgctxt "Games"
 msgid "Restore"
-msgstr ""
+msgstr "Restaurar"
 
 #: ui/screens/games.slint:99
 msgctxt "Games"
 msgid "Clear Selection"
-msgstr ""
+msgstr "Borrar la selección"
 
 #: ui/screens/games.slint:99
 msgctxt "Games"
 msgid "Select All"
-msgstr ""
+msgstr "Seleccionar todo"
 
 #: ui/screens/games.slint:100
 msgctxt "Games"
 msgid "{} Filtered"
-msgstr ""
+msgstr "{} Filtrados"
 
 #: ui/screens/about.slint:36
 msgctxt "About"
 msgid "Application Info"
-msgstr ""
+msgstr "Información de la aplicación"
 
 #: ui/screens/about.slint:50
 msgctxt "About"
 msgid "Aletheia is an open-source game save backup tool"
 msgstr ""
+"Aletheia es una herramienta de código abierto para hacer copias de seguridad "
+"de partidas guardadas de videojuegos"
 
 #: ui/screens/about.slint:57
 msgctxt "About"
 msgid "Version: {}"
-msgstr ""
+msgstr "Versión: {}"
 
 #: ui/screens/about.slint:64
 msgctxt "About"
 msgid "License: {}"
-msgstr ""
+msgstr "Licencia: {}"
 
 #: ui/screens/about.slint:71
 msgctxt "About"
 msgid "Logo by: {}"
-msgstr ""
+msgstr "Logotipo de: {}"
 
 #: ui/screens/about.slint:84
 msgctxt "About"
 msgid "View Source Code"
-msgstr ""
+msgstr "Ver código fuente"
 
 #: ui/screens/about.slint:91
 msgctxt "About"
 msgid "View License"
-msgstr ""
+msgstr "Ver licencia"
 
 #: ui/screens/about.slint:98
 msgctxt "About"
 msgid "Support the Project"
-msgstr ""
+msgstr "Apoya al proyecto"
 
 #: ui/updater.slint:29
 msgctxt "Updater"
@@ -208,87 +210,84 @@ msgstr "Descargar"
 #: ui/components/dropdown.slint:12
 msgctxt "Dropdown"
 msgid "Select an option…"
-msgstr ""
+msgstr "Selecciona una opción…"
 
 #: ui/components/dropdown.slint:90
 msgctxt "Dropdown"
 msgid "Dropdown options"
-msgstr ""
+msgstr "Opciones desplegables"
 
 #: ui/components/dropdown.slint:136
 msgctxt "Dropdown"
 msgid "Selected"
-msgstr ""
+msgstr "Seleccionado"
 
 #: ui/app.slint:43
 msgctxt "App"
 msgid "Games"
-msgstr ""
+msgstr "Juegos"
 
 #: ui/app.slint:56
 msgctxt "App"
 msgid "Settings"
-msgstr ""
+msgstr "Configuración"
 
 #: ui/app.slint:63
 msgctxt "App"
 msgid "About"
-msgstr ""
+msgstr "Información"
 
 #: ui/logic/notification.slint:30
 msgctxt "NotificationLogic"
 msgid "Set your Steam account in settings"
-msgstr ""
+msgstr "Configura tu cuenta de Steam en los ajustes"
 
 #: ui/logic/notification.slint:31
 msgctxt "NotificationLogic"
 msgid "Backup directory does not exist"
-msgstr ""
+msgstr "El directorio de copias de seguridad no existe"
 
 #: ui/logic/notification.slint:32
 msgctxt "NotificationLogic"
 msgid "Successfully saved settings"
-msgstr ""
+msgstr "Configuración guardada correctamente"
 
 #: ui/logic/notification.slint:33
 msgctxt "NotificationLogic"
 msgid "Successfully updated GameDB"
-msgstr ""
+msgstr "Actualización correcta de GameDB"
 
 #: ui/logic/notification.slint:34
 msgctxt "NotificationLogic"
 msgid "GameDB is already up to date"
-msgstr ""
+msgstr "GameDB ya está actualizado"
 
 #: ui/logic/notification.slint:35
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Update GameDB"
 msgctxt "NotificationLogic"
 msgid "Failed to update GameDB"
-msgstr "Actualizar GameDB"
+msgstr "Ha habido un error al actualizar GameDB"
 
 #: ui/logic/notification.slint:36
 msgctxt "NotificationLogic"
 msgid "Archive corrupted"
-msgstr ""
+msgstr "Archivo dañado"
 
 #: ui/logic/notification.slint:37
 msgctxt "NotificationLogic"
 msgid "Invalid archive"
-msgstr ""
+msgstr "Archivo no válido"
 
 #: ui/logic/notification.slint:38
 msgctxt "NotificationLogic"
 msgid "I/O error"
-msgstr ""
+msgstr "Error de I/O"
 
 #: ui/logic/notification.slint:39
 msgctxt "NotificationLogic"
 msgid "Unsupported archive version"
-msgstr ""
+msgstr "Versión de archivo no compatible"
 
 #: ui/logic/notification.slint:40
 msgctxt "NotificationLogic"
 msgid "No backups found"
-msgstr ""
+msgstr "No se han encontrado copias de seguridad"
