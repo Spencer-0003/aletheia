@@ -47,7 +47,7 @@ slint = { version = "=1.13", default-features = false, features = ["accessibilit
 plist = "1.7.4"
 
 [build-dependencies]
-slint-build = "=1.13"
+slint-build = "=1.15.0"
 
 [target.'cfg(windows)'.build-dependencies]
 winresource = { version = "0.1.22", default-features = false }
