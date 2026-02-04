@@ -36,12 +36,12 @@ zstd = "0.13.3"
 
 [target.'cfg(unix)'.dependencies]
 rusqlite = "0.38.0"
-slint = { version = "=1.13", default-features = false, features = ["accessibility", "backend-qt", "compat-1-2", "std"] }
+slint = { version = "=1.15.0", default-features = false, features = ["accessibility", "backend-qt", "compat-1-2", "std"] }
 
 [target.'cfg(windows)'.dependencies]
 quick-xml = { version = "0.38.3", features = ["serialize"] }
 rusqlite = { version = "0.38.0", features = ["bundled"] }
-slint = { version = "=1.13", default-features = false, features = ["accessibility", "backend-winit", "renderer-skia-opengl", "compat-1-2", "std"] }
+slint = { version = "=1.15.0", default-features = false, features = ["accessibility", "backend-winit", "renderer-skia-opengl", "compat-1-2", "std"] }
 
 [target.'cfg(target_os = "macos")'.dependencies]
 plist = "1.7.4"
