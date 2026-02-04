@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-01-27 04:10+0000\n"
+"POT-Creation-Date: 2026-02-04 10:59+0000\n"
 "PO-Revision-Date: 2026-01-28 05:01+0000\n"
 "Last-Translator: Максим Горпиніч <gorpinicmaksim0@gmail.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/aletheia/ui/"
-"uk/>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/aletheia/ui/uk/"
+">\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,6 +13,36 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.16-dev\n"
+
+#: ui/updater.slint:29
+msgctxt "Updater"
+msgid "Update Available"
+msgstr "Доступне оновлення"
+
+#: ui/updater.slint:52
+msgctxt "Updater"
+msgid "Current"
+msgstr "Поточне"
+
+#: ui/updater.slint:82
+msgctxt "Updater"
+msgid "New"
+msgstr "Нове"
+
+#: ui/updater.slint:106
+msgctxt "Updater"
+msgid "What's New"
+msgstr "Що нового"
+
+#: ui/updater.slint:143
+msgctxt "Updater"
+msgid "Skip"
+msgstr "Пропустити"
+
+#: ui/updater.slint:150
+msgctxt "Updater"
+msgid "Download"
+msgstr "Завантажити"
 
 #: ui/screens/settings.slint:60
 msgctxt "Settings"
@@ -176,65 +206,103 @@ msgctxt "About"
 msgid "Support the Project"
 msgstr "Підтримати проєкт"
 
-#: ui/updater.slint:29
-msgctxt "Updater"
-msgid "Update Available"
-msgstr "Доступне оновлення"
-
-#: ui/updater.slint:52
-msgctxt "Updater"
-msgid "Current"
-msgstr "Поточне"
-
-#: ui/updater.slint:82
-msgctxt "Updater"
-msgid "New"
-msgstr "Нове"
-
-#: ui/updater.slint:106
-msgctxt "Updater"
-msgid "What's New"
-msgstr "Що нового"
-
-#: ui/updater.slint:143
-msgctxt "Updater"
-msgid "Skip"
-msgstr "Пропустити"
-
-#: ui/updater.slint:150
-msgctxt "Updater"
-msgid "Download"
-msgstr "Завантажити"
-
-#: ui/components/dropdown.slint:12
-msgctxt "Dropdown"
-msgid "Select an option…"
-msgstr "Оберіть варіант…"
-
-#: ui/components/dropdown.slint:90
-msgctxt "Dropdown"
-msgid "Dropdown options"
-msgstr "Параметри випадаючих списків"
-
-#: ui/components/dropdown.slint:136
-msgctxt "Dropdown"
-msgid "Selected"
-msgstr "Вибрано"
-
-#: ui/app.slint:43
+#: ui/app.slint:46
 msgctxt "App"
 msgid "Games"
 msgstr "Ігри"
 
-#: ui/app.slint:56
+#: ui/app.slint:59
 msgctxt "App"
 msgid "Settings"
 msgstr "Налаштування"
 
-#: ui/app.slint:63
+#: ui/app.slint:66
 msgctxt "App"
 msgid "About"
 msgstr "Про застосунок"
+
+#: ui/restore_dialog.slint:9
+#, fuzzy
+#| msgctxt "About"
+#| msgid "Aletheia is an open-source game save backup tool"
+msgctxt "RestoreDialog"
+msgid "Aletheia - Restore backup"
+msgstr ""
+"Aletheia — це інструмент для резервного копіювання збережених ігор із "
+"відкритим кодом"
+
+#: ui/restore_dialog.slint:26
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "Restore"
+msgctxt "RestoreDialog"
+msgid "Restore Backup?"
+msgstr "Відновити"
+
+#: ui/restore_dialog.slint:35
+msgctxt "RestoreDialog"
+msgid "Are you sure you want to restore {}?"
+msgstr ""
+
+#: ui/restore_dialog.slint:42
+msgctxt "RestoreDialog"
+msgid "This will overwrite any existing save data."
+msgstr ""
+
+#: ui/restore_dialog.slint:74
+msgctxt "RestoreDialog"
+msgid "Cancel"
+msgstr ""
+
+#: ui/restore_dialog.slint:74
+msgctxt "RestoreDialog"
+msgid "Close"
+msgstr ""
+
+#: ui/restore_dialog.slint:82
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "Restore"
+msgctxt "RestoreDialog"
+msgid "Restore"
+msgstr "Відновити"
+
+#: ui/logic/restore.slint:11
+msgctxt "RestoreLogic"
+msgid "You do not have {} installed, install it first and try again."
+msgstr ""
+
+#: ui/logic/restore.slint:12
+#, fuzzy
+#| msgctxt "NotificationLogic"
+#| msgid "Archive corrupted"
+msgctxt "RestoreLogic"
+msgid "Archive corrupted"
+msgstr "Архів пошкоджено"
+
+#: ui/logic/restore.slint:13
+#, fuzzy
+#| msgctxt "NotificationLogic"
+#| msgid "Invalid archive"
+msgctxt "RestoreLogic"
+msgid "Invalid archive"
+msgstr "Недійсний архів"
+
+#: ui/logic/restore.slint:14
+#, fuzzy
+#| msgctxt "NotificationLogic"
+#| msgid "I/O error"
+msgctxt "RestoreLogic"
+msgid "I/O error"
+msgstr "Помилка вводу/виводу"
+
+#: ui/logic/restore.slint:15
+#, fuzzy
+#| msgctxt "NotificationLogic"
+#| msgid "Unsupported archive version"
+msgctxt "RestoreLogic"
+msgid "Unsupported archive version"
+msgstr "Непідтримувана версія архіву"
 
 #: ui/logic/notification.slint:30
 msgctxt "NotificationLogic"
@@ -290,6 +358,21 @@ msgstr "Непідтримувана версія архіву"
 msgctxt "NotificationLogic"
 msgid "No backups found"
 msgstr "Резервних копій не знайдено"
+
+#: ui/components/dropdown.slint:12
+msgctxt "Dropdown"
+msgid "Select an option…"
+msgstr "Оберіть варіант…"
+
+#: ui/components/dropdown.slint:90
+msgctxt "Dropdown"
+msgid "Dropdown options"
+msgstr "Параметри випадаючих списків"
+
+#: ui/components/dropdown.slint:136
+msgctxt "Dropdown"
+msgid "Selected"
+msgstr "Вибрано"
 
 #~ msgctxt "About"
 #~ msgid "Built with Slint"

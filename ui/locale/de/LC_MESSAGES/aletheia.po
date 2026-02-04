@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-01-27 04:10+0000\n"
+"POT-Creation-Date: 2026-02-04 10:59+0000\n"
 "PO-Revision-Date: 2025-12-17 19:00+0000\n"
 "Last-Translator: Oliver <oliver.puff@gmx.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/aletheia/ui/de/>\n"
@@ -11,6 +11,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.15.1-dev\n"
+
+#: ui/updater.slint:29
+msgctxt "Updater"
+msgid "Update Available"
+msgstr "Update verfügbar"
+
+#: ui/updater.slint:52
+msgctxt "Updater"
+msgid "Current"
+msgstr "Aktuell"
+
+#: ui/updater.slint:82
+msgctxt "Updater"
+msgid "New"
+msgstr "Neu"
+
+#: ui/updater.slint:106
+msgctxt "Updater"
+msgid "What's New"
+msgstr "Das ist neu"
+
+#: ui/updater.slint:143
+msgctxt "Updater"
+msgid "Skip"
+msgstr "Überspringen"
+
+#: ui/updater.slint:150
+msgctxt "Updater"
+msgid "Download"
+msgstr "Herunterladen"
 
 #: ui/screens/settings.slint:60
 msgctxt "Settings"
@@ -176,68 +206,89 @@ msgctxt "About"
 msgid "Support the Project"
 msgstr "Projekt unterstützen"
 
-#: ui/updater.slint:29
-msgctxt "Updater"
-msgid "Update Available"
-msgstr "Update verfügbar"
-
-#: ui/updater.slint:52
-msgctxt "Updater"
-msgid "Current"
-msgstr "Aktuell"
-
-#: ui/updater.slint:82
-msgctxt "Updater"
-msgid "New"
-msgstr "Neu"
-
-#: ui/updater.slint:106
-msgctxt "Updater"
-msgid "What's New"
-msgstr "Das ist neu"
-
-#: ui/updater.slint:143
-msgctxt "Updater"
-msgid "Skip"
-msgstr "Überspringen"
-
-#: ui/updater.slint:150
-msgctxt "Updater"
-msgid "Download"
-msgstr "Herunterladen"
-
-#: ui/components/dropdown.slint:12
-msgctxt "Dropdown"
-msgid "Select an option…"
-msgstr "Wähle eine Option aus …"
-
-#: ui/components/dropdown.slint:90
-msgctxt "Dropdown"
-msgid "Dropdown options"
-msgstr ""
-
-#: ui/components/dropdown.slint:136
-#, fuzzy
-#| msgctxt "Games"
-#| msgid "Select All"
-msgctxt "Dropdown"
-msgid "Selected"
-msgstr "Alle auswählen"
-
-#: ui/app.slint:43
+#: ui/app.slint:46
 msgctxt "App"
 msgid "Games"
 msgstr "Spiele"
 
-#: ui/app.slint:56
+#: ui/app.slint:59
 msgctxt "App"
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: ui/app.slint:63
+#: ui/app.slint:66
 msgctxt "App"
 msgid "About"
 msgstr "Über"
+
+#: ui/restore_dialog.slint:9
+#, fuzzy
+#| msgctxt "About"
+#| msgid "Aletheia is an open-source game save backup tool"
+msgctxt "RestoreDialog"
+msgid "Aletheia - Restore backup"
+msgstr "Aletheia ist ein quelloffenes Werkzeug zum Sichern der Spieldaten"
+
+#: ui/restore_dialog.slint:26
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "Restore"
+msgctxt "RestoreDialog"
+msgid "Restore Backup?"
+msgstr "Wiederherstellen"
+
+#: ui/restore_dialog.slint:35
+msgctxt "RestoreDialog"
+msgid "Are you sure you want to restore {}?"
+msgstr ""
+
+#: ui/restore_dialog.slint:42
+msgctxt "RestoreDialog"
+msgid "This will overwrite any existing save data."
+msgstr ""
+
+#: ui/restore_dialog.slint:74
+msgctxt "RestoreDialog"
+msgid "Cancel"
+msgstr ""
+
+#: ui/restore_dialog.slint:74
+msgctxt "RestoreDialog"
+msgid "Close"
+msgstr ""
+
+#: ui/restore_dialog.slint:82
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "Restore"
+msgctxt "RestoreDialog"
+msgid "Restore"
+msgstr "Wiederherstellen"
+
+#: ui/logic/restore.slint:11
+msgctxt "RestoreLogic"
+msgid "You do not have {} installed, install it first and try again."
+msgstr ""
+
+#: ui/logic/restore.slint:12
+msgctxt "RestoreLogic"
+msgid "Archive corrupted"
+msgstr ""
+
+#: ui/logic/restore.slint:13
+msgctxt "RestoreLogic"
+msgid "Invalid archive"
+msgstr ""
+
+#: ui/logic/restore.slint:14
+msgctxt "RestoreLogic"
+msgid "I/O error"
+msgstr ""
+
+#: ui/logic/restore.slint:15
+msgctxt "RestoreLogic"
+msgid "Unsupported archive version"
+msgstr ""
 
 #: ui/logic/notification.slint:30
 msgctxt "NotificationLogic"
@@ -296,3 +347,21 @@ msgstr ""
 msgctxt "NotificationLogic"
 msgid "No backups found"
 msgstr "Keine Spiele gefunden"
+
+#: ui/components/dropdown.slint:12
+msgctxt "Dropdown"
+msgid "Select an option…"
+msgstr "Wähle eine Option aus …"
+
+#: ui/components/dropdown.slint:90
+msgctxt "Dropdown"
+msgid "Dropdown options"
+msgstr ""
+
+#: ui/components/dropdown.slint:136
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "Select All"
+msgctxt "Dropdown"
+msgid "Selected"
+msgstr "Alle auswählen"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-01-27 04:10+0000\n"
+"POT-Creation-Date: 2026-02-04 10:59+0000\n"
 "PO-Revision-Date: 2025-09-25 22:13+0000\n"
 "Last-Translator: clanps <tylertexasgamingchannel@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/aletheia/ui/ja/"
@@ -12,6 +12,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.14-dev\n"
+
+#: ui/updater.slint:29
+msgctxt "Updater"
+msgid "Update Available"
+msgstr "更新が利用可能"
+
+#: ui/updater.slint:52
+msgctxt "Updater"
+msgid "Current"
+msgstr "現在版"
+
+#: ui/updater.slint:82
+msgctxt "Updater"
+msgid "New"
+msgstr "最新版"
+
+#: ui/updater.slint:106
+msgctxt "Updater"
+msgid "What's New"
+msgstr "新着情報"
+
+#: ui/updater.slint:143
+msgctxt "Updater"
+msgid "Skip"
+msgstr "更新を抜く"
+
+#: ui/updater.slint:150
+msgctxt "Updater"
+msgid "Download"
+msgstr "更新をダウンロード"
 
 #: ui/screens/settings.slint:60
 msgctxt "Settings"
@@ -176,68 +206,89 @@ msgctxt "About"
 msgid "Support the Project"
 msgstr "事業を支援おねがいします"
 
-#: ui/updater.slint:29
-msgctxt "Updater"
-msgid "Update Available"
-msgstr "更新が利用可能"
-
-#: ui/updater.slint:52
-msgctxt "Updater"
-msgid "Current"
-msgstr "現在版"
-
-#: ui/updater.slint:82
-msgctxt "Updater"
-msgid "New"
-msgstr "最新版"
-
-#: ui/updater.slint:106
-msgctxt "Updater"
-msgid "What's New"
-msgstr "新着情報"
-
-#: ui/updater.slint:143
-msgctxt "Updater"
-msgid "Skip"
-msgstr "更新を抜く"
-
-#: ui/updater.slint:150
-msgctxt "Updater"
-msgid "Download"
-msgstr "更新をダウンロード"
-
-#: ui/components/dropdown.slint:12
-msgctxt "Dropdown"
-msgid "Select an option…"
-msgstr "選択を選ぶ…"
-
-#: ui/components/dropdown.slint:90
-msgctxt "Dropdown"
-msgid "Dropdown options"
-msgstr ""
-
-#: ui/components/dropdown.slint:136
-#, fuzzy
-#| msgctxt "Games"
-#| msgid "Select All"
-msgctxt "Dropdown"
-msgid "Selected"
-msgstr "選択を全て"
-
-#: ui/app.slint:43
+#: ui/app.slint:46
 msgctxt "App"
 msgid "Games"
 msgstr "ゲーム"
 
-#: ui/app.slint:56
+#: ui/app.slint:59
 msgctxt "App"
 msgid "Settings"
 msgstr "設定"
 
-#: ui/app.slint:63
+#: ui/app.slint:66
 msgctxt "App"
 msgid "About"
 msgstr "概要"
+
+#: ui/restore_dialog.slint:9
+#, fuzzy
+#| msgctxt "About"
+#| msgid "Aletheia is an open-source game save backup tool"
+msgctxt "RestoreDialog"
+msgid "Aletheia - Restore backup"
+msgstr "Aletheiaはオープンソースのゲーム変更を保存データ退避の道具です"
+
+#: ui/restore_dialog.slint:26
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "Restore"
+msgctxt "RestoreDialog"
+msgid "Restore Backup?"
+msgstr "戻す"
+
+#: ui/restore_dialog.slint:35
+msgctxt "RestoreDialog"
+msgid "Are you sure you want to restore {}?"
+msgstr ""
+
+#: ui/restore_dialog.slint:42
+msgctxt "RestoreDialog"
+msgid "This will overwrite any existing save data."
+msgstr ""
+
+#: ui/restore_dialog.slint:74
+msgctxt "RestoreDialog"
+msgid "Cancel"
+msgstr ""
+
+#: ui/restore_dialog.slint:74
+msgctxt "RestoreDialog"
+msgid "Close"
+msgstr ""
+
+#: ui/restore_dialog.slint:82
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "Restore"
+msgctxt "RestoreDialog"
+msgid "Restore"
+msgstr "戻す"
+
+#: ui/logic/restore.slint:11
+msgctxt "RestoreLogic"
+msgid "You do not have {} installed, install it first and try again."
+msgstr ""
+
+#: ui/logic/restore.slint:12
+msgctxt "RestoreLogic"
+msgid "Archive corrupted"
+msgstr ""
+
+#: ui/logic/restore.slint:13
+msgctxt "RestoreLogic"
+msgid "Invalid archive"
+msgstr ""
+
+#: ui/logic/restore.slint:14
+msgctxt "RestoreLogic"
+msgid "I/O error"
+msgstr ""
+
+#: ui/logic/restore.slint:15
+msgctxt "RestoreLogic"
+msgid "Unsupported archive version"
+msgstr ""
 
 #: ui/logic/notification.slint:30
 msgctxt "NotificationLogic"
@@ -296,3 +347,21 @@ msgstr ""
 msgctxt "NotificationLogic"
 msgid "No backups found"
 msgstr "ゲームが見つかりませんでした"
+
+#: ui/components/dropdown.slint:12
+msgctxt "Dropdown"
+msgid "Select an option…"
+msgstr "選択を選ぶ…"
+
+#: ui/components/dropdown.slint:90
+msgctxt "Dropdown"
+msgid "Dropdown options"
+msgstr ""
+
+#: ui/components/dropdown.slint:136
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "Select All"
+msgctxt "Dropdown"
+msgid "Selected"
+msgstr "選択を全て"

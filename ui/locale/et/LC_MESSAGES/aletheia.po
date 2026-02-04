@@ -1,17 +1,47 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-01-27 04:10+0000\n"
+"POT-Creation-Date: 2026-02-04 10:59+0000\n"
 "PO-Revision-Date: 2026-01-29 10:17+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Estonian <https://hosted.weblate.org/projects/aletheia/ui/et/>"
-"\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/aletheia/ui/et/"
+">\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.16-dev\n"
+
+#: ui/updater.slint:29
+msgctxt "Updater"
+msgid "Update Available"
+msgstr "Uus versioon on saadaval"
+
+#: ui/updater.slint:52
+msgctxt "Updater"
+msgid "Current"
+msgstr "Praegune"
+
+#: ui/updater.slint:82
+msgctxt "Updater"
+msgid "New"
+msgstr "Uus"
+
+#: ui/updater.slint:106
+msgctxt "Updater"
+msgid "What's New"
+msgstr "Mida on meil uut"
+
+#: ui/updater.slint:143
+msgctxt "Updater"
+msgid "Skip"
+msgstr "Jäta vahele"
+
+#: ui/updater.slint:150
+msgctxt "Updater"
+msgid "Download"
+msgstr "Laadi alla"
 
 #: ui/screens/settings.slint:60
 msgctxt "Settings"
@@ -175,65 +205,103 @@ msgctxt "About"
 msgid "Support the Project"
 msgstr "Toeta meie projekti"
 
-#: ui/updater.slint:29
-msgctxt "Updater"
-msgid "Update Available"
-msgstr "Uus versioon on saadaval"
-
-#: ui/updater.slint:52
-msgctxt "Updater"
-msgid "Current"
-msgstr "Praegune"
-
-#: ui/updater.slint:82
-msgctxt "Updater"
-msgid "New"
-msgstr "Uus"
-
-#: ui/updater.slint:106
-msgctxt "Updater"
-msgid "What's New"
-msgstr "Mida on meil uut"
-
-#: ui/updater.slint:143
-msgctxt "Updater"
-msgid "Skip"
-msgstr "Jäta vahele"
-
-#: ui/updater.slint:150
-msgctxt "Updater"
-msgid "Download"
-msgstr "Laadi alla"
-
-#: ui/components/dropdown.slint:12
-msgctxt "Dropdown"
-msgid "Select an option…"
-msgstr "Vali oma eelistus…"
-
-#: ui/components/dropdown.slint:90
-msgctxt "Dropdown"
-msgid "Dropdown options"
-msgstr "Allalaadimise valikud"
-
-#: ui/components/dropdown.slint:136
-msgctxt "Dropdown"
-msgid "Selected"
-msgstr "Valitud"
-
-#: ui/app.slint:43
+#: ui/app.slint:46
 msgctxt "App"
 msgid "Games"
 msgstr "Mängud"
 
-#: ui/app.slint:56
+#: ui/app.slint:59
 msgctxt "App"
 msgid "Settings"
 msgstr "Seadistused"
 
-#: ui/app.slint:63
+#: ui/app.slint:66
 msgctxt "App"
 msgid "About"
 msgstr "Rakenduse teave"
+
+#: ui/restore_dialog.slint:9
+#, fuzzy
+#| msgctxt "About"
+#| msgid "Aletheia is an open-source game save backup tool"
+msgctxt "RestoreDialog"
+msgid "Aletheia - Restore backup"
+msgstr ""
+"Aletheia on avatud lähtekoodiga tarvik mängude salvestamise ja varundamise "
+"jaoks"
+
+#: ui/restore_dialog.slint:26
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "Restore"
+msgctxt "RestoreDialog"
+msgid "Restore Backup?"
+msgstr "Taastamine"
+
+#: ui/restore_dialog.slint:35
+msgctxt "RestoreDialog"
+msgid "Are you sure you want to restore {}?"
+msgstr ""
+
+#: ui/restore_dialog.slint:42
+msgctxt "RestoreDialog"
+msgid "This will overwrite any existing save data."
+msgstr ""
+
+#: ui/restore_dialog.slint:74
+msgctxt "RestoreDialog"
+msgid "Cancel"
+msgstr ""
+
+#: ui/restore_dialog.slint:74
+msgctxt "RestoreDialog"
+msgid "Close"
+msgstr ""
+
+#: ui/restore_dialog.slint:82
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "Restore"
+msgctxt "RestoreDialog"
+msgid "Restore"
+msgstr "Taastamine"
+
+#: ui/logic/restore.slint:11
+msgctxt "RestoreLogic"
+msgid "You do not have {} installed, install it first and try again."
+msgstr ""
+
+#: ui/logic/restore.slint:12
+#, fuzzy
+#| msgctxt "NotificationLogic"
+#| msgid "Archive corrupted"
+msgctxt "RestoreLogic"
+msgid "Archive corrupted"
+msgstr "Arhiivifail on vigane"
+
+#: ui/logic/restore.slint:13
+#, fuzzy
+#| msgctxt "NotificationLogic"
+#| msgid "Invalid archive"
+msgctxt "RestoreLogic"
+msgid "Invalid archive"
+msgstr "Vigane arhiivifail"
+
+#: ui/logic/restore.slint:14
+#, fuzzy
+#| msgctxt "NotificationLogic"
+#| msgid "I/O error"
+msgctxt "RestoreLogic"
+msgid "I/O error"
+msgstr "Sisend- või väljundviga"
+
+#: ui/logic/restore.slint:15
+#, fuzzy
+#| msgctxt "NotificationLogic"
+#| msgid "Unsupported archive version"
+msgctxt "RestoreLogic"
+msgid "Unsupported archive version"
+msgstr "Arhiivifaili versioon pole toetatud"
 
 #: ui/logic/notification.slint:30
 msgctxt "NotificationLogic"
@@ -289,6 +357,21 @@ msgstr "Arhiivifaili versioon pole toetatud"
 msgctxt "NotificationLogic"
 msgid "No backups found"
 msgstr "Varukoopiaid ei leidu"
+
+#: ui/components/dropdown.slint:12
+msgctxt "Dropdown"
+msgid "Select an option…"
+msgstr "Vali oma eelistus…"
+
+#: ui/components/dropdown.slint:90
+msgctxt "Dropdown"
+msgid "Dropdown options"
+msgstr "Allalaadimise valikud"
+
+#: ui/components/dropdown.slint:136
+msgctxt "Dropdown"
+msgid "Selected"
+msgstr "Valitud"
 
 #~ msgctxt "About"
 #~ msgid "Built with Slint"
