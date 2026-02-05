@@ -190,6 +190,10 @@ Cyberpunk 2077:
   files:
     windows:
       - "{Home}/Saved Games/CD Projekt Red/Cyberpunk 2077/*"
+"DATE A LIVE: Rio Reincarnation":
+  files:
+    linux:
+      - "{Documents}/Idea Factory/DATE A LIVE  RIO-REINCARNATION/*"
 DOOM Eternal:
   files:
     windows:
