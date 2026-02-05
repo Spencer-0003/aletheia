@@ -555,6 +555,10 @@ Judgment:
   files:
     windows:
       - "{AppData}/Sega/Judgment/Steam/*"
+KANADE:
+  files:
+    linux:
+      - "{SteamUserData}/3104270/remote/*"
 Killer Frequency:
   files:
     windows:
