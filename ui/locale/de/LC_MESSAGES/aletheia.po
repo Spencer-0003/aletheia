@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2026-02-04 10:59+0000\n"
-"PO-Revision-Date: 2026-02-18 15:09+0000\n"
-"Last-Translator: Hendrik Baier <baier.hendrik@proton.me>\n"
+"PO-Revision-Date: 2026-02-19 16:09+0000\n"
+"Last-Translator: Oliver <oliver.puff@gmx.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/aletheia/ui/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -247,12 +247,12 @@ msgstr ""
 #: ui/restore_dialog.slint:74
 msgctxt "RestoreDialog"
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #: ui/restore_dialog.slint:74
 msgctxt "RestoreDialog"
 msgid "Close"
-msgstr ""
+msgstr "Schließen"
 
 #: ui/restore_dialog.slint:82
 #, fuzzy
@@ -266,6 +266,7 @@ msgstr "Wiederherstellen"
 msgctxt "RestoreLogic"
 msgid "You do not have {} installed, install it first and try again."
 msgstr ""
+"Du hast {} nicht installiert. Installiere es zuerst und versuche es erneut."
 
 #: ui/logic/restore.slint:12
 msgctxt "RestoreLogic"
@@ -338,12 +339,9 @@ msgid "Unsupported archive version"
 msgstr ""
 
 #: ui/logic/notification.slint:40
-#, fuzzy
-#| msgctxt "Games"
-#| msgid "No games found"
 msgctxt "NotificationLogic"
 msgid "No backups found"
-msgstr "Keine Spiele gefunden"
+msgstr "Keine Backups gefunden"
 
 #: ui/components/dropdown.slint:12
 msgctxt "Dropdown"
