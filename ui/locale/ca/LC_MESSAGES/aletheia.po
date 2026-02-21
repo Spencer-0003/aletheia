@@ -1,17 +1,88 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-02-04 10:59+0000\n"
+"POT-Creation-Date: 2026-02-21 12:24+0000\n"
 "PO-Revision-Date: 2026-02-09 16:09+0000\n"
 "Last-Translator: World170 <world170_@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Catalan <https://hosted.weblate.org/projects/aletheia/ui/ca/>"
-"\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/aletheia/ui/ca/"
+">\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.16-dev\n"
+
+#: ui/first_time_setup.slint:10
+#, fuzzy
+#| msgctxt "RestoreDialog"
+#| msgid "Aletheia - Restore backup"
+msgctxt "FirstTimeSetup"
+msgid "Aletheia - First Time Setup"
+msgstr "Aletheia - Restaurar còpies de seguretat"
+
+#: ui/first_time_setup.slint:40
+msgctxt "FirstTimeSetup"
+msgid "Welcome to Aletheia"
+msgstr ""
+
+#: ui/first_time_setup.slint:49
+msgctxt "FirstTimeSetup"
+msgid "Let's get you set up. You can change these settings at any time."
+msgstr ""
+
+#: ui/first_time_setup.slint:68
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Game Data Location"
+msgctxt "FirstTimeSetup"
+msgid "Backup Location"
+msgstr "Ubicació de les dades dels jocs"
+
+#: ui/first_time_setup.slint:76
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Choose where your games will be saved"
+msgctxt "FirstTimeSetup"
+msgid "Where your game saves will be stored on disk."
+msgstr "Escull on vols guardats els teus jocs"
+
+#: ui/first_time_setup.slint:108
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Browse"
+msgctxt "FirstTimeSetup"
+msgid "Browse"
+msgstr "Navega"
+
+#: ui/first_time_setup.slint:123
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Steam Account"
+msgctxt "FirstTimeSetup"
+msgid "Steam Account"
+msgstr "Compte de Steam"
+
+#: ui/first_time_setup.slint:131
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Only affects games that save in the Steam userdata directory"
+msgctxt "FirstTimeSetup"
+msgid "Used to locate saves stored in Steam's userdata directory."
+msgstr "Només afecta els jocs que guarden dades al directori userdata de Steam"
+
+#: ui/first_time_setup.slint:140
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Select an account…"
+msgctxt "FirstTimeSetup"
+msgid "Select an account…"
+msgstr "Selecciona un compte…"
+
+#: ui/first_time_setup.slint:149
+msgctxt "FirstTimeSetup"
+msgid "Continue"
+msgstr ""
 
 #: ui/updater.slint:29
 msgctxt "Updater"
@@ -205,17 +276,17 @@ msgctxt "About"
 msgid "Support the Project"
 msgstr "Dona suport al projecte"
 
-#: ui/app.slint:46
+#: ui/app.slint:49
 msgctxt "App"
 msgid "Games"
 msgstr "Jocs"
 
-#: ui/app.slint:59
+#: ui/app.slint:62
 msgctxt "App"
 msgid "Settings"
 msgstr "Configuració"
 
-#: ui/app.slint:66
+#: ui/app.slint:69
 msgctxt "App"
 msgid "About"
 msgstr "Informació"

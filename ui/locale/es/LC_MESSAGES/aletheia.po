@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-02-04 10:59+0000\n"
+"POT-Creation-Date: 2026-02-21 12:24+0000\n"
 "PO-Revision-Date: 2026-01-29 10:17+0000\n"
 "Last-Translator: Laura Quintana Marín <2001lauraquintana@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/aletheia/ui/es/"
@@ -12,6 +12,81 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.16-dev\n"
+
+#: ui/first_time_setup.slint:10
+#, fuzzy
+#| msgctxt "About"
+#| msgid "Aletheia is an open-source game save backup tool"
+msgctxt "FirstTimeSetup"
+msgid "Aletheia - First Time Setup"
+msgstr ""
+"Aletheia es una herramienta de código abierto para hacer copias de seguridad "
+"de partidas guardadas de videojuegos"
+
+#: ui/first_time_setup.slint:40
+msgctxt "FirstTimeSetup"
+msgid "Welcome to Aletheia"
+msgstr ""
+
+#: ui/first_time_setup.slint:49
+msgctxt "FirstTimeSetup"
+msgid "Let's get you set up. You can change these settings at any time."
+msgstr ""
+
+#: ui/first_time_setup.slint:68
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Game Data Location"
+msgctxt "FirstTimeSetup"
+msgid "Backup Location"
+msgstr "Ubicación de los datos del juego"
+
+#: ui/first_time_setup.slint:76
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Choose where your games will be saved"
+msgctxt "FirstTimeSetup"
+msgid "Where your game saves will be stored on disk."
+msgstr "Elige dónde se guardarán tus juegos"
+
+#: ui/first_time_setup.slint:108
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Browse"
+msgctxt "FirstTimeSetup"
+msgid "Browse"
+msgstr "Ojear"
+
+#: ui/first_time_setup.slint:123
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Steam Account"
+msgctxt "FirstTimeSetup"
+msgid "Steam Account"
+msgstr "Steam Cuenta"
+
+#: ui/first_time_setup.slint:131
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Only affects games that save in the Steam userdata directory"
+msgctxt "FirstTimeSetup"
+msgid "Used to locate saves stored in Steam's userdata directory."
+msgstr ""
+"Solo afecta a los juegos que están en el directorio de datos de usuario de "
+"Steam"
+
+#: ui/first_time_setup.slint:140
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Select an account…"
+msgctxt "FirstTimeSetup"
+msgid "Select an account…"
+msgstr "Seleccione una cuenta…"
+
+#: ui/first_time_setup.slint:149
+msgctxt "FirstTimeSetup"
+msgid "Continue"
+msgstr ""
 
 #: ui/updater.slint:29
 msgctxt "Updater"
@@ -207,17 +282,17 @@ msgctxt "About"
 msgid "Support the Project"
 msgstr "Apoya al proyecto"
 
-#: ui/app.slint:46
+#: ui/app.slint:49
 msgctxt "App"
 msgid "Games"
 msgstr "Juegos"
 
-#: ui/app.slint:59
+#: ui/app.slint:62
 msgctxt "App"
 msgid "Settings"
 msgstr "Configuración"
 
-#: ui/app.slint:66
+#: ui/app.slint:69
 msgctxt "App"
 msgid "About"
 msgstr "Información"

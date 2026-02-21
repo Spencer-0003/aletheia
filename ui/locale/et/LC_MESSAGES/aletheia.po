@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-02-04 10:59+0000\n"
+"POT-Creation-Date: 2026-02-21 12:24+0000\n"
 "PO-Revision-Date: 2026-01-29 10:17+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/aletheia/ui/et/"
@@ -12,6 +12,79 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.16-dev\n"
+
+#: ui/first_time_setup.slint:10
+#, fuzzy
+#| msgctxt "About"
+#| msgid "Aletheia is an open-source game save backup tool"
+msgctxt "FirstTimeSetup"
+msgid "Aletheia - First Time Setup"
+msgstr ""
+"Aletheia on avatud lähtekoodiga tarvik mängude salvestamise ja varundamise "
+"jaoks"
+
+#: ui/first_time_setup.slint:40
+msgctxt "FirstTimeSetup"
+msgid "Welcome to Aletheia"
+msgstr ""
+
+#: ui/first_time_setup.slint:49
+msgctxt "FirstTimeSetup"
+msgid "Let's get you set up. You can change these settings at any time."
+msgstr ""
+
+#: ui/first_time_setup.slint:68
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Game Data Location"
+msgctxt "FirstTimeSetup"
+msgid "Backup Location"
+msgstr "Mänguandmete asukoht"
+
+#: ui/first_time_setup.slint:76
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Choose where your games will be saved"
+msgctxt "FirstTimeSetup"
+msgid "Where your game saves will be stored on disk."
+msgstr "Määra asukoht oma mängude salvestamiseks"
+
+#: ui/first_time_setup.slint:108
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Browse"
+msgctxt "FirstTimeSetup"
+msgid "Browse"
+msgstr "Sirvi"
+
+#: ui/first_time_setup.slint:123
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Steam Account"
+msgctxt "FirstTimeSetup"
+msgid "Steam Account"
+msgstr "Steami kasutajakonto"
+
+#: ui/first_time_setup.slint:131
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Only affects games that save in the Steam userdata directory"
+msgctxt "FirstTimeSetup"
+msgid "Used to locate saves stored in Steam's userdata directory."
+msgstr "Mõjutab vaid mänge, mis salvestavad andmeid Steami kasutajakausta"
+
+#: ui/first_time_setup.slint:140
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Select an account…"
+msgctxt "FirstTimeSetup"
+msgid "Select an account…"
+msgstr "Vali kasutajakonto…"
+
+#: ui/first_time_setup.slint:149
+msgctxt "FirstTimeSetup"
+msgid "Continue"
+msgstr ""
 
 #: ui/updater.slint:29
 msgctxt "Updater"
@@ -205,17 +278,17 @@ msgctxt "About"
 msgid "Support the Project"
 msgstr "Toeta meie projekti"
 
-#: ui/app.slint:46
+#: ui/app.slint:49
 msgctxt "App"
 msgid "Games"
 msgstr "Mängud"
 
-#: ui/app.slint:59
+#: ui/app.slint:62
 msgctxt "App"
 msgid "Settings"
 msgstr "Seadistused"
 
-#: ui/app.slint:66
+#: ui/app.slint:69
 msgctxt "App"
 msgid "About"
 msgstr "Rakenduse teave"

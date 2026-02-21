@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-02-04 10:59+0000\n"
+"POT-Creation-Date: 2026-02-21 12:24+0000\n"
 "PO-Revision-Date: 2025-09-25 22:13+0000\n"
 "Last-Translator: clanps <tylertexasgamingchannel@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/aletheia/ui/ja/"
@@ -12,6 +12,77 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.14-dev\n"
+
+#: ui/first_time_setup.slint:10
+#, fuzzy
+#| msgctxt "About"
+#| msgid "Aletheia is an open-source game save backup tool"
+msgctxt "FirstTimeSetup"
+msgid "Aletheia - First Time Setup"
+msgstr "Aletheiaはオープンソースのゲーム変更を保存データ退避の道具です"
+
+#: ui/first_time_setup.slint:40
+msgctxt "FirstTimeSetup"
+msgid "Welcome to Aletheia"
+msgstr ""
+
+#: ui/first_time_setup.slint:49
+msgctxt "FirstTimeSetup"
+msgid "Let's get you set up. You can change these settings at any time."
+msgstr ""
+
+#: ui/first_time_setup.slint:68
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Game Data Location"
+msgctxt "FirstTimeSetup"
+msgid "Backup Location"
+msgstr "ゲームデータの保存場所"
+
+#: ui/first_time_setup.slint:76
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Choose where your games will be saved"
+msgctxt "FirstTimeSetup"
+msgid "Where your game saves will be stored on disk."
+msgstr "ゲームに蓄えるどこ選択"
+
+#: ui/first_time_setup.slint:108
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Browse"
+msgctxt "FirstTimeSetup"
+msgid "Browse"
+msgstr "ブラウズ"
+
+#: ui/first_time_setup.slint:123
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Steam Account"
+msgctxt "FirstTimeSetup"
+msgid "Steam Account"
+msgstr "Steamアカウント"
+
+#: ui/first_time_setup.slint:131
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Only affects games that save in the Steam userdata directory"
+msgctxt "FirstTimeSetup"
+msgid "Used to locate saves stored in Steam's userdata directory."
+msgstr "Steamのuserdataディレクトリに保存するゲームにのみ影響"
+
+#: ui/first_time_setup.slint:140
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Select an account…"
+msgctxt "FirstTimeSetup"
+msgid "Select an account…"
+msgstr "アカウントを選ぶ…"
+
+#: ui/first_time_setup.slint:149
+msgctxt "FirstTimeSetup"
+msgid "Continue"
+msgstr ""
 
 #: ui/updater.slint:29
 msgctxt "Updater"
@@ -206,17 +277,17 @@ msgctxt "About"
 msgid "Support the Project"
 msgstr "事業を支援おねがいします"
 
-#: ui/app.slint:46
+#: ui/app.slint:49
 msgctxt "App"
 msgid "Games"
 msgstr "ゲーム"
 
-#: ui/app.slint:59
+#: ui/app.slint:62
 msgctxt "App"
 msgid "Settings"
 msgstr "設定"
 
-#: ui/app.slint:66
+#: ui/app.slint:69
 msgctxt "App"
 msgid "About"
 msgstr "概要"
