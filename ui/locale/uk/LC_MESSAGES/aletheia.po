@@ -2,80 +2,62 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2026-02-21 12:24+0000\n"
-"PO-Revision-Date: 2026-02-06 20:01+0000\n"
+"PO-Revision-Date: 2026-02-23 14:09+0000\n"
 "Last-Translator: Dan <jonweblin2205@protonmail.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/aletheia/ui/uk/"
-">\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/aletheia/ui/"
+"uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #: ui/first_time_setup.slint:10
-#, fuzzy
-#| msgctxt "RestoreDialog"
-#| msgid "Aletheia - Restore backup"
 msgctxt "FirstTimeSetup"
 msgid "Aletheia - First Time Setup"
-msgstr "Aletheia — відновлення резервною копією"
+msgstr "Aletheia: Перше налаштування"
 
 #: ui/first_time_setup.slint:40
 msgctxt "FirstTimeSetup"
 msgid "Welcome to Aletheia"
-msgstr ""
+msgstr "Вітаємо в Aletheia"
 
 #: ui/first_time_setup.slint:49
 msgctxt "FirstTimeSetup"
 msgid "Let's get you set up. You can change these settings at any time."
 msgstr ""
+"Нумо все налаштуємо. Ви зможете змінити ці параметри в будь-який момент."
 
 #: ui/first_time_setup.slint:68
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Game Data Location"
 msgctxt "FirstTimeSetup"
 msgid "Backup Location"
-msgstr "Розташування даних гри"
+msgstr "Розташування резервної копії"
 
 #: ui/first_time_setup.slint:76
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Choose where your games will be saved"
 msgctxt "FirstTimeSetup"
 msgid "Where your game saves will be stored on disk."
-msgstr "Виберіть, де будуть зберігатися ваші ігри"
+msgstr "Місце на диску, де зберігатимуться ваші ігрові збереження."
 
 #: ui/first_time_setup.slint:108
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Browse"
 msgctxt "FirstTimeSetup"
 msgid "Browse"
 msgstr "Переглянути"
 
 #: ui/first_time_setup.slint:123
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Steam Account"
 msgctxt "FirstTimeSetup"
 msgid "Steam Account"
 msgstr "Обліковий запис Steam"
 
 #: ui/first_time_setup.slint:131
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Only affects games that save in the Steam userdata directory"
 msgctxt "FirstTimeSetup"
 msgid "Used to locate saves stored in Steam's userdata directory."
-msgstr "Впливає тільки на ігри, які зберігаються в каталозі userdata Steam"
+msgstr ""
+"Використовується для пошуку збережень, що зберігаються в каталозі userdata "
+"Steam."
 
 #: ui/first_time_setup.slint:140
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Select an account…"
 msgctxt "FirstTimeSetup"
 msgid "Select an account…"
 msgstr "Виберіть обліковий запис…"
@@ -83,7 +65,7 @@ msgstr "Виберіть обліковий запис…"
 #: ui/first_time_setup.slint:149
 msgctxt "FirstTimeSetup"
 msgid "Continue"
-msgstr ""
+msgstr "Продовжити"
 
 #: ui/updater.slint:29
 msgctxt "Updater"
@@ -244,7 +226,7 @@ msgstr "Інформація про застосунок"
 msgctxt "About"
 msgid "Aletheia is an open-source game save backup tool"
 msgstr ""
-"Aletheia — це інструмент для резервного копіювання збережених ігор із "
+"Aletheia — це інструмент для резервного копіювання ігрових збережень із "
 "відкритим кодом"
 
 #: ui/screens/about.slint:57
