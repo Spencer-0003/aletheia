@@ -1216,6 +1216,12 @@ Tormented Souls:
   files:
     windows:
       - "{LocalLow}/duale-abstractd/Tormented Souls Release/Saves/*"
+Treasure of Nadia:
+  files:
+    linux:
+      - "{GameRoot}/game/game/saves/*"
+    windows:
+      - "{GameRoot}/game/game/saves/*"
 ULTRAKILL:
   files:
     linux:
