@@ -540,6 +540,12 @@ Heavy Rain:
   files:
     windows:
       - "{Home}/Saved Games/HeavyRain/*"
+Helping the Hotties:
+  files:
+    linux:
+      - "{GameRoot}/game/game/saves/*"
+    windows:
+      - "{GameRoot}/game/game/saves/*"
 Hi-Fi RUSH:
   files:
     windows:
