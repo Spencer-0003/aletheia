@@ -719,6 +719,11 @@ Minecraft Legends:
   files:
     windows:
       - "{Documents}/Telltale Games/Minecraft Story Mode - Season Two/*"
+Mortal Kombat 1:
+  files:
+    windows:
+      - "{SteamUserData}/1971870/remote/Profile*"
+      - "{SteamUserData}/1971870/remote/*SaveData"
 Mortal Kombat 11:
   files:
     windows:
