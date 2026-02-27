@@ -613,6 +613,12 @@ LOLLIPOP CHAINSAW RePOP:
   files:
     windows:
       - "{LocalAppData}/lollipop/Saved/SaveGames/lollipop.sav"
+Leap of Love:
+  files:
+    linux:
+      - "{GameRoot}/game/game/saves/*"
+    windows:
+      - "{GameRoot}/game/game/saves/*"
 Life is Strange:
   files:
     linux:
