@@ -98,6 +98,12 @@ Bayonetta:
   files:
     windows:
       - "{SteamUserData}/460790/remote/*"
+Being a DIK - Season 1:
+  files:
+    linux:
+      - "{GameRoot}/game/game/saves/*"
+    windows:
+      - "{GameRoot}/game/game/saves/*"
 BioShock:
   files:
     windows:
