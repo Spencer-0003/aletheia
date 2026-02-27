@@ -995,6 +995,10 @@ Stardew Valley:
       - "{XDGConfig}/StardewValley/Saves/*"
     windows:
       - "{AppData}/StardewValley/Saves/*"
+Stories Untold:
+  files:
+    windows:
+      - "{LocalLow}/No Code/Stories Untold SaveGame.dat"
 Stray:
   files:
     windows:
