@@ -412,6 +412,11 @@ Fatal Twelve:
       - "{GameRoot}/game/game/saves/*"
     windows:
       - "{GameRoot}/game/game/saves/*"
+Fetish Locator Week One:
+  linux:
+    - "{GameRoot}/game/game/saves/*"
+  windows:
+    - "{GameRoot}/game/game/saves/*"
 Final Exam:
   files:
     windows:
