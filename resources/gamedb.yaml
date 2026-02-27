@@ -662,6 +662,12 @@ Lords of the Fallen:
   files:
     windows:
       - "{LocalAppData}/Bloom&Rage/Saved/SaveGames/*/*.sav"
+Lust Theory - Season 1:
+  files:
+    linux:
+      - "{GameRoot}/game/game/saves/*"
+    windows:
+      - "{GameRoot}/game/game/saves/*"
 "MURDERED: SOUL SUSPECT":
   files:
     windows:
