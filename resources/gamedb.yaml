@@ -130,6 +130,10 @@ Borderlands 3:
   files:
     windows:
       - "{Documents}/My Games/Borderlands 3/Saved/SaveGames/*"
+Borderlands 4:
+  files:
+    windows:
+      - "{Documents}/My Games/Borderlands 4/Saved/SaveGames/{SteamID64}/Profiles/client/*"
 Bullet Girls Phantasia:
   files:
     windows:
