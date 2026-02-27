@@ -1028,6 +1028,12 @@ Street Fighter V:
   files:
     windows:
       - "{LocalAppData}/StreetFighterV/Saved/SaveGames/*"
+"Summer's Gone - Season 1":
+  files:
+    linux:
+      - "{GameRoot}/game/game/saves/*"
+    windows:
+      - "{GameRoot}/game/game/saves/*"
 Sunset Overdrive:
   files:
     windows:
