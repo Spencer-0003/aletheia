@@ -547,6 +547,10 @@ Hollow Knight:
       - "{XDGConfig}/unity3d/Team Cherry/Hollow Knight/*"
     windows:
       - "{LocalLow}/Team Cherry/Hollow Knight/*"
+House Party:
+  files:
+    windows:
+      - "{LocalLow}/Eek/House Party/Saves/*"
 HuniePop:
   files:
     linux:
