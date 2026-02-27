@@ -150,6 +150,10 @@ Call of Cthulhu:
   files:
     windows:
       - "{GameRoot}/players2/savegame.svg"
+"Call of Duty: Infinite Warfare":
+  files:
+    windows:
+      - "{GameRoot}/players2/savegame.svg"
 Cars:
   files:
     windows:
