@@ -907,6 +907,10 @@ Resident Evil 7 Biohazard:
   files:
     windows:
       - "{SteamUserData}/418370/remote/win64_save/*"
+Resident Evil Requiem:
+  files:
+    windows:
+      - "{SteamUserData}/3764200/remote/win64_save/*"
 Resident Evil Revelations:
   files:
     windows:
