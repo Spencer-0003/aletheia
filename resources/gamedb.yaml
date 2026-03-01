@@ -184,6 +184,11 @@ Catherine Classic:
   files:
     windows:
       - "{LocalAppData}/Sandfall/Saved/SaveGames/*/*.sav"
+Control Ultimate Edition:
+  files:
+    windows:
+      - "{Documents}/My Games/Control/Saves/*" # GOG variant
+      - "{SteamUserData}/870780/remote/*"
 Craftopia:
   files:
     windows:
