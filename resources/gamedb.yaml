@@ -831,6 +831,12 @@ Obscure 2:
   files:
     windows:
       - "{Home}/Saved Games/Octodad Dadliest Catch/*"
+PAYDAY 2:
+  files:
+    linux:
+      - "{SteamUserData}/218620/remote/*"
+    windows:
+      - "{LocalAppData}/PAYDAY 2/saves/{SteamID64}/*"
 Palworld:
   files:
     windows:
