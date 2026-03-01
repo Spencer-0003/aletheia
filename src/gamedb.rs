@@ -109,7 +109,7 @@ pub fn get_installed_games() -> Vec<Game> {
                 return Some(game);
             }
 
-            let clean_name = game.name.replace("™", "").replace("®", "").trim().to_owned();
+            let clean_name = game.name.replace(['™', '®'], "").trim().to_owned();
             db.contains_key(&clean_name).then(|| {
                 game.name = clean_name;
                 game
