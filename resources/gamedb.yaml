@@ -1084,6 +1084,12 @@ Street Fighter V:
       - "{GameRoot}/game/game/saves/*"
     windows:
       - "{GameRoot}/game/game/saves/*"
+"Sunrider: Mask of Arcadius":
+  files:
+    linux:
+      - "{GameRoot}/game/game/saves/*"
+    windows:
+      - "{GameRoot}/game/game/saves/*"
 Sunset Overdrive:
   files:
     windows:
