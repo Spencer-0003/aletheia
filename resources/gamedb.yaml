@@ -422,6 +422,10 @@ Fetish Locator Week One:
     - "{GameRoot}/game/game/saves/*"
   windows:
     - "{GameRoot}/game/game/saves/*"
+Fight'N Rage:
+  files:
+    windows:
+      - "{LocalLow}/sebagamesdev/fightnrage/savedata/data.sav"
 Final Exam:
   files:
     windows:
