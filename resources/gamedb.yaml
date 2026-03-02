@@ -418,10 +418,11 @@ Fatal Twelve:
     windows:
       - "{GameRoot}/game/game/saves/*"
 Fetish Locator Week One:
-  linux:
-    - "{GameRoot}/game/game/saves/*"
-  windows:
-    - "{GameRoot}/game/game/saves/*"
+  files:
+    linux:
+      - "{GameRoot}/game/game/saves/*"
+    windows:
+      - "{GameRoot}/game/game/saves/*"
 Fight'N Rage:
   files:
     windows:
