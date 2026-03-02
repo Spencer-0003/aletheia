@@ -426,6 +426,7 @@ Fetish Locator Week One:
 Fight'N Rage:
   files:
     windows:
+      - "{LocalLow}/sebagamesdev/gog/fightnrage/savedata/data.sav" # GOG variant
       - "{LocalLow}/sebagamesdev/fightnrage/savedata/data.sav"
 Final Exam:
   files:
