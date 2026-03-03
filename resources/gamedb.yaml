@@ -189,6 +189,12 @@ Control Ultimate Edition:
     windows:
       - "{Documents}/My Games/Control/Saves/*" # GOG variant
       - "{SteamUserData}/870780/remote/*"
+Corpse Party (2021):
+  files:
+    linux:
+      - "{XDGConfig}/unity3d/MAGES_/Corpse Party/*.bin"
+    windows:
+      - "{AppData}/CorpseParty/*.bin"
 Craftopia:
   files:
     windows:
