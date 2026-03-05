@@ -1005,6 +1005,11 @@ Sker Ritual:
   files:
     windows:
       - "{SteamUserData}/1492070/remote/PersistentSaveData"
+"Sleeping Dogs: Definitive Edition":
+  files:
+    windows:
+      - "{GameRoot}/data/HK Autosave*"
+      - "{GameRoot}/data/HK GameSlot*"
 Slitterhead:
   files:
     windows:
