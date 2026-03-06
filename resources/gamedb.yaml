@@ -997,6 +997,11 @@ Severed Steel:
   files:
     windows:
       - "{LocalAppData}/ThankYouVeryCool/Saved/SaveGames/*"
+Shenmue I & II:
+  files:
+    windows:
+      - "{SteamUserData}/758330/remote/sm1saves/*"
+      - "{SteamUserData}/758330/remote/sm2saves/*"
 "Silent Hill 4: The Room":
   files:
     windows:
