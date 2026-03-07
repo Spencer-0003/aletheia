@@ -381,6 +381,10 @@ Elden Bling:
   files:
     windows:
       - "{Documents}/KoeiTecmo/FATAL FRAME MOL/SAVEDATA/*"
+"FATAL FRAME II: Crimson Butterfly REMAKE DEMO":
+  files:
+    windows:
+      - "{LocalAppData}/KoeiTecmo/FatalFrameIIDemo/Savedata/{SteamID3}/**/*"
 FULL METAL SCHOOLGIRL:
   files:
     windows:
