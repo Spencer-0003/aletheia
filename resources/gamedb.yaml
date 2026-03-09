@@ -647,6 +647,10 @@ Kinkoi Golden Time:
   files:
     windows:
       - "{GameRoot}/SaveData/*"
+LEGO MARVEL Super Heroes 2:
+  files:
+    windows:
+      - "{SteamUserData}/647830/remote/savedgames/slot*/*"
 LOLLIPOP CHAINSAW RePOP:
   files:
     windows:
