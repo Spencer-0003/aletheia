@@ -304,6 +304,10 @@ Dead Rising 4:
   files:
     windows:
       - "{Documents}/My Games/Dead Rising 4/saves/*"
+Dead Space 3:
+  files:
+    windows:
+      - "{Documents}/EA Games/Dead Space 3/*"
 Death end re;Quest:
   files:
     windows:
