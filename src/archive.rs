@@ -174,7 +174,7 @@ impl ArchiveReader {
 
         let mut game_name_bytes = vec![0u8; game_name_len as usize];
         file.read_exact(&mut game_name_bytes)?;
-        let game = String::from_utf8(game_name_bytes).unwrap();
+        let game = String::from_utf8(game_name_bytes).map_err(|_| Error::InvalidArchive)?;
 
         let mut index_offset_bytes = [0u8; 8];
         file.read_exact(&mut index_offset_bytes)?;
