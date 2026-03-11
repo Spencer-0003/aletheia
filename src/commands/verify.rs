@@ -31,8 +31,8 @@ impl Command for Verify {
         }
 
         for entry in read_dir(&config.save_dir).unwrap() {
-            let path = entry.unwrap().path();
-            if path.extension().is_some_and(|e| e == "aletheia") {
+            let path = entry.unwrap().path().join("backup.aletheia");
+            if path.exists() {
                 verify_archive(&path);
             }
         }
