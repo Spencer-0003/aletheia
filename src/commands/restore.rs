@@ -20,8 +20,8 @@ impl Command for Restore {
             ensure_steam_account_selected(config);
         }
 
-        if args.positional.len() == 1 && args.positional[0].ends_with(".aletheia") {
-            let archive_path = Path::new(&args.positional[0]);
+        if let Some(path_str) = args.positional.first() {
+            let archive_path = Path::new(&path_str);
             if !archive_path.exists() {
                 eprintln!("Archive file not found: {}", archive_path.display());
                 return;
