@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Spencer
+// SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
 #[cfg(all(feature = "updater", not(debug_assertions)))]
@@ -8,6 +8,7 @@ mod backup;
 mod restore;
 mod update_custom;
 mod update_gamedb;
+mod verify;
 
 #[cfg(all(feature = "updater", not(debug_assertions)))]
 pub use update::Update;
@@ -16,6 +17,7 @@ pub use backup::Backup;
 pub use restore::Restore;
 pub use update_custom::UpdateCustom;
 pub use update_gamedb::UpdateGameDb;
+pub use verify::Verify;
 
 pub struct Args {
     pub positional: Vec<String>,

@@ -77,6 +77,7 @@ fn main() {
             "update" => commands::Update::run(args, &config),
             "update_gamedb" => commands::UpdateGameDb::run(args, &cfg),
             "update_custom_gamedbs" => commands::UpdateCustom::run(args, &cfg),
+            "verify" => commands::Verify::run(args, &cfg),
             _ => eprintln!("Command not found.")
         }
     } else if let Some(ref cfg) = config {
