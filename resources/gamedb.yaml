@@ -388,7 +388,7 @@ Elden Bling:
 "FATAL FRAME II: Crimson Butterfly REMAKE":
   files:
     windows:
-      - "{LocalAppData}/KoeiTecmo/FatalFrameII/Savedata/{SteamID3}/*/SAVEDATA.bin"
+      - "{LocalAppData}/KoeiTecmo/FatalFrameII/Savedata/{SteamID3}/*/SAVEDATA.BIN"
 "FATAL FRAME II: Crimson Butterfly REMAKE DEMO":
   files:
     windows:
