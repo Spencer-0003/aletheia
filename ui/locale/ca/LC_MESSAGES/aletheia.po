@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-02-21 12:24+0000\n"
+"POT-Creation-Date: 2026-03-16 01:20+0000\n"
 "PO-Revision-Date: 2026-02-09 16:09+0000\n"
 "Last-Translator: World170 <world170_@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/aletheia/ui/ca/"
@@ -405,6 +405,11 @@ msgstr "Versió d'arxiu no admesa"
 msgctxt "NotificationLogic"
 msgid "No backups found"
 msgstr "No s'han trobat còpies de seguretat"
+
+#: ui/logic/notification.slint:41
+msgctxt "NotificationLogic"
+msgid "Game is not installed"
+msgstr ""
 
 #: ui/components/dropdown.slint:12
 msgctxt "Dropdown"
