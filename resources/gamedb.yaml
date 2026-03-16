@@ -425,6 +425,10 @@ Fallout 4 VR:
   files:
     windows:
       - "{Documents}/My Games/Fallout4VR/Saves/*"
+"Fallout 4: Game of the Year Edition":
+  files:
+    windows:
+      - "{Documents}/My Games/Fallout4/Saves/*"
 "Fallout: New Vegas":
   files:
     windows:
