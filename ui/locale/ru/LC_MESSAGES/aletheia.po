@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-02-21 12:24+0000\n"
+"POT-Creation-Date: 2026-03-16 01:20+0000\n"
 "PO-Revision-Date: 2025-09-25 00:01+0000\n"
 "Last-Translator: Игорь <petriv4646@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/aletheia/ui/ru/"
@@ -431,6 +431,11 @@ msgstr ""
 msgctxt "NotificationLogic"
 msgid "No backups found"
 msgstr "Игра не найдена"
+
+#: ui/logic/notification.slint:41
+msgctxt "NotificationLogic"
+msgid "Game is not installed"
+msgstr ""
 
 #: ui/components/dropdown.slint:12
 msgctxt "Dropdown"

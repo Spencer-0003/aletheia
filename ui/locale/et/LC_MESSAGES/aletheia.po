@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-02-21 12:24+0000\n"
+"POT-Creation-Date: 2026-03-16 01:20+0000\n"
 "PO-Revision-Date: 2026-01-29 10:17+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/aletheia/ui/et/"
@@ -430,6 +430,11 @@ msgstr "Arhiivifaili versioon pole toetatud"
 msgctxt "NotificationLogic"
 msgid "No backups found"
 msgstr "Varukoopiaid ei leidu"
+
+#: ui/logic/notification.slint:41
+msgctxt "NotificationLogic"
+msgid "Game is not installed"
+msgstr ""
 
 #: ui/components/dropdown.slint:12
 msgctxt "Dropdown"
