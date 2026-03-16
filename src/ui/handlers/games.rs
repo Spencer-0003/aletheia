@@ -171,7 +171,11 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
 
                 let mut restored = 0;
                 for ui_game in selected_games.iter() {
-                    let game = installed_games.iter().find(|g| *g.name == *ui_game.name).unwrap();
+                    let Some(game) = installed_games.iter().find(|g| *g.name == *ui_game.name) else {
+                        log::error!("Failed to restore {}: Uninstalled while Aletheia was still open", ui_game.name);
+                        notification_logic.invoke_show_error("GAME_NOT_INSTALLED".into());
+                        continue;
+                    };
 
                     if let Err(e) = restore_game(game, &cfg) {
                         log::error!("Failed to restore {}: {e}", game.name);
