@@ -950,6 +950,10 @@ Resident Evil 7 Biohazard:
   files:
     windows:
       - "{SteamUserData}/418370/remote/win64_save/*"
+Resident Evil HD REMASTER:
+  files:
+    windows:
+      - "{GOGAppData}/58424498340553405/Storage/Shared/Files/*"
 Resident Evil Requiem:
   files:
     windows:
