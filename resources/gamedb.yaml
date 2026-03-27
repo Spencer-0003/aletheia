@@ -773,6 +773,10 @@ MiSide:
   files:
     windows:
       - "{LocalLow}/AIHASTO/MiSideFull/Save/*"
+MikuPan:
+  files:
+    windows:
+      - "{GameRoot}/BASLUS-20388zero0/*"
 Minecraft Dungeons:
   files:
     windows:
