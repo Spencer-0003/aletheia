@@ -902,6 +902,10 @@ Planet Coaster:
   files:
     windows:
       - "{Home}/Saved Games/Frontier Developments/Planet Coaster/*/Saves/*"
+Poker Night at the Inventory:
+  files:
+    windows:
+      - "{Documents}/Skunkape Games/Poker Night at the Inventory Remastered/*"
 Prototype:
   files:
     windows:
