@@ -84,7 +84,7 @@ BONEWORKS:
 Balatro:
   files:
     windows:
-      - "{AppData}/Balatro/*"
+      - "{AppData}/Balatro/*/*"
 "Batman - The Telltale Series":
   files:
     windows:
