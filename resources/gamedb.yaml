@@ -682,9 +682,9 @@ Life is Strange:
 Life is Strange 2:
   files:
     linux:
-      - "{XDGData}/feral-interactive/Life is Strange 2/SaveData/Dontnod/*/LIS2/Saved/SaveGames/*"
+      - "{XDGData}/feral-interactive/Life is Strange 2/SaveData/Dontnod/{SteamID64}/LIS2/Saved/SaveGames/*"
     windows:
-      - "{LocalAppData}/Dontnod/*/LIS2/Saved/SaveGames/*"
+      - "{LocalAppData}/Dontnod/{SteamID64}/LIS2/Saved/SaveGames/*"
 "Like a Dragon Gaiden: The Man Who Erased His Name":
   files:
     windows:
