@@ -547,6 +547,10 @@ Grand Theft Auto V Legacy:
   files:
     windows:
       - "{Documents}/Rockstar Games/GTA V/Profiles/*/*"
+HITMAN World of Assassination:
+  files:
+    windows:
+      - "{SteamUserData}/1659040/remote/*/*"
 Hades:
   files:
     windows:
