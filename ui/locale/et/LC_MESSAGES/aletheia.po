@@ -2,81 +2,59 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2026-03-16 01:20+0000\n"
-"PO-Revision-Date: 2026-01-29 10:17+0000\n"
+"PO-Revision-Date: 2026-04-09 16:09+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Estonian <https://hosted.weblate.org/projects/aletheia/ui/et/"
-">\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/aletheia/ui/et/>"
+"\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: ui/first_time_setup.slint:10
-#, fuzzy
-#| msgctxt "About"
-#| msgid "Aletheia is an open-source game save backup tool"
 msgctxt "FirstTimeSetup"
 msgid "Aletheia - First Time Setup"
-msgstr ""
-"Aletheia on avatud lähtekoodiga tarvik mängude salvestamise ja varundamise "
-"jaoks"
+msgstr "Aletheia - Esimene seadistamine"
 
 #: ui/first_time_setup.slint:40
 msgctxt "FirstTimeSetup"
 msgid "Welcome to Aletheia"
-msgstr ""
+msgstr "Tere tulemast, see on Aletheia"
 
 #: ui/first_time_setup.slint:49
 msgctxt "FirstTimeSetup"
 msgid "Let's get you set up. You can change these settings at any time."
 msgstr ""
+"Võtame ette esmase seadistamise. Kõige seda saad hiljem igal ajal muuta."
 
 #: ui/first_time_setup.slint:68
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Game Data Location"
 msgctxt "FirstTimeSetup"
 msgid "Backup Location"
-msgstr "Mänguandmete asukoht"
+msgstr "Varunduse asukoht"
 
 #: ui/first_time_setup.slint:76
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Choose where your games will be saved"
 msgctxt "FirstTimeSetup"
 msgid "Where your game saves will be stored on disk."
-msgstr "Määra asukoht oma mängude salvestamiseks"
+msgstr "Sinu mängude salvestamise asukoht andmekandjal."
 
 #: ui/first_time_setup.slint:108
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Browse"
 msgctxt "FirstTimeSetup"
 msgid "Browse"
 msgstr "Sirvi"
 
 #: ui/first_time_setup.slint:123
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Steam Account"
 msgctxt "FirstTimeSetup"
 msgid "Steam Account"
 msgstr "Steami kasutajakonto"
 
 #: ui/first_time_setup.slint:131
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Only affects games that save in the Steam userdata directory"
 msgctxt "FirstTimeSetup"
 msgid "Used to locate saves stored in Steam's userdata directory."
-msgstr "Mõjutab vaid mänge, mis salvestavad andmeid Steami kasutajakausta"
+msgstr "Mõeldud salvestamiste tuvastamiseks Steami kasutajaprofiilist."
 
 #: ui/first_time_setup.slint:140
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Select an account…"
 msgctxt "FirstTimeSetup"
 msgid "Select an account…"
 msgstr "Vali kasutajakonto…"
@@ -84,7 +62,7 @@ msgstr "Vali kasutajakonto…"
 #: ui/first_time_setup.slint:149
 msgctxt "FirstTimeSetup"
 msgid "Continue"
-msgstr ""
+msgstr "Jätka"
 
 #: ui/updater.slint:29
 msgctxt "Updater"
@@ -294,47 +272,36 @@ msgid "About"
 msgstr "Rakenduse teave"
 
 #: ui/restore_dialog.slint:9
-#, fuzzy
-#| msgctxt "About"
-#| msgid "Aletheia is an open-source game save backup tool"
 msgctxt "RestoreDialog"
 msgid "Aletheia - Restore backup"
-msgstr ""
-"Aletheia on avatud lähtekoodiga tarvik mängude salvestamise ja varundamise "
-"jaoks"
+msgstr "Aletheia - varukoopiast taastamine"
 
 #: ui/restore_dialog.slint:26
-#, fuzzy
-#| msgctxt "Games"
-#| msgid "Restore"
 msgctxt "RestoreDialog"
 msgid "Restore Backup?"
-msgstr "Taastamine"
+msgstr "Kas taastad varukoopiast?"
 
 #: ui/restore_dialog.slint:35
 msgctxt "RestoreDialog"
 msgid "Are you sure you want to restore {}?"
-msgstr ""
+msgstr "Kas oled kindel, et soovid „{}“ taastada?"
 
 #: ui/restore_dialog.slint:42
 msgctxt "RestoreDialog"
 msgid "This will overwrite any existing save data."
-msgstr ""
+msgstr "Sellega kirjutatakse kõik olemasolevate salvestamiste andmed üle."
 
 #: ui/restore_dialog.slint:74
 msgctxt "RestoreDialog"
 msgid "Cancel"
-msgstr ""
+msgstr "Katkesta"
 
 #: ui/restore_dialog.slint:74
 msgctxt "RestoreDialog"
 msgid "Close"
-msgstr ""
+msgstr "Sulge"
 
 #: ui/restore_dialog.slint:82
-#, fuzzy
-#| msgctxt "Games"
-#| msgid "Restore"
 msgctxt "RestoreDialog"
 msgid "Restore"
 msgstr "Taastamine"
@@ -342,36 +309,24 @@ msgstr "Taastamine"
 #: ui/logic/restore.slint:11
 msgctxt "RestoreLogic"
 msgid "You do not have {} installed, install it first and try again."
-msgstr ""
+msgstr "„{}“ pole sul paigaldatud. Esmalt paigalda ta ja siis proovi uuesti."
 
 #: ui/logic/restore.slint:12
-#, fuzzy
-#| msgctxt "NotificationLogic"
-#| msgid "Archive corrupted"
 msgctxt "RestoreLogic"
 msgid "Archive corrupted"
 msgstr "Arhiivifail on vigane"
 
 #: ui/logic/restore.slint:13
-#, fuzzy
-#| msgctxt "NotificationLogic"
-#| msgid "Invalid archive"
 msgctxt "RestoreLogic"
 msgid "Invalid archive"
 msgstr "Vigane arhiivifail"
 
 #: ui/logic/restore.slint:14
-#, fuzzy
-#| msgctxt "NotificationLogic"
-#| msgid "I/O error"
 msgctxt "RestoreLogic"
 msgid "I/O error"
 msgstr "Sisend- või väljundviga"
 
 #: ui/logic/restore.slint:15
-#, fuzzy
-#| msgctxt "NotificationLogic"
-#| msgid "Unsupported archive version"
 msgctxt "RestoreLogic"
 msgid "Unsupported archive version"
 msgstr "Arhiivifaili versioon pole toetatud"
@@ -434,7 +389,7 @@ msgstr "Varukoopiaid ei leidu"
 #: ui/logic/notification.slint:41
 msgctxt "NotificationLogic"
 msgid "Game is not installed"
-msgstr ""
+msgstr "Mäng pole paigaldatud"
 
 #: ui/components/dropdown.slint:12
 msgctxt "Dropdown"
