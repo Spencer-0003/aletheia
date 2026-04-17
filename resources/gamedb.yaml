@@ -926,6 +926,10 @@ RESIDENT EVIL RESISTANCE:
   files:
     windows:
       - "{SteamUserData}/952070/remote/win64_save/*"
+RV There Yet?:
+  files:
+    windows:
+      - "{LocalAppData}/Ride/Saved/SaveGames/{SteamID64}/*"
 Rabbit and Steel:
   files:
     windows:
