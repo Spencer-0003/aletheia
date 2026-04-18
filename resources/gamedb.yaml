@@ -547,6 +547,10 @@ Grand Theft Auto V Legacy:
   files:
     windows:
       - "{Documents}/Rockstar Games/GTA V/Profiles/*/*"
+Ground Zero:
+  files:
+    windows:
+      - "{LocalAppData}/GroundZero/Saved/SaveGames/*.sav"
 HITMAN World of Assassination:
   files:
     windows:
