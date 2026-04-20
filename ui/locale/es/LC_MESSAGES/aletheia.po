@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-03-16 01:20+0000\n"
+"POT-Creation-Date: 2026-04-20 17:46+0000\n"
 "PO-Revision-Date: 2026-01-29 10:17+0000\n"
 "Last-Translator: Laura Quintana Marín <2001lauraquintana@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/aletheia/ui/es/"
@@ -277,11 +277,6 @@ msgctxt "About"
 msgid "View License"
 msgstr "Ver licencia"
 
-#: ui/screens/about.slint:98
-msgctxt "About"
-msgid "Support the Project"
-msgstr "Apoya al proyecto"
-
 #: ui/app.slint:49
 msgctxt "App"
 msgid "Games"
@@ -454,3 +449,7 @@ msgstr "Opciones desplegables"
 msgctxt "Dropdown"
 msgid "Selected"
 msgstr "Seleccionado"
+
+#~ msgctxt "About"
+#~ msgid "Support the Project"
+#~ msgstr "Apoya al proyecto"
