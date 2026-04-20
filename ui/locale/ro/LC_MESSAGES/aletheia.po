@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2026-03-16 01:20+0000\n"
-"PO-Revision-Date: 2026-04-20 12:36+0000\n"
+"PO-Revision-Date: 2026-04-20 17:48+0000\n"
 "Last-Translator: Luciana Waldbaur <luciana.waldbaur@gmail.com>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/aletheia/ui/ro/>"
 "\n"
@@ -37,12 +37,12 @@ msgstr "Backup locație"
 #: ui/first_time_setup.slint:76
 msgctxt "FirstTimeSetup"
 msgid "Where your game saves will be stored on disk."
-msgstr ""
+msgstr "Unde versiunile salvate ale jocurilor tale vor fi stocate pe disc."
 
 #: ui/first_time_setup.slint:108
 msgctxt "FirstTimeSetup"
 msgid "Browse"
-msgstr "Descoperă"
+msgstr "Caută"
 
 #: ui/first_time_setup.slint:123
 msgctxt "FirstTimeSetup"
@@ -53,8 +53,8 @@ msgstr "Cont Steam"
 msgctxt "FirstTimeSetup"
 msgid "Used to locate saves stored in Steam's userdata directory."
 msgstr ""
-"Utilizat pentru localizarea elementelor salvate stocate în registrul Steam "
-"al datelor utilizatorilor."
+"Utilizat pentru localizarea salvărilor stocate în registrul Steam de date "
+"ale utilizatorilor."
 
 #: ui/first_time_setup.slint:140
 msgctxt "FirstTimeSetup"
@@ -125,76 +125,80 @@ msgstr "Alege contul de Steam pentru jocurile tale"
 msgctxt "Settings"
 msgid "Only affects games that save in the Steam userdata directory"
 msgstr ""
+"Se referă doar la jocurile care sunt salvate în registrul Steam de date ale "
+"utilizatorilor"
 
 #: ui/screens/settings.slint:157
+#, fuzzy
 msgctxt "Settings"
 msgid "Select an account…"
-msgstr ""
+msgstr "Selectează un cont…"
 
 #: ui/screens/settings.slint:157
 msgctxt "Settings"
 msgid "No accounts found…"
-msgstr ""
+msgstr "Nu s-au găsit conturi…"
 
 #: ui/screens/settings.slint:186
+#, fuzzy
 msgctxt "Settings"
 msgid "GameDB"
-msgstr ""
+msgstr "GameDB"
 
 #: ui/screens/settings.slint:200
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
-msgstr ""
+msgstr "Descarcă cea mai nouă versiune a GameDB"
 
 #: ui/screens/settings.slint:209
 msgctxt "Settings"
 msgid "Update GameDB"
-msgstr ""
+msgstr "Actualizează GameDB"
 
 #: ui/screens/settings.slint:236
 msgctxt "Settings"
 msgid "Updates"
-msgstr ""
+msgstr "Actualizări"
 
 #: ui/screens/settings.slint:250
 msgctxt "Settings"
 msgid "Configure automatic update checking"
-msgstr ""
+msgstr "Configurează verificarea automată a apariției actualizărilor"
 
 #: ui/screens/settings.slint:261
 msgctxt "Settings"
 msgid "Check for updates automatically"
-msgstr ""
+msgstr "Verifică automat dacă există actualizări noi"
 
 #: ui/screens/settings.slint:279
 msgctxt "Settings"
 msgid "Save"
-msgstr ""
+msgstr "Salvează"
 
 #: ui/screens/games.slint:31
 msgctxt "Games"
 msgid "No games found"
-msgstr ""
+msgstr "Nu s-au găsit jocuri"
 
 #: ui/screens/games.slint:45
 msgctxt "Games"
 msgid "Refresh"
-msgstr ""
+msgstr "Reîncarcă"
 
 #: ui/screens/games.slint:62
 msgctxt "Games"
 msgid "Search games…"
-msgstr ""
+msgstr "Caută jocuri…"
 
 #: ui/screens/games.slint:68
 msgctxt "Games"
 msgid "Selecting {} / {} games"
-msgstr ""
+msgstr "{} / {} jocuri selectate"
 
 #: ui/screens/games.slint:82
 msgctxt "Games"
 msgid "Backup"
-msgstr ""
+msgstr "Backup"
 
 #: ui/screens/games.slint:90
 msgctxt "Games"
@@ -204,122 +208,124 @@ msgstr ""
 #: ui/screens/games.slint:99
 msgctxt "Games"
 msgid "Clear Selection"
-msgstr ""
+msgstr "Șterge selecția"
 
 #: ui/screens/games.slint:99
 msgctxt "Games"
 msgid "Select All"
-msgstr ""
+msgstr "Selectează tot"
 
 #: ui/screens/games.slint:100
 msgctxt "Games"
 msgid "{} Filtered"
-msgstr ""
+msgstr "{} filtrări"
 
 #: ui/screens/about.slint:36
 msgctxt "About"
 msgid "Application Info"
-msgstr ""
+msgstr "Informații despre aplicație"
 
 #: ui/screens/about.slint:50
 msgctxt "About"
 msgid "Aletheia is an open-source game save backup tool"
 msgstr ""
+"Aletheia este un instrument open-source pentru backup-ul progresului din "
+"jocuri."
 
 #: ui/screens/about.slint:57
 msgctxt "About"
 msgid "Version: {}"
-msgstr ""
+msgstr "Versiune: {}"
 
 #: ui/screens/about.slint:64
 msgctxt "About"
 msgid "License: {}"
-msgstr ""
+msgstr "Licență: {}"
 
 #: ui/screens/about.slint:71
 msgctxt "About"
 msgid "Logo by: {}"
-msgstr ""
+msgstr "Autor logo: {}"
 
 #: ui/screens/about.slint:84
 msgctxt "About"
 msgid "View Source Code"
-msgstr ""
+msgstr "Vezi codul sursă"
 
 #: ui/screens/about.slint:91
 msgctxt "About"
 msgid "View License"
-msgstr ""
+msgstr "Vezi licența"
 
 #: ui/screens/about.slint:98
 msgctxt "About"
 msgid "Support the Project"
-msgstr ""
+msgstr "Sprijină proiectul"
 
 #: ui/app.slint:49
 msgctxt "App"
 msgid "Games"
-msgstr ""
+msgstr "Jocuri"
 
 #: ui/app.slint:62
 msgctxt "App"
 msgid "Settings"
-msgstr ""
+msgstr "Setări"
 
 #: ui/app.slint:69
 msgctxt "App"
 msgid "About"
-msgstr ""
+msgstr "Despre"
 
 #: ui/restore_dialog.slint:9
 msgctxt "RestoreDialog"
 msgid "Aletheia - Restore backup"
-msgstr ""
+msgstr "Aletheia: restabilește un backup"
 
 #: ui/restore_dialog.slint:26
 msgctxt "RestoreDialog"
 msgid "Restore Backup?"
-msgstr ""
+msgstr "Restabilești un backup?"
 
 #: ui/restore_dialog.slint:35
 msgctxt "RestoreDialog"
 msgid "Are you sure you want to restore {}?"
-msgstr ""
+msgstr "Ești sigur/ă că vrei să restabilești {}?"
 
 #: ui/restore_dialog.slint:42
 msgctxt "RestoreDialog"
 msgid "This will overwrite any existing save data."
-msgstr ""
+msgstr "Vor fi suprascrise toate datele existente salvate."
 
 #: ui/restore_dialog.slint:74
 msgctxt "RestoreDialog"
 msgid "Cancel"
-msgstr ""
+msgstr "Anulează"
 
 #: ui/restore_dialog.slint:74
 msgctxt "RestoreDialog"
 msgid "Close"
-msgstr ""
+msgstr "Închide"
 
 #: ui/restore_dialog.slint:82
 msgctxt "RestoreDialog"
 msgid "Restore"
-msgstr ""
+msgstr "Restabilește"
 
 #: ui/logic/restore.slint:11
 msgctxt "RestoreLogic"
 msgid "You do not have {} installed, install it first and try again."
-msgstr ""
+msgstr "Nu ai {} instalat; instalează mai întâi și încearcă din nou."
 
 #: ui/logic/restore.slint:12
 msgctxt "RestoreLogic"
 msgid "Archive corrupted"
-msgstr ""
+msgstr "Arhivă coruptă"
 
 #: ui/logic/restore.slint:13
 msgctxt "RestoreLogic"
 msgid "Invalid archive"
-msgstr ""
+msgstr "Arhivă nevalidă"
 
 #: ui/logic/restore.slint:14
 msgctxt "RestoreLogic"
