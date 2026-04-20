@@ -2,35 +2,37 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2026-03-16 01:20+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-04-20 12:36+0000\n"
+"Last-Translator: Luciana Waldbaur <luciana.waldbaur@gmail.com>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/aletheia/ui/ro/>"
+"\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 #: ui/first_time_setup.slint:10
 msgctxt "FirstTimeSetup"
 msgid "Aletheia - First Time Setup"
-msgstr ""
+msgstr "Aletheia: configurare inițială"
 
 #: ui/first_time_setup.slint:40
 msgctxt "FirstTimeSetup"
 msgid "Welcome to Aletheia"
-msgstr ""
+msgstr "Bun-venit la Aletheia"
 
 #: ui/first_time_setup.slint:49
 msgctxt "FirstTimeSetup"
 msgid "Let's get you set up. You can change these settings at any time."
-msgstr ""
+msgstr "Să începem! Poți schimba setările oricând."
 
 #: ui/first_time_setup.slint:68
 msgctxt "FirstTimeSetup"
 msgid "Backup Location"
-msgstr ""
+msgstr "Backup locație"
 
 #: ui/first_time_setup.slint:76
 msgctxt "FirstTimeSetup"
@@ -40,82 +42,84 @@ msgstr ""
 #: ui/first_time_setup.slint:108
 msgctxt "FirstTimeSetup"
 msgid "Browse"
-msgstr ""
+msgstr "Descoperă"
 
 #: ui/first_time_setup.slint:123
 msgctxt "FirstTimeSetup"
 msgid "Steam Account"
-msgstr ""
+msgstr "Cont Steam"
 
 #: ui/first_time_setup.slint:131
 msgctxt "FirstTimeSetup"
 msgid "Used to locate saves stored in Steam's userdata directory."
 msgstr ""
+"Utilizat pentru localizarea elementelor salvate stocate în registrul Steam "
+"al datelor utilizatorilor."
 
 #: ui/first_time_setup.slint:140
 msgctxt "FirstTimeSetup"
 msgid "Select an account…"
-msgstr ""
+msgstr "Selectează un cont…"
 
 #: ui/first_time_setup.slint:149
 msgctxt "FirstTimeSetup"
 msgid "Continue"
-msgstr ""
+msgstr "Continuă"
 
 #: ui/updater.slint:29
 msgctxt "Updater"
 msgid "Update Available"
-msgstr ""
+msgstr "Actualizare disponibilă"
 
 #: ui/updater.slint:52
 msgctxt "Updater"
 msgid "Current"
-msgstr ""
+msgstr "Actual"
 
 #: ui/updater.slint:82
 msgctxt "Updater"
 msgid "New"
-msgstr ""
+msgstr "Nou"
 
 #: ui/updater.slint:106
 msgctxt "Updater"
 msgid "What's New"
-msgstr ""
+msgstr "Ce e nou"
 
 #: ui/updater.slint:143
 msgctxt "Updater"
 msgid "Skip"
-msgstr ""
+msgstr "Sari peste"
 
 #: ui/updater.slint:150
 msgctxt "Updater"
 msgid "Download"
-msgstr ""
+msgstr "Descarcă"
 
 #: ui/screens/settings.slint:60
 msgctxt "Settings"
 msgid "Game Data Location"
-msgstr ""
+msgstr "Locație date joc"
 
 #: ui/screens/settings.slint:74
 msgctxt "Settings"
 msgid "Choose where your games will be saved"
-msgstr ""
+msgstr "Alege unde vor fi salvate jocurile tale"
 
 #: ui/screens/settings.slint:92
 msgctxt "Settings"
 msgid "Browse"
-msgstr ""
+msgstr "Caută"
 
 #: ui/screens/settings.slint:121
 msgctxt "Settings"
 msgid "Steam Account"
-msgstr ""
+msgstr "Cont Steam"
 
 #: ui/screens/settings.slint:138
 msgctxt "Settings"
 msgid "Choose the Steam account for your games"
-msgstr ""
+msgstr "Alege contul de Steam pentru jocurile tale"
 
 #: ui/screens/settings.slint:145
 msgctxt "Settings"
