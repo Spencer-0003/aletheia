@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-03-16 01:20+0000\n"
+"POT-Creation-Date: 2026-04-20 17:46+0000\n"
 "PO-Revision-Date: 2025-10-24 15:38+0000\n"
 "Last-Translator: Feike Donia <feikedonia@proton.me>\n"
 "Language-Team: Afrikaans <https://hosted.weblate.org/projects/aletheia/ui/af/"
@@ -266,11 +266,6 @@ msgstr ""
 #: ui/screens/about.slint:91
 msgctxt "About"
 msgid "View License"
-msgstr ""
-
-#: ui/screens/about.slint:98
-msgctxt "About"
-msgid "Support the Project"
 msgstr ""
 
 #: ui/app.slint:49

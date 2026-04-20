@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-03-16 01:20+0000\n"
+"POT-Creation-Date: 2026-04-20 17:46+0000\n"
 "PO-Revision-Date: 2025-09-25 22:13+0000\n"
 "Last-Translator: clanps <tylertexasgamingchannel@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/aletheia/ui/ja/"
@@ -272,11 +272,6 @@ msgctxt "About"
 msgid "View License"
 msgstr "免許を表示"
 
-#: ui/screens/about.slint:98
-msgctxt "About"
-msgid "Support the Project"
-msgstr "事業を支援おねがいします"
-
 #: ui/app.slint:49
 msgctxt "App"
 msgid "Games"
@@ -441,3 +436,7 @@ msgstr ""
 msgctxt "Dropdown"
 msgid "Selected"
 msgstr "選択を全て"
+
+#~ msgctxt "About"
+#~ msgid "Support the Project"
+#~ msgstr "事業を支援おねがいします"
