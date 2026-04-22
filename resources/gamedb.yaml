@@ -243,7 +243,7 @@ DRAGON BALL XENOVERSE 2:
 "DRAGON BALL: Sparking! ZERO":
   files:
     windows:
-      - "{GameRoot}/{SteamID64}/*"
+      - "{GameRoot}/SaveGame/{SteamID64}/*"
 "Danganronpa 2: Goodbye Despair":
   files:
     linux:
