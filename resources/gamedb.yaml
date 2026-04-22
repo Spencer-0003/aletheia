@@ -240,6 +240,10 @@ DRAGON BALL XENOVERSE 2:
   files:
     windows:
       - "{SteamUserData}/851850/remote/*"
+"DRAGON BALL: Sparking! ZERO":
+  files:
+    windows:
+      - "{GameRoot}/{SteamID64}/*"
 "Danganronpa 2: Goodbye Despair":
   files:
     linux:
