@@ -860,6 +860,10 @@ NEKOPARA Vol. 4:
     windows:
       - "{AppData}/NEKO WORKs/nekopara4/*"
       - "{Documents}/NEKO WORKs/nekopara_vol4/*"
+Need for Speed Unbound:
+  files:
+    windows:
+      - "{Documents}/Need For Speed(TM) Unbound/SaveGame/*/*"
 New Tales from the Borderlands:
   files:
     windows:
