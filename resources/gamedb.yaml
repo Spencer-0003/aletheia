@@ -98,6 +98,10 @@ Balatro:
   files:
     windows:
       - "{Documents}/Telltale Games/Batman The Enemy Within - The Telltale Series/*"
+Battlefield 4:
+  files:
+    windows:
+      - "{Documents}/Battlefield 4/settings/*"
 Bayonetta:
   files:
     windows:
