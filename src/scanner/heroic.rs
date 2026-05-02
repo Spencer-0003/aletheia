@@ -40,6 +40,24 @@ struct HeroicGOGManifest {
     installed: Vec<HeroicGOGGame>
 }
 
+#[derive(Deserialize)]
+struct HeroicGamesSideloadLibrary {
+    games: Vec<HeroicSideloadGame>
+}
+
+#[derive(Deserialize)]
+struct HeroicSideloadGame {
+    app_name: String,
+    title: String,
+    install: HeroicSideloadInstall,
+    folder_name: PathBuf
+}
+
+#[derive(Deserialize)]
+struct HeroicSideloadInstall {
+    platform: String
+}
+
 impl HeroicScanner {
     fn get_game_name(heroic_path: &Path, game: &HeroicGOGGame) -> Option<String> {
         let manifest_path = heroic_path.join("gogdlConfig/heroic_gogdl/manifests").join(&game.app_id);
@@ -60,6 +78,25 @@ impl HeroicScanner {
 
         #[cfg(any(windows, target_os = "macos"))]
         None
+    }
+
+    #[cfg(unix)]
+    fn get_wine_prefix(heroic_path: &Path, app_name: &str, platform: &str) -> Option<PathBuf> {
+        if platform != "Windows" && platform != "windows" {
+            // GOG uses "windows" while custom games use "Windows" for some reason
+            return None;
+        }
+
+        let game_config = heroic_path.join("GamesConfig").join(app_name).with_extension("json");
+        if !game_config.exists() {
+            return None;
+        }
+
+        let Ok(game_config) = serde_json::from_reader::<File, serde_json::Value>(File::open(game_config).unwrap()) else {
+            return None;
+        };
+
+        game_config.get(app_name).and_then(|c| c.get("winePrefix")).and_then(|p| p.as_str()).map(Into::into)
     }
 }
 
@@ -104,27 +141,35 @@ impl Scanner for HeroicScanner {
             };
 
             #[cfg(unix)]
-            let prefix = if game.platform == "windows" {
-                let game_config = heroic_path.join("GamesConfig").join(&game.app_id).with_extension("json");
-
-                if !game_config.exists() {
-                    continue;
-                }
-
-                let Ok(game_config) = serde_json::from_reader::<File, serde_json::Value>(File::open(game_config).unwrap()) else {
-                    continue;
-                };
-
-                game_config.get(&game.app_id).and_then(|c| c.get("winePrefix")).and_then(|p| p.as_str()).map(Into::into)
-            } else {
-                None
-            };
-
-            #[cfg(unix)]
-            games.push(Game { name: game_name, installation_dir: Some(game.install_path), prefix, source: "Heroic".into() });
+            games.push(Game {
+                name: game_name,
+                installation_dir: Some(game.install_path),
+                prefix: Self::get_wine_prefix(&heroic_path, &game.app_id, &game.platform),
+                source: "Heroic".into()
+            });
 
             #[cfg(windows)]
             games.push(Game { name: game_name, installation_dir: Some(game.install_path), source: "Heroic".into() });
+        }
+
+        let Ok(sideload_library) = serde_json::from_reader::<File, HeroicGamesSideloadLibrary>(
+            File::open(heroic_path.join("sideload_apps/library.json")).unwrap()
+        ) else {
+            log::error!("Failed to parse sideloaad library.");
+            return games;
+        };
+
+        for game in sideload_library.games {
+            #[cfg(unix)]
+            games.push(Game {
+                name: game.title,
+                installation_dir: Some(game.folder_name),
+                prefix: Self::get_wine_prefix(&heroic_path, &game.app_name, &game.install.platform),
+                source: "Heroic".into()
+            });
+
+            #[cfg(windows)]
+            games.push(Game { name: game.title, installation_dir: Some(game.folder_name), source: "Heroic".into() });
         }
 
         games
