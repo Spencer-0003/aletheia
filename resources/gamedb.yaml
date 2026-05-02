@@ -37,6 +37,10 @@ Alan Wake 2:
   files:
     windows:
       - "{LocalAppData}/Remedy/AlanWake2/*"
+"Alice: Madness Returns":
+  files:
+    windows:
+      - "{Documents}/My Games/Alice Madness Returns/AliceGame/CheckPoint/**/*"
 "Alien: Isolation":
   files:
     linux:
