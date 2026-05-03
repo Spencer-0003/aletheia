@@ -1209,6 +1209,10 @@ Terraria:
     windows:
       - "{Documents}/My Games/Terraria/Players/*"
       - "{Documents}/My Games/Terraria/Worlds/*"
+The Awesome Adventures of Captain Spirit:
+  files:
+    windows:
+      - "{LocalAppData}/Dontnod/{SteamID64}/CaptainSpirit/Saved/SaveGames/*"
 The Callisto Protocol:
   files:
     windows:
