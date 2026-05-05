@@ -1030,6 +1030,10 @@ SILENT HILL f:
     windows:
       - "{LocalAppData}/Shf/Saved/SaveGames/76561197960265729/*.sav" # GOG variant
       - "{LocalAppData}/SHf/Saved/SaveGames/{SteamID64}/*.sav"
+SOULCALIBUR VI:
+  files:
+    windows:
+      - "{LocalAppData}/SoulcaliburVI/Saved/SaveGames/{SteamID64}/**/*"
 SUPERHOT:
   files:
     linux:
