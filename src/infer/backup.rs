@@ -1,10 +1,10 @@
-// SPDX-FileCopyrightText: 2025 Spencer
+// SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
 use crate::config::Config;
 use crate::gamedb;
 use crate::infer::Launcher;
-use crate::infer::launchers::Heroic;
+use crate::infer::launchers::{Heroic, Steam};
 use crate::operations::backup_game;
 
 #[cfg(all(unix, not(target_os = "macos")))]
@@ -15,6 +15,7 @@ pub fn backup(launcher: &str, config: &Config) {
         "heroic" => Heroic::get_game(),
         #[cfg(all(unix, not(target_os = "macos")))]
         "lutris" => Lutris::get_game(),
+        "steam" => Steam::get_game(),
         _ => {
             log::warn!("Backup was ran with infer using an unsupported launcher.");
             return;
