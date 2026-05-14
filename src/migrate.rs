@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: 2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
-// TODO: Remove module after releasing 1.3
+// TODO: Remove module after releasing 2.0
 
 use crate::archive::ArchiveWriter;
 use crate::config::Config;
