@@ -16,7 +16,7 @@ pub fn restore(launcher: &str, config: &Config) {
         "lutris" => Lutris::get_game(),
         "steam" => Steam::get_game(),
         _ => {
-            log::warn!("Backup was ran with infer using an unsupported launcher.");
+            log::warn!("Restore was ran with infer using an unsupported launcher.");
             return;
         }
     };
