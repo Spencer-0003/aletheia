@@ -3,7 +3,7 @@
 
 use crate::config::Config;
 use crate::infer::Launcher;
-use crate::infer::launchers::Heroic;
+use crate::infer::launchers::{Heroic, Steam};
 use crate::operations::restore_game;
 
 #[cfg(all(unix, not(target_os = "macos")))]
@@ -14,6 +14,7 @@ pub fn restore(launcher: &str, config: &Config) {
         "heroic" => Heroic::get_game(),
         #[cfg(all(unix, not(target_os = "macos")))]
         "lutris" => Lutris::get_game(),
+        "steam" => Steam::get_game(),
         _ => {
             log::warn!("Backup was ran with infer using an unsupported launcher.");
             return;
