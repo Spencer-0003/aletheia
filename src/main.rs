@@ -74,7 +74,7 @@ fn main() {
             "backup" => commands::Backup::run(args, &cfg),
             "restore" => commands::Restore::run(args, &cfg),
             #[cfg(all(feature = "updater", not(debug_assertions)))]
-            "update" => commands::Update::run(args, &config),
+            "update" => commands::Update::run(args, &cfg),
             "update_gamedb" => commands::UpdateGameDb::run(args, &cfg),
             "update_custom_gamedbs" => commands::UpdateCustom::run(args, &cfg),
             "verify" => commands::Verify::run(args, &cfg),
