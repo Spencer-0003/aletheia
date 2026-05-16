@@ -1,5 +1,6 @@
 // SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
+
 use super::{Game, Scanner};
 use serde::Deserialize;
 use std::fs::File;
@@ -47,12 +48,15 @@ struct HeroicGamesSideloadLibrary {
 
 #[derive(Deserialize)]
 struct HeroicSideloadGame {
+    #[cfg(unix)]
     app_name: String,
     title: String,
+    #[cfg(unix)]
     install: HeroicSideloadInstall,
     folder_name: PathBuf
 }
 
+#[cfg(unix)]
 #[derive(Deserialize)]
 struct HeroicSideloadInstall {
     platform: String
@@ -152,8 +156,13 @@ impl Scanner for HeroicScanner {
             games.push(Game { name: game_name, installation_dir: Some(game.install_path), source: "Heroic".into() });
         }
 
+        let sideload_path = heroic_path.join("sideload_apps/library.json");
+        if !sideload_path.exists() {
+            return games;
+        }
+
         let Ok(sideload_library) = serde_json::from_reader::<File, HeroicGamesSideloadLibrary>(
-            File::open(heroic_path.join("sideload_apps/library.json")).unwrap()
+            File::open(&sideload_path).unwrap()
         ) else {
             log::error!("Failed to parse sideloaad library.");
             return games;
