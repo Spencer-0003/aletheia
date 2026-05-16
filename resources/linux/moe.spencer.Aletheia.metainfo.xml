@@ -47,7 +47,7 @@ SPDX-License-Identifier: CC0-1.0
     <release version="2.0.1" date="2026-05-16">
       <url type="details">https://github.com/Spencer-0003/aletheia/releases/tag/2.0.1</url>
       <description>
-        <p>Heroic: Fix crash when no games have been sideloaded.<p>
+        <p>Heroic: Fix crash when no games have been sideloaded.</p>
       </description>
     </release>
     <release version="2.0.0" date="2026-05-16">
