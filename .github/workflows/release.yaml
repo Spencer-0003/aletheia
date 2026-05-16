@@ -185,7 +185,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Install cargo-about
-        run: cargo install cargo-about
+        run: cargo install --locked --features cli cargo-about
 
       - name: Checkout code
         uses: actions/checkout@v6
