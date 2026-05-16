@@ -44,6 +44,106 @@ SPDX-License-Identifier: CC0-1.0
   </screenshots>
 
   <releases>
+    <release version="2.0.0" date="2026-05-16">
+      <url type="details">https://github.com/Spencer-0003/aletheia/releases/tag/2.0.0</url>
+      <description>
+        <p>GameDB: Add Obscure 2.</p>
+        <p>GameDB: Add Final Exam.</p>
+        <p>Translations: Add Catalan.</p>
+        <p>GameDB: Add sm64coopdx.</p>
+        <p>MetaInfo: Add translate and contribute links and mark as desktop only.</p>
+        <p>GameDB: Fix Yu-Gi-Oh! Legacy of the Duelist: Link Evolution.</p>
+        <p>GameDB: Add Rise of the Tomb Raider's GOG save location.</p>
+        <p>Operations: Use custom file archive instead of copying files.</p>
+        <p>GameDB: Add Hytale.</p>
+        <p>Dirs: Fix home expansion for Linux native games.</p>
+        <p>Lutris: Fix Flatpak game installation directories.</p>
+        <p>Dirs: Fix home shrinkage for Linux native games.</p>
+        <p>GameDB: Add IW7-Mod.</p>
+        <p>Scanner: Reduce allocations</p>
+        <p>Translations: Fix mistakes in Ukrainian translations.</p>
+        <p>Commands: Allow restore to use archives.</p>
+        <p>Linux: Associate .aletheia files.</p>
+        <p>MacOS: Update copyright year.</p>
+        <p>MacOS: Associate .aletheia files.</p>
+        <p>UI: Optimize game deselection.</p>
+        <p>Build: Set codegen units to 1.</p>
+        <p>GameDB: Update SILENT HILL 2 to use SteamID64.</p>
+        <p>GameDB: Add SILENT HILL 2 GOG offline variant save location.</p>
+        <p>GameDB: Add SILENT HILL f GOG variant save location.</p>
+        <p>GameDB: Add SILENT HILL 2 GOG variant save location.</p>
+        <p>UI: Improve dropdown visuals.</p>
+        <p>UI: Fix screen readers detecting empty dropdowns as expandable.</p>
+        <p>Translations: Add Spanish.</p>
+        <p>Translations: Fix mistake in Estonian translations.</p>
+        <p>UI: Add restore dialog.</p>
+        <p>Translations: Add some missing french translations.</p>
+        <p>GameDB: Add Iron Lung.</p>
+        <p>GameDB: Add KANADE.</p>
+        <p>GameDB: Add DATE A LIVE: Rio Reincarnation.</p>
+        <p>GameDB: Fix both Fatal Frame entries.</p>
+        <p>Operations: Fix games containing slashes.</p>
+        <p>GameDB: Add LOLLIPOP CHAINSAW RePOP.</p>
+        <p>Translations: Improve German translations.</p>
+        <p>UI: Implement first time setup.</p>
+        <p>GameDB: Add FULL METAL SCHOOLGIRL.</p>
+        <p>Operations: Add support for SteamID3.</p>
+        <p>GameDB: Fix Tales of Arise.</p>
+        <p>GameDB: Add Wolfenstein II: The New Colossus.</p>
+        <p>GameDB: Add Wolfenstein: Youngblood.</p>
+        <p>Dirs: Fix path compression on Linux for Steam games installed on a different drive.</p>
+        <p>GameDB: Add Hades.</p>
+        <p>GameDB: Add Hades II.</p>
+        <p>GameDB: Add Stories Untold.</p>
+        <p>GameDB: Add Borderlands 4.</p>
+        <p>GameDB: Add Call of Duty: Infinite Warfare.</p>
+        <p>GameDB: Add House Party.</p>
+        <p>GameDB: Add Summer's Gone - Season 1.</p>
+        <p>GameDB: Add Leap of Love.</p>
+        <p>GameDB: Add Being a DIK - Season 1.</p>
+        <p>GameDB: Add Lust Theory - Season 1.</p>
+        <p>GameDB: Add Treasure of Nadia.</p>
+        <p>GameDB: Add Fetish Locator Week One.</p>
+        <p>GameDB: Add Helping the Hotties.</p>
+        <p>GameDB: Add Resident Evil Requiem.</p>
+        <p>GAMEDB: Add PAYDAY 2.</p>
+        <p>GameDB: Reduce allocations.</p>
+        <p>GameDB: Add Fight'N Rage.</p>
+        <p>GameDB: Add Sunrider: Mask of Arcadius.</p>
+        <p>GameDB: Add Corpse Party (2021).</p>
+        <p>GameDB: Add Sleeping Dogs: Definitive Edition.</p>
+        <p>GameDB: Add Shenmue I &amp; II.</p>
+        <p>GameDB: Add FATAL FRAME II: Crimson Butterfly REMAKE DEMO.</p>
+        <p>GameDB: Add LEGO MARVEL Super Heroes 2.</p>
+        <p>GameDB: Add Dead Space 3.</p>
+        <p>Commands: Add verify.</p>
+        <p>GameDB: Add FATAL FRAME II: Crimson Butterfly REMAKE.</p>
+        <p>GameDB: Add Fallout 4: Game of the Year Edition.</p>
+        <p>Restore: Fix crash if user uninstalls the game while Aletheia is open.</p>
+        <p>GameDB: Add Resident Evil HD REMASTER.</p>
+        <p>GameDB: Add MikuPan.</p>
+        <p>GameDB: Make Life is Strange 2 use SteamID64.</p>
+        <p>GameDB: Fix Balatro.</p>
+        <p>GameDB: Add Poker Night at the Inventory.</p>
+        <p>GameDB: Add HITMAN: World of Assassination.</p>
+        <p>GameDB: Add RESIDENT EVIL RESISTANCE.</p>
+        <p>Dependencies: Bump steamlocate.</p>
+        <p>Translations: Improve Estonian.</p>
+        <p>GameDB: Add RV There Yet?</p>
+        <p>GameDB: Add Ground Zero.</p>
+        <p>Translations: Add Romanian.</p>
+        <p>Meta: Remove donation links.</p>
+        <p>GameDB: Add DRAGON BALL: Sparking! ZERO.</p>
+        <p>GameDB: Add Need for Speed Unbound.</p>
+        <p>GameDB: Add Alice: Madness Returns.</p>
+        <p>Heroic: Support custom games.</p>
+        <p>GameDB: Add Battlefield 4.</p>
+        <p>GameDB: Add The Awesome Adventures Of Captain Spirit.</p>
+        <p>GameDB: Add SOULCALIBUR VI.</p>
+        <p>Infer: Support steam.</p>
+        <p>UI: Fix scaling on Steam Deck.</p>
+      </description>
+    </release>
     <release version="1.2.2" date="2025-12-24">
       <url type="details">https://github.com/Spencer-0003/aletheia/releases/tag/1.2.2</url>
       <description>
