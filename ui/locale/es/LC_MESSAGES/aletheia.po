@@ -2,83 +2,61 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2026-04-20 17:46+0000\n"
-"PO-Revision-Date: 2026-01-29 10:17+0000\n"
-"Last-Translator: Laura Quintana Marín <2001lauraquintana@gmail.com>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/aletheia/ui/es/"
-">\n"
+"PO-Revision-Date: 2026-05-22 20:11+0000\n"
+"Last-Translator: Libre <6n0n1m0s@proton.me>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/aletheia/ui/es/>"
+"\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 
 #: ui/first_time_setup.slint:10
-#, fuzzy
-#| msgctxt "About"
-#| msgid "Aletheia is an open-source game save backup tool"
 msgctxt "FirstTimeSetup"
 msgid "Aletheia - First Time Setup"
-msgstr ""
-"Aletheia es una herramienta de código abierto para hacer copias de seguridad "
-"de partidas guardadas de videojuegos"
+msgstr "Aletheia ‐ Configuración por primera vez"
 
 #: ui/first_time_setup.slint:40
 msgctxt "FirstTimeSetup"
 msgid "Welcome to Aletheia"
-msgstr ""
+msgstr "Bienvenido a Aletheia"
 
 #: ui/first_time_setup.slint:49
 msgctxt "FirstTimeSetup"
 msgid "Let's get you set up. You can change these settings at any time."
 msgstr ""
+"Vamos a configurarlo. Puedes cambiar estos ajustes en cualquier momento."
 
 #: ui/first_time_setup.slint:68
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Game Data Location"
 msgctxt "FirstTimeSetup"
 msgid "Backup Location"
-msgstr "Ubicación de los datos del juego"
+msgstr "Lugar del Respaldo"
 
 #: ui/first_time_setup.slint:76
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Choose where your games will be saved"
 msgctxt "FirstTimeSetup"
 msgid "Where your game saves will be stored on disk."
-msgstr "Elige dónde se guardarán tus juegos"
+msgstr "Donde guarde su partida estará almacenado en el disco."
 
 #: ui/first_time_setup.slint:108
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Browse"
 msgctxt "FirstTimeSetup"
 msgid "Browse"
-msgstr "Ojear"
+msgstr "Examinar"
 
 #: ui/first_time_setup.slint:123
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Steam Account"
 msgctxt "FirstTimeSetup"
 msgid "Steam Account"
-msgstr "Steam Cuenta"
+msgstr "Cuenta de Steam"
 
 #: ui/first_time_setup.slint:131
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Only affects games that save in the Steam userdata directory"
 msgctxt "FirstTimeSetup"
 msgid "Used to locate saves stored in Steam's userdata directory."
 msgstr ""
-"Solo afecta a los juegos que están en el directorio de datos de usuario de "
-"Steam"
+"Utilizado para el lugar donde guarda en su directorio de datos del usuario "
+"de Steam."
 
 #: ui/first_time_setup.slint:140
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Select an account…"
 msgctxt "FirstTimeSetup"
 msgid "Select an account…"
 msgstr "Seleccione una cuenta…"
@@ -86,7 +64,7 @@ msgstr "Seleccione una cuenta…"
 #: ui/first_time_setup.slint:149
 msgctxt "FirstTimeSetup"
 msgid "Continue"
-msgstr ""
+msgstr "Continuar"
 
 #: ui/updater.slint:29
 msgctxt "Updater"
@@ -293,47 +271,36 @@ msgid "About"
 msgstr "Información"
 
 #: ui/restore_dialog.slint:9
-#, fuzzy
-#| msgctxt "About"
-#| msgid "Aletheia is an open-source game save backup tool"
 msgctxt "RestoreDialog"
 msgid "Aletheia - Restore backup"
-msgstr ""
-"Aletheia es una herramienta de código abierto para hacer copias de seguridad "
-"de partidas guardadas de videojuegos"
+msgstr "Aletheia ‐ Restablecer respaldo"
 
 #: ui/restore_dialog.slint:26
-#, fuzzy
-#| msgctxt "Games"
-#| msgid "Restore"
 msgctxt "RestoreDialog"
 msgid "Restore Backup?"
-msgstr "Restaurar"
+msgstr "¿Restaurar Respaldo?"
 
 #: ui/restore_dialog.slint:35
 msgctxt "RestoreDialog"
 msgid "Are you sure you want to restore {}?"
-msgstr ""
+msgstr "¿Seguro que desea restaurar {}?"
 
 #: ui/restore_dialog.slint:42
 msgctxt "RestoreDialog"
 msgid "This will overwrite any existing save data."
-msgstr ""
+msgstr "Esto sobrescribirá cualquier datos guardado existente."
 
 #: ui/restore_dialog.slint:74
 msgctxt "RestoreDialog"
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: ui/restore_dialog.slint:74
 msgctxt "RestoreDialog"
 msgid "Close"
-msgstr ""
+msgstr "Cerrar"
 
 #: ui/restore_dialog.slint:82
-#, fuzzy
-#| msgctxt "Games"
-#| msgid "Restore"
 msgctxt "RestoreDialog"
 msgid "Restore"
 msgstr "Restaurar"
@@ -341,39 +308,27 @@ msgstr "Restaurar"
 #: ui/logic/restore.slint:11
 msgctxt "RestoreLogic"
 msgid "You do not have {} installed, install it first and try again."
-msgstr ""
+msgstr "No tiene instalado {}, instálelo primero e inténtelo de nuevo."
 
 #: ui/logic/restore.slint:12
-#, fuzzy
-#| msgctxt "NotificationLogic"
-#| msgid "Archive corrupted"
 msgctxt "RestoreLogic"
 msgid "Archive corrupted"
-msgstr "Archivo dañado"
+msgstr "Archivador corrompido"
 
 #: ui/logic/restore.slint:13
-#, fuzzy
-#| msgctxt "NotificationLogic"
-#| msgid "Invalid archive"
 msgctxt "RestoreLogic"
 msgid "Invalid archive"
-msgstr "Archivo no válido"
+msgstr "Archivador no válido"
 
 #: ui/logic/restore.slint:14
-#, fuzzy
-#| msgctxt "NotificationLogic"
-#| msgid "I/O error"
 msgctxt "RestoreLogic"
 msgid "I/O error"
-msgstr "Error de I/O"
+msgstr "Error de E/S"
 
 #: ui/logic/restore.slint:15
-#, fuzzy
-#| msgctxt "NotificationLogic"
-#| msgid "Unsupported archive version"
 msgctxt "RestoreLogic"
 msgid "Unsupported archive version"
-msgstr "Versión de archivo no compatible"
+msgstr "Versión de archivador no compatible"
 
 #: ui/logic/notification.slint:30
 msgctxt "NotificationLogic"
@@ -433,7 +388,7 @@ msgstr "No se han encontrado copias de seguridad"
 #: ui/logic/notification.slint:41
 msgctxt "NotificationLogic"
 msgid "Game is not installed"
-msgstr ""
+msgstr "El juego no está instalado"
 
 #: ui/components/dropdown.slint:12
 msgctxt "Dropdown"
