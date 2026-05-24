@@ -1,12 +1,11 @@
 // SPDX-FileCopyrightText: 2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
+use super::app::{RestoreDialog, RestoreLogic};
 use crate::archive::{ArchiveReader, Error as ArchiveError};
 use crate::config::Config as AletheiaConfig;
 use crate::gamedb;
 use crate::operations::{RestoreError, restore_game};
-use crate::ui::app::RestoreDialog;
-use crate::ui::app::RestoreLogic;
 use slint::ComponentHandle;
 use std::cell::RefCell;
 use std::path::Path;

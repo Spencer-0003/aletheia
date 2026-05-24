@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
+use super::app::{DropdownOption, FirstTimeSetup, SetupLogic};
 use crate::config::Config;
 use crate::scanner::SteamScanner;
-use crate::ui::app::{DropdownOption, FirstTimeSetup, SetupLogic};
 use slint::{ComponentHandle, ModelRc, VecModel};
 
 pub fn run_first_time_setup() {
