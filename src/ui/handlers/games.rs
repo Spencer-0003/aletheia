@@ -154,9 +154,9 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
                 for ui_game in selected_games.iter() {
                     let game = installed_games.iter().find(|g| *g.name == *ui_game.name).unwrap();
                     if let Err(e) = backup_game(game, &cfg, &game_db[&game.name]) {
-                        log::error!("Failed to backup {}.\n{e}", &game.name);
+                        log::error!("Failed to backup {}.\n{e}", game.name);
                     } else {
-                        log::info!("Successfully backed up {}.", &game.name);
+                        log::info!("Successfully backed up {}.", game.name);
                         backed_up += 1;
                     }
                 }
