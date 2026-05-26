@@ -647,6 +647,10 @@ IW7-Mod:
   files:
     windows:
       - "{GameRoot}/iw7-mod/players2/user/**/*"
+In Falsus Demo:
+  files:
+    windows:
+      - "{LocalLow}/lowiro/if-app/*.sav"
 Iron Lung:
   files:
     windows:
