@@ -830,6 +830,10 @@ Mortal Kombat X:
   files:
     windows:
       - "{SteamUserData}/307780/remote/user/*"
+Mortal Shell II - Open Beta:
+  files:
+    windows:
+      - "{LocalAppData}/MortalShell2/Saved/SaveGames/*"
 Mouthwashing:
   files:
     windows:
