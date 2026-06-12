@@ -13,6 +13,7 @@ mod gog;
 mod xbox;
 
 mod heroic;
+mod itch;
 
 #[cfg(all(unix, not(target_os = "macos")))]
 pub use lutris::LutrisScanner;
@@ -25,6 +26,7 @@ pub use gog::GOGScanner;
 pub use xbox::XboxScanner;
 
 pub use heroic::HeroicScanner;
+pub use itch::ItchScanner;
 
 #[derive(Clone)]
 pub struct Game {

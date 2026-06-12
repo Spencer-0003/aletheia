@@ -4,7 +4,7 @@
 use crate::config::Config;
 use crate::dirs::cache;
 use crate::scanner::{Game, Scanner};
-use crate::scanner::{HeroicScanner, SteamScanner};
+use crate::scanner::{HeroicScanner, ItchScanner, SteamScanner};
 use reqwest::{StatusCode, header};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
@@ -100,6 +100,7 @@ pub fn get_installed_games() -> Vec<Game> {
     games.extend(XboxScanner::get_games());
 
     games.extend(HeroicScanner::get_games());
+    games.extend(ItchScanner::get_games());
     games.extend(SteamScanner::get_games());
 
     games

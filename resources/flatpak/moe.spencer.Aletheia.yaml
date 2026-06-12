@@ -35,6 +35,9 @@ finish-args:
   # Used to detect and restore Heroic save files
   - --filesystem=xdg-config/heroic # For cases where Aletheia is installed in Flatpak but Heroic is not
   - --filesystem=~/.var/app/com.heroicgameslauncher.hgl
+  # Used to detect and restore itch.io save files
+  - --filesystem=xdg-config/itch # For cases where Aletheia is installed in Flatpak but itch.io is not
+  - --filesystem=~/.var/app/io.itch.itch
 
 command: aletheia
 
