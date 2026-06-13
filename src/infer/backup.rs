@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
+use super::Launcher;
+use super::launchers::{Heroic, Steam};
 use crate::config::Config;
 use crate::gamedb;
-use crate::infer::Launcher;
-use crate::infer::launchers::{Heroic, Steam};
 use crate::operations::backup_game;
 
 #[cfg(all(unix, not(target_os = "macos")))]
-use crate::infer::launchers::Lutris;
+use super::launchers::Lutris;
 
 pub fn backup(launcher: &str, config: &Config) {
     let game = match launcher.to_lowercase().as_str() {
