@@ -161,10 +161,9 @@ impl Scanner for HeroicScanner {
             return games;
         }
 
-        let Ok(sideload_library) = serde_json::from_reader::<File, HeroicGamesSideloadLibrary>(
-            File::open(&sideload_path).unwrap()
-        ) else {
-            log::error!("Failed to parse sideloaad library.");
+        let Ok(sideload_library) = serde_json::from_reader::<File, HeroicGamesSideloadLibrary>(File::open(&sideload_path).unwrap())
+        else {
+            log::error!("Failed to parse sideload library.");
             return games;
         };
 
