@@ -3,8 +3,7 @@
 
 use crate::config::Config;
 use crate::dirs::cache;
-use crate::scanner::{Game, Scanner};
-use crate::scanner::{HeroicScanner, ItchScanner, SteamScanner};
+use crate::scanner::{Game, HeroicScanner, ItchScanner, Scanner, SteamScanner};
 use reqwest::{StatusCode, header};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
