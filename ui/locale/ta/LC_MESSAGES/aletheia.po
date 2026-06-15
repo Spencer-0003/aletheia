@@ -2,396 +2,398 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2026-04-20 17:46+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-06-15 23:24+0000\n"
+"Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/aletheia/ui/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 #: ui/first_time_setup.slint:10
 msgctxt "FirstTimeSetup"
 msgid "Aletheia - First Time Setup"
-msgstr ""
+msgstr "Aletheia - முதல் முறை அமைவு"
 
 #: ui/first_time_setup.slint:40
 msgctxt "FirstTimeSetup"
 msgid "Welcome to Aletheia"
-msgstr ""
+msgstr "Aletheia க்கு வரவேற்கிறோம்"
 
 #: ui/first_time_setup.slint:49
 msgctxt "FirstTimeSetup"
 msgid "Let's get you set up. You can change these settings at any time."
-msgstr ""
+msgstr "உங்களை அமைக்கலாம். நீங்கள் எந்த நேரத்திலும் இந்த அமைப்புகளை மாற்றலாம்."
 
 #: ui/first_time_setup.slint:68
 msgctxt "FirstTimeSetup"
 msgid "Backup Location"
-msgstr ""
+msgstr "காப்புப் பிரதி இடம்"
 
 #: ui/first_time_setup.slint:76
 msgctxt "FirstTimeSetup"
 msgid "Where your game saves will be stored on disk."
-msgstr ""
+msgstr "உங்கள் கேம் சேமிக்கப்படும் இடம் வட்டில் சேமிக்கப்படும்."
 
 #: ui/first_time_setup.slint:108
 msgctxt "FirstTimeSetup"
 msgid "Browse"
-msgstr ""
+msgstr "உலாவவும்"
 
 #: ui/first_time_setup.slint:123
 msgctxt "FirstTimeSetup"
 msgid "Steam Account"
-msgstr ""
+msgstr "நீராவி கணக்கு"
 
 #: ui/first_time_setup.slint:131
 msgctxt "FirstTimeSetup"
 msgid "Used to locate saves stored in Steam's userdata directory."
 msgstr ""
+"நீராவி பயனர் தரவு கோப்பகத்தில் சேமிக்கப்பட்ட சேமிக்கப்பட்டதைக் கண்டறியப் பயன்படுகிறது."
 
 #: ui/first_time_setup.slint:140
 msgctxt "FirstTimeSetup"
 msgid "Select an account…"
-msgstr ""
+msgstr "கணக்கைத் தேர்ந்தெடு…"
 
 #: ui/first_time_setup.slint:149
 msgctxt "FirstTimeSetup"
 msgid "Continue"
-msgstr ""
+msgstr "தொடரவும்"
 
 #: ui/updater.slint:29
 msgctxt "Updater"
 msgid "Update Available"
-msgstr ""
+msgstr "புதுப்பிப்பு கிடைக்கிறது"
 
 #: ui/updater.slint:52
 msgctxt "Updater"
 msgid "Current"
-msgstr ""
+msgstr "மின்னோட்ட்ம், ஓட்டம்"
 
 #: ui/updater.slint:82
 msgctxt "Updater"
 msgid "New"
-msgstr ""
+msgstr "புதிய"
 
 #: ui/updater.slint:106
 msgctxt "Updater"
 msgid "What's New"
-msgstr ""
+msgstr "புதியது என்ன"
 
 #: ui/updater.slint:143
 msgctxt "Updater"
 msgid "Skip"
-msgstr ""
+msgstr "தவிர்"
 
 #: ui/updater.slint:150
 msgctxt "Updater"
 msgid "Download"
-msgstr ""
+msgstr "பதிவிறக்கம்"
 
 #: ui/screens/settings.slint:60
 msgctxt "Settings"
 msgid "Game Data Location"
-msgstr ""
+msgstr "விளையாட்டு தரவு இடம்"
 
 #: ui/screens/settings.slint:74
 msgctxt "Settings"
 msgid "Choose where your games will be saved"
-msgstr ""
+msgstr "உங்கள் கேம்கள் எங்கு சேமிக்கப்படும் என்பதை தேர்வு செய்யவும்"
 
 #: ui/screens/settings.slint:92
 msgctxt "Settings"
 msgid "Browse"
-msgstr ""
+msgstr "உலாவவும்"
 
 #: ui/screens/settings.slint:121
 msgctxt "Settings"
 msgid "Steam Account"
-msgstr ""
+msgstr "நீராவி கணக்கு"
 
 #: ui/screens/settings.slint:138
 msgctxt "Settings"
 msgid "Choose the Steam account for your games"
-msgstr ""
+msgstr "உங்கள் விளையாட்டுகளுக்கான நீராவி கணக்கைத் தேர்வு செய்யவும்"
 
 #: ui/screens/settings.slint:145
 msgctxt "Settings"
 msgid "Only affects games that save in the Steam userdata directory"
-msgstr ""
+msgstr "நீராவி பயனர் தரவு கோப்பகத்தில் சேமிக்கும் கேம்களை மட்டுமே பாதிக்கும்"
 
 #: ui/screens/settings.slint:157
 msgctxt "Settings"
 msgid "Select an account…"
-msgstr ""
+msgstr "கணக்கைத் தேர்ந்தெடு…"
 
 #: ui/screens/settings.slint:157
 msgctxt "Settings"
 msgid "No accounts found…"
-msgstr ""
+msgstr "கணக்குகள் எதுவும் இல்லை…"
 
 #: ui/screens/settings.slint:186
 msgctxt "Settings"
 msgid "GameDB"
-msgstr ""
+msgstr "கேம்டிபி"
 
 #: ui/screens/settings.slint:200
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
-msgstr ""
+msgstr "கேம்டிபியின் அண்மைக் கால நகலைப் பதிவிறக்கவும்"
 
 #: ui/screens/settings.slint:209
 msgctxt "Settings"
 msgid "Update GameDB"
-msgstr ""
+msgstr "கேம்டிபியைப் புதுப்பிக்கவும்"
 
 #: ui/screens/settings.slint:236
 msgctxt "Settings"
 msgid "Updates"
-msgstr ""
+msgstr "புதுப்பிப்புகள்"
 
 #: ui/screens/settings.slint:250
 msgctxt "Settings"
 msgid "Configure automatic update checking"
-msgstr ""
+msgstr "தானியங்கி புதுப்பிப்பு சரிபார்ப்பை உள்ளமைக்கவும்"
 
 #: ui/screens/settings.slint:261
 msgctxt "Settings"
 msgid "Check for updates automatically"
-msgstr ""
+msgstr "புதுப்பிப்புகளைத் தானாகவே சரிபார்க்கவும்"
 
 #: ui/screens/settings.slint:279
 msgctxt "Settings"
 msgid "Save"
-msgstr ""
+msgstr "சேமி"
 
 #: ui/screens/games.slint:31
 msgctxt "Games"
 msgid "No games found"
-msgstr ""
+msgstr "கேம்கள் எதுவும் இல்லை"
 
 #: ui/screens/games.slint:45
 msgctxt "Games"
 msgid "Refresh"
-msgstr ""
+msgstr "புதுப்பிப்பு"
 
 #: ui/screens/games.slint:62
 msgctxt "Games"
 msgid "Search games…"
-msgstr ""
+msgstr "கேம்களைத் தேடு…"
 
 #: ui/screens/games.slint:68
 msgctxt "Games"
 msgid "Selecting {} / {} games"
-msgstr ""
+msgstr "{} / {} கேம்களைத் தேர்ந்தெடுக்கிறது"
 
 #: ui/screens/games.slint:82
 msgctxt "Games"
 msgid "Backup"
-msgstr ""
+msgstr "காப்புப்பிரதி"
 
 #: ui/screens/games.slint:90
 msgctxt "Games"
 msgid "Restore"
-msgstr ""
+msgstr "மீட்டமை"
 
 #: ui/screens/games.slint:99
 msgctxt "Games"
 msgid "Clear Selection"
-msgstr ""
+msgstr "தேர்வை அழிக்கவும்"
 
 #: ui/screens/games.slint:99
 msgctxt "Games"
 msgid "Select All"
-msgstr ""
+msgstr "அனைத்தையும் தெரிவுசெய்"
 
 #: ui/screens/games.slint:100
 msgctxt "Games"
 msgid "{} Filtered"
-msgstr ""
+msgstr "{} வடிகட்டப்பட்டது"
 
 #: ui/screens/about.slint:36
 msgctxt "About"
 msgid "Application Info"
-msgstr ""
+msgstr "விண்ணப்பத் செய்தி"
 
 #: ui/screens/about.slint:50
 msgctxt "About"
 msgid "Aletheia is an open-source game save backup tool"
-msgstr ""
+msgstr "Aletheia ஒரு திறந்த மூல விளையாட்டு சேமிப்பு காப்பு கருவியாகும்"
 
 #: ui/screens/about.slint:57
 msgctxt "About"
 msgid "Version: {}"
-msgstr ""
+msgstr "பதிப்பு: {}"
 
 #: ui/screens/about.slint:64
 msgctxt "About"
 msgid "License: {}"
-msgstr ""
+msgstr "உரிமம்: {}"
 
 #: ui/screens/about.slint:71
 msgctxt "About"
 msgid "Logo by: {}"
-msgstr ""
+msgstr "லோகோ: {}"
 
 #: ui/screens/about.slint:84
 msgctxt "About"
 msgid "View Source Code"
-msgstr ""
+msgstr "மூலக் குறியீட்டைப் பார்க்கவும்"
 
 #: ui/screens/about.slint:91
 msgctxt "About"
 msgid "View License"
-msgstr ""
+msgstr "உரிமத்தைப் பார்க்கவும்"
 
 #: ui/app.slint:49
 msgctxt "App"
 msgid "Games"
-msgstr ""
+msgstr "விளையாட்டுகள்"
 
 #: ui/app.slint:62
 msgctxt "App"
 msgid "Settings"
-msgstr ""
+msgstr "அமைப்புகள்"
 
 #: ui/app.slint:69
 msgctxt "App"
 msgid "About"
-msgstr ""
+msgstr "பற்றி"
 
 #: ui/restore_dialog.slint:9
 msgctxt "RestoreDialog"
 msgid "Aletheia - Restore backup"
-msgstr ""
+msgstr "Aletheia - காப்புப்பிரதியை மீட்டமை"
 
 #: ui/restore_dialog.slint:26
 msgctxt "RestoreDialog"
 msgid "Restore Backup?"
-msgstr ""
+msgstr "காப்புப்பிரதியை மீட்டெடுக்கவா?"
 
 #: ui/restore_dialog.slint:35
 msgctxt "RestoreDialog"
 msgid "Are you sure you want to restore {}?"
-msgstr ""
+msgstr "நிச்சயமாக {} ஐ மீட்டெடுக்க விரும்புகிறீர்களா?"
 
 #: ui/restore_dialog.slint:42
 msgctxt "RestoreDialog"
 msgid "This will overwrite any existing save data."
-msgstr ""
+msgstr "இது ஏற்கனவே உள்ள சேமிக்கும் தரவை மேலெழுதும்."
 
 #: ui/restore_dialog.slint:74
 msgctxt "RestoreDialog"
 msgid "Cancel"
-msgstr ""
+msgstr "ரத்துசெய்"
 
 #: ui/restore_dialog.slint:74
 msgctxt "RestoreDialog"
 msgid "Close"
-msgstr ""
+msgstr "மூடு"
 
 #: ui/restore_dialog.slint:82
 msgctxt "RestoreDialog"
 msgid "Restore"
-msgstr ""
+msgstr "மீட்டமை"
 
 #: ui/logic/restore.slint:11
 msgctxt "RestoreLogic"
 msgid "You do not have {} installed, install it first and try again."
-msgstr ""
+msgstr "நீங்கள் {} ஐ நிறுவவில்லை, முதலில் அதை நிறுவி மீண்டும் முயற்சிக்கவும்."
 
 #: ui/logic/restore.slint:12
 msgctxt "RestoreLogic"
 msgid "Archive corrupted"
-msgstr ""
+msgstr "காப்பகம் சிதைந்துவிட்டது"
 
 #: ui/logic/restore.slint:13
 msgctxt "RestoreLogic"
 msgid "Invalid archive"
-msgstr ""
+msgstr "தவறான காப்பகம்"
 
 #: ui/logic/restore.slint:14
 msgctxt "RestoreLogic"
 msgid "I/O error"
-msgstr ""
+msgstr "I/O பிழை"
 
 #: ui/logic/restore.slint:15
 msgctxt "RestoreLogic"
 msgid "Unsupported archive version"
-msgstr ""
+msgstr "ஆதரிக்கப்படாத காப்பக பதிப்பு"
 
 #: ui/logic/notification.slint:30
 msgctxt "NotificationLogic"
 msgid "Set your Steam account in settings"
-msgstr ""
+msgstr "உங்கள் ச்டீம் கணக்கை அமைப்புகளில் அமைக்கவும்"
 
 #: ui/logic/notification.slint:31
 msgctxt "NotificationLogic"
 msgid "Backup directory does not exist"
-msgstr ""
+msgstr "காப்பு கோப்பகம் இல்லை"
 
 #: ui/logic/notification.slint:32
 msgctxt "NotificationLogic"
 msgid "Successfully saved settings"
-msgstr ""
+msgstr "அமைப்புகள் வெற்றிகரமாகச் சேமிக்கப்பட்டன"
 
 #: ui/logic/notification.slint:33
 msgctxt "NotificationLogic"
 msgid "Successfully updated GameDB"
-msgstr ""
+msgstr "கேம்டிபி வெற்றிகரமாக புதுப்பிக்கப்பட்டது"
 
 #: ui/logic/notification.slint:34
 msgctxt "NotificationLogic"
 msgid "GameDB is already up to date"
-msgstr ""
+msgstr "GameDB ஏற்கனவே புதுப்பித்த நிலையில் உள்ளது"
 
 #: ui/logic/notification.slint:35
 msgctxt "NotificationLogic"
 msgid "Failed to update GameDB"
-msgstr ""
+msgstr "கேம்டிபியைப் புதுப்பிக்க முடியவில்லை"
 
 #: ui/logic/notification.slint:36
 msgctxt "NotificationLogic"
 msgid "Archive corrupted"
-msgstr ""
+msgstr "காப்பகம் சிதைந்துவிட்டது"
 
 #: ui/logic/notification.slint:37
 msgctxt "NotificationLogic"
 msgid "Invalid archive"
-msgstr ""
+msgstr "தவறான காப்பகம்"
 
 #: ui/logic/notification.slint:38
 msgctxt "NotificationLogic"
 msgid "I/O error"
-msgstr ""
+msgstr "I/O பிழை"
 
 #: ui/logic/notification.slint:39
 msgctxt "NotificationLogic"
 msgid "Unsupported archive version"
-msgstr ""
+msgstr "ஆதரிக்கப்படாத காப்பக பதிப்பு"
 
 #: ui/logic/notification.slint:40
 msgctxt "NotificationLogic"
 msgid "No backups found"
-msgstr ""
+msgstr "காப்புப்பிரதிகள் எதுவும் இல்லை"
 
 #: ui/logic/notification.slint:41
 msgctxt "NotificationLogic"
 msgid "Game is not installed"
-msgstr ""
+msgstr "விளையாட்டு நிறுவப்படவில்லை"
 
 #: ui/components/dropdown.slint:12
 msgctxt "Dropdown"
 msgid "Select an option…"
-msgstr ""
+msgstr "ஒரு விருப்பத்தைத் தேர்ந்தெடுக்கவும்…"
 
 #: ui/components/dropdown.slint:90
 msgctxt "Dropdown"
 msgid "Dropdown options"
-msgstr ""
+msgstr "கீழ்தோன்றும் விருப்பங்கள்"
 
 #: ui/components/dropdown.slint:136
 msgctxt "Dropdown"
 msgid "Selected"
-msgstr ""
+msgstr "தேர்ந்தெடுக்கப்பட்டது"
