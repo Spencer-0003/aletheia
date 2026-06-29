@@ -24,7 +24,8 @@ pub fn backup_game(game: &Game, config: &Config, entry: &GameDbEntry) -> Result<
     let steam_id = config.steam_account_id.as_deref();
     let backup_folder = config.save_dir.join(utils::sanitize_game_name(&game.name).as_ref());
     let archive_path = backup_folder.join("backup.aletheia");
-    let previous_archive = archive_path.exists().then(|| ArchiveReader::open(&archive_path).ok()).flatten();
+    let previous_files =
+        archive_path.exists().then(|| ArchiveReader::read_index(&archive_path).ok()).flatten().map(|(_, files)| files);
 
     let mut changed = false;
     let mut paths = vec![];
@@ -96,13 +97,10 @@ pub fn backup_game(game: &Game, config: &Config, entry: &GameDbEntry) -> Result<
         let shrunk_file_path = shrunk_file.to_string_lossy();
         let file_hash = hash_file(&file);
 
-        let file_changed = previous_archive
+        changed |= previous_files
             .as_ref()
-            .and_then(|archive| archive.files.iter().find(|e| e.shrunk_path == shrunk_file_path))
+            .and_then(|entries| entries.iter().find(|e| e.shrunk_path == shrunk_file_path))
             .is_none_or(|existing| existing.checksum != file_hash);
-
-        changed |= file_changed;
-
         writer.add_file(&shrunk_file_path, &file, file_hash);
     }
 

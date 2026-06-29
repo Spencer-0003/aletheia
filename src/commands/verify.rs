@@ -26,7 +26,6 @@ impl Command for Verify {
             }
 
             verify_archive(path);
-
             return;
         }
 

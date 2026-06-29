@@ -150,9 +150,7 @@ impl ArchiveWriter {
 }
 
 impl ArchiveReader {
-    pub fn open(path: &Path) -> Result<Self> {
-        let mut file = File::open(path)?;
-
+    fn parse(file: &mut File) -> Result<(String, Vec<FileEntry>)> {
         let mut magic = [0u8; 8];
         file.read_exact(&mut magic)?;
         if &magic != MAGIC {
@@ -188,6 +186,18 @@ impl ArchiveReader {
         let mut index_bytes = vec![0u8; index_size as usize];
         file.read_exact(&mut index_bytes)?;
         let files: Vec<FileEntry> = postcard::from_bytes(&index_bytes)?;
+
+        Ok((game, files))
+    }
+
+    pub fn read_index(path: &Path) -> Result<(String, Vec<FileEntry>)> {
+        let mut file = File::open(path)?;
+        Self::parse(&mut file)
+    }
+
+    pub fn open(path: &Path) -> Result<Self> {
+        let mut file = File::open(path)?;
+        let (game, files) = Self::parse(&mut file)?;
 
         for entry in &files {
             let data = Self::decompress(&mut file, entry)?;
