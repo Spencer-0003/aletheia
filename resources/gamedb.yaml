@@ -383,6 +383,10 @@ ELDEN RING:
   files:
     windows:
       - "{AppData}/EldenRing/{SteamID64}/*.sl2"
+Echoes of Aincrad DEMO Version:
+  files:
+    windows:
+      - "{LocalAppData}/EchoesOfAincrad/Saved/SaveGames/*.sav"
 Elden Bling:
   files:
     windows:
