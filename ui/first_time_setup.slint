@@ -138,7 +138,7 @@ export component FirstTimeSetup inherits Window {
             height: 40px;
             options: SetupLogic.steam_account_options;
             placeholder: @tr("Select an account…");
-            changed(id) => { SetupLogic.steam_account_id = id; }
+            value <=> SetupLogic.steam_account_id;
           }
         }
 

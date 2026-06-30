@@ -60,10 +60,10 @@ export component Dropdown {
         source: @image-url("../assets/arrow_drop_down.svg");
         colorize: ThemeLogic.colors.primary;
         opacity: root.enabled && root.expandable ? 100% : 50%;
-        rotation-angle: root.expanded ? 180deg : 0deg;
+        transform-rotation: root.expanded ? 180deg : 0deg;
         vertical-alignment: center;
 
-        animate rotation-angle { duration: 200ms; easing: ease-in-out; }
+        animate transform-rotation { duration: 200ms; easing: ease-in-out; }
       }
     }
 

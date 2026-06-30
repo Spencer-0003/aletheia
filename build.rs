@@ -4,11 +4,7 @@
 fn main() {
     println!("cargo::rustc-check-cfg=cfg(flatpak_build)");
 
-    #[rustfmt::skip]
-    let config = slint_build::CompilerConfiguration::new()
-        .with_style("material-dark".into())
-        .with_bundled_translations("ui/locale");
-
+    let config = slint_build::CompilerConfiguration::new().with_bundled_translations("ui/locale");
     slint_build::compile_with_config("ui/app.slint", config).expect("Slint build failed.");
 
     #[cfg(all(unix, not(target_os = "macos")))]

@@ -155,9 +155,8 @@ export component Settings {
               height: 36px;
               enabled: has_accounts;
               placeholder: has_accounts ? @tr("Select an account…") : @tr("No accounts found…");
-              value: SettingsScreenLogic.config.steam_account_id;
+              value <=> SettingsScreenLogic.config.steam_account_id;
               options: SettingsScreenLogic.steam_account_options;
-              changed(value) => { SettingsScreenLogic.config.steam_account_id = value; }
             }
           }
         }
@@ -259,8 +258,7 @@ export component Settings {
 
               CheckBox {
                 text: @tr("Check for updates automatically");
-                enabled: SettingsScreenLogic.config.check_for_updates;
-                toggled => { SettingsScreenLogic.config.check_for_updates = self.enabled; }
+                enabled <=> SettingsScreenLogic.config.check_for_updates;
               }
             }
           }
