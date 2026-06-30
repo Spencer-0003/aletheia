@@ -14,7 +14,8 @@ accepted = [
   "Apache-2.0 WITH LLVM-exception",
   "GPL-3.0-only",
   "AGPL-3.0-only",
-  "OpenSSL" # https://github.com/aws/aws-lc-rs/pull/1062/changes, waiting for rustls to bump aws-lc-sys version
+  "OpenSSL", # https://github.com/aws/aws-lc-rs/pull/1062/changes, waiting for rustls to bump aws-lc-sys version
+  "CC0-1.0"
 ]
 
 targets = [
