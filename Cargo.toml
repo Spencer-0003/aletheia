@@ -36,12 +36,12 @@ thiserror = "2.0.12"
 zstd = "0.13.3"
 
 [target.'cfg(unix)'.dependencies]
-rusqlite = "0.38.0"
+rusqlite = "0.40.1"
 slint = { version = "1.17", default-features = false, features = ["accessibility", "backend-winit", "renderer-femtovg-wgpu", "compat-1-2", "std"] }
 
 [target.'cfg(windows)'.dependencies]
-quick-xml = { version = "0.38.3", features = ["serialize"] }
-rusqlite = { version = "0.38.0", features = ["bundled"] }
+quick-xml = { version = "0.41.0", features = ["serialize"] }
+rusqlite = { version = "0.40.1", features = ["bundled"] }
 slint = { version = "1.17", default-features = false, features = ["accessibility", "backend-winit", "renderer-skia-opengl", "compat-1-2", "std"] }
 
 [target.'cfg(target_os = "macos")'.dependencies]
