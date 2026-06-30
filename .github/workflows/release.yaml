@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2025 Spencer
+# SPDX-FileCopyrightText: 2025-2026 Spencer
 # SPDX-License-Identifier: CC0-1.0
 
 name: Publish Release Builds
@@ -26,9 +26,6 @@ jobs:
       - name: Setup Rust toolchain
         uses: dtolnay/rust-toolchain@stable
 
-      - name: Install dependencies
-        run: sudo apt update && sudo apt install -y qt6-base-dev libwayland-dev libgl1-mesa-dev qt6-wayland # TODO: Remove libgl1-mesa-dev and qt6-wayland when upgrading to 24.04
-
       - name: Checkout code
         uses: actions/checkout@v6
 
@@ -49,7 +46,6 @@ jobs:
           RELEASE_ARCH=${{ matrix.target == 'x86_64-unknown-linux-gnu' && 'x64' || 'aarch64' }}
           APPIMAGETOOL="target/appimage/deps/appimagetool-$ARCH.AppImage"
           LINUXDEPLOY="target/appimage/deps/linuxdeploy-$ARCH.AppImage"
-          LINUXDEPLOY_PLUGIN_QT="target/appimage/deps/linuxdeploy-plugin-qt-$ARCH.AppImage"
 
           wget -O "$APPIMAGETOOL" "https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-$ARCH.AppImage"
           chmod +x "$APPIMAGETOOL"
@@ -57,12 +53,7 @@ jobs:
           wget -O "$LINUXDEPLOY" "https://github.com/linuxdeploy/linuxdeploy/releases/download/1-alpha-20250213-2/linuxdeploy-$ARCH.AppImage"
           chmod +x "$LINUXDEPLOY"
 
-          wget -O "$LINUXDEPLOY_PLUGIN_QT" "https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/1-alpha-20250213-1/linuxdeploy-plugin-qt-$ARCH.AppImage"
-          chmod +x "$LINUXDEPLOY_PLUGIN_QT"
-
-          echo -e "/usr/lib/qt6/bin\n/usr/lib/$ARCH-linux-gnu" | sudo tee "/usr/lib/$ARCH-linux-gnu/qtchooser/qt6.conf" > /dev/null # https://bugs.launchpad.net/ubuntu/+source/qtchooser/+bug/1964763 (TODO: Remove when upgrading to 24.04, also remove QT_SELECT)
-
-          NO_STRIP=true EXTRA_QT_MODULES=waylandcompositor EXTRA_PLATFORM_PLUGINS="libqwayland-egl.so;libqwayland-generic.so" QT_SELECT=qt6 $LINUXDEPLOY --plugin qt --appdir target/appimage/out --executable target/${{ matrix.target }}/release/aletheia --desktop-file resources/linux/moe.spencer.Aletheia.desktop --icon-file resources/logo/moe.spencer.Aletheia.png
+          $LINUXDEPLOY --appdir target/appimage/out --executable target/${{ matrix.target }}/release/aletheia --desktop-file resources/linux/moe.spencer.Aletheia.desktop --icon-file resources/logo/moe.spencer.Aletheia.png
           cp resources/linux/moe.spencer.Aletheia.metainfo.xml target/appimage/out/usr/share/metainfo/moe.spencer.Aletheia.appdata.xml
           $APPIMAGETOOL -u "gh-releases-zsync|${{ github.repository_owner }}|${{ github.event.repository.name }}|latest|aletheia-$RELEASE_ARCH.appimage" target/appimage/out aletheia-$RELEASE_ARCH.appimage
 
@@ -151,9 +142,6 @@ jobs:
       - name: Setup Rust toolchain
         uses: dtolnay/rust-toolchain@stable
 
-      - name: Install dependencies
-        run: brew update && brew install qt@6
-
       - name: Checkout code
         uses: actions/checkout@v6
 
@@ -171,7 +159,6 @@ jobs:
           cp target/${{ matrix.target }}/release/aletheia ${{ matrix.artifact }}/Contents/MacOS/aletheia
           cp resources/mac/aletheia.icns ${{ matrix.artifact }}/Contents/Resources
           cp resources/mac/Info.plist ${{ matrix.artifact }}/Contents
-          macdeployqt ${{ matrix.artifact }} -no-plugins
           codesign -s - --deep -f ${{ matrix.artifact }}
           tar -czf ${{ matrix.artifact }}.tar.gz ${{ matrix.artifact }}
 
