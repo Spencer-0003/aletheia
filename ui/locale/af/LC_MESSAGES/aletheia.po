@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-04-20 17:46+0000\n"
+"POT-Creation-Date: 2026-07-04 22:41+0000\n"
 "PO-Revision-Date: 2025-10-24 15:38+0000\n"
 "Last-Translator: Feike Donia <feikedonia@proton.me>\n"
 "Language-Team: Afrikaans <https://hosted.weblate.org/projects/aletheia/ui/af/"
@@ -153,37 +153,37 @@ msgctxt "Settings"
 msgid "No accounts found…"
 msgstr ""
 
-#: ui/screens/settings.slint:186
+#: ui/screens/settings.slint:185
 msgctxt "Settings"
 msgid "GameDB"
 msgstr ""
 
-#: ui/screens/settings.slint:200
+#: ui/screens/settings.slint:199
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
 msgstr "Laai die nuutste weergawe van GameDB af"
 
-#: ui/screens/settings.slint:209
+#: ui/screens/settings.slint:208
 msgctxt "Settings"
 msgid "Update GameDB"
 msgstr "Werk GameDB by"
 
-#: ui/screens/settings.slint:236
+#: ui/screens/settings.slint:235
 msgctxt "Settings"
 msgid "Updates"
 msgstr "Opdaterings"
 
-#: ui/screens/settings.slint:250
+#: ui/screens/settings.slint:249
 msgctxt "Settings"
 msgid "Configure automatic update checking"
 msgstr "Stel dit op om outomaties vir opdaterings te soek"
 
-#: ui/screens/settings.slint:261
+#: ui/screens/settings.slint:260
 msgctxt "Settings"
 msgid "Check for updates automatically"
 msgstr ""
 
-#: ui/screens/settings.slint:279
+#: ui/screens/settings.slint:277
 msgctxt "Settings"
 msgid "Save"
 msgstr ""
@@ -268,17 +268,17 @@ msgctxt "About"
 msgid "View License"
 msgstr ""
 
-#: ui/app.slint:49
+#: ui/app.slint:48
 msgctxt "App"
 msgid "Games"
 msgstr ""
 
-#: ui/app.slint:62
+#: ui/app.slint:61
 msgctxt "App"
 msgid "Settings"
 msgstr ""
 
-#: ui/app.slint:69
+#: ui/app.slint:68
 msgctxt "App"
 msgid "About"
 msgstr ""
@@ -343,64 +343,74 @@ msgctxt "RestoreLogic"
 msgid "Unsupported archive version"
 msgstr ""
 
-#: ui/logic/notification.slint:30
+#: ui/logic/notification.slint:48
 msgctxt "NotificationLogic"
 msgid "Set your Steam account in settings"
 msgstr ""
 
-#: ui/logic/notification.slint:31
+#: ui/logic/notification.slint:49
 msgctxt "NotificationLogic"
 msgid "Backup directory does not exist"
 msgstr ""
 
-#: ui/logic/notification.slint:32
+#: ui/logic/notification.slint:50
 msgctxt "NotificationLogic"
 msgid "Successfully saved settings"
 msgstr ""
 
-#: ui/logic/notification.slint:33
+#: ui/logic/notification.slint:51
 msgctxt "NotificationLogic"
 msgid "Successfully updated GameDB"
 msgstr ""
 
-#: ui/logic/notification.slint:34
+#: ui/logic/notification.slint:52
 msgctxt "NotificationLogic"
 msgid "GameDB is already up to date"
 msgstr ""
 
-#: ui/logic/notification.slint:35
+#: ui/logic/notification.slint:53
 msgctxt "NotificationLogic"
 msgid "Failed to update GameDB"
 msgstr ""
 
-#: ui/logic/notification.slint:36
+#: ui/logic/notification.slint:54
 msgctxt "NotificationLogic"
 msgid "Archive corrupted"
 msgstr ""
 
-#: ui/logic/notification.slint:37
+#: ui/logic/notification.slint:55
 msgctxt "NotificationLogic"
 msgid "Invalid archive"
 msgstr ""
 
-#: ui/logic/notification.slint:38
+#: ui/logic/notification.slint:56
 msgctxt "NotificationLogic"
 msgid "I/O error"
 msgstr ""
 
-#: ui/logic/notification.slint:39
+#: ui/logic/notification.slint:57
 msgctxt "NotificationLogic"
 msgid "Unsupported archive version"
 msgstr ""
 
-#: ui/logic/notification.slint:40
+#: ui/logic/notification.slint:58
 msgctxt "NotificationLogic"
 msgid "No backups found"
 msgstr ""
 
-#: ui/logic/notification.slint:41
+#: ui/logic/notification.slint:59
 msgctxt "NotificationLogic"
 msgid "Game is not installed"
+msgstr ""
+
+#: ui/logic/notification.slint:64
+msgctxt "NotificationLogic"
+msgid "Backed up {} games"
+msgstr ""
+
+#: ui/logic/notification.slint:65
+msgctxt "NotificationLogic"
+msgid "Restored {} games"
 msgstr ""
 
 #: ui/components/dropdown.slint:12

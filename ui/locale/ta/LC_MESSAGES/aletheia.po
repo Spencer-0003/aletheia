@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-04-20 17:46+0000\n"
+"POT-Creation-Date: 2026-07-04 22:41+0000\n"
 "PO-Revision-Date: 2026-06-15 23:24+0000\n"
 "Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/aletheia/ui/ta/>\n"
@@ -133,37 +133,37 @@ msgctxt "Settings"
 msgid "No accounts found…"
 msgstr "கணக்குகள் எதுவும் இல்லை…"
 
-#: ui/screens/settings.slint:186
+#: ui/screens/settings.slint:185
 msgctxt "Settings"
 msgid "GameDB"
 msgstr "கேம்டிபி"
 
-#: ui/screens/settings.slint:200
+#: ui/screens/settings.slint:199
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
 msgstr "கேம்டிபியின் அண்மைக் கால நகலைப் பதிவிறக்கவும்"
 
-#: ui/screens/settings.slint:209
+#: ui/screens/settings.slint:208
 msgctxt "Settings"
 msgid "Update GameDB"
 msgstr "கேம்டிபியைப் புதுப்பிக்கவும்"
 
-#: ui/screens/settings.slint:236
+#: ui/screens/settings.slint:235
 msgctxt "Settings"
 msgid "Updates"
 msgstr "புதுப்பிப்புகள்"
 
-#: ui/screens/settings.slint:250
+#: ui/screens/settings.slint:249
 msgctxt "Settings"
 msgid "Configure automatic update checking"
 msgstr "தானியங்கி புதுப்பிப்பு சரிபார்ப்பை உள்ளமைக்கவும்"
 
-#: ui/screens/settings.slint:261
+#: ui/screens/settings.slint:260
 msgctxt "Settings"
 msgid "Check for updates automatically"
 msgstr "புதுப்பிப்புகளைத் தானாகவே சரிபார்க்கவும்"
 
-#: ui/screens/settings.slint:279
+#: ui/screens/settings.slint:277
 msgctxt "Settings"
 msgid "Save"
 msgstr "சேமி"
@@ -248,17 +248,17 @@ msgctxt "About"
 msgid "View License"
 msgstr "உரிமத்தைப் பார்க்கவும்"
 
-#: ui/app.slint:49
+#: ui/app.slint:48
 msgctxt "App"
 msgid "Games"
 msgstr "விளையாட்டுகள்"
 
-#: ui/app.slint:62
+#: ui/app.slint:61
 msgctxt "App"
 msgid "Settings"
 msgstr "அமைப்புகள்"
 
-#: ui/app.slint:69
+#: ui/app.slint:68
 msgctxt "App"
 msgid "About"
 msgstr "பற்றி"
@@ -323,65 +323,75 @@ msgctxt "RestoreLogic"
 msgid "Unsupported archive version"
 msgstr "ஆதரிக்கப்படாத காப்பக பதிப்பு"
 
-#: ui/logic/notification.slint:30
+#: ui/logic/notification.slint:48
 msgctxt "NotificationLogic"
 msgid "Set your Steam account in settings"
 msgstr "உங்கள் ச்டீம் கணக்கை அமைப்புகளில் அமைக்கவும்"
 
-#: ui/logic/notification.slint:31
+#: ui/logic/notification.slint:49
 msgctxt "NotificationLogic"
 msgid "Backup directory does not exist"
 msgstr "காப்பு கோப்பகம் இல்லை"
 
-#: ui/logic/notification.slint:32
+#: ui/logic/notification.slint:50
 msgctxt "NotificationLogic"
 msgid "Successfully saved settings"
 msgstr "அமைப்புகள் வெற்றிகரமாகச் சேமிக்கப்பட்டன"
 
-#: ui/logic/notification.slint:33
+#: ui/logic/notification.slint:51
 msgctxt "NotificationLogic"
 msgid "Successfully updated GameDB"
 msgstr "கேம்டிபி வெற்றிகரமாக புதுப்பிக்கப்பட்டது"
 
-#: ui/logic/notification.slint:34
+#: ui/logic/notification.slint:52
 msgctxt "NotificationLogic"
 msgid "GameDB is already up to date"
 msgstr "GameDB ஏற்கனவே புதுப்பித்த நிலையில் உள்ளது"
 
-#: ui/logic/notification.slint:35
+#: ui/logic/notification.slint:53
 msgctxt "NotificationLogic"
 msgid "Failed to update GameDB"
 msgstr "கேம்டிபியைப் புதுப்பிக்க முடியவில்லை"
 
-#: ui/logic/notification.slint:36
+#: ui/logic/notification.slint:54
 msgctxt "NotificationLogic"
 msgid "Archive corrupted"
 msgstr "காப்பகம் சிதைந்துவிட்டது"
 
-#: ui/logic/notification.slint:37
+#: ui/logic/notification.slint:55
 msgctxt "NotificationLogic"
 msgid "Invalid archive"
 msgstr "தவறான காப்பகம்"
 
-#: ui/logic/notification.slint:38
+#: ui/logic/notification.slint:56
 msgctxt "NotificationLogic"
 msgid "I/O error"
 msgstr "I/O பிழை"
 
-#: ui/logic/notification.slint:39
+#: ui/logic/notification.slint:57
 msgctxt "NotificationLogic"
 msgid "Unsupported archive version"
 msgstr "ஆதரிக்கப்படாத காப்பக பதிப்பு"
 
-#: ui/logic/notification.slint:40
+#: ui/logic/notification.slint:58
 msgctxt "NotificationLogic"
 msgid "No backups found"
 msgstr "காப்புப்பிரதிகள் எதுவும் இல்லை"
 
-#: ui/logic/notification.slint:41
+#: ui/logic/notification.slint:59
 msgctxt "NotificationLogic"
 msgid "Game is not installed"
 msgstr "விளையாட்டு நிறுவப்படவில்லை"
+
+#: ui/logic/notification.slint:64
+msgctxt "NotificationLogic"
+msgid "Backed up {} games"
+msgstr ""
+
+#: ui/logic/notification.slint:65
+msgctxt "NotificationLogic"
+msgid "Restored {} games"
+msgstr ""
 
 #: ui/components/dropdown.slint:12
 msgctxt "Dropdown"
