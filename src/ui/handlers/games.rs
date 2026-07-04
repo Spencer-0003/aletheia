@@ -162,7 +162,7 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
                 }
 
                 app_weak.global::<GameLogic>().invoke_refresh_games();
-                notification_logic.invoke_show_success(format!("Backed up {backed_up} games").into());
+                notification_logic.invoke_show_success_fmt("BACKED_UP".into(), backed_up.to_string().into());
             } else {
                 if !cfg.save_dir.exists() {
                     notification_logic.invoke_show_error("BACKUP_DIRECTORY_MISSING".into());
@@ -199,7 +199,7 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
                 }
 
                 if restored > 0 {
-                    notification_logic.invoke_show_success(format!("Restored {restored} games").into());
+                    notification_logic.invoke_show_success_fmt("RESTORED".into(), restored.to_string().into());
                 }
             }
         }

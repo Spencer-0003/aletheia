@@ -4,7 +4,8 @@
 import { NotificationType } from "../components/notification.slint";
 
 export global NotificationLogic {
-  callback show_notification(string, NotificationType);
+  callback show_notification(key: string, type: NotificationType);
+  callback show_notification_fmt(key: string, param: string, type: NotificationType);
 
   private property <bool> notification_visible;
   private property <string> notification_message;
@@ -26,6 +27,23 @@ export global NotificationLogic {
     NotificationLogic.show_notification(message, NotificationType.WARNING);
   }
 
+  public function show_success_fmt(key: string, param: string) {
+    NotificationLogic.show_notification_fmt(key, param, NotificationType.SUCCESS);
+  }
+
+  // Unused for now
+  // public function show_error_fmt(key: string, param: string) {
+  //   NotificationLogic.show_notification_fmt(key, param, NotificationType.ERROR);
+  // }
+  //
+  // public function show_info_fmt(key: string, param: string) {
+  //   NotificationLogic.show_notification_fmt(key, param, NotificationType.INFO);
+  // }
+  //
+  // public function show_warning_fmt(key: string, param: string) {
+  //   NotificationLogic.show_notification_fmt(key, param, NotificationType.WARNING);
+  // }
+
   pure function translate(key: string) -> string {
     key == "STEAM_ACCOUNT_MISSING" ? @tr("Set your Steam account in settings")
       : key == "BACKUP_DIRECTORY_MISSING" ? @tr("Backup directory does not exist")
@@ -42,8 +60,20 @@ export global NotificationLogic {
       : key
   }
 
-  show_notification(message, type) => {
-    notification_message = translate(message);
+  function translate_fmt(key: string, param: string) -> string {
+    key == "BACKED_UP" ? @tr("Backed up {} games", param)
+      : key == "RESTORED" ? @tr("Restored {} games", param)
+      : key
+  }
+
+  show_notification(key, type) => {
+    notification_message = translate(key);
+    notification_type = type;
+    notification_visible = true;
+  }
+
+  show_notification_fmt(key, param, type) => {
+    notification_message = translate_fmt(key, param);
     notification_type = type;
     notification_visible = true;
   }
