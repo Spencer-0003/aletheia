@@ -679,6 +679,14 @@ KINGDOM HEARTS -HD 1.5+2.5 ReMIX-:
   files:
     windows:
       - "{Documents}/My Games/KINGDOM HEARTS HD 1.5+2.5 ReMIX/Steam/{SteamID64}/*"
+KINGDOM HEARTS HD 2.8 Final Chapter Prologue:
+  files:
+    windows:
+      - "{Documents}/KINGDOM HEARTS HD 2.8 Final Chapter Prologue/Steam/{SteamID64}/*"
+KINGDOM HEARTS III + Re Mind (DLC):
+  files:
+    windows:
+      - "{Documents}/KINGDOM HEARTS III/Steam/{SteamID64}/*"
 Killer Frequency:
   files:
     windows:
