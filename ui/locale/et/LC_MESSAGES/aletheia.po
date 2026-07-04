@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-04-20 17:46+0000\n"
+"POT-Creation-Date: 2026-07-04 22:41+0000\n"
 "PO-Revision-Date: 2026-04-09 16:09+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/aletheia/ui/et/"
@@ -134,37 +134,37 @@ msgctxt "Settings"
 msgid "No accounts found…"
 msgstr "Kasutajakontosid ei leidu…"
 
-#: ui/screens/settings.slint:186
+#: ui/screens/settings.slint:185
 msgctxt "Settings"
 msgid "GameDB"
 msgstr "GameDB"
 
-#: ui/screens/settings.slint:200
+#: ui/screens/settings.slint:199
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
 msgstr "Laadi alla GameDB viimane versioon"
 
-#: ui/screens/settings.slint:209
+#: ui/screens/settings.slint:208
 msgctxt "Settings"
 msgid "Update GameDB"
 msgstr "Uuenda GameDB-d"
 
-#: ui/screens/settings.slint:236
+#: ui/screens/settings.slint:235
 msgctxt "Settings"
 msgid "Updates"
 msgstr "Uuendused"
 
-#: ui/screens/settings.slint:250
+#: ui/screens/settings.slint:249
 msgctxt "Settings"
 msgid "Configure automatic update checking"
 msgstr "Seadista uuenduste olemasolu automaatset kontrollimist"
 
-#: ui/screens/settings.slint:261
+#: ui/screens/settings.slint:260
 msgctxt "Settings"
 msgid "Check for updates automatically"
 msgstr "Kontrolli uuendusi automaatselt"
 
-#: ui/screens/settings.slint:279
+#: ui/screens/settings.slint:277
 msgctxt "Settings"
 msgid "Save"
 msgstr "Salvesta"
@@ -251,17 +251,17 @@ msgctxt "About"
 msgid "View License"
 msgstr "Vaata litsentsi"
 
-#: ui/app.slint:49
+#: ui/app.slint:48
 msgctxt "App"
 msgid "Games"
 msgstr "Mängud"
 
-#: ui/app.slint:62
+#: ui/app.slint:61
 msgctxt "App"
 msgid "Settings"
 msgstr "Seadistused"
 
-#: ui/app.slint:69
+#: ui/app.slint:68
 msgctxt "App"
 msgid "About"
 msgstr "Rakenduse teave"
@@ -326,65 +326,75 @@ msgctxt "RestoreLogic"
 msgid "Unsupported archive version"
 msgstr "Arhiivifaili versioon pole toetatud"
 
-#: ui/logic/notification.slint:30
+#: ui/logic/notification.slint:48
 msgctxt "NotificationLogic"
 msgid "Set your Steam account in settings"
 msgstr "Lisa seadistustes oma Steami kasutajakonto"
 
-#: ui/logic/notification.slint:31
+#: ui/logic/notification.slint:49
 msgctxt "NotificationLogic"
 msgid "Backup directory does not exist"
 msgstr "Varunduskausta pole olemas"
 
-#: ui/logic/notification.slint:32
+#: ui/logic/notification.slint:50
 msgctxt "NotificationLogic"
 msgid "Successfully saved settings"
 msgstr "Seadistuste salvestamine õnnestus"
 
-#: ui/logic/notification.slint:33
+#: ui/logic/notification.slint:51
 msgctxt "NotificationLogic"
 msgid "Successfully updated GameDB"
 msgstr "GameDB uuendamine õnnestus"
 
-#: ui/logic/notification.slint:34
+#: ui/logic/notification.slint:52
 msgctxt "NotificationLogic"
 msgid "GameDB is already up to date"
 msgstr "GameDB on juba uuendatud"
 
-#: ui/logic/notification.slint:35
+#: ui/logic/notification.slint:53
 msgctxt "NotificationLogic"
 msgid "Failed to update GameDB"
 msgstr "GameDB uuendamine ei õnnestunud"
 
-#: ui/logic/notification.slint:36
+#: ui/logic/notification.slint:54
 msgctxt "NotificationLogic"
 msgid "Archive corrupted"
 msgstr "Arhiivifail on vigane"
 
-#: ui/logic/notification.slint:37
+#: ui/logic/notification.slint:55
 msgctxt "NotificationLogic"
 msgid "Invalid archive"
 msgstr "Vigane arhiivifail"
 
-#: ui/logic/notification.slint:38
+#: ui/logic/notification.slint:56
 msgctxt "NotificationLogic"
 msgid "I/O error"
 msgstr "Sisend- või väljundviga"
 
-#: ui/logic/notification.slint:39
+#: ui/logic/notification.slint:57
 msgctxt "NotificationLogic"
 msgid "Unsupported archive version"
 msgstr "Arhiivifaili versioon pole toetatud"
 
-#: ui/logic/notification.slint:40
+#: ui/logic/notification.slint:58
 msgctxt "NotificationLogic"
 msgid "No backups found"
 msgstr "Varukoopiaid ei leidu"
 
-#: ui/logic/notification.slint:41
+#: ui/logic/notification.slint:59
 msgctxt "NotificationLogic"
 msgid "Game is not installed"
 msgstr "Mäng pole paigaldatud"
+
+#: ui/logic/notification.slint:64
+msgctxt "NotificationLogic"
+msgid "Backed up {} games"
+msgstr ""
+
+#: ui/logic/notification.slint:65
+msgctxt "NotificationLogic"
+msgid "Restored {} games"
+msgstr ""
 
 #: ui/components/dropdown.slint:12
 msgctxt "Dropdown"

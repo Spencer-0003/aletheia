@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-04-20 17:46+0000\n"
+"POT-Creation-Date: 2026-07-04 22:41+0000\n"
 "PO-Revision-Date: 2026-02-09 16:09+0000\n"
 "Last-Translator: World170 <world170_@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/aletheia/ui/ca/"
@@ -154,37 +154,37 @@ msgctxt "Settings"
 msgid "No accounts found…"
 msgstr "No s'han trobat comptes…"
 
-#: ui/screens/settings.slint:186
+#: ui/screens/settings.slint:185
 msgctxt "Settings"
 msgid "GameDB"
 msgstr "GameDB"
 
-#: ui/screens/settings.slint:200
+#: ui/screens/settings.slint:199
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
 msgstr "Descarrega l'última còpia del GameDB"
 
-#: ui/screens/settings.slint:209
+#: ui/screens/settings.slint:208
 msgctxt "Settings"
 msgid "Update GameDB"
 msgstr "Actualitzar GameDB"
 
-#: ui/screens/settings.slint:236
+#: ui/screens/settings.slint:235
 msgctxt "Settings"
 msgid "Updates"
 msgstr "Actualitzacions"
 
-#: ui/screens/settings.slint:250
+#: ui/screens/settings.slint:249
 msgctxt "Settings"
 msgid "Configure automatic update checking"
 msgstr "Configura la comprovació automàtica d’actualitzacions"
 
-#: ui/screens/settings.slint:261
+#: ui/screens/settings.slint:260
 msgctxt "Settings"
 msgid "Check for updates automatically"
 msgstr "Busca actualitzacions automàticament"
 
-#: ui/screens/settings.slint:279
+#: ui/screens/settings.slint:277
 msgctxt "Settings"
 msgid "Save"
 msgstr "Guardar"
@@ -271,17 +271,17 @@ msgctxt "About"
 msgid "View License"
 msgstr "Veure llicència"
 
-#: ui/app.slint:49
+#: ui/app.slint:48
 msgctxt "App"
 msgid "Games"
 msgstr "Jocs"
 
-#: ui/app.slint:62
+#: ui/app.slint:61
 msgctxt "App"
 msgid "Settings"
 msgstr "Configuració"
 
-#: ui/app.slint:69
+#: ui/app.slint:68
 msgctxt "App"
 msgid "About"
 msgstr "Informació"
@@ -346,64 +346,74 @@ msgctxt "RestoreLogic"
 msgid "Unsupported archive version"
 msgstr "Versió d'arxiu no admesa"
 
-#: ui/logic/notification.slint:30
+#: ui/logic/notification.slint:48
 msgctxt "NotificationLogic"
 msgid "Set your Steam account in settings"
 msgstr "Configura el teu compte de Steam a les configuracions"
 
-#: ui/logic/notification.slint:31
+#: ui/logic/notification.slint:49
 msgctxt "NotificationLogic"
 msgid "Backup directory does not exist"
 msgstr "El directori de còpies de seguretat no existeix"
 
-#: ui/logic/notification.slint:32
+#: ui/logic/notification.slint:50
 msgctxt "NotificationLogic"
 msgid "Successfully saved settings"
 msgstr "Configuració desada correctament"
 
-#: ui/logic/notification.slint:33
+#: ui/logic/notification.slint:51
 msgctxt "NotificationLogic"
 msgid "Successfully updated GameDB"
 msgstr "GameDB actualitzat correctament"
 
-#: ui/logic/notification.slint:34
+#: ui/logic/notification.slint:52
 msgctxt "NotificationLogic"
 msgid "GameDB is already up to date"
 msgstr "GameDB ja està actualitzat"
 
-#: ui/logic/notification.slint:35
+#: ui/logic/notification.slint:53
 msgctxt "NotificationLogic"
 msgid "Failed to update GameDB"
 msgstr "Hi ha hagut un error en actualitzar GameDB"
 
-#: ui/logic/notification.slint:36
+#: ui/logic/notification.slint:54
 msgctxt "NotificationLogic"
 msgid "Archive corrupted"
 msgstr "Arxiu corrupte"
 
-#: ui/logic/notification.slint:37
+#: ui/logic/notification.slint:55
 msgctxt "NotificationLogic"
 msgid "Invalid archive"
 msgstr "Arxiu no vàlid"
 
-#: ui/logic/notification.slint:38
+#: ui/logic/notification.slint:56
 msgctxt "NotificationLogic"
 msgid "I/O error"
 msgstr "Error I/O"
 
-#: ui/logic/notification.slint:39
+#: ui/logic/notification.slint:57
 msgctxt "NotificationLogic"
 msgid "Unsupported archive version"
 msgstr "Versió d'arxiu no admesa"
 
-#: ui/logic/notification.slint:40
+#: ui/logic/notification.slint:58
 msgctxt "NotificationLogic"
 msgid "No backups found"
 msgstr "No s'han trobat còpies de seguretat"
 
-#: ui/logic/notification.slint:41
+#: ui/logic/notification.slint:59
 msgctxt "NotificationLogic"
 msgid "Game is not installed"
+msgstr ""
+
+#: ui/logic/notification.slint:64
+msgctxt "NotificationLogic"
+msgid "Backed up {} games"
+msgstr ""
+
+#: ui/logic/notification.slint:65
+msgctxt "NotificationLogic"
+msgid "Restored {} games"
 msgstr ""
 
 #: ui/components/dropdown.slint:12
