@@ -1148,6 +1148,10 @@ Sonic and SEGA All Stars Racing:
   files:
     windows:
       - "{GameRoot}/ssr_save.bin"
+Soulstice:
+  files:
+    windows:
+      - "{GameRoot}/Soulstice/Saved/SaveGames/Cloud/*.sav"
 Spin Rhythm XD:
   files:
     windows:
