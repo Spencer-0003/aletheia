@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2026-07-05 19:17+0000\n"
-"PO-Revision-Date: 2026-07-05 19:20+0000\n"
+"PO-Revision-Date: 2026-07-05 23:17+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Estonian <https://hosted.weblate.org/projects/aletheia/ui/et/"
-">\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/aletheia/ui/et/>"
+"\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,12 +65,9 @@ msgid "Continue"
 msgstr "Jätka"
 
 #: ui/updater.slint:12
-#, fuzzy
-#| msgctxt "RestoreDialog"
-#| msgid "Aletheia - Restore backup"
 msgctxt "Updater"
 msgid "Aletheia - Updater"
-msgstr "Aletheia - varukoopiast taastamine"
+msgstr "Aletheia - versiooniuuendaja"
 
 #: ui/updater.slint:30
 msgctxt "Updater"
