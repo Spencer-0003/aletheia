@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-07-04 22:41+0000\n"
+"POT-Creation-Date: 2026-07-05 19:17+0000\n"
 "PO-Revision-Date: 2025-09-07 00:28+0000\n"
 "Last-Translator: Spencer <git@spencer.moe>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
@@ -21,7 +21,7 @@ msgctxt "FirstTimeSetup"
 msgid "Aletheia - First Time Setup"
 msgstr "Aletheia 是一款开源的游戏保存备份工具"
 
-#: ui/first_time_setup.slint:40
+#: ui/first_time_setup.slint:41
 msgctxt "FirstTimeSetup"
 msgid "Welcome to Aletheia"
 msgstr ""
@@ -31,7 +31,7 @@ msgctxt "FirstTimeSetup"
 msgid "Let's get you set up. You can change these settings at any time."
 msgstr ""
 
-#: ui/first_time_setup.slint:68
+#: ui/first_time_setup.slint:67
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Game Data Location"
@@ -39,7 +39,7 @@ msgctxt "FirstTimeSetup"
 msgid "Backup Location"
 msgstr "游戏数据位置"
 
-#: ui/first_time_setup.slint:76
+#: ui/first_time_setup.slint:74
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Choose where your games will be saved"
@@ -47,7 +47,7 @@ msgctxt "FirstTimeSetup"
 msgid "Where your game saves will be stored on disk."
 msgstr "选择保存游戏的位置"
 
-#: ui/first_time_setup.slint:108
+#: ui/first_time_setup.slint:104
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Browse"
@@ -55,7 +55,7 @@ msgctxt "FirstTimeSetup"
 msgid "Browse"
 msgstr "浏览"
 
-#: ui/first_time_setup.slint:123
+#: ui/first_time_setup.slint:119
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Steam Account"
@@ -63,7 +63,7 @@ msgctxt "FirstTimeSetup"
 msgid "Steam Account"
 msgstr "Steam 账号"
 
-#: ui/first_time_setup.slint:131
+#: ui/first_time_setup.slint:126
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Only affects games that save in the Steam userdata directory"
@@ -71,7 +71,7 @@ msgctxt "FirstTimeSetup"
 msgid "Used to locate saves stored in Steam's userdata directory."
 msgstr "仅影响在 Steam 用户数据目录中保存的游戏"
 
-#: ui/first_time_setup.slint:140
+#: ui/first_time_setup.slint:134
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Select an account…"
@@ -79,12 +79,20 @@ msgctxt "FirstTimeSetup"
 msgid "Select an account…"
 msgstr "选择一个账号…"
 
-#: ui/first_time_setup.slint:149
+#: ui/first_time_setup.slint:143
 msgctxt "FirstTimeSetup"
 msgid "Continue"
 msgstr ""
 
-#: ui/updater.slint:29
+#: ui/updater.slint:12
+#, fuzzy
+#| msgctxt "About"
+#| msgid "Aletheia is an open-source game save backup tool"
+msgctxt "Updater"
+msgid "Aletheia - Updater"
+msgstr "Aletheia 是一款开源的游戏保存备份工具"
+
+#: ui/updater.slint:30
 msgctxt "Updater"
 msgid "Update Available"
 msgstr "有可用的更新"
@@ -94,22 +102,22 @@ msgctxt "Updater"
 msgid "Current"
 msgstr "当前版本"
 
-#: ui/updater.slint:82
+#: ui/updater.slint:79
 msgctxt "Updater"
 msgid "New"
 msgstr "新版本"
 
-#: ui/updater.slint:106
+#: ui/updater.slint:101
 msgctxt "Updater"
 msgid "What's New"
 msgstr "怎么样"
 
-#: ui/updater.slint:143
+#: ui/updater.slint:136
 msgctxt "Updater"
 msgid "Skip"
 msgstr "跳过"
 
-#: ui/updater.slint:150
+#: ui/updater.slint:143
 msgctxt "Updater"
 msgid "Download"
 msgstr "下载"
@@ -119,37 +127,37 @@ msgctxt "Settings"
 msgid "Game Data Location"
 msgstr "游戏数据位置"
 
-#: ui/screens/settings.slint:74
+#: ui/screens/settings.slint:73
 msgctxt "Settings"
 msgid "Choose where your games will be saved"
 msgstr "选择保存游戏的位置"
 
-#: ui/screens/settings.slint:92
+#: ui/screens/settings.slint:90
 msgctxt "Settings"
 msgid "Browse"
 msgstr "浏览"
 
-#: ui/screens/settings.slint:121
+#: ui/screens/settings.slint:119
 msgctxt "Settings"
 msgid "Steam Account"
 msgstr "Steam 账号"
 
-#: ui/screens/settings.slint:138
+#: ui/screens/settings.slint:135
 msgctxt "Settings"
 msgid "Choose the Steam account for your games"
 msgstr "为您的游戏选择 Steam 账号"
 
-#: ui/screens/settings.slint:145
+#: ui/screens/settings.slint:141
 msgctxt "Settings"
 msgid "Only affects games that save in the Steam userdata directory"
 msgstr "仅影响在 Steam 用户数据目录中保存的游戏"
 
-#: ui/screens/settings.slint:157
+#: ui/screens/settings.slint:152
 msgctxt "Settings"
 msgid "Select an account…"
 msgstr "选择一个账号…"
 
-#: ui/screens/settings.slint:157
+#: ui/screens/settings.slint:152
 #, fuzzy
 #| msgctxt "Games"
 #| msgid "No games found"
@@ -157,37 +165,37 @@ msgctxt "Settings"
 msgid "No accounts found…"
 msgstr "找不到游戏"
 
-#: ui/screens/settings.slint:185
+#: ui/screens/settings.slint:180
 msgctxt "Settings"
 msgid "GameDB"
 msgstr "GameDB"
 
-#: ui/screens/settings.slint:199
+#: ui/screens/settings.slint:193
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
 msgstr "下载 GameDB 的最新版本"
 
-#: ui/screens/settings.slint:208
+#: ui/screens/settings.slint:201
 msgctxt "Settings"
 msgid "Update GameDB"
 msgstr "更新 GameDB"
 
-#: ui/screens/settings.slint:235
+#: ui/screens/settings.slint:228
 msgctxt "Settings"
 msgid "Updates"
 msgstr "更新"
 
-#: ui/screens/settings.slint:249
+#: ui/screens/settings.slint:241
 msgctxt "Settings"
 msgid "Configure automatic update checking"
 msgstr "配置自动检查更新"
 
-#: ui/screens/settings.slint:260
+#: ui/screens/settings.slint:251
 msgctxt "Settings"
 msgid "Check for updates automatically"
 msgstr "自动检查更新"
 
-#: ui/screens/settings.slint:277
+#: ui/screens/settings.slint:268
 msgctxt "Settings"
 msgid "Save"
 msgstr "保存"
@@ -197,42 +205,42 @@ msgctxt "Games"
 msgid "No games found"
 msgstr "找不到游戏"
 
-#: ui/screens/games.slint:45
+#: ui/screens/games.slint:44
 msgctxt "Games"
 msgid "Refresh"
 msgstr "刷新"
 
-#: ui/screens/games.slint:62
+#: ui/screens/games.slint:61
 msgctxt "Games"
 msgid "Search games…"
 msgstr "搜索游戏…"
 
-#: ui/screens/games.slint:68
+#: ui/screens/games.slint:67
 msgctxt "Games"
 msgid "Selecting {} / {} games"
 msgstr "选择 {} / {} 游戏"
 
-#: ui/screens/games.slint:82
+#: ui/screens/games.slint:80
 msgctxt "Games"
 msgid "Backup"
 msgstr "备份"
 
-#: ui/screens/games.slint:90
+#: ui/screens/games.slint:88
 msgctxt "Games"
 msgid "Restore"
 msgstr "恢复"
 
-#: ui/screens/games.slint:99
+#: ui/screens/games.slint:97
 msgctxt "Games"
 msgid "Clear Selection"
 msgstr "清除选择"
 
-#: ui/screens/games.slint:99
+#: ui/screens/games.slint:97
 msgctxt "Games"
 msgid "Select All"
 msgstr "全选"
 
-#: ui/screens/games.slint:100
+#: ui/screens/games.slint:98
 msgctxt "Games"
 msgid "{} Filtered"
 msgstr "{} 已过滤"
@@ -242,47 +250,47 @@ msgctxt "About"
 msgid "Application Info"
 msgstr "应用信息"
 
-#: ui/screens/about.slint:50
+#: ui/screens/about.slint:49
 msgctxt "About"
 msgid "Aletheia is an open-source game save backup tool"
 msgstr "Aletheia 是一款开源的游戏保存备份工具"
 
-#: ui/screens/about.slint:57
+#: ui/screens/about.slint:55
 msgctxt "About"
 msgid "Version: {}"
 msgstr "版本: {}"
 
-#: ui/screens/about.slint:64
+#: ui/screens/about.slint:61
 msgctxt "About"
 msgid "License: {}"
 msgstr "许可证: {}"
 
-#: ui/screens/about.slint:71
+#: ui/screens/about.slint:67
 msgctxt "About"
 msgid "Logo by: {}"
 msgstr "Logo 由: {}"
 
-#: ui/screens/about.slint:84
+#: ui/screens/about.slint:79
 msgctxt "About"
 msgid "View Source Code"
 msgstr "查看源代码"
 
-#: ui/screens/about.slint:91
+#: ui/screens/about.slint:86
 msgctxt "About"
 msgid "View License"
 msgstr "查看许可证"
 
-#: ui/app.slint:48
+#: ui/app.slint:49
 msgctxt "App"
 msgid "Games"
 msgstr "游戏"
 
-#: ui/app.slint:61
+#: ui/app.slint:62
 msgctxt "App"
 msgid "Settings"
 msgstr "设置"
 
-#: ui/app.slint:68
+#: ui/app.slint:69
 msgctxt "App"
 msgid "About"
 msgstr "关于"
@@ -295,7 +303,7 @@ msgctxt "RestoreDialog"
 msgid "Aletheia - Restore backup"
 msgstr "Aletheia 是一款开源的游戏保存备份工具"
 
-#: ui/restore_dialog.slint:26
+#: ui/restore_dialog.slint:27
 #, fuzzy
 #| msgctxt "Games"
 #| msgid "Restore"
@@ -308,22 +316,22 @@ msgctxt "RestoreDialog"
 msgid "Are you sure you want to restore {}?"
 msgstr ""
 
-#: ui/restore_dialog.slint:42
+#: ui/restore_dialog.slint:41
 msgctxt "RestoreDialog"
 msgid "This will overwrite any existing save data."
 msgstr ""
 
-#: ui/restore_dialog.slint:74
+#: ui/restore_dialog.slint:71
 msgctxt "RestoreDialog"
 msgid "Cancel"
 msgstr ""
 
-#: ui/restore_dialog.slint:74
+#: ui/restore_dialog.slint:71
 msgctxt "RestoreDialog"
 msgid "Close"
 msgstr ""
 
-#: ui/restore_dialog.slint:82
+#: ui/restore_dialog.slint:79
 #, fuzzy
 #| msgctxt "Games"
 #| msgid "Restore"
@@ -437,12 +445,12 @@ msgctxt "Dropdown"
 msgid "Select an option…"
 msgstr "选择一个选项…"
 
-#: ui/components/dropdown.slint:90
+#: ui/components/dropdown.slint:89
 msgctxt "Dropdown"
 msgid "Dropdown options"
 msgstr ""
 
-#: ui/components/dropdown.slint:136
+#: ui/components/dropdown.slint:134
 #, fuzzy
 #| msgctxt "Games"
 #| msgid "Select All"

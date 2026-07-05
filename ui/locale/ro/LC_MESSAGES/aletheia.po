@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-07-04 22:41+0000\n"
+"POT-Creation-Date: 2026-07-05 19:17+0000\n"
 "PO-Revision-Date: 2026-04-20 17:48+0000\n"
 "Last-Translator: Luciana Waldbaur <luciana.waldbaur@gmail.com>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/aletheia/ui/ro/"
@@ -19,7 +19,7 @@ msgctxt "FirstTimeSetup"
 msgid "Aletheia - First Time Setup"
 msgstr "Aletheia: configurare inițială"
 
-#: ui/first_time_setup.slint:40
+#: ui/first_time_setup.slint:41
 msgctxt "FirstTimeSetup"
 msgid "Welcome to Aletheia"
 msgstr "Bun-venit la Aletheia"
@@ -29,44 +29,52 @@ msgctxt "FirstTimeSetup"
 msgid "Let's get you set up. You can change these settings at any time."
 msgstr "Să începem! Poți schimba setările oricând."
 
-#: ui/first_time_setup.slint:68
+#: ui/first_time_setup.slint:67
 msgctxt "FirstTimeSetup"
 msgid "Backup Location"
 msgstr "Backup locație"
 
-#: ui/first_time_setup.slint:76
+#: ui/first_time_setup.slint:74
 msgctxt "FirstTimeSetup"
 msgid "Where your game saves will be stored on disk."
 msgstr "Unde versiunile salvate ale jocurilor tale vor fi stocate pe disc."
 
-#: ui/first_time_setup.slint:108
+#: ui/first_time_setup.slint:104
 msgctxt "FirstTimeSetup"
 msgid "Browse"
 msgstr "Caută"
 
-#: ui/first_time_setup.slint:123
+#: ui/first_time_setup.slint:119
 msgctxt "FirstTimeSetup"
 msgid "Steam Account"
 msgstr "Cont Steam"
 
-#: ui/first_time_setup.slint:131
+#: ui/first_time_setup.slint:126
 msgctxt "FirstTimeSetup"
 msgid "Used to locate saves stored in Steam's userdata directory."
 msgstr ""
 "Utilizat pentru localizarea salvărilor stocate în registrul Steam de date "
 "ale utilizatorilor."
 
-#: ui/first_time_setup.slint:140
+#: ui/first_time_setup.slint:134
 msgctxt "FirstTimeSetup"
 msgid "Select an account…"
 msgstr "Selectează un cont…"
 
-#: ui/first_time_setup.slint:149
+#: ui/first_time_setup.slint:143
 msgctxt "FirstTimeSetup"
 msgid "Continue"
 msgstr "Continuă"
 
-#: ui/updater.slint:29
+#: ui/updater.slint:12
+#, fuzzy
+#| msgctxt "RestoreDialog"
+#| msgid "Aletheia - Restore backup"
+msgctxt "Updater"
+msgid "Aletheia - Updater"
+msgstr "Aletheia: restabilește un backup"
+
+#: ui/updater.slint:30
 msgctxt "Updater"
 msgid "Update Available"
 msgstr "Actualizare disponibilă"
@@ -76,22 +84,22 @@ msgctxt "Updater"
 msgid "Current"
 msgstr "Actual"
 
-#: ui/updater.slint:82
+#: ui/updater.slint:79
 msgctxt "Updater"
 msgid "New"
 msgstr "Nou"
 
-#: ui/updater.slint:106
+#: ui/updater.slint:101
 msgctxt "Updater"
 msgid "What's New"
 msgstr "Ce e nou"
 
-#: ui/updater.slint:143
+#: ui/updater.slint:136
 msgctxt "Updater"
 msgid "Skip"
 msgstr "Sari peste"
 
-#: ui/updater.slint:150
+#: ui/updater.slint:143
 msgctxt "Updater"
 msgid "Download"
 msgstr "Descarcă"
@@ -101,76 +109,76 @@ msgctxt "Settings"
 msgid "Game Data Location"
 msgstr "Locație date joc"
 
-#: ui/screens/settings.slint:74
+#: ui/screens/settings.slint:73
 msgctxt "Settings"
 msgid "Choose where your games will be saved"
 msgstr "Alege unde vor fi salvate jocurile tale"
 
-#: ui/screens/settings.slint:92
+#: ui/screens/settings.slint:90
 msgctxt "Settings"
 msgid "Browse"
 msgstr "Caută"
 
-#: ui/screens/settings.slint:121
+#: ui/screens/settings.slint:119
 msgctxt "Settings"
 msgid "Steam Account"
 msgstr "Cont Steam"
 
-#: ui/screens/settings.slint:138
+#: ui/screens/settings.slint:135
 msgctxt "Settings"
 msgid "Choose the Steam account for your games"
 msgstr "Alege contul de Steam pentru jocurile tale"
 
-#: ui/screens/settings.slint:145
+#: ui/screens/settings.slint:141
 msgctxt "Settings"
 msgid "Only affects games that save in the Steam userdata directory"
 msgstr ""
 "Se referă doar la jocurile care sunt salvate în registrul Steam de date ale "
 "utilizatorilor"
 
-#: ui/screens/settings.slint:157
+#: ui/screens/settings.slint:152
 #, fuzzy
 msgctxt "Settings"
 msgid "Select an account…"
 msgstr "Selectează un cont…"
 
-#: ui/screens/settings.slint:157
+#: ui/screens/settings.slint:152
 msgctxt "Settings"
 msgid "No accounts found…"
 msgstr "Nu s-au găsit conturi…"
 
-#: ui/screens/settings.slint:185
+#: ui/screens/settings.slint:180
 #, fuzzy
 msgctxt "Settings"
 msgid "GameDB"
 msgstr "GameDB"
 
-#: ui/screens/settings.slint:199
+#: ui/screens/settings.slint:193
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
 msgstr "Descarcă cea mai nouă versiune a GameDB"
 
-#: ui/screens/settings.slint:208
+#: ui/screens/settings.slint:201
 msgctxt "Settings"
 msgid "Update GameDB"
 msgstr "Actualizează GameDB"
 
-#: ui/screens/settings.slint:235
+#: ui/screens/settings.slint:228
 msgctxt "Settings"
 msgid "Updates"
 msgstr "Actualizări"
 
-#: ui/screens/settings.slint:249
+#: ui/screens/settings.slint:241
 msgctxt "Settings"
 msgid "Configure automatic update checking"
 msgstr "Configurează verificarea automată a apariției actualizărilor"
 
-#: ui/screens/settings.slint:260
+#: ui/screens/settings.slint:251
 msgctxt "Settings"
 msgid "Check for updates automatically"
 msgstr "Verifică automat dacă există actualizări noi"
 
-#: ui/screens/settings.slint:277
+#: ui/screens/settings.slint:268
 msgctxt "Settings"
 msgid "Save"
 msgstr "Salvează"
@@ -180,42 +188,42 @@ msgctxt "Games"
 msgid "No games found"
 msgstr "Nu s-au găsit jocuri"
 
-#: ui/screens/games.slint:45
+#: ui/screens/games.slint:44
 msgctxt "Games"
 msgid "Refresh"
 msgstr "Reîncarcă"
 
-#: ui/screens/games.slint:62
+#: ui/screens/games.slint:61
 msgctxt "Games"
 msgid "Search games…"
 msgstr "Caută jocuri…"
 
-#: ui/screens/games.slint:68
+#: ui/screens/games.slint:67
 msgctxt "Games"
 msgid "Selecting {} / {} games"
 msgstr "{} / {} jocuri selectate"
 
-#: ui/screens/games.slint:82
+#: ui/screens/games.slint:80
 msgctxt "Games"
 msgid "Backup"
 msgstr "Backup"
 
-#: ui/screens/games.slint:90
+#: ui/screens/games.slint:88
 msgctxt "Games"
 msgid "Restore"
 msgstr ""
 
-#: ui/screens/games.slint:99
+#: ui/screens/games.slint:97
 msgctxt "Games"
 msgid "Clear Selection"
 msgstr "Șterge selecția"
 
-#: ui/screens/games.slint:99
+#: ui/screens/games.slint:97
 msgctxt "Games"
 msgid "Select All"
 msgstr "Selectează tot"
 
-#: ui/screens/games.slint:100
+#: ui/screens/games.slint:98
 msgctxt "Games"
 msgid "{} Filtered"
 msgstr "{} filtrări"
@@ -225,49 +233,49 @@ msgctxt "About"
 msgid "Application Info"
 msgstr "Informații despre aplicație"
 
-#: ui/screens/about.slint:50
+#: ui/screens/about.slint:49
 msgctxt "About"
 msgid "Aletheia is an open-source game save backup tool"
 msgstr ""
 "Aletheia este un instrument open-source pentru backup-ul progresului din "
 "jocuri."
 
-#: ui/screens/about.slint:57
+#: ui/screens/about.slint:55
 msgctxt "About"
 msgid "Version: {}"
 msgstr "Versiune: {}"
 
-#: ui/screens/about.slint:64
+#: ui/screens/about.slint:61
 msgctxt "About"
 msgid "License: {}"
 msgstr "Licență: {}"
 
-#: ui/screens/about.slint:71
+#: ui/screens/about.slint:67
 msgctxt "About"
 msgid "Logo by: {}"
 msgstr "Autor logo: {}"
 
-#: ui/screens/about.slint:84
+#: ui/screens/about.slint:79
 msgctxt "About"
 msgid "View Source Code"
 msgstr "Vezi codul sursă"
 
-#: ui/screens/about.slint:91
+#: ui/screens/about.slint:86
 msgctxt "About"
 msgid "View License"
 msgstr "Vezi licența"
 
-#: ui/app.slint:48
+#: ui/app.slint:49
 msgctxt "App"
 msgid "Games"
 msgstr "Jocuri"
 
-#: ui/app.slint:61
+#: ui/app.slint:62
 msgctxt "App"
 msgid "Settings"
 msgstr "Setări"
 
-#: ui/app.slint:68
+#: ui/app.slint:69
 msgctxt "App"
 msgid "About"
 msgstr "Despre"
@@ -277,7 +285,7 @@ msgctxt "RestoreDialog"
 msgid "Aletheia - Restore backup"
 msgstr "Aletheia: restabilește un backup"
 
-#: ui/restore_dialog.slint:26
+#: ui/restore_dialog.slint:27
 msgctxt "RestoreDialog"
 msgid "Restore Backup?"
 msgstr "Restabilești un backup?"
@@ -287,22 +295,22 @@ msgctxt "RestoreDialog"
 msgid "Are you sure you want to restore {}?"
 msgstr "Ești sigur/ă că vrei să restabilești {}?"
 
-#: ui/restore_dialog.slint:42
+#: ui/restore_dialog.slint:41
 msgctxt "RestoreDialog"
 msgid "This will overwrite any existing save data."
 msgstr "Vor fi suprascrise toate datele existente salvate."
 
-#: ui/restore_dialog.slint:74
+#: ui/restore_dialog.slint:71
 msgctxt "RestoreDialog"
 msgid "Cancel"
 msgstr "Anulează"
 
-#: ui/restore_dialog.slint:74
+#: ui/restore_dialog.slint:71
 msgctxt "RestoreDialog"
 msgid "Close"
 msgstr "Închide"
 
-#: ui/restore_dialog.slint:82
+#: ui/restore_dialog.slint:79
 msgctxt "RestoreDialog"
 msgid "Restore"
 msgstr "Restabilește"
@@ -407,12 +415,12 @@ msgctxt "Dropdown"
 msgid "Select an option…"
 msgstr ""
 
-#: ui/components/dropdown.slint:90
+#: ui/components/dropdown.slint:89
 msgctxt "Dropdown"
 msgid "Dropdown options"
 msgstr ""
 
-#: ui/components/dropdown.slint:136
+#: ui/components/dropdown.slint:134
 msgctxt "Dropdown"
 msgid "Selected"
 msgstr ""
