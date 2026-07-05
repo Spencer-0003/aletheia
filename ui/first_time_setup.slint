@@ -8,6 +8,7 @@ import { ThemeLogic } from "./logic/theme.slint";
 
 export component FirstTimeSetup inherits Window {
   title: @tr("Aletheia - First Time Setup");
+  default-font-family: "Inter";
   preferred-width: 520px;
   preferred-height: 480px;
   width: 520px;
@@ -39,7 +40,6 @@ export component FirstTimeSetup inherits Window {
           Text {
             text: @tr("Welcome to Aletheia");
             color: ThemeLogic.colors.text_primary;
-            font-family: "Inter";
             font-size: 24px;
             font-weight: 700;
             horizontal-alignment: center;
@@ -48,7 +48,6 @@ export component FirstTimeSetup inherits Window {
           Text {
             text: @tr("Let's get you set up. You can change these settings at any time.");
             color: ThemeLogic.colors.text_tertiary;
-            font-family: "Inter";
             font-size: 13px;
             horizontal-alignment: center;
             wrap: word-wrap;
@@ -67,7 +66,6 @@ export component FirstTimeSetup inherits Window {
           Text {
             text: @tr("Backup Location");
             color: ThemeLogic.colors.text_primary;
-            font-family: "Inter";
             font-size: 14px;
             font-weight: 600;
           }
@@ -75,7 +73,6 @@ export component FirstTimeSetup inherits Window {
           Text {
             text: @tr("Where your game saves will be stored on disk.");
             color: ThemeLogic.colors.text_tertiary;
-            font-family: "Inter";
             font-size: 12px;
           }
 
@@ -96,7 +93,6 @@ export component FirstTimeSetup inherits Window {
                 Text {
                   text: SetupLogic.backup_path;
                   color: ThemeLogic.colors.text_primary;
-                  font-family: "Inter";
                   font-size: 13px;
                   vertical-alignment: center;
                   overflow: elide;
@@ -122,7 +118,6 @@ export component FirstTimeSetup inherits Window {
           Text {
             text: @tr("Steam Account");
             color: ThemeLogic.colors.text_primary;
-            font-family: "Inter";
             font-size: 14px;
             font-weight: 600;
           }
@@ -130,7 +125,6 @@ export component FirstTimeSetup inherits Window {
           Text {
             text: @tr("Used to locate saves stored in Steam's userdata directory.");
             color: ThemeLogic.colors.text_tertiary;
-            font-family: "Inter";
             font-size: 12px;
           }
 

@@ -6,6 +6,7 @@ import { ThemeLogic } from "./logic/theme.slint";
 import { UpdaterLogic } from "./logic/updater.slint";
 
 export component Updater inherits Window {
+  default-font-family: "Inter";
   width: 500px;
   height: 400px;
   title: "Aletheia - Updater";
@@ -28,7 +29,6 @@ export component Updater inherits Window {
         Text {
           text: @tr("Update Available");
           color: ThemeLogic.colors.text_secondary;
-          font-family: "Inter";
           font-size: 24px;
           font-weight: 700;
           horizontal-alignment: center;
@@ -51,7 +51,6 @@ export component Updater inherits Window {
             Text {
               text: @tr("Current");
               color: ThemeLogic.colors.text_tertiary;
-              font-family: "Inter";
               font-size: 12px;
               font-weight: 500;
               horizontal-alignment: center;
@@ -60,7 +59,6 @@ export component Updater inherits Window {
             Text {
               text: UpdaterLogic.current_version;
               color: ThemeLogic.colors.updater_current;
-              font-family: "Inter";
               font-size: 16px;
               font-weight: 600;
               horizontal-alignment: center;
@@ -70,7 +68,6 @@ export component Updater inherits Window {
           Text {
             text: "→";
             color: ThemeLogic.colors.text_tertiary;
-            font-family: "Inter";
             font-size: 20px;
           }
 
@@ -81,7 +78,6 @@ export component Updater inherits Window {
             Text {
               text: @tr("New");
               color: ThemeLogic.colors.text_tertiary;
-              font-family: "Inter";
               font-size: 12px;
               font-weight: 500;
               horizontal-alignment: center;
@@ -90,7 +86,6 @@ export component Updater inherits Window {
             Text {
               text: UpdaterLogic.new_version;
               color: ThemeLogic.colors.updater_new;
-              font-family: "Inter";
               font-size: 16px;
               font-weight: 600;
               horizontal-alignment: center;
@@ -105,7 +100,6 @@ export component Updater inherits Window {
         Text {
           text: @tr("What's New");
           color: ThemeLogic.colors.text_secondary;
-          font-family: "Inter";
           font-size: 16px;
           font-weight: 600;
         }
@@ -125,7 +119,6 @@ export component Updater inherits Window {
               width: parent.width - 24px;
               text: UpdaterLogic.changelog;
               color: ThemeLogic.colors.text_secondary;
-              font-family: "Inter";
               font-size: 14px;
               wrap: word-wrap;
             }

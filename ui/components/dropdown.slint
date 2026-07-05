@@ -49,7 +49,6 @@ export component Dropdown {
         text: show_label ? root.label : root.placeholder;
         color: show_label ? ThemeLogic.colors.text_primary : ThemeLogic.colors.text_placeholder;
         opacity: root.enabled ? (show_label ? 65% : 40%) : 50%;
-        font-family: "Inter";
         font-size: 14px;
         font-weight: 400;
         overflow: elide;
@@ -121,7 +120,6 @@ export component Dropdown {
               text: option.label;
               color: ThemeLogic.colors.text_primary;
               opacity: is_current_value ? 100% : 65%;
-              font-family: "Inter";
               font-size: 14px;
               font-weight: 400;
               overflow: elide;

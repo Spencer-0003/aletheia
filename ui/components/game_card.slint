@@ -46,7 +46,6 @@ export component GameCard inherits Rectangle {
       Text {
         text: game.name;
         color: ThemeLogic.colors.text_primary;
-        font-family: "Inter";
         font-size: 16px;
         overflow: elide;
         vertical-alignment: center;
@@ -56,7 +55,6 @@ export component GameCard inherits Rectangle {
         y: 1px;
         text: "(" + game.source + ")";
         opacity: 25%;
-        font-family: "Inter";
         font-size: 10px;
         vertical-alignment: center;
       }
@@ -65,7 +63,6 @@ export component GameCard inherits Rectangle {
     Text {
       text: root.game.backup_size;
       color: ThemeLogic.colors.text_muted;
-      font-family: "Inter";
       font-size: 14px;
       horizontal-alignment: right;
       vertical-alignment: center;

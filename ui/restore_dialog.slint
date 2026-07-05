@@ -7,6 +7,7 @@ import { ThemeLogic } from "./logic/theme.slint";
 
 export component RestoreDialog inherits Window {
   title: @tr("Aletheia - Restore backup");
+  default-font-family: "Inter";
   preferred-width: 520px;
   preferred-height: 220px;
   background: ThemeLogic.colors.background;
@@ -25,7 +26,6 @@ export component RestoreDialog inherits Window {
         Text {
           text: @tr("Restore Backup?");
           color: ThemeLogic.colors.text_primary;
-          font-family: "Inter";
           font-size: 20px;
           font-weight: 700;
         }
@@ -33,7 +33,6 @@ export component RestoreDialog inherits Window {
         Text {
           color: ThemeLogic.colors.text_secondary;
           text: @tr("Are you sure you want to restore {}?", RestoreLogic.game_name);
-          font-family: "Inter";
           font-size: 15px;
           font-weight: 400;
         }
@@ -41,7 +40,6 @@ export component RestoreDialog inherits Window {
         if RestoreLogic.error.is-empty: Text {
           text: @tr("This will overwrite any existing save data.");
           color: ThemeLogic.colors.text_muted;
-          font-family: "Inter";
           font-size: 13px;
           font-weight: 400;
         }
@@ -58,7 +56,6 @@ export component RestoreDialog inherits Window {
             Text {
               text: RestoreLogic.translate_error();
               color: ThemeLogic.colors.text_primary;
-              font-family: "Inter";
               font-size: 14px;
               font-weight: 400;
             }
