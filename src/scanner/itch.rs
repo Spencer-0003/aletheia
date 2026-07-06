@@ -2,6 +2,8 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 
 use super::{Game, Scanner};
+
+#[cfg(not(target_os = "macos"))]
 use crate::dirs::config;
 
 #[cfg(all(unix, not(target_os = "macos")))]
