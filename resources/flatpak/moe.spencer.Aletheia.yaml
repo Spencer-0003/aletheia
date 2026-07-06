@@ -2,9 +2,9 @@
 # SPDX-License-Identifier: CC0-1.0
 
 app-id: moe.spencer.Aletheia
-runtime: org.kde.Platform
-runtime-version: '6.10'
-sdk: org.kde.Sdk
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
 
