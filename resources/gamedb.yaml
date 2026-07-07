@@ -1441,8 +1441,8 @@ Yakuza 5 Remastered:
 "Yakuza 6: The Song of Life":
   files:
     windows:
-      - "{GOGAppData}/56296606511683989/Storage/Shared/Files/*"
-      - "{SteamUserData}/1388590/remote/*"
+      - "{GOGAppData}/56296606511683989/Storage/Shared/Files/**/*"
+      - "{SteamUserData}/1388590/remote/**/*"
 Yakuza Kiwami:
   files:
     windows:
