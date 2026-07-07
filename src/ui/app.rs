@@ -24,6 +24,7 @@ pub fn run(config: &AletheiaConfig) {
         updater_logic.set_current_version(env!("CARGO_PKG_VERSION").into());
         updater_logic.set_new_version(release.tag_name.into());
         updater_logic.set_changelog(release.body.into());
+        updater_logic.set_release_url(release.url.into());
 
         updater_window.run().unwrap();
 

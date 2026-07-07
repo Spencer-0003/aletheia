@@ -142,6 +142,7 @@ export component Updater inherits Window {
           height: 36px;
           text: @tr("Download");
           clicked => {
+            Platform.open-url(UpdaterLogic.release_url);
             UpdaterLogic.downloading = true;
             root.hide();
           }
