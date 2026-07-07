@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2025 Spencer
+SPDX-FileCopyrightText: 2025-2026 Spencer
 SPDX-License-Identifier: AGPL-3.0-only
 -->
 
