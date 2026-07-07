@@ -1448,10 +1448,18 @@ Yakuza Kiwami:
     windows:
       - "{GOGAppData}/56296604923139714/Storage/Shared/Files/*"
       - "{SteamUserData}/834530/remote/*"
+Yakuza Kiwami (Legacy):
+  files:
+    windows:
+      - "{SteamUserData}/834530/remote/*"
 Yakuza Kiwami 2:
   files:
     windows:
       - "{AppData}/Sega/YakuzaKiwami2/*"
+Yakuza Kiwami 2 (Legacy):
+  files:
+    windows:
+      - "{AppData}/Sega/YakuzaKiwami2/{SteamID3}/**/*"
 Youtubers Life:
   files:
     windows:
