@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Spencer
+// SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
 import { Button } from "./components/button.slint";
@@ -134,7 +134,7 @@ export component Updater inherits Window {
           width: 80px;
           height: 36px;
           text: @tr("Skip");
-          clicked => UpdaterLogic.skip_update();
+          clicked => root.hide();
         }
 
         Button {
@@ -143,7 +143,7 @@ export component Updater inherits Window {
           text: @tr("Download");
           clicked => {
             UpdaterLogic.downloading = true;
-            UpdaterLogic.download_update();
+            root.hide();
           }
         }
       }

@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Spencer
+// SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
 import { Button } from "../components/button.slint";
@@ -77,14 +77,14 @@ export component About {
             width: 180px;
             height: 38px;
             text: @tr("View Source Code");
-            clicked => AppLogic.open_url("https://github.com/Spencer-0003/aletheia");
+            clicked => Platform.open-url("https://github.com/Spencer-0003/aletheia");
           }
 
           Button {
             width: 180px;
             height: 38px;
             text: @tr("View License");
-            clicked => AppLogic.open_url("https://github.com/Spencer-0003/aletheia/blob/master/LICENSE");
+            clicked => Platform.open-url("https://github.com/Spencer-0003/aletheia/blob/master/LICENSE");
           }
         }
       }
