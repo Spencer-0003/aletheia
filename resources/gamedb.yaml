@@ -900,6 +900,10 @@ Need for Speed Unbound:
   files:
     windows:
       - "{Documents}/Need For Speed(TM) Unbound/SaveGame/*/*"
+Neon White:
+  files:
+    windows:
+      - "{LocalLow}/Little Flag Software, LLC/Neon White/{SteamID64}/**/*"
 New Tales from the Borderlands:
   files:
     windows:
