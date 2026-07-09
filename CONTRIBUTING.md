@@ -24,7 +24,7 @@ Add game save locations in `resources/gamedb.yaml`; entries must be alphabetical
 | `{GOGAppData}`    | GOG application data directory                                                                |
 | `{SteamID3}`      | Steam ID3                                                                                     |
 | `{SteamID64}`     | Steam ID64                                                                                    |
-| `{SteamUserData}` | Steam userdata directory                                                                      |
+| `{SteamUserData}` | Steam userdata directory for the configured Steam user                                        |
 
 Example entry:
 ```yaml
@@ -35,6 +35,8 @@ Unleashed Recompiled:
     windows:
       - "{AppData}/UnleashedRecomp/save/*"
 ```
+
+On Linux, `windows` paths are resolved relative to the Wine prefix rather than a real Windows filesystem, so you don't need to write separate entries just to cover Proton/Wine.
 
 ### Translations
 Translations are managed with [Weblate](https://weblate.org), you can contribute translations [here](https://hosted.weblate.org/projects/aletheia).
