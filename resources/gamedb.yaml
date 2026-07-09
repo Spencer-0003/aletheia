@@ -699,6 +699,10 @@ Kinkoi Golden Time:
   files:
     windows:
       - "{GameRoot}/SaveData/*"
+Kugayama Shiori's Death Diary:
+  files:
+    windows:
+      - "{SteamUserData}/4141950/remote/*"
 "Kumitantei: Old-School Slaughter":
   files:
     windows:
