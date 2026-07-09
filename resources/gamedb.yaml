@@ -1080,6 +1080,10 @@ SWORD ART ONLINE Last Recollection:
   files:
     windows:
       - "{LocalAppData}/BANDAI NAMCO Entertainment/SAO LastRecollection/Saved/SaveGames/*"
+SaDistic BlooD:
+  files:
+    windows:
+      - "{Documents}/BLACKcyc/SaDisticBlooD_savefiles/sav/*"
 Saints Row The Third Remastered:
   files:
     windows:
