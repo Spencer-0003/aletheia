@@ -36,51 +36,48 @@ export component App inherits Window {
   min-height: 500px;
   title: "Aletheia";
   icon: @image-url("../resources/logo/moe.spencer.Aletheia.png");
+  background: ThemeLogic.colors.surface;
 
-  Rectangle {
-    background: ThemeLogic.colors.surface;
+  VerticalLayout {
+    HorizontalLayout {
+      spacing: 16px;
+      padding: 16px;
 
-    VerticalLayout {
-      HorizontalLayout {
-        spacing: 16px;
-        padding: 16px;
-
-        NavItem {
-          text: @tr("Games");
-          icon: @image-url("./assets/joystick.svg");
-          active: root.current_screen == "games";
-          clicked => {
-            if (root.current_screen != "games") {
-              GamesScreenLogic.filter(""); // Lazy hack to reset search, waiting for https://github.com/slint-ui/slint/pull/6657 to be merged.
-            }
-
-            root.current_screen = "games";
+      NavItem {
+        text: @tr("Games");
+        icon: @image-url("./assets/joystick.svg");
+        active: root.current_screen == "games";
+        clicked => {
+          if (root.current_screen != "games") {
+            GamesScreenLogic.filter(""); // Lazy hack to reset search, waiting for https://github.com/slint-ui/slint/pull/6657 to be merged.
           }
-        }
 
-        NavItem {
-          text: @tr("Settings");
-          icon: @image-url("./assets/settings.svg");
-          active: root.current_screen == "settings";
-          clicked => { root.current_screen = "settings"; }
-        }
-
-        NavItem {
-          text: @tr("About");
-          icon: @image-url("./assets/about.svg");
-          active: root.current_screen == "about";
-          clicked => { root.current_screen = "about"; }
+          root.current_screen = "games";
         }
       }
 
-      Rectangle {
-        background: ThemeLogic.colors.background;
-        border-radius: 8px;
-
-        if (root.current_screen == "games"): Games {}
-        if (root.current_screen == "settings"): Settings {}
-        if (root.current_screen == "about"): About {}
+      NavItem {
+        text: @tr("Settings");
+        icon: @image-url("./assets/settings.svg");
+        active: root.current_screen == "settings";
+        clicked => { root.current_screen = "settings"; }
       }
+
+      NavItem {
+        text: @tr("About");
+        icon: @image-url("./assets/about.svg");
+        active: root.current_screen == "about";
+        clicked => { root.current_screen = "about"; }
+      }
+    }
+
+    Rectangle {
+      background: ThemeLogic.colors.background;
+      border-radius: 8px;
+
+      if (root.current_screen == "games"): Games {}
+      if (root.current_screen == "settings"): Settings {}
+      if (root.current_screen == "about"): About {}
     }
   }
 
