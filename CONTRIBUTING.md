@@ -9,6 +9,8 @@ Thanks for your interest in contributing to Aletheia. Whether you want to fix bu
 ### GameDB
 Add game save locations in `resources/gamedb.yaml`; entries must be alphabetical, and the file is automatically linted on pull requests. Include Linux paths if supported. Game titles are based on GOG names, but titles from Steam and itch.io are also accepted. The following placeholders can be used:
 
+> Note: Aletheia matches Steam games against the name in the local `appmanifest_<appid>.acf`, not the store page. This is usually the same as the English title, but Steam sometimes stores the name in the developer's own language, like Japanese or Korean, regardless of your Steam client or system language. If your entry isn't matching, check `steamapps/appmanifest_<appid>.acf` for the exact string Steam is using and key your entry off that.
+
 | Placeholder       | Description                                                                                   |
 |-------------------|-----------------------------------------------------------------------------------------------|
 | `{GameRoot}`      | Root directory of the game installation                                                       |
