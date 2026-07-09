@@ -699,10 +699,6 @@ Kinkoi Golden Time:
   files:
     windows:
       - "{GameRoot}/SaveData/*"
-Kugayama Shiori's Death Diary:
-  files:
-    windows:
-      - "{SteamUserData}/4141950/remote/*"
 "Kumitantei: Old-School Slaughter":
   files:
     windows:
@@ -1500,3 +1496,7 @@ tModLoader:
     windows:
       - "{Documents}/My Games/Terraria/tModLoader/Players/*/*"
       - "{Documents}/My Games/Terraria/tModLoader/Worlds/*/*"
+久我山栞の死様手帖: # Kugayama Shiori's Death Diary
+  files:
+    windows:
+      - "{SteamUserData}/4141950/remote/*"
