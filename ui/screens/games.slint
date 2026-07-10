@@ -107,6 +107,10 @@ export component Games {
         width: 50%;
         spacing: 8px;
 
+        accessible-role: list;
+        accessible-orientation: vertical;
+        accessible-item-count: GamesScreenLogic.filtered_games.length;
+
         for game in GamesScreenLogic.filtered_games: GameCard {
           game: game;
           clicked => {
