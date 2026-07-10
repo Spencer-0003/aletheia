@@ -43,10 +43,14 @@ export component App inherits Window {
       spacing: 16px;
       padding: 16px;
 
+      accessible-role: tab-list;
+      accessible-item-count: 3;
+
       NavItem {
         text: @tr("Games");
         icon: @image-url("./assets/joystick.svg");
         active: root.current_screen == "games";
+        index: 0;
         clicked => {
           if (root.current_screen != "games") {
             GamesScreenLogic.filter(""); // Lazy hack to reset search, waiting for https://github.com/slint-ui/slint/pull/6657 to be merged.
@@ -60,6 +64,7 @@ export component App inherits Window {
         text: @tr("Settings");
         icon: @image-url("./assets/settings.svg");
         active: root.current_screen == "settings";
+        index: 1;
         clicked => { root.current_screen = "settings"; }
       }
 
@@ -67,6 +72,7 @@ export component App inherits Window {
         text: @tr("About");
         icon: @image-url("./assets/about.svg");
         active: root.current_screen == "about";
+        index: 2;
         clicked => { root.current_screen = "about"; }
       }
     }

@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Spencer
+// SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
 import { ThemeLogic } from "../logic/theme.slint";
@@ -7,6 +7,7 @@ export component NavItem inherits Rectangle {
   in property <string> text;
   in property <bool> active;
   in property <image> icon;
+  in property <int> index;
   callback clicked <=> touch_area.clicked;
 
   height: 40px;
@@ -18,7 +19,11 @@ export component NavItem inherits Rectangle {
   drop-shadow-blur: 8px;
   drop-shadow-color: ThemeLogic.colors.surface_shadow;
   drop-shadow-offset-y: 4px;
-  accessible-role: button;
+  accessible-role: tab;
+  accessible-label: root.text;
+  accessible-item-index: root.index;
+  accessible-item-selectable: true;
+  accessible-item-selected: root.active;
   accessible-action-default => clicked();
 
   icon_container := Rectangle {
