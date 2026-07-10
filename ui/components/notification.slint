@@ -26,6 +26,12 @@ export component Notification inherits Rectangle {
   drop-shadow-color: ThemeLogic.colors.surface_shadow;
   drop-shadow-offset-y: 4px;
 
+  accessible-role: text;
+  accessible-label: root.message;
+  accessible-live-region: root.notification_type == NotificationType.ERROR
+    ? AccessibleLiveness.assertive
+    : AccessibleLiveness.polite;
+
   animate x { duration: 225ms; easing: ease-out; }
 
   private property <bool> animated_in: false;
@@ -80,6 +86,7 @@ export component Notification inherits Rectangle {
       font-size: 14px;
       font-weight: 500;
       vertical-alignment: center;
+      accessible-role: none;
     }
   }
 }
