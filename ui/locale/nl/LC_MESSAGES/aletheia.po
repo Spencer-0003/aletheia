@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-07-05 19:17+0000\n"
+"POT-Creation-Date: 2026-07-12 03:01+0000\n"
 "PO-Revision-Date: 2025-10-24 15:38+0000\n"
 "Last-Translator: Feike Donia <feikedonia@proton.me>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/aletheia/ui/nl/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.14.1-dev\n"
 
-#: ui/first_time_setup.slint:10
+#: ui/first_time_setup.slint:11
 #, fuzzy
 #| msgctxt "About"
 #| msgid "Aletheia is an open-source game save backup tool"
@@ -20,17 +20,17 @@ msgctxt "FirstTimeSetup"
 msgid "Aletheia - First Time Setup"
 msgstr "Aletheia is 'n openbron backup-hulpmiddel voor de spelopslag"
 
-#: ui/first_time_setup.slint:41
+#: ui/first_time_setup.slint:42
 msgctxt "FirstTimeSetup"
 msgid "Welcome to Aletheia"
 msgstr ""
 
-#: ui/first_time_setup.slint:49
+#: ui/first_time_setup.slint:50
 msgctxt "FirstTimeSetup"
 msgid "Let's get you set up. You can change these settings at any time."
 msgstr ""
 
-#: ui/first_time_setup.slint:67
+#: ui/first_time_setup.slint:68
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Game Data Location"
@@ -38,7 +38,7 @@ msgctxt "FirstTimeSetup"
 msgid "Backup Location"
 msgstr "Locatie spelgegevens"
 
-#: ui/first_time_setup.slint:74
+#: ui/first_time_setup.slint:75
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Choose where your games will be saved"
@@ -46,7 +46,7 @@ msgctxt "FirstTimeSetup"
 msgid "Where your game saves will be stored on disk."
 msgstr "Kies waar je je spellen wil opslaan"
 
-#: ui/first_time_setup.slint:104
+#: ui/first_time_setup.slint:105
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Browse"
@@ -57,12 +57,25 @@ msgstr "Kies locatie"
 #: ui/first_time_setup.slint:119
 #, fuzzy
 #| msgctxt "Settings"
+#| msgid "Game Data Location"
+msgctxt "FirstTimeSetup"
+msgid "Backup Retention"
+msgstr "Locatie spelgegevens"
+
+#: ui/first_time_setup.slint:126
+msgctxt "FirstTimeSetup"
+msgid "How many backups to keep per game."
+msgstr ""
+
+#: ui/first_time_setup.slint:146
+#, fuzzy
+#| msgctxt "Settings"
 #| msgid "Steam Account"
 msgctxt "FirstTimeSetup"
 msgid "Steam Account"
 msgstr "Steam-account"
 
-#: ui/first_time_setup.slint:126
+#: ui/first_time_setup.slint:153
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Only affects games that save in the Steam userdata directory"
@@ -72,7 +85,7 @@ msgstr ""
 "Heeft alleen effect op de spellen opgeslagen in de Steam-"
 "gebruikersgegevensmap"
 
-#: ui/first_time_setup.slint:134
+#: ui/first_time_setup.slint:161
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Select an account…"
@@ -80,7 +93,7 @@ msgctxt "FirstTimeSetup"
 msgid "Select an account…"
 msgstr "Selecteer 'n account…"
 
-#: ui/first_time_setup.slint:143
+#: ui/first_time_setup.slint:170
 msgctxt "FirstTimeSetup"
 msgid "Continue"
 msgstr ""
@@ -123,44 +136,44 @@ msgctxt "Updater"
 msgid "Download"
 msgstr "Download"
 
-#: ui/screens/settings.slint:60
+#: ui/screens/settings.slint:63
 msgctxt "Settings"
 msgid "Game Data Location"
 msgstr "Locatie spelgegevens"
 
-#: ui/screens/settings.slint:73
+#: ui/screens/settings.slint:76
 msgctxt "Settings"
 msgid "Choose where your games will be saved"
 msgstr "Kies waar je je spellen wil opslaan"
 
-#: ui/screens/settings.slint:90
+#: ui/screens/settings.slint:93
 msgctxt "Settings"
 msgid "Browse"
 msgstr "Kies locatie"
 
-#: ui/screens/settings.slint:119
+#: ui/screens/settings.slint:122
 msgctxt "Settings"
 msgid "Steam Account"
 msgstr "Steam-account"
 
-#: ui/screens/settings.slint:135
+#: ui/screens/settings.slint:138
 msgctxt "Settings"
 msgid "Choose the Steam account for your games"
 msgstr "Kies het Steam-account voor je spellen"
 
-#: ui/screens/settings.slint:141
+#: ui/screens/settings.slint:144
 msgctxt "Settings"
 msgid "Only affects games that save in the Steam userdata directory"
 msgstr ""
 "Heeft alleen effect op de spellen opgeslagen in de Steam-"
 "gebruikersgegevensmap"
 
-#: ui/screens/settings.slint:152
+#: ui/screens/settings.slint:155
 msgctxt "Settings"
 msgid "Select an account…"
 msgstr "Selecteer 'n account…"
 
-#: ui/screens/settings.slint:152
+#: ui/screens/settings.slint:155
 #, fuzzy
 #| msgctxt "Games"
 #| msgid "No games found"
@@ -168,37 +181,50 @@ msgctxt "Settings"
 msgid "No accounts found…"
 msgstr "Geen spellen gevonden"
 
-#: ui/screens/settings.slint:180
+#: ui/screens/settings.slint:183
 msgctxt "Settings"
 msgid "GameDB"
 msgstr "GameDB"
 
-#: ui/screens/settings.slint:193
+#: ui/screens/settings.slint:196
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
 msgstr "Download de laatste versie van GameDB"
 
-#: ui/screens/settings.slint:201
+#: ui/screens/settings.slint:204
 msgctxt "Settings"
 msgid "Update GameDB"
 msgstr "Werk GameDB bij"
 
-#: ui/screens/settings.slint:228
+#: ui/screens/settings.slint:231
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Game Data Location"
+msgctxt "Settings"
+msgid "Backup Retention"
+msgstr "Locatie spelgegevens"
+
+#: ui/screens/settings.slint:244
+msgctxt "Settings"
+msgid "How many backups to keep per game"
+msgstr ""
+
+#: ui/screens/settings.slint:280
 msgctxt "Settings"
 msgid "Updates"
 msgstr "Bijwerkingen"
 
-#: ui/screens/settings.slint:241
+#: ui/screens/settings.slint:293
 msgctxt "Settings"
 msgid "Configure automatic update checking"
 msgstr "Stel in dat-ie automatisch naar bijwerkingen zoekt"
 
-#: ui/screens/settings.slint:251
+#: ui/screens/settings.slint:303
 msgctxt "Settings"
 msgid "Check for updates automatically"
 msgstr "Zoek automatisch naar bijwerkingen"
 
-#: ui/screens/settings.slint:268
+#: ui/screens/settings.slint:320
 msgctxt "Settings"
 msgid "Save"
 msgstr "Opslaan"
@@ -283,17 +309,17 @@ msgctxt "About"
 msgid "View License"
 msgstr "Bekijk de licentie"
 
-#: ui/app.slint:49
+#: ui/app.slint:52
 msgctxt "App"
 msgid "Games"
 msgstr "Spellen"
 
-#: ui/app.slint:62
+#: ui/app.slint:66
 msgctxt "App"
 msgid "Settings"
 msgstr "Instellingen"
 
-#: ui/app.slint:69
+#: ui/app.slint:74
 msgctxt "App"
 msgid "About"
 msgstr "Over"
@@ -314,27 +340,27 @@ msgctxt "RestoreDialog"
 msgid "Restore Backup?"
 msgstr "Herstel"
 
-#: ui/restore_dialog.slint:35
+#: ui/restore_dialog.slint:34
 msgctxt "RestoreDialog"
 msgid "Are you sure you want to restore {}?"
 msgstr ""
 
-#: ui/restore_dialog.slint:41
+#: ui/restore_dialog.slint:48
 msgctxt "RestoreDialog"
 msgid "This will overwrite any existing save data."
 msgstr ""
 
-#: ui/restore_dialog.slint:71
+#: ui/restore_dialog.slint:78
 msgctxt "RestoreDialog"
 msgid "Cancel"
 msgstr ""
 
-#: ui/restore_dialog.slint:71
+#: ui/restore_dialog.slint:78
 msgctxt "RestoreDialog"
 msgid "Close"
 msgstr ""
 
-#: ui/restore_dialog.slint:79
+#: ui/restore_dialog.slint:86
 #, fuzzy
 #| msgctxt "Games"
 #| msgid "Restore"
@@ -342,27 +368,27 @@ msgctxt "RestoreDialog"
 msgid "Restore"
 msgstr "Herstel"
 
-#: ui/logic/restore.slint:11
+#: ui/logic/restore.slint:12
 msgctxt "RestoreLogic"
 msgid "You do not have {} installed, install it first and try again."
 msgstr ""
 
-#: ui/logic/restore.slint:12
+#: ui/logic/restore.slint:13
 msgctxt "RestoreLogic"
 msgid "Archive corrupted"
 msgstr ""
 
-#: ui/logic/restore.slint:13
+#: ui/logic/restore.slint:14
 msgctxt "RestoreLogic"
 msgid "Invalid archive"
 msgstr ""
 
-#: ui/logic/restore.slint:14
+#: ui/logic/restore.slint:15
 msgctxt "RestoreLogic"
 msgid "I/O error"
 msgstr ""
 
-#: ui/logic/restore.slint:15
+#: ui/logic/restore.slint:16
 msgctxt "RestoreLogic"
 msgid "Unsupported archive version"
 msgstr ""
@@ -438,6 +464,27 @@ msgstr ""
 #: ui/logic/notification.slint:65
 msgctxt "NotificationLogic"
 msgid "Restored {} games"
+msgstr ""
+
+#: ui/components/backup_list_dialog.slint:29
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "Restore"
+msgctxt "BackupListDialog"
+msgid "Restore backup"
+msgstr "Herstel"
+
+#: ui/components/backup_list_dialog.slint:74
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "Restore"
+msgctxt "BackupListDialog"
+msgid "Restore"
+msgstr "Herstel"
+
+#: ui/components/backup_list_dialog.slint:89
+msgctxt "BackupListDialog"
+msgid "Cancel"
 msgstr ""
 
 #: ui/components/dropdown.slint:12

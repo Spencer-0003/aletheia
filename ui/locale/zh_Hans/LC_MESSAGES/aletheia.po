@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-07-05 19:17+0000\n"
+"POT-Creation-Date: 2026-07-12 03:01+0000\n"
 "PO-Revision-Date: 2025-09-07 00:28+0000\n"
 "Last-Translator: Spencer <git@spencer.moe>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.14-dev\n"
 
-#: ui/first_time_setup.slint:10
+#: ui/first_time_setup.slint:11
 #, fuzzy
 #| msgctxt "About"
 #| msgid "Aletheia is an open-source game save backup tool"
@@ -21,17 +21,17 @@ msgctxt "FirstTimeSetup"
 msgid "Aletheia - First Time Setup"
 msgstr "Aletheia 是一款开源的游戏保存备份工具"
 
-#: ui/first_time_setup.slint:41
+#: ui/first_time_setup.slint:42
 msgctxt "FirstTimeSetup"
 msgid "Welcome to Aletheia"
 msgstr ""
 
-#: ui/first_time_setup.slint:49
+#: ui/first_time_setup.slint:50
 msgctxt "FirstTimeSetup"
 msgid "Let's get you set up. You can change these settings at any time."
 msgstr ""
 
-#: ui/first_time_setup.slint:67
+#: ui/first_time_setup.slint:68
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Game Data Location"
@@ -39,7 +39,7 @@ msgctxt "FirstTimeSetup"
 msgid "Backup Location"
 msgstr "游戏数据位置"
 
-#: ui/first_time_setup.slint:74
+#: ui/first_time_setup.slint:75
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Choose where your games will be saved"
@@ -47,7 +47,7 @@ msgctxt "FirstTimeSetup"
 msgid "Where your game saves will be stored on disk."
 msgstr "选择保存游戏的位置"
 
-#: ui/first_time_setup.slint:104
+#: ui/first_time_setup.slint:105
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Browse"
@@ -58,12 +58,25 @@ msgstr "浏览"
 #: ui/first_time_setup.slint:119
 #, fuzzy
 #| msgctxt "Settings"
+#| msgid "Game Data Location"
+msgctxt "FirstTimeSetup"
+msgid "Backup Retention"
+msgstr "游戏数据位置"
+
+#: ui/first_time_setup.slint:126
+msgctxt "FirstTimeSetup"
+msgid "How many backups to keep per game."
+msgstr ""
+
+#: ui/first_time_setup.slint:146
+#, fuzzy
+#| msgctxt "Settings"
 #| msgid "Steam Account"
 msgctxt "FirstTimeSetup"
 msgid "Steam Account"
 msgstr "Steam 账号"
 
-#: ui/first_time_setup.slint:126
+#: ui/first_time_setup.slint:153
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Only affects games that save in the Steam userdata directory"
@@ -71,7 +84,7 @@ msgctxt "FirstTimeSetup"
 msgid "Used to locate saves stored in Steam's userdata directory."
 msgstr "仅影响在 Steam 用户数据目录中保存的游戏"
 
-#: ui/first_time_setup.slint:134
+#: ui/first_time_setup.slint:161
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Select an account…"
@@ -79,7 +92,7 @@ msgctxt "FirstTimeSetup"
 msgid "Select an account…"
 msgstr "选择一个账号…"
 
-#: ui/first_time_setup.slint:143
+#: ui/first_time_setup.slint:170
 msgctxt "FirstTimeSetup"
 msgid "Continue"
 msgstr ""
@@ -122,42 +135,42 @@ msgctxt "Updater"
 msgid "Download"
 msgstr "下载"
 
-#: ui/screens/settings.slint:60
+#: ui/screens/settings.slint:63
 msgctxt "Settings"
 msgid "Game Data Location"
 msgstr "游戏数据位置"
 
-#: ui/screens/settings.slint:73
+#: ui/screens/settings.slint:76
 msgctxt "Settings"
 msgid "Choose where your games will be saved"
 msgstr "选择保存游戏的位置"
 
-#: ui/screens/settings.slint:90
+#: ui/screens/settings.slint:93
 msgctxt "Settings"
 msgid "Browse"
 msgstr "浏览"
 
-#: ui/screens/settings.slint:119
+#: ui/screens/settings.slint:122
 msgctxt "Settings"
 msgid "Steam Account"
 msgstr "Steam 账号"
 
-#: ui/screens/settings.slint:135
+#: ui/screens/settings.slint:138
 msgctxt "Settings"
 msgid "Choose the Steam account for your games"
 msgstr "为您的游戏选择 Steam 账号"
 
-#: ui/screens/settings.slint:141
+#: ui/screens/settings.slint:144
 msgctxt "Settings"
 msgid "Only affects games that save in the Steam userdata directory"
 msgstr "仅影响在 Steam 用户数据目录中保存的游戏"
 
-#: ui/screens/settings.slint:152
+#: ui/screens/settings.slint:155
 msgctxt "Settings"
 msgid "Select an account…"
 msgstr "选择一个账号…"
 
-#: ui/screens/settings.slint:152
+#: ui/screens/settings.slint:155
 #, fuzzy
 #| msgctxt "Games"
 #| msgid "No games found"
@@ -165,37 +178,50 @@ msgctxt "Settings"
 msgid "No accounts found…"
 msgstr "找不到游戏"
 
-#: ui/screens/settings.slint:180
+#: ui/screens/settings.slint:183
 msgctxt "Settings"
 msgid "GameDB"
 msgstr "GameDB"
 
-#: ui/screens/settings.slint:193
+#: ui/screens/settings.slint:196
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
 msgstr "下载 GameDB 的最新版本"
 
-#: ui/screens/settings.slint:201
+#: ui/screens/settings.slint:204
 msgctxt "Settings"
 msgid "Update GameDB"
 msgstr "更新 GameDB"
 
-#: ui/screens/settings.slint:228
+#: ui/screens/settings.slint:231
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Game Data Location"
+msgctxt "Settings"
+msgid "Backup Retention"
+msgstr "游戏数据位置"
+
+#: ui/screens/settings.slint:244
+msgctxt "Settings"
+msgid "How many backups to keep per game"
+msgstr ""
+
+#: ui/screens/settings.slint:280
 msgctxt "Settings"
 msgid "Updates"
 msgstr "更新"
 
-#: ui/screens/settings.slint:241
+#: ui/screens/settings.slint:293
 msgctxt "Settings"
 msgid "Configure automatic update checking"
 msgstr "配置自动检查更新"
 
-#: ui/screens/settings.slint:251
+#: ui/screens/settings.slint:303
 msgctxt "Settings"
 msgid "Check for updates automatically"
 msgstr "自动检查更新"
 
-#: ui/screens/settings.slint:268
+#: ui/screens/settings.slint:320
 msgctxt "Settings"
 msgid "Save"
 msgstr "保存"
@@ -280,17 +306,17 @@ msgctxt "About"
 msgid "View License"
 msgstr "查看许可证"
 
-#: ui/app.slint:49
+#: ui/app.slint:52
 msgctxt "App"
 msgid "Games"
 msgstr "游戏"
 
-#: ui/app.slint:62
+#: ui/app.slint:66
 msgctxt "App"
 msgid "Settings"
 msgstr "设置"
 
-#: ui/app.slint:69
+#: ui/app.slint:74
 msgctxt "App"
 msgid "About"
 msgstr "关于"
@@ -311,27 +337,27 @@ msgctxt "RestoreDialog"
 msgid "Restore Backup?"
 msgstr "恢复"
 
-#: ui/restore_dialog.slint:35
+#: ui/restore_dialog.slint:34
 msgctxt "RestoreDialog"
 msgid "Are you sure you want to restore {}?"
 msgstr ""
 
-#: ui/restore_dialog.slint:41
+#: ui/restore_dialog.slint:48
 msgctxt "RestoreDialog"
 msgid "This will overwrite any existing save data."
 msgstr ""
 
-#: ui/restore_dialog.slint:71
+#: ui/restore_dialog.slint:78
 msgctxt "RestoreDialog"
 msgid "Cancel"
 msgstr ""
 
-#: ui/restore_dialog.slint:71
+#: ui/restore_dialog.slint:78
 msgctxt "RestoreDialog"
 msgid "Close"
 msgstr ""
 
-#: ui/restore_dialog.slint:79
+#: ui/restore_dialog.slint:86
 #, fuzzy
 #| msgctxt "Games"
 #| msgid "Restore"
@@ -339,27 +365,27 @@ msgctxt "RestoreDialog"
 msgid "Restore"
 msgstr "恢复"
 
-#: ui/logic/restore.slint:11
+#: ui/logic/restore.slint:12
 msgctxt "RestoreLogic"
 msgid "You do not have {} installed, install it first and try again."
 msgstr ""
 
-#: ui/logic/restore.slint:12
+#: ui/logic/restore.slint:13
 msgctxt "RestoreLogic"
 msgid "Archive corrupted"
 msgstr ""
 
-#: ui/logic/restore.slint:13
+#: ui/logic/restore.slint:14
 msgctxt "RestoreLogic"
 msgid "Invalid archive"
 msgstr ""
 
-#: ui/logic/restore.slint:14
+#: ui/logic/restore.slint:15
 msgctxt "RestoreLogic"
 msgid "I/O error"
 msgstr ""
 
-#: ui/logic/restore.slint:15
+#: ui/logic/restore.slint:16
 msgctxt "RestoreLogic"
 msgid "Unsupported archive version"
 msgstr ""
@@ -438,6 +464,27 @@ msgstr ""
 #: ui/logic/notification.slint:65
 msgctxt "NotificationLogic"
 msgid "Restored {} games"
+msgstr ""
+
+#: ui/components/backup_list_dialog.slint:29
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "Restore"
+msgctxt "BackupListDialog"
+msgid "Restore backup"
+msgstr "恢复"
+
+#: ui/components/backup_list_dialog.slint:74
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "Restore"
+msgctxt "BackupListDialog"
+msgid "Restore"
+msgstr "恢复"
+
+#: ui/components/backup_list_dialog.slint:89
+msgctxt "BackupListDialog"
+msgid "Cancel"
 msgstr ""
 
 #: ui/components/dropdown.slint:12
