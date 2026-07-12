@@ -19,7 +19,6 @@ mod dirs;
 mod file;
 mod gamedb;
 mod infer;
-mod migrate;
 mod operations;
 mod scanner;
 mod ui;
@@ -51,10 +50,6 @@ fn main() {
     log::info!("Aletheia v{} (Windows)", env!("CARGO_PKG_VERSION"));
 
     let config = config::Config::load();
-    if let Some(ref cfg) = config {
-        migrate::run(cfg); // TODO: Remove after 2.1.0.
-    }
-
     let mut args = std::env::args().skip(1);
 
     if let Some(cmd) = args.next() {

@@ -45,20 +45,6 @@ pub struct GameFiles {
 }
 
 #[derive(Deserialize, Serialize)]
-pub struct Manifest {
-    pub name: String,
-    pub files: Vec<FileMetadata>
-}
-
-#[derive(Deserialize, Serialize)]
-pub struct FileMetadata {
-    pub hash: String,
-    pub modified: std::time::SystemTime,
-    pub path: String,
-    pub size: u64
-}
-
-#[derive(Deserialize, Serialize)]
 struct CustomDbMetadata {
     etag: Option<String>,
     data: HashMap<String, GameDbEntry>
