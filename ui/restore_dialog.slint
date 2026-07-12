@@ -9,86 +9,82 @@ export component RestoreDialog inherits Window {
   title: @tr("Aletheia - Restore backup");
   default-font-family: "Inter";
   preferred-width: 520px;
-  preferred-height: 220px;
-  background: ThemeLogic.colors.background;
+  preferred-height: 240px;
+  background: ThemeLogic.colors.surface;
 
-  Rectangle {
-    background: ThemeLogic.colors.surface;
+  VerticalLayout {
+    padding: 24px;
+    spacing: 24px;
 
     VerticalLayout {
-      padding: 24px;
-      spacing: 24px;
+      spacing: 8px;
+      alignment: start;
 
-      VerticalLayout {
-        spacing: 8px;
-        alignment: start;
+      Text {
+        text: @tr("Restore Backup?");
+        color: ThemeLogic.colors.text_primary;
+        font-size: 20px;
+        font-weight: 700;
+      }
 
-        Text {
-          text: @tr("Restore Backup?");
-          color: ThemeLogic.colors.text_primary;
-          font-size: 20px;
-          font-weight: 700;
-        }
+      Text {
+        color: ThemeLogic.colors.text_secondary;
+        text: @tr("Are you sure you want to restore {}?", RestoreLogic.game_name);
+        font-size: 15px;
+        font-weight: 400;
+      }
 
-        Text {
-          text: @tr("Are you sure you want to restore {}?", RestoreLogic.game_name);
-          color: ThemeLogic.colors.text_secondary;
-          font-size: 15px;
-          font-weight: 400;
-        }
+      Text {
+        text: RestoreLogic.timestamp;
+        color: ThemeLogic.colors.text_muted;
+        font-size: 13px;
+        font-weight: 400;
+      }
 
-        Text {
-          text: RestoreLogic.timestamp;
-          color: ThemeLogic.colors.text_muted;
-          font-size: 13px;
-          font-weight: 400;
-        }
+      if RestoreLogic.error.is-empty: Text {
+        text: @tr("This will overwrite any existing save data.");
+        color: ThemeLogic.colors.text_muted;
+        font-size: 13px;
+        font-weight: 400;
+      }
 
-        if RestoreLogic.error.is-empty: Text {
-          text: @tr("This will overwrite any existing save data.");
-          color: ThemeLogic.colors.text_muted;
-          font-size: 13px;
-          font-weight: 400;
-        }
+      if !RestoreLogic.error.is-empty: Rectangle {
+        background: ThemeLogic.colors.restore_dialog_error_background;
+        border-radius: 8px;
+        border-width: 1px;
+        border-color: ThemeLogic.colors.restore_dialog_error_border;
 
-        if !RestoreLogic.error.is-empty: Rectangle {
-          background: ThemeLogic.colors.restore_dialog_error_background;
-          border-radius: 8px;
-          border-width: 1px;
-          border-color: ThemeLogic.colors.restore_dialog_error_border;
+        VerticalLayout {
+          padding: 12px;
 
-          VerticalLayout {
-            padding: 12px;
-
-            Text {
-              text: RestoreLogic.translate_error();
-              color: ThemeLogic.colors.text_primary;
-              font-size: 14px;
-              font-weight: 400;
-            }
+          Text {
+            text: RestoreLogic.translate_error();
+            color: ThemeLogic.colors.text_primary;
+            font-size: 14px;
+            font-weight: 400;
           }
         }
       }
+    }
 
-      HorizontalLayout {
-        alignment: end;
-        spacing: 12px;
+    HorizontalLayout {
+      alignment: end;
+      spacing: 12px;
 
-        Button {
-          text: RestoreLogic.error.is-empty ? @tr("Cancel") : @tr("Close");
-          background: ThemeLogic.colors.secondary;
-          width: 100px;
-          height: 36px;
-          clicked => root.hide();
-        }
+      Button {
+        text: RestoreLogic.error.is-empty ? @tr("Cancel") : @tr("Close");
+        background: ThemeLogic.colors.secondary;
+        width: 100px;
+        height: 36px;
+        clicked => root.hide();
+      }
 
-        if RestoreLogic.error.is-empty: Button {
-          text: @tr("Restore");
-          background: ThemeLogic.colors.primary;
-          width: 100px;
-          height: 36px;
-          clicked => RestoreLogic.restore();
-        }
+      if RestoreLogic.error.is-empty: Button {
+        text: @tr("Restore");
+        background: ThemeLogic.colors.primary;
+        width: 100px;
+        height: 36px;
+        clicked => RestoreLogic.restore();
       }
     }
   }

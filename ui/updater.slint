@@ -11,141 +11,136 @@ export component Updater inherits Window {
   height: 400px;
   title: @tr("Aletheia - Updater");
   icon: @image-url("../resources/logo/moe.spencer.Aletheia.png");
+  background: ThemeLogic.colors.surface;
 
-  Rectangle {
-    width: 100%;
-    height: 100%;
-    background: ThemeLogic.colors.surface;
+  VerticalLayout {
+    spacing: 24px;
+    padding: 24px;
+    alignment: start;
 
     VerticalLayout {
-      spacing: 24px;
-      padding: 24px;
-      alignment: start;
+      spacing: 12px;
+      alignment: center;
 
-      VerticalLayout {
-        spacing: 12px;
+      Text {
+        text: @tr("Update Available");
+        color: ThemeLogic.colors.text_secondary;
+        font-size: 24px;
+        font-weight: 700;
+        horizontal-alignment: center;
+      }
+    }
+
+    Rectangle { height: 1px; background: ThemeLogic.colors.secondary_hover; }
+
+    VerticalLayout {
+      spacing: 16px;
+
+      HorizontalLayout {
+        spacing: 16px;
         alignment: center;
 
-        Text {
-          text: @tr("Update Available");
-          color: ThemeLogic.colors.text_secondary;
-          font-size: 24px;
-          font-weight: 700;
-          horizontal-alignment: center;
-        }
-      }
-
-      Rectangle { height: 1px; background: ThemeLogic.colors.secondary_hover; }
-
-      VerticalLayout {
-        spacing: 16px;
-
-        HorizontalLayout {
-          spacing: 16px;
+        VerticalLayout {
+          spacing: 4px;
           alignment: center;
 
-          VerticalLayout {
-            spacing: 4px;
-            alignment: center;
-
-            Text {
-              text: @tr("Current");
-              color: ThemeLogic.colors.text_tertiary;
-              font-size: 12px;
-              font-weight: 500;
-              horizontal-alignment: center;
-            }
-
-            Text {
-              text: UpdaterLogic.current_version;
-              color: ThemeLogic.colors.updater_current;
-              font-size: 16px;
-              font-weight: 600;
-              horizontal-alignment: center;
-            }
+          Text {
+            text: @tr("Current");
+            color: ThemeLogic.colors.text_tertiary;
+            font-size: 12px;
+            font-weight: 500;
+            horizontal-alignment: center;
           }
 
           Text {
-            text: "→";
-            color: ThemeLogic.colors.text_tertiary;
-            font-size: 20px;
-          }
-
-          VerticalLayout {
-            spacing: 4px;
-            alignment: center;
-
-            Text {
-              text: @tr("New");
-              color: ThemeLogic.colors.text_tertiary;
-              font-size: 12px;
-              font-weight: 500;
-              horizontal-alignment: center;
-            }
-
-            Text {
-              text: UpdaterLogic.new_version;
-              color: ThemeLogic.colors.updater_new;
-              font-size: 16px;
-              font-weight: 600;
-              horizontal-alignment: center;
-            }
+            text: UpdaterLogic.current_version;
+            color: ThemeLogic.colors.updater_current;
+            font-size: 16px;
+            font-weight: 600;
+            horizontal-alignment: center;
           }
         }
-      }
-
-      VerticalLayout {
-        spacing: 8px;
 
         Text {
-          text: @tr("What's New");
-          color: ThemeLogic.colors.text_secondary;
-          font-size: 16px;
-          font-weight: 600;
+          text: "→";
+          color: ThemeLogic.colors.text_tertiary;
+          font-size: 20px;
         }
 
-        Rectangle {
-          height: 120px;
-          background: ThemeLogic.colors.updater_changelog;
-          border-radius: 8px;
+        VerticalLayout {
+          spacing: 4px;
+          alignment: center;
 
-          Flickable {
-            width: 100%;
-            height: 100%;
-            viewport-width: self.width;
-            viewport-height: text.preferred-height + 12px;
+          Text {
+            text: @tr("New");
+            color: ThemeLogic.colors.text_tertiary;
+            font-size: 12px;
+            font-weight: 500;
+            horizontal-alignment: center;
+          }
 
-            text := Text {
-              width: parent.width - 24px;
-              text: UpdaterLogic.changelog;
-              color: ThemeLogic.colors.text_secondary;
-              font-size: 14px;
-              wrap: word-wrap;
-            }
+          Text {
+            text: UpdaterLogic.new_version;
+            color: ThemeLogic.colors.updater_new;
+            font-size: 16px;
+            font-weight: 600;
+            horizontal-alignment: center;
           }
         }
       }
+    }
 
-      HorizontalLayout {
-        spacing: 12px;
-        alignment: end;
+    VerticalLayout {
+      spacing: 8px;
 
-        Button {
-          width: 80px;
-          height: 36px;
-          text: @tr("Skip");
-          clicked => root.hide();
-        }
+      Text {
+        text: @tr("What's New");
+        color: ThemeLogic.colors.text_secondary;
+        font-size: 16px;
+        font-weight: 600;
+      }
 
-        Button {
-          width: 140px;
-          height: 36px;
-          text: @tr("Download");
-          clicked => {
-            Platform.open-url(UpdaterLogic.release_url);
-            UpdaterLogic.downloading = true;
-            root.hide();
+      Rectangle {
+        height: 120px;
+        background: ThemeLogic.colors.updater_changelog;
+        border-radius: 8px;
+
+        Flickable {
+          width: 100%;
+          height: 100%;
+          viewport-width: self.width;
+          viewport-height: text.preferred-height + 12px;
+
+          text := Text {
+            width: parent.width - 24px;
+            text: UpdaterLogic.changelog;
+            color: ThemeLogic.colors.text_secondary;
+            font-size: 14px;
+            wrap: word-wrap;
           }
+        }
+      }
+    }
+
+    HorizontalLayout {
+      spacing: 12px;
+      alignment: end;
+
+      Button {
+        width: 80px;
+        height: 36px;
+        text: @tr("Skip");
+        clicked => root.hide();
+      }
+
+      Button {
+        width: 140px;
+        height: 36px;
+        text: @tr("Download");
+        clicked => {
+          Platform.open-url(UpdaterLogic.release_url);
+          UpdaterLogic.downloading = true;
+          root.hide();
         }
       }
     }
