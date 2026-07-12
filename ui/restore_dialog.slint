@@ -79,7 +79,7 @@ export component RestoreDialog inherits Window {
           background: ThemeLogic.colors.secondary;
           width: 100px;
           height: 36px;
-          clicked => RestoreLogic.cancel();
+          clicked => root.hide();
         }
 
         if RestoreLogic.error.is-empty: Button {

@@ -5,7 +5,6 @@ export global RestoreLogic {
   in-out property <string> game_name;
   in-out property <string> error;
   in-out property <string> timestamp;
-  callback cancel();
   callback restore();
 
   public pure function translate_error() -> string {

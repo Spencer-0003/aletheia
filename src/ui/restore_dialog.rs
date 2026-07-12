@@ -27,14 +27,6 @@ pub fn run_restore_dialog(config: &AletheiaConfig, archive_path: &str) {
     let restore_dialog = RestoreDialog::new().unwrap();
     let restore_logic = restore_dialog.global::<RestoreLogic>();
 
-    restore_logic.on_cancel({
-        let restore_weak = restore_dialog.as_weak().unwrap();
-
-        move || {
-            restore_weak.hide().unwrap();
-        }
-    });
-
     restore_logic.on_restore({
         let restore_weak = restore_dialog.as_weak().unwrap();
         let archive_path = archive_path.to_path_buf();
