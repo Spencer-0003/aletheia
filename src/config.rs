@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Spencer
+// SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
 use crate::dirs;
@@ -16,6 +16,7 @@ pub struct Config {
     pub custom_databases: Vec<String>,
     pub save_dir: PathBuf,
     pub steam_account_id: Option<String>,
+    pub max_backups: u8,
     #[cfg(feature = "updater")]
     pub check_for_updates: bool
 }
@@ -117,6 +118,7 @@ impl Default for Config {
             custom_databases: vec![],
             save_dir: Self::get_save_dir(),
             steam_account_id: None,
+            max_backups: 3,
             #[cfg(feature = "updater")]
             check_for_updates: true
         }

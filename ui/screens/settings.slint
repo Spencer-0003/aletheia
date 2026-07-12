@@ -6,6 +6,7 @@ import { Button } from "../components/button.slint";
 import { CheckBox } from "../components/check_box.slint";
 import { TextLabel } from "../components/text_label.slint";
 import { Dropdown } from "../components/dropdown.slint";
+import { NumberInput } from "../components/number_input.slint";
 import { ThemeLogic } from "../logic/theme.slint";
 import { DropdownOption } from "../structs/dropdown_option.slint";
 import { Config } from "../structs/config.slint";
@@ -16,9 +17,11 @@ export global SettingsScreenLogic {
   in property <bool> show_update_settings;
   in property <string> previous_save_dir;
   in property <string> previous_steam_account_id;
+  in property <int> previous_max_backups;
   in property <bool> previous_check_for_updates: false;
   out property <bool> dirty: config.save_dir != previous_save_dir ||
                                config.steam_account_id != previous_steam_account_id ||
+                               config.max_backups != previous_max_backups ||
                                config.check_for_updates != previous_check_for_updates;
   callback browse();
   callback get_steam_users();
@@ -204,6 +207,55 @@ export component Settings {
           }
         }
 
+        Rectangle { height: 1px; background: ThemeLogic.colors.secondary_hover; }
+
+        VerticalLayout {
+          spacing: 16px;
+
+          HorizontalLayout {
+            spacing: 12px;
+
+            Rectangle {
+              width: 24px;
+              height: 24px;
+
+              Image {
+                width: 100%;
+                height: 100%;
+                source: @image-url("../assets/history.svg");
+                colorize: ThemeLogic.colors.text_secondary;
+              }
+            }
+
+            Text {
+              text: @tr("Backup Retention");
+              color: ThemeLogic.colors.text_secondary;
+              font-size: 18px;
+              font-weight: 600;
+              vertical-alignment: center;
+            }
+          }
+
+          VerticalLayout {
+            spacing: 12px;
+            padding-left: 36px;
+
+            Text {
+              text: @tr("How many backups to keep per game");
+              color: ThemeLogic.colors.text_tertiary;
+              font-size: 14px;
+            }
+
+            NumberInput {
+              width: 50px;
+              height: 38px;
+              minimum: 1;
+              maximum: 255;
+              value <=> SettingsScreenLogic.config.max_backups;
+            }
+          }
+        }
+
         if SettingsScreenLogic.show_update_settings: Rectangle { height: 1px; background: ThemeLogic.colors.secondary_hover; }
 
         if SettingsScreenLogic.show_update_settings: VerticalLayout {
@@ -272,3 +324,4 @@ export component Settings {
     }
   }
 }
+

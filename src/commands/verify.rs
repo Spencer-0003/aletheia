@@ -4,6 +4,7 @@
 use super::{Args, Command};
 use crate::archive::ArchiveReader;
 use crate::config::Config;
+use crate::operations::list_backups;
 use std::fs::read_dir;
 use std::path::Path;
 
@@ -30,9 +31,8 @@ impl Command for Verify {
         }
 
         for entry in read_dir(&config.save_dir).unwrap() {
-            let path = entry.unwrap().path().join("backup.aletheia");
-            if path.exists() {
-                verify_archive(&path);
+            for backup in list_backups(&entry.unwrap().path()) {
+                verify_archive(&backup.path);
             }
         }
     }

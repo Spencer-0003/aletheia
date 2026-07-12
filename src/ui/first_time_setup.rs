@@ -12,6 +12,7 @@ pub fn run_first_time_setup() {
     let setup_logic = first_time_setup.global::<SetupLogic>();
 
     setup_logic.set_backup_path(default_config.save_dir.to_string_lossy().as_ref().into());
+    setup_logic.set_max_backups(default_config.max_backups.into());
 
     setup_logic.on_browse({
         let weak = first_time_setup.as_weak();
@@ -40,6 +41,7 @@ pub fn run_first_time_setup() {
                 custom_databases: vec![],
                 save_dir: (&setup_logic.get_backup_path()).into(),
                 steam_account_id: (!steam_account_id.is_empty()).then(|| (&steam_account_id).into()),
+                max_backups: setup_logic.get_max_backups() as u8,
                 #[cfg(feature = "updater")]
                 check_for_updates: default_config.check_for_updates
             });

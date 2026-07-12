@@ -5,11 +5,13 @@ use super::app::{RestoreDialog, RestoreLogic};
 use crate::archive::{ArchiveReader, Error as ArchiveError};
 use crate::config::Config as AletheiaConfig;
 use crate::gamedb;
-use crate::operations::{RestoreError, restore_game};
+use crate::operations::{RestoreError, restore_archive};
+use crate::utils::format_timestamp;
 use slint::ComponentHandle;
 use std::cell::RefCell;
 use std::path::Path;
 use std::rc::Rc;
+use std::time::{Duration, SystemTime};
 
 pub fn run_restore_dialog(config: &AletheiaConfig, archive_path: &str) {
     let archive_path = Path::new(archive_path);
@@ -35,6 +37,7 @@ pub fn run_restore_dialog(config: &AletheiaConfig, archive_path: &str) {
 
     restore_logic.on_restore({
         let restore_weak = restore_dialog.as_weak().unwrap();
+        let archive_path = archive_path.to_path_buf();
 
         move || {
             let restore_logic = restore_weak.global::<RestoreLogic>();
@@ -47,7 +50,7 @@ pub fn run_restore_dialog(config: &AletheiaConfig, archive_path: &str) {
                 return;
             };
 
-            if let Err(RestoreError::Archive(e)) = restore_game(game, &cfg.borrow()) {
+            if let Err(RestoreError::Archive(e)) = restore_archive(&archive_path, game, &cfg.borrow()) {
                 let error_message = match e {
                     ArchiveError::ChecksumMismatch(..) | ArchiveError::FileNotFound(_) => "ARCHIVE_CORRUPTED",
                     ArchiveError::InvalidArchive | ArchiveError::Serialization(_) => "INVALID_ARCHIVE",
@@ -63,6 +66,7 @@ pub fn run_restore_dialog(config: &AletheiaConfig, archive_path: &str) {
     });
 
     restore_logic.set_game_name(reader.game.into());
+    restore_logic.set_timestamp(format_timestamp(SystemTime::UNIX_EPOCH + Duration::from_secs(reader.created)).into());
     slint::set_xdg_app_id("moe.spencer.Aletheia").unwrap();
 
     restore_dialog.run().unwrap();

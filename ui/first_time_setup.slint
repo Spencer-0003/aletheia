@@ -3,6 +3,7 @@
 
 import { Button } from "./components/button.slint";
 import { Dropdown } from "./components/dropdown.slint";
+import { NumberInput } from "./components/number_input.slint";
 import { SetupLogic } from "./logic/setup.slint";
 import { ThemeLogic } from "./logic/theme.slint";
 
@@ -10,16 +11,16 @@ export component FirstTimeSetup inherits Window {
   title: @tr("Aletheia - First Time Setup");
   default-font-family: "Inter";
   preferred-width: 520px;
-  preferred-height: 480px;
+  preferred-height: 580px;
   width: 520px;
-  height: 480px;
+  height: 580px;
 
   Rectangle {
     background: ThemeLogic.colors.surface;
 
     Rectangle {
       width: 460px;
-      height: 420px;
+      height: 520px;
       background: ThemeLogic.colors.background;
       border-radius: 12px;
       border-width: 1px;
@@ -107,6 +108,32 @@ export component FirstTimeSetup inherits Window {
               height: 40px;
               clicked => SetupLogic.browse();
             }
+          }
+        }
+
+        VerticalLayout {
+          spacing: 8px;
+          alignment: start;
+
+          Text {
+            text: @tr("Backup Retention");
+            color: ThemeLogic.colors.text_primary;
+            font-size: 14px;
+            font-weight: 600;
+          }
+
+          Text {
+            text: @tr("How many backups to keep per game.");
+            color: ThemeLogic.colors.text_tertiary;
+            font-size: 12px;
+          }
+
+          NumberInput {
+            width: 60px;
+            height: 40px;
+            minimum: 1;
+            maximum: 255;
+            value <=> SetupLogic.max_backups;
           }
         }
 

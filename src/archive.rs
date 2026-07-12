@@ -54,6 +54,7 @@ pub struct ArchiveWriter {
 
 pub struct ArchiveReader {
     file: File,
+    pub created: u64,
     pub files: Vec<FileEntry>,
     pub game: String
 }
@@ -150,7 +151,7 @@ impl ArchiveWriter {
 }
 
 impl ArchiveReader {
-    fn parse(file: &mut File) -> Result<(String, Vec<FileEntry>)> {
+    fn parse(file: &mut File) -> Result<(String, u64, Vec<FileEntry>)> {
         let mut magic = [0u8; 8];
         file.read_exact(&mut magic)?;
         if &magic != MAGIC {
@@ -163,8 +164,9 @@ impl ArchiveReader {
             return Err(Error::UnsupportedVersion(version[0]));
         }
 
-        let mut created = [0u8; 8];
-        file.read_exact(&mut created)?;
+        let mut created_bytes = [0u8; 8];
+        file.read_exact(&mut created_bytes)?;
+        let created = u64::from_le_bytes(created_bytes);
 
         let mut game_len_bytes = [0u8; 1];
         file.read_exact(&mut game_len_bytes)?;
@@ -187,17 +189,17 @@ impl ArchiveReader {
         file.read_exact(&mut index_bytes)?;
         let files: Vec<FileEntry> = postcard::from_bytes(&index_bytes)?;
 
-        Ok((game, files))
+        Ok((game, created, files))
     }
 
-    pub fn read_index(path: &Path) -> Result<(String, Vec<FileEntry>)> {
+    pub fn read_index(path: &Path) -> Result<(String, u64, Vec<FileEntry>)> {
         let mut file = File::open(path)?;
         Self::parse(&mut file)
     }
 
     pub fn open(path: &Path) -> Result<Self> {
         let mut file = File::open(path)?;
-        let (game, files) = Self::parse(&mut file)?;
+        let (game, created, files) = Self::parse(&mut file)?;
 
         for entry in &files {
             let data = Self::decompress(&mut file, entry)?;
@@ -207,7 +209,7 @@ impl ArchiveReader {
             }
         }
 
-        Ok(Self { file, files, game })
+        Ok(Self { file, created, files, game })
     }
 
     fn decompress(file: &mut File, entry: &FileEntry) -> Result<Vec<u8>> {

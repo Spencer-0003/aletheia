@@ -4,9 +4,11 @@
 import "./fonts/Inter/InterVariable.ttf";
 import "./fonts/Inter/InterVariable-Italic.ttf";
 
+import { BackupListDialog } from "./components/backup_list_dialog.slint";
 import { NavItem } from "./components/nav_item.slint";
 import { Notification } from "./components/notification.slint";
 import { AppLogic } from "./logic/app.slint";
+import { BackupListLogic } from "./logic/backup_list.slint";
 import { FirstTimeSetup } from "./first_time_setup.slint";
 import { GameLogic } from "./logic/game.slint";
 import { NotificationLogic } from "./logic/notification.slint";
@@ -21,7 +23,7 @@ import { ThemeLogic } from "./logic/theme.slint";
 import { Updater } from "./updater.slint";
 import { UiGame } from "./structs/ui_game.slint";
 
-export { AppLogic, GamesScreenLogic, GameLogic, NotificationLogic, SettingsScreenLogic }
+export { AppLogic, BackupListLogic, GamesScreenLogic, GameLogic, NotificationLogic, SettingsScreenLogic }
 export { FirstTimeSetup, SetupLogic }
 export { RestoreDialog, RestoreLogic }
 export { Updater, UpdaterLogic }
@@ -93,7 +95,8 @@ export component App inherits Window {
     visible: NotificationLogic.is_notification_visible;
     message: NotificationLogic.current_notification_message;
     notification_type: NotificationLogic.current_notification_type;
-
-    closed => { NotificationLogic.hide_notification(); }
+    closed => NotificationLogic.hide_notification();
   }
+
+  if BackupListLogic.visible: BackupListDialog {}
 }

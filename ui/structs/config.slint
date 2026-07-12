@@ -1,9 +1,10 @@
-// SPDX-FileCopyrightText: 2025 Spencer
+// SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
 export struct Config {
   custom_databases: [string],
   save_dir: string,
   steam_account_id: string, // Slint doesn't support optional types currently
+  max_backups: int,
   check_for_updates: bool
 }

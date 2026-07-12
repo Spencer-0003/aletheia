@@ -4,17 +4,44 @@
 use crate::archive::Error as ArchiveError;
 use crate::config::Config as AletheiaConfig;
 use crate::gamedb;
-use crate::operations::{RestoreError, backup_game, restore_game};
-use crate::ui::app::{App, GameLogic, GamesScreenLogic, NotificationLogic, UiGame};
+use crate::operations::{RestoreError, backup_game, list_backups, restore_archive, restore_game};
+use crate::ui::app::{App, BackupEntry, BackupListLogic, GameLogic, GamesScreenLogic, NotificationLogic, UiGame};
 use crate::utils;
 use slint::{ComponentHandle, Model, ModelRc, VecModel};
 use std::cell::RefCell;
+use std::path::Path;
 use std::rc::Rc;
+use std::time::{Duration, SystemTime};
+
+fn gather_backup_entries(folder: &Path) -> Vec<BackupEntry> {
+    list_backups(folder)
+        .into_iter()
+        .map(|backup| BackupEntry {
+            timestamp: utils::format_timestamp(SystemTime::UNIX_EPOCH + Duration::from_secs(backup.created)).into(),
+            size: format_size(backup.size).into(),
+            path: backup.path.to_string_lossy().as_ref().into()
+        })
+        .collect()
+}
+
+fn restore_error_key(e: &RestoreError) -> &'static str {
+    let RestoreError::Archive(ae) = e else {
+        return "NO_BACKUPS_FOUND";
+    };
+
+    match ae {
+        ArchiveError::ChecksumMismatch(..) | ArchiveError::FileNotFound(_) => "ARCHIVE_CORRUPTED",
+        ArchiveError::InvalidArchive | ArchiveError::Serialization(_) => "INVALID_ARCHIVE",
+        ArchiveError::Io(_) => "IO_ERROR",
+        ArchiveError::UnsupportedVersion(_) => "UNSUPPORTED_ARCHIVE_VERSION"
+    }
+}
 
 #[expect(clippy::too_many_lines, reason = "This is as simple as it's going to get")]
 pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
     let app = app.upgrade().unwrap();
     let game_logic = app.global::<GameLogic>();
+    let backup_list_logic = app.global::<BackupListLogic>();
     let games_screen_logic = app.global::<GamesScreenLogic>();
     let save_dir = config.borrow().save_dir.clone();
 
@@ -152,7 +179,11 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
                 let mut backed_up = 0;
 
                 for ui_game in selected_games.iter() {
-                    let game = installed_games.iter().find(|g| *g.name == *ui_game.name).unwrap();
+                    let Some(game) = installed_games.iter().find(|g| *g.name == *ui_game.name) else {
+                        log::error!("Failed to backup {}: Uninstalled while Aletheia was still open", ui_game.name);
+                        continue;
+                    };
+
                     if let Err(e) = backup_game(game, &cfg, &game_db[&game.name]) {
                         log::error!("Failed to backup {}.\n{e}", game.name);
                     } else {
@@ -169,6 +200,41 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
                     return;
                 }
 
+                if selected_games.row_count() == 1 {
+                    let ui_game = selected_games.iter().next().unwrap();
+
+                    let Some(game) = installed_games.iter().find(|g| *g.name == *ui_game.name) else {
+                        log::error!("Failed to restore {}: Uninstalled while Aletheia was still open", ui_game.name);
+                        notification_logic.invoke_show_error("GAME_NOT_INSTALLED".into());
+                        return;
+                    };
+
+                    let backup_folder = cfg.save_dir.join(utils::sanitize_game_name(&game.name).as_ref());
+                    let entries = gather_backup_entries(&backup_folder);
+
+                    if entries.is_empty() {
+                        notification_logic.invoke_show_error("NO_BACKUPS_FOUND".into());
+                        return;
+                    }
+
+                    if entries.len() == 1 {
+                        if let Err(e) = restore_game(game, &cfg) {
+                            log::error!("Failed to restore {}: {e}", game.name);
+                            notification_logic.invoke_show_error(restore_error_key(&e).into());
+                        } else {
+                            log::info!("Successfully restored {}", game.name);
+                            notification_logic.invoke_show_success_fmt("RESTORED".into(), "1".into());
+                        }
+                    } else {
+                        let backup_list_logic = app_weak.global::<BackupListLogic>();
+                        backup_list_logic.set_game_name(game.name.clone().into());
+                        backup_list_logic.set_backups(ModelRc::new(VecModel::from(entries)));
+                        backup_list_logic.set_visible(true);
+                    }
+
+                    return;
+                }
+
                 let mut restored = 0;
                 for ui_game in selected_games.iter() {
                     let Some(game) = installed_games.iter().find(|g| *g.name == *ui_game.name) else {
@@ -179,19 +245,7 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
 
                     if let Err(e) = restore_game(game, &cfg) {
                         log::error!("Failed to restore {}: {e}", game.name);
-
-                        let error_message = if let RestoreError::Archive(ae) = &e {
-                            match ae {
-                                ArchiveError::ChecksumMismatch(..) | ArchiveError::FileNotFound(_) => "ARCHIVE_CORRUPTED",
-                                ArchiveError::InvalidArchive | ArchiveError::Serialization(_) => "INVALID_ARCHIVE",
-                                ArchiveError::Io(_) => "IO_ERROR",
-                                ArchiveError::UnsupportedVersion(_) => "UNSUPPORTED_ARCHIVE_VERSION"
-                            }
-                        } else {
-                            "NO_BACKUPS_FOUND"
-                        };
-
-                        notification_logic.invoke_show_error(error_message.into());
+                        notification_logic.invoke_show_error(restore_error_key(&e).into());
                     } else {
                         log::info!("Successfully restored {}", game.name);
                         restored += 1;
@@ -201,6 +255,35 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
                 if restored > 0 {
                     notification_logic.invoke_show_success_fmt("RESTORED".into(), restored.to_string().into());
                 }
+            }
+        }
+    });
+
+    backup_list_logic.on_restore({
+        let app_weak = app.as_weak().unwrap();
+        let cfg = Rc::clone(config);
+
+        move |path| {
+            let cfg = cfg.as_ref().borrow();
+            let backup_list_logic = app_weak.global::<BackupListLogic>();
+            let notification_logic = app_weak.global::<NotificationLogic>();
+            let game_name = backup_list_logic.get_game_name();
+            let installed_games = gamedb::get_installed_games();
+
+            backup_list_logic.set_visible(false);
+
+            let Some(game) = installed_games.iter().find(|g| *g.name == *game_name) else {
+                log::error!("Failed to restore {game_name}: Uninstalled while Aletheia was still open");
+                notification_logic.invoke_show_error("GAME_NOT_INSTALLED".into());
+                return;
+            };
+
+            if let Err(e) = restore_archive(Path::new(path.as_str()), game, &cfg) {
+                log::error!("Failed to restore {}: {e}", game.name);
+                notification_logic.invoke_show_error(restore_error_key(&e).into());
+            } else {
+                log::info!("Successfully restored {}", game.name);
+                notification_logic.invoke_show_success_fmt("RESTORED".into(), "1".into());
             }
         }
     });

@@ -1,0 +1,15 @@
+// SPDX-FileCopyrightText: 2026 Spencer
+// SPDX-License-Identifier: AGPL-3.0-only
+
+import { BackupEntry } from "../structs/backup_entry.slint";
+
+export global BackupListLogic {
+  in-out property <string> game_name;
+  in-out property <[BackupEntry]> backups: [];
+  in-out property <bool> visible: false;
+  callback restore(string);
+
+  public function cancel() {
+    visible = false;
+  }
+}

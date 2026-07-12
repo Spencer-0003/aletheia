@@ -1,0 +1,42 @@
+// SPDX-FileCopyrightText: 2026 Spencer
+// SPDX-License-Identifier: AGPL-3.0-only
+
+import { ThemeLogic } from "../logic/theme.slint";
+
+export component NumberInput inherits Rectangle {
+  in property <int> minimum;
+  in property <int> maximum;
+  in-out property <int> value;
+  callback changed(int);
+
+  background: ThemeLogic.colors.surface;
+  border-radius: 4px;
+  border-width: 1px;
+  border-color: ThemeLogic.colors.surface_border;
+  drop-shadow-blur: 8px;
+  drop-shadow-color: ThemeLogic.colors.surface_shadow;
+  drop-shadow-offset-y: 4px;
+
+  HorizontalLayout {
+    padding-left: 12px;
+    padding-right: 12px;
+
+    TextInput {
+      text: root.value;
+      color: ThemeLogic.colors.text_primary;
+      font-size: 14px;
+      font-weight: 400;
+      vertical-alignment: center;
+      horizontal-alignment: center;
+      input-type: number;
+
+      edited => {
+        if !self.text.is-empty {
+          root.value = max(root.minimum, min(root.maximum, self.text.to-float()));
+          root.changed(root.value);
+          self.text = root.value;
+        }
+      }
+    }
+  }
+}

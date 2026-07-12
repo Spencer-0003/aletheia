@@ -1,0 +1,98 @@
+// SPDX-FileCopyrightText: 2026 Spencer
+// SPDX-License-Identifier: AGPL-3.0-only
+
+import { Button } from "./button.slint";
+import { BackupListLogic } from "../logic/backup_list.slint";
+import { Scrollable } from "./scrollable.slint";
+import { ThemeLogic } from "../logic/theme.slint";
+
+export component BackupListDialog inherits Rectangle {
+  background: rgba(0, 0, 0, 0.5);
+
+  TouchArea {
+    clicked => BackupListLogic.cancel();
+  }
+
+  Rectangle {
+    width: 480px;
+    height: 420px;
+    x: (parent.width - self.width) / 2;
+    y: (parent.height - self.height) / 2;
+    background: ThemeLogic.colors.surface;
+    border-radius: 8px;
+
+    VerticalLayout {
+      padding: 24px;
+      spacing: 16px;
+
+      Text {
+        text: @tr("Restore backup");
+        color: ThemeLogic.colors.text_primary;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      Text {
+        text: BackupListLogic.game_name;
+        color: ThemeLogic.colors.text_secondary;
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      Scrollable {
+        VerticalLayout {
+          for backup in BackupListLogic.backups: Rectangle {
+            background: (entry_touch.has-hover || restore_btn.hovered) ? ThemeLogic.colors.surface_hover : transparent;
+            border-radius: 6px;
+
+            entry_touch := TouchArea {}
+
+            test := HorizontalLayout {
+              padding: 10px;
+
+              VerticalLayout {
+                alignment: center;
+
+                Text {
+                  text: backup.timestamp;
+                  color: ThemeLogic.colors.text_primary;
+                  font-size: 14px;
+                  font-weight: 400;
+                }
+
+                Text {
+                  text: backup.size;
+                  color: ThemeLogic.colors.text_muted;
+                  font-size: 12px;
+                  font-weight: 400;
+                }
+              }
+
+              Rectangle { horizontal-stretch: 1; }
+
+              restore_btn := Button {
+                text: @tr("Restore");
+                background: ThemeLogic.colors.secondary;
+                width: 90px;
+                height: 32px;
+                clicked => BackupListLogic.restore(backup.path);
+              }
+            }
+          }
+        }
+      }
+
+      HorizontalLayout {
+        alignment: end;
+
+        Button {
+          text: @tr("Cancel");
+          background: ThemeLogic.colors.secondary;
+          width: 100px;
+          height: 36px;
+          clicked => BackupListLogic.cancel();
+        }
+      }
+    }
+  }
+}

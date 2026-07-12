@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Spencer
+// SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
 use crate::config::Config as AletheiaConfig;
@@ -45,12 +45,14 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
                 custom_databases: ui_cfg.custom_databases.iter().map(Into::into).collect(),
                 save_dir: (&ui_cfg.save_dir).into(),
                 steam_account_id: (!ui_cfg.steam_account_id.is_empty()).then(|| (&ui_cfg.steam_account_id).into()),
+                max_backups: ui_cfg.max_backups as u8,
                 #[cfg(feature = "updater")]
                 check_for_updates: ui_cfg.check_for_updates
             };
 
             settings_logic.set_previous_save_dir(ui_cfg.save_dir);
             settings_logic.set_previous_steam_account_id(ui_cfg.steam_account_id);
+            settings_logic.set_previous_max_backups(ui_cfg.max_backups);
             settings_logic.set_previous_check_for_updates(ui_cfg.check_for_updates);
 
             AletheiaConfig::save(&new_config);
@@ -118,6 +120,7 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
         custom_databases: ModelRc::new(config_ref.custom_databases.iter().map(Into::into).collect::<VecModel<_>>()),
         save_dir: config_ref.save_dir.to_string_lossy().as_ref().into(),
         steam_account_id: steam_account_id_str.into(),
+        max_backups: config_ref.max_backups.into(),
         #[cfg(feature = "updater")]
         check_for_updates: config_ref.check_for_updates,
         #[cfg(not(feature = "updater"))]
@@ -126,6 +129,7 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
 
     settings_screen_logic.set_previous_save_dir(config_ref.save_dir.to_string_lossy().as_ref().into());
     settings_screen_logic.set_previous_steam_account_id(steam_account_id_str.into());
+    settings_screen_logic.set_previous_max_backups(config_ref.max_backups.into());
 
     #[cfg(feature = "updater")]
     {

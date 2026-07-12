@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Spencer
+// SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
 use super::{Args, Command};
@@ -7,7 +7,7 @@ use crate::cli_helpers::ensure_steam_account_selected;
 use crate::config::Config;
 use crate::gamedb;
 use crate::infer;
-use crate::operations::restore_game;
+use crate::operations::{restore_archive, restore_game};
 use std::path::Path;
 
 pub struct Restore;
@@ -42,7 +42,7 @@ impl Command for Restore {
 
             println!("Restoring {}", reader.game);
 
-            if let Err(e) = restore_game(game, config) {
+            if let Err(e) = restore_archive(archive_path, game, config) {
                 eprintln!("Failed to restore {}: {e}", reader.game);
             } else {
                 println!("Restored {}.", reader.game);

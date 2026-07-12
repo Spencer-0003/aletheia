@@ -31,9 +31,16 @@ export component RestoreDialog inherits Window {
         }
 
         Text {
-          color: ThemeLogic.colors.text_secondary;
           text: @tr("Are you sure you want to restore {}?", RestoreLogic.game_name);
+          color: ThemeLogic.colors.text_secondary;
           font-size: 15px;
+          font-weight: 400;
+        }
+
+        Text {
+          text: RestoreLogic.timestamp;
+          color: ThemeLogic.colors.text_muted;
+          font-size: 13px;
           font-weight: 400;
         }
 

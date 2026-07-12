@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
+use super::list_backups;
 use crate::archive::{ArchiveReader, ArchiveWriter};
 use crate::config::Config;
 use crate::dirs::{expand_path, shrink_path};
@@ -9,8 +10,9 @@ use crate::gamedb::GameDbEntry;
 use crate::scanner::Game;
 use crate::utils;
 use glob::glob;
-use std::fs::create_dir_all;
+use std::fs::{create_dir_all, remove_file};
 use std::path::Path;
+use std::time::SystemTime;
 
 #[derive(Debug, thiserror::Error)]
 pub enum Error {
@@ -23,9 +25,9 @@ pub type Result<T> = core::result::Result<T, Error>;
 pub fn backup_game(game: &Game, config: &Config, entry: &GameDbEntry) -> Result<bool> {
     let steam_id = config.steam_account_id.as_deref();
     let backup_folder = config.save_dir.join(utils::sanitize_game_name(&game.name).as_ref());
-    let archive_path = backup_folder.join("backup.aletheia");
+    let existing_backups = list_backups(&backup_folder);
     let previous_files =
-        archive_path.exists().then(|| ArchiveReader::read_index(&archive_path).ok()).flatten().map(|(_, files)| files);
+        existing_backups.first().and_then(|latest| ArchiveReader::read_index(&latest.path).ok()).map(|(_, _, files)| files);
 
     let mut changed = false;
     let mut paths = vec![];
@@ -85,6 +87,8 @@ pub fn backup_game(game: &Game, config: &Config, entry: &GameDbEntry) -> Result<
 
     create_dir_all(&backup_folder)?;
 
+    let archive_path =
+        backup_folder.join(format!("{}.aletheia", SystemTime::now().duration_since(SystemTime::UNIX_EPOCH).unwrap().as_secs()));
     let mut writer = ArchiveWriter::new(game.name.clone(), &archive_path);
 
     for file in files {
@@ -109,6 +113,20 @@ pub fn backup_game(game: &Game, config: &Config, entry: &GameDbEntry) -> Result<
     }
 
     writer.finalize().unwrap();
+    prune_backups(&backup_folder, config.max_backups);
 
     Ok(true)
+}
+
+fn prune_backups(backup_folder: &Path, max_backups: u8) {
+    if max_backups == 0 {
+        return;
+    }
+
+    let backups = list_backups(backup_folder);
+    for stale in backups.into_iter().skip(max_backups as usize) {
+        if let Err(e) = remove_file(&stale.path) {
+            log::warn!("Failed to prune old backup {}: {e}", stale.path.display());
+        }
+    }
 }

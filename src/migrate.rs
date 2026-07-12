@@ -1,12 +1,14 @@
 // SPDX-FileCopyrightText: 2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
-// TODO: Remove module after releasing 2.0
+// TODO: Remove module after releasing 2.1.0
 
 use crate::archive::ArchiveWriter;
 use crate::config::Config;
 use crate::gamedb::Manifest;
+use crate::operations::list_backups;
 use std::fs::{File, read_dir, remove_file};
 use std::path::Path;
+use std::time::SystemTime;
 
 pub fn run(config: &Config) {
     if !config.save_dir.exists() {
@@ -22,12 +24,13 @@ pub fn run(config: &Config) {
         }
 
         let manifest_path = path.join("aletheia_manifest.yaml");
-        let archive_path = path.join("backup.aletheia");
 
-        if archive_path.exists() || !manifest_path.exists() {
+        if !list_backups(&path).is_empty() || !manifest_path.exists() {
             continue;
         }
 
+        let archive_path =
+            path.join(format!("{}.aletheia", SystemTime::now().duration_since(SystemTime::UNIX_EPOCH).unwrap().as_secs()));
         let manifest_file = File::open(&manifest_path).unwrap();
         let manifest: Manifest = serde_yaml::from_reader(manifest_file).unwrap();
 

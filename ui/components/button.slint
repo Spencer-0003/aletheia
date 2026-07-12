@@ -7,6 +7,7 @@ export component Button {
   in property <string> text;
   in property <color> background: ThemeLogic.colors.primary;
   in property <bool> enabled: true;
+  out property <bool> hovered <=> touch_area.has-hover;
   callback clicked <=> touch_area.clicked;
 
   accessible-role: button;

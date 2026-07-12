@@ -52,7 +52,7 @@ fn main() {
 
     let config = config::Config::load();
     if let Some(ref cfg) = config {
-        migrate::run(cfg); // TODO: Remove after 2.0.
+        migrate::run(cfg); // TODO: Remove after 2.1.0.
     }
 
     let mut args = std::env::args().skip(1);
