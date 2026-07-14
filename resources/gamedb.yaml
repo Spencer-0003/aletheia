@@ -320,6 +320,10 @@ Dead Space 3:
   files:
     windows:
       - "{Documents}/EA Games/Dead Space 3/*"
+Dead as Disco:
+  files:
+    windows:
+      - "{LocalAppData}/Pagoda/Saved/SaveGames/*"
 Death end re;Quest:
   files:
     windows:
