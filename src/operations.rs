@@ -19,7 +19,9 @@ pub struct Backup {
 }
 
 pub fn list_backups(dir: &Path) -> Vec<Backup> {
-    let entries = read_dir(dir).unwrap();
+    let Ok(entries) = read_dir(dir) else {
+        return vec![];
+    };
 
     let mut backups: Vec<Backup> = entries
         .filter_map(std::result::Result::ok)
