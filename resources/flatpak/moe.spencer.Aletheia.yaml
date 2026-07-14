@@ -20,6 +20,7 @@ finish-args:
   - --socket=wayland
   - --socket=fallback-x11
   - --share=ipc # https://discourse.flathub.org/t/what-does-finish-args-x11-without-ipc-mean-and-how-do-you-fix-it/3279
+  - --device=dri # GPU acceleration
   # Used to download GameDB updates
   - --share=network
   # Used in the event of the user wanting to backup saves to external storage
