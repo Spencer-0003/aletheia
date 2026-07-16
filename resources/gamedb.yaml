@@ -225,8 +225,8 @@ Cyberpunk 2077:
       - "{Home}/Saved Games/CD Projekt Red/Cyberpunk 2077/*"
 "DATE A LIVE: Rio Reincarnation":
   files:
-    linux:
-      - "{Documents}/Idea Factory/DATE A LIVE  RIO-REINCARNATION/*"
+    windows:
+      - "{Documents}/Idea Factory/DATE A LIVE RIO-REINCARNATION/*"
 DEAD OR ALIVE 6 Last Round:
   files:
     windows:
