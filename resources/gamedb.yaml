@@ -227,6 +227,10 @@ Cyberpunk 2077:
   files:
     linux:
       - "{Documents}/Idea Factory/DATE A LIVE  RIO-REINCARNATION/*"
+DEAD OR ALIVE 6 Last Round:
+  files:
+    windows:
+      - "{LocalAppData}/KoeiTecmo/DEADORALIVE6 Last Round/{SteamID64}/SYSTEMDATA/*"
 DOOM Eternal:
   files:
     windows:
