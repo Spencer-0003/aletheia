@@ -253,7 +253,7 @@ mod tests {
         drop(f);
 
         let mut writer = ArchiveWriter::new("Test Game".into(), &archive_path);
-        writer.add_file("test.txt".into(), &test_file, "288a86a79f20a3d6dccdca7713beaed178798296bdfa7913fa2a62d9727bf8f8".to_string());
+        writer.add_file("test.txt", &test_file, "288a86a79f20a3d6dccdca7713beaed178798296bdfa7913fa2a62d9727bf8f8".to_owned());
         writer.finalize().unwrap();
 
         let mut reader = ArchiveReader::open(&archive_path).unwrap();

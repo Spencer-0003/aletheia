@@ -408,7 +408,7 @@ mod tests {
             let prefix = home_dir.join("Games/UnitTest");
 
             assert_eq!(
-                expand_path(save_file_1, None, Some(&prefix), Some(&gabe_steam_id3)),
+                expand_path(save_file_1, None, Some(&prefix), Some(gabe_steam_id3)),
                 prefix
                     .join("drive_c/users")
                     .join(username)
