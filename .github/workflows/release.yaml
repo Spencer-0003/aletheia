@@ -58,13 +58,13 @@ jobs:
           $APPIMAGETOOL -u "gh-releases-zsync|${{ github.repository_owner }}|${{ github.event.repository.name }}|latest|aletheia-$RELEASE_ARCH.appimage" target/appimage/out aletheia-$RELEASE_ARCH.appimage
 
       - name: Upload binary
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.artifact }}
           path: target/${{ matrix.target }}/release/${{ matrix.artifact }}
 
       - name: Upload AppImage
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: aletheia-${{ matrix.target == 'x86_64-unknown-linux-gnu' && 'x64' || 'aarch64' }}.appimage
           path: |
@@ -92,13 +92,13 @@ jobs:
         run: rustup target add aarch64-pc-windows-msvc; cargo build --release --features updater --target aarch64-pc-windows-msvc; Rename-Item "target\aarch64-pc-windows-msvc\release\aletheia.exe" "aletheia-windows-aarch64.exe"
 
       - name: Upload x64 artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: aletheia-windows-x64.exe
           path: target/x86_64-pc-windows-msvc/release/aletheia-windows-x64.exe
 
       - name: Upload ARM artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: aletheia-windows-aarch64.exe
           path: target/aarch64-pc-windows-msvc/release/aletheia-windows-aarch64.exe
@@ -125,7 +125,7 @@ jobs:
           flatpak build-bundle repo aletheia-${{ matrix.arch }}.flatpak moe.spencer.Aletheia --runtime-repo=https://flathub.org/repo/flathub.flatpakrepo
 
       - name: Upload
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: aletheia-${{ matrix.arch }}.flatpak
           path: aletheia-${{ matrix.arch }}.flatpak
@@ -163,7 +163,7 @@ jobs:
           tar -czf ${{ matrix.artifact }}.tar.gz ${{ matrix.artifact }}
 
       - name: Upload
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.artifact }}.tar.gz
           path: ${{ matrix.artifact }}.tar.gz
@@ -181,7 +181,7 @@ jobs:
         run: cargo about generate about.hbs > THIRD_PARTY_LICENSES.html
 
       - name: Upload
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: THIRD_PARTY_LICENSES.html
           path: THIRD_PARTY_LICENSES.html
@@ -193,7 +193,7 @@ jobs:
       contents: write
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           path: artifacts
 
