@@ -12,9 +12,10 @@ export component Dropdown {
   in property <string> placeholder: @tr("Select an option…");
   in-out property <string> value: "";
   out property <string> label: "";
-  out property <bool> expanded <=> dropdown_menu.visible;
+  out property <bool> expanded: false;
   private property <bool> expandable: root.options.length > 1;
   callback changed(string);
+  callback toggled(bool);
 
   for option in options: ForEach {
     init => {
@@ -24,73 +25,73 @@ export component Dropdown {
     }
   }
 
-  Rectangle {
-    background: ThemeLogic.colors.surface;
-    border-width: 1px;
-    border-radius: 4px;
-    border-color: ThemeLogic.colors.surface_border;
-    drop-shadow-blur: 8px;
-    drop-shadow-color: ThemeLogic.colors.surface_shadow;
-    drop-shadow-offset-y: 4px;
-    accessible-role: button;
-    accessible-label: root.label.is-empty ? root.placeholder : root.label;
-    accessible-enabled: root.enabled;
-    accessible-expanded: root.expanded;
-    accessible-expandable: root.expandable;
+  VerticalLayout {
+    spacing: 4px;
 
-    HorizontalLayout {
-      padding-left: 12px;
-      padding-right: 8px;
-      spacing: 8px;
-      alignment: space-between;
+    Rectangle {
+      height: 36px;
+      background: ThemeLogic.colors.surface;
+      border-width: 1px;
+      border-radius: 4px;
+      border-color: ThemeLogic.colors.surface_border;
+      drop-shadow-blur: 8px;
+      drop-shadow-color: ThemeLogic.colors.surface_shadow;
+      drop-shadow-offset-y: 4px;
+      accessible-role: button;
+      accessible-label: root.label.is-empty ? root.placeholder : root.label;
+      accessible-enabled: root.enabled;
+      accessible-expanded: root.expanded;
+      accessible-expandable: root.expandable;
 
-      Text {
-        private property <bool> show_label: !root.label.is-empty;
-        text: show_label ? root.label : root.placeholder;
-        color: show_label ? ThemeLogic.colors.text_primary : ThemeLogic.colors.text_placeholder;
-        opacity: root.enabled ? (show_label ? 65% : 40%) : 50%;
-        font-size: 14px;
-        font-weight: 400;
-        overflow: elide;
-        vertical-alignment: center;
+      HorizontalLayout {
+        padding-left: 12px;
+        padding-right: 8px;
+        spacing: 8px;
+        alignment: space-between;
+
+        Text {
+          private property <bool> show_label: !root.label.is-empty;
+          text: show_label ? root.label : root.placeholder;
+          color: show_label ? ThemeLogic.colors.text_primary : ThemeLogic.colors.text_placeholder;
+          opacity: root.enabled ? (show_label ? 65% : 40%) : 50%;
+          font-size: 14px;
+          font-weight: 400;
+          overflow: elide;
+          vertical-alignment: center;
+        }
+
+        Image {
+          source: @image-url("../assets/arrow_drop_down.svg");
+          colorize: ThemeLogic.colors.primary;
+          opacity: root.enabled && root.expandable ? 100% : 50%;
+          transform-rotation: root.expanded ? 180deg : 0deg;
+          vertical-alignment: center;
+
+          animate transform-rotation { duration: 200ms; easing: ease-in-out; }
+        }
       }
 
-      Image {
-        source: @image-url("../assets/arrow_drop_down.svg");
-        colorize: ThemeLogic.colors.primary;
-        opacity: root.enabled && root.expandable ? 100% : 50%;
-        transform-rotation: root.expanded ? 180deg : 0deg;
-        vertical-alignment: center;
-
-        animate transform-rotation { duration: 200ms; easing: ease-in-out; }
+      TouchArea {
+        enabled: root.enabled && root.expandable;
+        mouse-cursor: pointer;
+        clicked => {
+          root.expanded = !root.expanded;
+          root.toggled(root.expanded);
+        }
       }
     }
 
-    TouchArea {
-      enabled: root.enabled && root.expandable;
-      mouse-cursor: pointer;
-      clicked => { root.expanded = !root.expanded; }
-    }
-  }
-
-  dropdown_menu := Rectangle {
-    y: root.height + 4px;
-    width: root.width;
-    height: min(200px, (root.height * root.options.length) + 4px);
-    visible: false;
-    background: ThemeLogic.colors.surface;
-    border-radius: 4px;
-    border-width: 1px;
-    border-color: ThemeLogic.colors.border_hover;
-    drop-shadow-blur: 12px;
-    drop-shadow-color: ThemeLogic.colors.shadow_heavy;
-    drop-shadow-offset-y: 6px;
-    accessible-role: list;
-    accessible-label: @tr("Dropdown options");
-
-    Flickable {
-      width: 100%;
-      height: 100%;
+    if root.expanded: Rectangle {
+      height: min(200px, (36px * root.options.length) + 4px);
+      background: ThemeLogic.colors.surface;
+      border-radius: 4px;
+      border-width: 1px;
+      border-color: ThemeLogic.colors.border_hover;
+      drop-shadow-blur: 12px;
+      drop-shadow-color: ThemeLogic.colors.shadow_heavy;
+      drop-shadow-offset-y: 6px;
+      accessible-role: list;
+      accessible-label: @tr("Dropdown options");
 
       VerticalLayout {
         width: 100%;
