@@ -21,9 +21,9 @@ export global SettingsScreenLogic {
   in property <bool> previous_check_for_updates: false;
   in property <bool> has_steam_accounts: steam_account_options.length > 0;
   out property <bool> dirty: config.save_dir != previous_save_dir ||
-                             config.steam_account_id != previous_steam_account_id ||
-                             config.max_backups != previous_max_backups ||
-                             config.check_for_updates != previous_check_for_updates;
+                               config.steam_account_id != previous_steam_account_id ||
+                               config.max_backups != previous_max_backups ||
+                               config.check_for_updates != previous_check_for_updates;
   callback browse();
   callback get_steam_users();
   callback update_gamedb();
