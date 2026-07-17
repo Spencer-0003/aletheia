@@ -15,7 +15,6 @@ export component Dropdown {
   out property <bool> expanded: false;
   private property <bool> expandable: root.options.length > 1;
   callback changed(string);
-  callback toggled(bool);
 
   for option in options: ForEach {
     init => {
@@ -74,10 +73,7 @@ export component Dropdown {
       TouchArea {
         enabled: root.enabled && root.expandable;
         mouse-cursor: pointer;
-        clicked => {
-          root.expanded = !root.expanded;
-          root.toggled(root.expanded);
-        }
+        clicked => { root.expanded = !root.expanded; }
       }
     }
 

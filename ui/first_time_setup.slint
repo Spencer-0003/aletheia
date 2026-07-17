@@ -181,8 +181,8 @@ export component FirstTimeSetup inherits Window {
               placeholder: @tr("Select an account…");
               options: SetupLogic.steam_account_options;
               value <=> SetupLogic.steam_account_id;
-              toggled(expanded) => {
-                if expanded {
+              changed expanded => {
+                if self.expanded {
                   scrollable.viewport-y = scrollable.viewport-y - 200px;
                 }
               }
