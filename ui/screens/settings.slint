@@ -19,10 +19,11 @@ export global SettingsScreenLogic {
   in property <string> previous_steam_account_id;
   in property <int> previous_max_backups;
   in property <bool> previous_check_for_updates: false;
+  in property <bool> has_steam_accounts: steam_account_options.length > 0;
   out property <bool> dirty: config.save_dir != previous_save_dir ||
-                               config.steam_account_id != previous_steam_account_id ||
-                               config.max_backups != previous_max_backups ||
-                               config.check_for_updates != previous_check_for_updates;
+                             config.steam_account_id != previous_steam_account_id ||
+                             config.max_backups != previous_max_backups ||
+                             config.check_for_updates != previous_check_for_updates;
   callback browse();
   callback get_steam_users();
   callback update_gamedb();
@@ -97,9 +98,9 @@ export component Settings {
           }
         }
 
-        Rectangle { height: 1px; background: ThemeLogic.colors.secondary_hover; }
+        if SettingsScreenLogic.has_steam_accounts: Rectangle { height: 1px; background: ThemeLogic.colors.secondary_hover; }
 
-        VerticalLayout {
+        if SettingsScreenLogic.has_steam_accounts: VerticalLayout {
           z: 1; // Dropdown needs to render over other components.
           spacing: 16px;
 
@@ -148,13 +149,11 @@ export component Settings {
             }
 
             Dropdown {
-              private property <bool> has_accounts: SettingsScreenLogic.steam_account_options.length > 0;
               width: 200px;
               height: 36px;
-              enabled: has_accounts;
-              placeholder: has_accounts ? @tr("Select an account…") : @tr("No accounts found…");
-              value <=> SettingsScreenLogic.config.steam_account_id;
+              placeholder: @tr("Select an account…");
               options: SettingsScreenLogic.steam_account_options;
+              value <=> SettingsScreenLogic.config.steam_account_id;
             }
           }
         }
