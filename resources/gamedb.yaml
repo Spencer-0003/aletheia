@@ -678,7 +678,7 @@ JUMP FORCE:
 Judgment:
   files:
     windows:
-      - "{AppData}/Sega/Judgment/Steam/*"
+      - "{AppData}/Sega/Judgment/Steam/{SteamID64}/**/*"
 KANADE:
   files:
     linux:
