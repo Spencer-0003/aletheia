@@ -6,62 +6,72 @@ import { RestoreLogic } from "./logic/restore.slint";
 import { ThemeLogic } from "./logic/theme.slint";
 
 export component RestoreDialog inherits Window {
+  private property <bool> is_ok: RestoreLogic.error.is-empty;
+
   title: @tr("Aletheia - Restore backup");
   default-font-family: "Inter";
-  preferred-width: 520px;
-  preferred-height: 240px;
+  width: 520px;
+  height: 240px;
   background: ThemeLogic.colors.surface;
 
   VerticalLayout {
     padding: 24px;
-    spacing: 24px;
+    spacing: 16px;
 
     VerticalLayout {
-      spacing: 8px;
+      spacing: 6px;
       alignment: start;
 
-      Text {
-        text: @tr("Restore Backup?");
-        color: ThemeLogic.colors.text_primary;
-        font-size: 20px;
-        font-weight: 700;
-      }
+      VerticalLayout {
+        spacing: 2px;
+        alignment: start;
 
-      Text {
-        color: ThemeLogic.colors.text_secondary;
-        text: @tr("Are you sure you want to restore {}?", RestoreLogic.game_name);
-        font-size: 15px;
-        font-weight: 400;
+        Text {
+          text: @tr("Restore backup");
+          color: ThemeLogic.colors.text_primary;
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        Text {
+          color: ThemeLogic.colors.text_secondary;
+          text: @tr("Are you sure you want to restore {}?", RestoreLogic.game_name);
+          font-size: 14px;
+        } 
       }
 
       Text {
         text: RestoreLogic.timestamp;
-        color: ThemeLogic.colors.text_muted;
-        font-size: 13px;
-        font-weight: 400;
+        color: ThemeLogic.colors.text_tertiary;
+        font-size: 12px;
       }
+    }
 
-      if RestoreLogic.error.is-empty: Text {
-        text: @tr("This will overwrite any existing save data.");
-        color: ThemeLogic.colors.text_muted;
-        font-size: 13px;
-        font-weight: 400;
-      }
+    Rectangle {
+      background: is_ok
+                  ? ThemeLogic.colors.restore_dialog_warning_background
+                  : ThemeLogic.colors.restore_dialog_error_background;
 
-      if !RestoreLogic.error.is-empty: Rectangle {
-        background: ThemeLogic.colors.restore_dialog_error_background;
-        border-radius: 8px;
-        border-width: 1px;
-        border-color: ThemeLogic.colors.restore_dialog_error_border;
+      border-radius: 8px;
 
-        VerticalLayout {
-          padding: 12px;
+      VerticalLayout {
+        padding: 18px;
+
+        HorizontalLayout {
+          spacing: 12px;
+          padding-left: 4px;
+
+          Image {
+            source: @image-url("assets/info.svg");
+            colorize: is_ok ? #f5b060 : #ef5350;
+            width: 18px;
+            height: 18px;
+          }
 
           Text {
-            text: RestoreLogic.translate_error();
-            color: ThemeLogic.colors.text_primary;
-            font-size: 14px;
-            font-weight: 400;
+            text: is_ok ? @tr("This will overwrite any existing save data.") : RestoreLogic.translate_error();
+            color: ThemeLogic.colors.text_muted;
+            font-size: 12px;
           }
         }
       }
@@ -72,14 +82,14 @@ export component RestoreDialog inherits Window {
       spacing: 12px;
 
       Button {
-        text: RestoreLogic.error.is-empty ? @tr("Cancel") : @tr("Close");
+        text: is_ok ? @tr("Cancel") : @tr("Close");
         background: ThemeLogic.colors.secondary;
         width: 100px;
         height: 36px;
         clicked => root.hide();
       }
 
-      if RestoreLogic.error.is-empty: Button {
+      if is_ok: Button {
         text: @tr("Restore");
         background: ThemeLogic.colors.primary;
         width: 100px;
