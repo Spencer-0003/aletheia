@@ -35,7 +35,7 @@ component FirstTimeSetupContent inherits VerticalLayout {
 
       Text {
         text: @tr("Welcome to Aletheia");
-        color: ThemeLogic.colors.text_secondary;
+        color: ThemeLogic.colors.text_primary;
         font-size: 18px;
         font-weight: 600;
         horizontal-alignment: center;
@@ -43,7 +43,7 @@ component FirstTimeSetupContent inherits VerticalLayout {
 
       Text {
         text: @tr("Let's get you set up. You can change these settings at any time.");
-        color: ThemeLogic.colors.text_tertiary;
+        color: ThemeLogic.colors.text_secondary;
         font-size: 14px;
         horizontal-alignment: center;
         wrap: word-wrap;
@@ -134,8 +134,6 @@ export component FirstTimeSetup inherits Window {
   default-font-family: "Inter";
   width: 520px;
   height: root.has_steam_accounts ? 580px : 560px;
-  preferred-width: 520px;
-  preferred-height: root.has_steam_accounts ? 580px : 560px;
   background: ThemeLogic.colors.surface;
 
   Rectangle {
