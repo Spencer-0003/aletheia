@@ -151,7 +151,7 @@ impl ArchiveWriter {
 }
 
 impl ArchiveReader {
-    fn parse(file: &mut File) -> Result<(String, u64, Vec<FileEntry>)> {
+    fn parse(file: &mut File) -> Result<(String, u64, u64, Vec<FileEntry>)> {
         let mut magic = [0u8; 8];
         file.read_exact(&mut magic)?;
         if &magic != MAGIC {
@@ -184,24 +184,36 @@ impl ArchiveReader {
         file.read_exact(&mut index_size_bytes)?;
         let index_size = u64::from_le_bytes(index_size_bytes);
 
+        let file_size = file.metadata()?.len();
+        let index_end = index_offset.checked_add(index_size).ok_or(Error::InvalidArchive)?;
+        if index_end > file_size {
+            return Err(Error::InvalidArchive);
+        }
+
         file.seek(SeekFrom::Start(index_offset))?;
         let mut index_bytes = vec![0u8; index_size as usize];
         file.read_exact(&mut index_bytes)?;
         let files: Vec<FileEntry> = postcard::from_bytes(&index_bytes)?;
 
-        Ok((game, created, files))
+        Ok((game, created, file_size, files))
     }
 
     pub fn read_index(path: &Path) -> Result<(String, u64, Vec<FileEntry>)> {
         let mut file = File::open(path)?;
-        Self::parse(&mut file)
+        let (game, created, _file_size, files) = Self::parse(&mut file)?;
+        Ok((game, created, files))
     }
 
     pub fn open(path: &Path) -> Result<Self> {
         let mut file = File::open(path)?;
-        let (game, created, files) = Self::parse(&mut file)?;
+        let (game, created, file_size, files) = Self::parse(&mut file)?;
 
         for entry in &files {
+            let data_end = entry.data_offset.checked_add(entry.data_size).ok_or(Error::InvalidArchive)?;
+            if data_end > file_size {
+                return Err(Error::InvalidArchive);
+            }
+
             let data = Self::decompress(&mut file, entry)?;
             let checksum = hash_bytes(&data);
             if checksum != entry.checksum {
