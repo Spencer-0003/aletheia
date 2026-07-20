@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025-2026 Spencer
 # SPDX-License-Identifier: CC0-1.0
 
+[linux]
 install:
   cargo build --release
   sudo install -Dm755 target/release/aletheia /usr/bin
@@ -13,10 +14,12 @@ install:
   sudo install -Dm644 resources/linux/moe.spencer.Aletheia.mime.xml /usr/share/mime/packages/aletheia.xml
   sudo install -Dm644 LICENSE /usr/share/licenses/aletheia/LICENSE
 
+[linux]
 install_flatpak:
   flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
   flatpak-builder --force-clean --user --install-deps-from=flathub --repo=repo --install builddir resources/flatpak/moe.spencer.Aletheia.yaml
 
+[linux]
 uninstall:
   sudo rm /usr/bin/aletheia
   sudo rm /usr/share/bash-completion/completions/aletheia
@@ -28,6 +31,7 @@ uninstall:
   sudo rm /usr/share/mime/packages/aletheia.xml
   sudo rm -r /usr/share/licenses/aletheia
 
+[linux]
 uninstall_flatpak:
   flatpak uninstall moe.spencer.Aletheia
 
