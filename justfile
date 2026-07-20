@@ -35,5 +35,20 @@ uninstall:
 uninstall_flatpak:
   flatpak uninstall moe.spencer.Aletheia
 
+[macos]
+install:
+  cargo build --release
+  mkdir -p Aletheia.app/Contents/{MacOS,Resources}
+  cp target/release/aletheia Aletheia.app/Contents/MacOS
+  cp resources/mac/aletheia.icns Aletheia.app/Contents/Resources
+  cp resources/mac/Info.plist Aletheia.app/Contents
+  codesign -s - --deep -f Aletheia.app
+  rm -rf /Applications/Aletheia.app
+  mv Aletheia.app /Applications
+
+[macos]
+uninstall:
+  rm -rf /Applications/Aletheia.app
+
 generate_translations:
   find -name \*.slint | xargs slint-tr-extractor -o ui/locale/aletheia.pot
