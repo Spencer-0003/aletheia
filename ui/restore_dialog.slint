@@ -6,9 +6,10 @@ import { RestoreLogic } from "./logic/restore.slint";
 import { ThemeLogic } from "./logic/theme.slint";
 
 export component RestoreDialog inherits Window {
-  private property <bool> is_ok: RestoreLogic.error.is-empty;
+  private property <bool> ok: RestoreLogic.error.is-empty;
 
   title: @tr("Aletheia - Restore backup");
+  icon: @image-url("../resources/logo/moe.spencer.Aletheia.png");
   default-font-family: "Inter";
   width: 520px;
   height: 240px;
@@ -48,7 +49,7 @@ export component RestoreDialog inherits Window {
     }
 
     Rectangle {
-      background: is_ok
+      background: ok
                   ? ThemeLogic.colors.restore_dialog_warning_background
                   : ThemeLogic.colors.restore_dialog_error_background;
 
@@ -63,13 +64,13 @@ export component RestoreDialog inherits Window {
 
           Image {
             source: @image-url("assets/info.svg");
-            colorize: is_ok ? #f5b060 : #ef5350;
+            colorize: ok ? #f5b060 : #ef5350;
             width: 18px;
             height: 18px;
           }
 
           Text {
-            text: is_ok ? @tr("This will overwrite any existing save data.") : RestoreLogic.translate_error();
+            text: ok ? @tr("This will overwrite any existing save data.") : RestoreLogic.translate_error();
             color: ThemeLogic.colors.text_muted;
             font-size: 12px;
           }
@@ -78,18 +79,18 @@ export component RestoreDialog inherits Window {
     }
 
     HorizontalLayout {
-      alignment: end;
       spacing: 12px;
+      alignment: end;
 
       Button {
-        text: is_ok ? @tr("Cancel") : @tr("Close");
+        text: ok ? @tr("Cancel") : @tr("Close");
         background: ThemeLogic.colors.secondary;
         width: 100px;
         height: 36px;
         clicked => root.hide();
       }
 
-      if is_ok: Button {
+      if ok: Button {
         text: @tr("Restore");
         background: ThemeLogic.colors.primary;
         width: 100px;
