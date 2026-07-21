@@ -3,6 +3,7 @@
 
 use crate::file::hash_bytes;
 use serde::{Deserialize, Serialize};
+use std::collections::HashMap;
 use std::fs::{File, metadata};
 use std::io::{Read, Seek, SeekFrom, Write, copy};
 use std::path::{Path, PathBuf};
@@ -53,7 +54,7 @@ pub struct ArchiveWriter {
 }
 
 pub struct ArchiveReader {
-    file: File,
+    decompressed: HashMap<String, Vec<u8>>,
     pub created: u64,
     pub files: Vec<FileEntry>,
     pub game: String
@@ -207,6 +208,7 @@ impl ArchiveReader {
     pub fn open(path: &Path) -> Result<Self> {
         let mut file = File::open(path)?;
         let (game, created, file_size, files) = Self::parse(&mut file)?;
+        let mut decompressed = HashMap::with_capacity(files.len());
 
         for entry in &files {
             let data_end = entry.data_offset.checked_add(entry.data_size).ok_or(Error::InvalidArchive)?;
@@ -219,9 +221,11 @@ impl ArchiveReader {
             if checksum != entry.checksum {
                 return Err(Error::ChecksumMismatch(entry.checksum.clone(), checksum));
             }
+
+            decompressed.insert(entry.shrunk_path.clone(), data);
         }
 
-        Ok(Self { file, created, files, game })
+        Ok(Self { decompressed, created, files, game })
     }
 
     fn decompress(file: &mut File, entry: &FileEntry) -> Result<Vec<u8>> {
@@ -235,13 +239,13 @@ impl ArchiveReader {
         }
     }
 
-    pub fn extract_file(&mut self, shrunk_path: &str, dest: &Path) -> Result<()> {
+    pub fn extract_file(&self, shrunk_path: &str, dest: &Path) -> Result<()> {
         let entry =
             self.files.iter().find(|e| e.shrunk_path == shrunk_path).ok_or_else(|| Error::FileNotFound(shrunk_path.to_owned()))?;
 
-        let data = Self::decompress(&mut self.file, entry)?;
+        let data = &self.decompressed[shrunk_path];
         let mut output = File::create(dest)?;
-        output.write_all(&data)?;
+        output.write_all(data)?;
         output.set_modified(entry.modified)?;
 
         Ok(())
@@ -268,7 +272,7 @@ mod tests {
         writer.add_file("test.txt", &test_file, "288a86a79f20a3d6dccdca7713beaed178798296bdfa7913fa2a62d9727bf8f8".to_owned());
         writer.finalize().unwrap();
 
-        let mut reader = ArchiveReader::open(&archive_path).unwrap();
+        let reader = ArchiveReader::open(&archive_path).unwrap();
         assert_eq!(&reader.game, "Test Game");
         assert_eq!(reader.files.len(), 1);
         assert_eq!(reader.files[0].checksum, "288a86a79f20a3d6dccdca7713beaed178798296bdfa7913fa2a62d9727bf8f8");

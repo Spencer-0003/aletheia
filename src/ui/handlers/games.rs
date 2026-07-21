@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
-use crate::archive::Error as ArchiveError;
+use crate::archive::{ArchiveReader, Error as ArchiveError};
 use crate::config::Config as AletheiaConfig;
 use crate::gamedb;
 use crate::operations::{RestoreError, backup_game, list_backups, restore_archive, restore_game};
@@ -278,7 +278,16 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
                 return;
             };
 
-            if let Err(e) = restore_archive(Path::new(path.as_str()), game, &cfg) {
+            let reader = match ArchiveReader::open(Path::new(path.as_str())) {
+                Ok(a) => a,
+                Err(e) => {
+                    log::error!("Failed to open archive for {}: {e}", game.name);
+                    notification_logic.invoke_show_error(restore_error_key(&RestoreError::Archive(e)).into());
+                    return;
+                }
+            };
+
+            if let Err(e) = restore_archive(&reader, game, &cfg) {
                 log::error!("Failed to restore {}: {e}", game.name);
                 notification_logic.invoke_show_error(restore_error_key(&e).into());
             } else {

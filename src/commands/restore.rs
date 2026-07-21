@@ -42,7 +42,7 @@ impl Command for Restore {
 
             println!("Restoring {}", reader.game);
 
-            if let Err(e) = restore_archive(archive_path, game, config) {
+            if let Err(e) = restore_archive(&reader, game, config) {
                 eprintln!("Failed to restore {}: {e}", reader.game);
             } else {
                 println!("Restored {}.", reader.game);

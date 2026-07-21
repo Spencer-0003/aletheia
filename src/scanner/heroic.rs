@@ -109,8 +109,9 @@ impl Scanner for HeroicScanner {
         let mut games = vec![];
 
         #[cfg(all(unix, not(target_os = "macos")))]
-        let heroic_path =
-            [config().join("heroic"), home().join(".var/app/com.heroicgameslauncher.hgl/config/heroic")].into_iter().find(|p| p.exists());
+        let heroic_path = [config().join("heroic"), home().join(".var/app/com.heroicgameslauncher.hgl/config/heroic")]
+            .into_iter()
+            .find(|p| p.exists());
 
         #[cfg(target_os = "macos")]
         let heroic_path = {

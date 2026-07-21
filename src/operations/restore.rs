@@ -28,14 +28,13 @@ pub fn restore_game(game: &Game, config: &Config) -> Result<()> {
         return Err(Error::NoBackupsFound);
     };
 
-    restore_archive(&backup.path, game, config)
+    restore_archive(&ArchiveReader::open(&backup.path)?, game, config)
 }
 
-pub fn restore_archive(archive_path: &Path, game: &Game, config: &Config) -> Result<()> {
+pub fn restore_archive(reader: &ArchiveReader, game: &Game, config: &Config) -> Result<()> {
     let steam_id = config.steam_account_id.as_deref();
-    let mut reader = ArchiveReader::open(archive_path)?;
 
-    for entry in &reader.files.clone() {
+    for entry in &reader.files {
         #[cfg(unix)]
         let expanded = expand_path(Path::new(&entry.shrunk_path), game.installation_dir.as_deref(), game.prefix.as_deref(), steam_id);
 
@@ -43,7 +42,7 @@ pub fn restore_archive(archive_path: &Path, game: &Game, config: &Config) -> Res
         let expanded = expand_path(Path::new(&entry.shrunk_path), game.installation_dir.as_deref(), steam_id);
 
         create_dir_all(expanded.parent().unwrap()).unwrap();
-        reader.extract_file(&entry.shrunk_path, &expanded).unwrap();
+        reader.extract_file(&entry.shrunk_path, &expanded)?;
 
         log::info!("Restored: {}", expanded.display());
     }
