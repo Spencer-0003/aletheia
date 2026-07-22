@@ -25,7 +25,9 @@ pub enum Error {
     #[error("IO error: {0}")]
     Io(#[from] std::io::Error),
     #[error("Network error: {0}")]
-    Network(#[from] reqwest::Error)
+    Network(#[from] reqwest::Error),
+    #[error("Failed to parse YAML: {0}")]
+    Yaml(#[from] serde_yaml::Error)
 }
 
 pub type Result<T> = core::result::Result<T, Error>;
@@ -180,7 +182,7 @@ pub fn update_custom(cfg: &Config) -> Result<bool> {
 
         let etag = response.headers().get(header::ETAG).and_then(|etag| etag.to_str().ok()).map(ToOwned::to_owned);
 
-        db_cache.databases.insert(db.clone(), CustomDbMetadata { etag, data: serde_yaml::from_reader(response).unwrap() });
+        db_cache.databases.insert(db.clone(), CustomDbMetadata { etag, data: serde_yaml::from_reader(response)? });
         updated = true;
     }
 
