@@ -7,6 +7,7 @@ on:
     paths:
       - 'src/archive.rs'
       - 'src/dirs.rs'
+      - 'src/operations/restore.rs'
 
 jobs:
   tests:

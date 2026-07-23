@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Spencer
+// SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
 use super::{Args, Command};
@@ -12,8 +12,7 @@ pub struct Backup;
 
 impl Command for Backup {
     fn run(args: Args, config: &Config) {
-        let game_db = gamedb::parse();
-        let installed_games = gamedb::get_installed_games();
+        let (game_db, installed_games) = gamedb::get_installed_games_with_db();
 
         if config.steam_account_id.is_none() && installed_games.iter().any(|g| g.source == "Steam") {
             ensure_steam_account_selected(config);

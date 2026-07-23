@@ -14,7 +14,7 @@ pub struct Restore;
 
 impl Command for Restore {
     fn run(args: Args, config: &Config) {
-        let installed_games = gamedb::get_installed_games();
+        let (game_db, installed_games) = gamedb::get_installed_games_with_db();
 
         if config.steam_account_id.is_none() && installed_games.iter().any(|g| g.source == "Steam") {
             ensure_steam_account_selected(config);
@@ -42,7 +42,7 @@ impl Command for Restore {
 
             println!("Restoring {}", reader.game);
 
-            if let Err(e) = restore_archive(&reader, game, config) {
+            if let Err(e) = restore_archive(&reader, game, &game_db[&game.name], config) {
                 eprintln!("Failed to restore {}: {e}", reader.game);
             } else {
                 println!("Restored {}.", reader.game);
@@ -66,7 +66,7 @@ impl Command for Restore {
                 continue;
             }
 
-            if let Err(e) = restore_game(game, config) {
+            if let Err(e) = restore_game(game, &game_db[&game.name], config) {
                 eprintln!("Failed to restore {}: {e}", game.name);
             } else {
                 println!("Restored {}.", game.name);

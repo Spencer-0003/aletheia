@@ -167,7 +167,7 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
             let cfg = cfg.as_ref().borrow();
             let notification_logic = app_weak.global::<NotificationLogic>();
             let selected_games = app_weak.global::<GamesScreenLogic>().get_selected_games();
-            let installed_games = gamedb::get_installed_games();
+            let (game_db, installed_games) = gamedb::get_installed_games_with_db();
 
             if cfg.steam_account_id.is_none() && selected_games.iter().any(|g| g.source == "Steam") {
                 notification_logic.invoke_show_warning("STEAM_ACCOUNT_MISSING".into());
@@ -175,7 +175,6 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
             }
 
             if action == "backup" {
-                let game_db = gamedb::parse();
                 let mut backed_up = 0;
 
                 for ui_game in selected_games.iter() {
@@ -218,7 +217,7 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
                     }
 
                     if entries.len() == 1 {
-                        if let Err(e) = restore_game(game, &cfg) {
+                        if let Err(e) = restore_game(game, &game_db[&game.name], &cfg) {
                             log::error!("Failed to restore {}: {e}", game.name);
                             notification_logic.invoke_show_error(restore_error_key(&e).into());
                         } else {
@@ -243,7 +242,7 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
                         continue;
                     };
 
-                    if let Err(e) = restore_game(game, &cfg) {
+                    if let Err(e) = restore_game(game, &game_db[&game.name], &cfg) {
                         log::error!("Failed to restore {}: {e}", game.name);
                         notification_logic.invoke_show_error(restore_error_key(&e).into());
                     } else {
@@ -268,7 +267,7 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
             let backup_list_logic = app_weak.global::<BackupListLogic>();
             let notification_logic = app_weak.global::<NotificationLogic>();
             let game_name = backup_list_logic.get_game_name();
-            let installed_games = gamedb::get_installed_games();
+            let (game_db, installed_games) = gamedb::get_installed_games_with_db();
 
             backup_list_logic.set_visible(false);
 
@@ -287,7 +286,7 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
                 }
             };
 
-            if let Err(e) = restore_archive(&reader, game, &cfg) {
+            if let Err(e) = restore_archive(&reader, game, &game_db[&game.name], &cfg) {
                 log::error!("Failed to restore {}: {e}", game.name);
                 notification_logic.invoke_show_error(restore_error_key(&e).into());
             } else {

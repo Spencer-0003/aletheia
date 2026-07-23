@@ -33,7 +33,7 @@ pub fn run_restore_dialog(config: &AletheiaConfig, archive_path: &str) {
 
         move || {
             let restore_logic = restore_weak.global::<RestoreLogic>();
-            let installed_games = gamedb::get_installed_games();
+            let (game_db, installed_games) = gamedb::get_installed_games_with_db();
             let game_name = restore_logic.get_game_name();
             let game_name = game_name.as_str();
 
@@ -42,7 +42,7 @@ pub fn run_restore_dialog(config: &AletheiaConfig, archive_path: &str) {
                 return;
             };
 
-            if let Err(RestoreError::Archive(e)) = restore_archive(&reader, game, &cfg) {
+            if let Err(RestoreError::Archive(e)) = restore_archive(&reader, game, &game_db[&game.name], &cfg) {
                 let error_message = match e {
                     ArchiveError::ChecksumMismatch(..) | ArchiveError::FileNotFound(_) => "ARCHIVE_CORRUPTED",
                     ArchiveError::InvalidArchive | ArchiveError::Serialization(_) => "INVALID_ARCHIVE",

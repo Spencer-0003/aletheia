@@ -75,6 +75,17 @@ pub fn parse() -> HashMap<String, GameDbEntry> {
 
 pub fn get_installed_games() -> Vec<Game> {
     let db = parse();
+    scan_installed_games(&db)
+}
+
+pub fn get_installed_games_with_db() -> (HashMap<String, GameDbEntry>, Vec<Game>) {
+    // Used wherever both the GameDB and installed games are needed (e.g. restore's path validation or looking up a GameDbEntry for backup) without parsing the GameDB twice
+    let db = parse();
+    let games = scan_installed_games(&db);
+    (db, games)
+}
+
+fn scan_installed_games(db: &HashMap<String, GameDbEntry>) -> Vec<Game> {
     let mut games = vec![];
 
     #[cfg(all(unix, not(target_os = "macos")))]
