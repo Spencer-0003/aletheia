@@ -332,6 +332,10 @@ Death end re;Quest:
   files:
     windows:
       - "{SteamUserData}/990050/remote/*"
+"Death end re;Quest: Code Z":
+  files:
+    windows:
+      - "{LocalLow}/IDEA FACTORY/Death end re;Quest Code Z/*.sav"
 "Detroit: Become Human":
   files:
     windows:
