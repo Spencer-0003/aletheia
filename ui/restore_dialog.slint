@@ -38,7 +38,7 @@ export component RestoreDialog inherits Window {
           color: ThemeLogic.colors.text_secondary;
           text: @tr("Are you sure you want to restore {}?", RestoreLogic.game_name);
           font-size: 14px;
-        } 
+        }
       }
 
       Text {
@@ -73,6 +73,7 @@ export component RestoreDialog inherits Window {
             text: ok ? @tr("This will overwrite any existing save data.") : RestoreLogic.translate_error();
             color: ThemeLogic.colors.text_muted;
             font-size: 12px;
+            wrap: word-wrap;
           }
         }
       }
