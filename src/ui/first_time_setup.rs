@@ -41,6 +41,7 @@ pub fn run_first_time_setup() {
                 custom_databases: vec![],
                 save_dir: (&setup_logic.get_backup_path()).into(),
                 steam_account_id: (!steam_account_id.is_empty()).then(|| (&steam_account_id).into()),
+                #[allow(clippy::cast_possible_truncation, clippy::cast_sign_loss, reason = "UI is capped at 255 max backups")]
                 max_backups: setup_logic.get_max_backups() as u8,
                 #[cfg(feature = "updater")]
                 check_for_updates: default_config.check_for_updates

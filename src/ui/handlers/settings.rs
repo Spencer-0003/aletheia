@@ -45,6 +45,7 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
                 custom_databases: ui_cfg.custom_databases.iter().map(Into::into).collect(),
                 save_dir: (&ui_cfg.save_dir).into(),
                 steam_account_id: (!ui_cfg.steam_account_id.is_empty()).then(|| (&ui_cfg.steam_account_id).into()),
+                #[allow(clippy::cast_possible_truncation, clippy::cast_sign_loss, reason = "UI is capped at 255 max backups")]
                 max_backups: ui_cfg.max_backups as u8,
                 #[cfg(feature = "updater")]
                 check_for_updates: ui_cfg.check_for_updates
