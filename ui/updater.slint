@@ -6,11 +6,11 @@ import { ThemeLogic } from "./logic/theme.slint";
 import { UpdaterLogic } from "./logic/updater.slint";
 
 export component Updater inherits Window {
+  title: @tr("Aletheia - Updater");
+  icon: @image-url("../resources/logo/moe.spencer.Aletheia.png");
   default-font-family: "Inter";
   width: 500px;
   height: 400px;
-  title: @tr("Aletheia - Updater");
-  icon: @image-url("../resources/logo/moe.spencer.Aletheia.png");
   background: ThemeLogic.colors.surface;
 
   VerticalLayout {
@@ -24,7 +24,7 @@ export component Updater inherits Window {
 
       Text {
         text: @tr("Update Available");
-        color: ThemeLogic.colors.text_secondary;
+        color: ThemeLogic.colors.text_primary;
         font-size: 24px;
         font-weight: 700;
         horizontal-alignment: center;
@@ -130,6 +130,7 @@ export component Updater inherits Window {
         width: 80px;
         height: 36px;
         text: @tr("Skip");
+        background: ThemeLogic.colors.secondary;
         clicked => root.hide();
       }
 

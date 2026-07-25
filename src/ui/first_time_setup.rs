@@ -52,7 +52,7 @@ pub fn run_first_time_setup() {
 
     if let Some(users) = SteamScanner::get_users() {
         if users.len() > 1 {
-            let options: Vec<DropdownOption> = users
+            let mut options: Vec<DropdownOption> = users
                 .into_iter()
                 .map(|(steam_id, user)| DropdownOption {
                     label: user.persona_name.into(),
@@ -60,9 +60,19 @@ pub fn run_first_time_setup() {
                 })
                 .collect();
 
+            options.sort_by(|a, b| a.label.cmp(&b.label));
             setup_logic.set_steam_account_options(ModelRc::new(VecModel::from(options)));
         } else {
-            setup_logic.set_steam_account_id(users.keys().next().unwrap().into());
+            let (steam_id, user) = users.into_iter().next().unwrap();
+            let steam_account_id = SteamScanner::id64_to_id3(steam_id.parse::<u64>().unwrap()).to_string();
+
+            setup_logic.set_steam_account_id(steam_account_id.clone().into());
+            setup_logic.set_steam_account_options(ModelRc::new(VecModel::from(vec![
+                DropdownOption {
+                    label: user.persona_name.into(),
+                    value: steam_account_id.into()
+                }
+            ])));
         }
     }
 
