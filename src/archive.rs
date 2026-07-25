@@ -22,6 +22,8 @@ pub enum Error {
     ChecksumMismatch(String, String),
     #[error("File not found in archive: {0}")]
     FileNotFound(String),
+    #[error("Game name is too long to store in the archive (max 255 bytes, got {0})")]
+    GameNameTooLong(usize),
     #[error("Invalid archive format")]
     InvalidArchive,
     #[error("IO error: {0}")]
@@ -138,7 +140,7 @@ impl ArchiveWriter {
     fn write_header(file: &mut File, index_offset: u64, index_size: u64, game: &str, index_checksum: &str) -> Result<()> {
         let now = SystemTime::now().duration_since(SystemTime::UNIX_EPOCH).unwrap().as_secs();
         let game_bytes = game.as_bytes();
-        let game_len = u8::try_from(game_bytes.len()).unwrap();
+        let game_len = u8::try_from(game_bytes.len()).map_err(|_| Error::GameNameTooLong(game_bytes.len()))?;
 
         let mut buf = Vec::with_capacity(MIN_HEADER_SIZE + INDEX_CHECKSUM_HEX_LEN + game_bytes.len());
         buf.extend_from_slice(MAGIC);

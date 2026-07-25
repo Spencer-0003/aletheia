@@ -31,6 +31,7 @@ fn restore_error_key(e: &RestoreError) -> &'static str {
 
     match ae {
         ArchiveError::ChecksumMismatch(..) | ArchiveError::FileNotFound(_) => "ARCHIVE_CORRUPTED",
+        ArchiveError::GameNameTooLong(_) => "GAME_NAME_TOO_LONG",
         ArchiveError::InvalidArchive | ArchiveError::Serialization(_) => "INVALID_ARCHIVE",
         ArchiveError::Io(_) => "IO_ERROR",
         ArchiveError::UnsupportedVersion(_) => "UNSUPPORTED_ARCHIVE_VERSION"

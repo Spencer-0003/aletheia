@@ -45,6 +45,7 @@ pub fn run_restore_dialog(config: &AletheiaConfig, archive_path: &str) {
             if let Err(RestoreError::Archive(e)) = restore_archive(&reader, game, &game_db[&game.name], &cfg) {
                 let error_message = match e {
                     ArchiveError::ChecksumMismatch(..) | ArchiveError::FileNotFound(_) => "ARCHIVE_CORRUPTED",
+                    ArchiveError::GameNameTooLong(_) => "GAME_NAME_TOO_LONG",
                     ArchiveError::InvalidArchive | ArchiveError::Serialization(_) => "INVALID_ARCHIVE",
                     ArchiveError::Io(_) => "IO_ERROR",
                     ArchiveError::UnsupportedVersion(_) => "UNSUPPORTED_ARCHIVE_VERSION"
