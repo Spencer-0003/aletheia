@@ -10,8 +10,11 @@ use std::path::{Path, PathBuf};
 use std::time::SystemTime;
 
 const MAGIC: &[u8; 8] = b"ALETHEIA";
-const VERSION: u8 = 1;
+const VERSION_1: u8 = 1;
+const VERSION_2: u8 = 2;
+const CURRENT_VERSION: u8 = VERSION_2;
 const MIN_HEADER_SIZE: usize = 34;
+const INDEX_CHECKSUM_HEX_LEN: usize = 64; // Only present in v2 and onward
 
 #[derive(Debug, thiserror::Error)]
 pub enum Error {
@@ -85,7 +88,7 @@ impl ArchiveWriter {
         }
 
         let mut file = File::create(&self.path)?;
-        let header_size = MIN_HEADER_SIZE + self.game.len();
+        let header_size = MIN_HEADER_SIZE + INDEX_CHECKSUM_HEX_LEN + self.game.len();
         file.write_all(&vec![0u8; header_size])?;
 
         let mut next_offset = header_size as u64;
@@ -120,24 +123,27 @@ impl ArchiveWriter {
         }
 
         let index_offset = next_offset;
+        let index_bytes = postcard::to_allocvec(&entries)?;
+        let index_checksum = hash_bytes(&index_bytes);
 
-        file.write_all(&postcard::to_allocvec(&entries)?)?;
+        file.write_all(&index_bytes)?;
 
         let index_size = file.stream_position()? - index_offset;
 
-        Self::write_header(&mut file, index_offset, index_size, &self.game)?;
+        Self::write_header(&mut file, index_offset, index_size, &self.game, &index_checksum)?;
 
         Ok(())
     }
 
-    fn write_header(file: &mut File, index_offset: u64, index_size: u64, game: &str) -> Result<()> {
+    fn write_header(file: &mut File, index_offset: u64, index_size: u64, game: &str, index_checksum: &str) -> Result<()> {
         let now = SystemTime::now().duration_since(SystemTime::UNIX_EPOCH).unwrap().as_secs();
         let game_bytes = game.as_bytes();
         let game_len = u8::try_from(game_bytes.len()).unwrap();
 
-        let mut buf = Vec::with_capacity(MIN_HEADER_SIZE + game_bytes.len());
+        let mut buf = Vec::with_capacity(MIN_HEADER_SIZE + INDEX_CHECKSUM_HEX_LEN + game_bytes.len());
         buf.extend_from_slice(MAGIC);
-        buf.push(VERSION);
+        buf.push(CURRENT_VERSION);
+        buf.extend_from_slice(index_checksum.as_bytes());
         buf.extend_from_slice(&now.to_le_bytes());
         buf.push(game_len);
         buf.extend_from_slice(game_bytes);
@@ -161,9 +167,16 @@ impl ArchiveReader {
 
         let mut version = [0u8; 1];
         file.read_exact(&mut version)?;
-        if version[0] != VERSION {
-            return Err(Error::UnsupportedVersion(version[0]));
-        }
+
+        let index_checksum = match version[0] {
+            VERSION_1 => None,
+            VERSION_2 => {
+                let mut buf = [0u8; INDEX_CHECKSUM_HEX_LEN];
+                file.read_exact(&mut buf)?;
+                Some(String::from_utf8(buf.to_vec()).map_err(|_| Error::InvalidArchive)?)
+            }
+            other => return Err(Error::UnsupportedVersion(other))
+        };
 
         let mut created_bytes = [0u8; 8];
         file.read_exact(&mut created_bytes)?;
@@ -194,6 +207,14 @@ impl ArchiveReader {
         file.seek(SeekFrom::Start(index_offset))?;
         let mut index_bytes = vec![0u8; index_size as usize];
         file.read_exact(&mut index_bytes)?;
+
+        if let Some(checksum) = index_checksum {
+            let actual = hash_bytes(&index_bytes);
+            if actual != checksum {
+                return Err(Error::ChecksumMismatch(checksum, actual));
+            }
+        }
+
         let files: Vec<FileEntry> = postcard::from_bytes(&index_bytes)?;
 
         Ok((game, created, file_size, files))
@@ -257,7 +278,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_roundtrip() {
+    fn roundtrip() {
         std::fs::create_dir_all("tests").unwrap();
 
         let temp = Path::new("tests");
