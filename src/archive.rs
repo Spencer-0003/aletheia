@@ -207,7 +207,7 @@ impl ArchiveReader {
         }
 
         file.seek(SeekFrom::Start(index_offset))?;
-        let mut index_bytes = vec![0u8; index_size as usize];
+        let mut index_bytes = vec![0u8; usize::try_from(index_size).map_err(|_| Error::InvalidArchive)?];
         file.read_exact(&mut index_bytes)?;
 
         if let Some(checksum) = index_checksum {
