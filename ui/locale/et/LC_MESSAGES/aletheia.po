@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-07-12 03:01+0000\n"
+"POT-Creation-Date: 2026-07-25 22:24+0000\n"
 "PO-Revision-Date: 2026-07-13 17:46+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Estonian <https://hosted.weblate.org/projects/aletheia/ui/et/>"
-"\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/aletheia/ui/et/"
+">\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,183 +13,214 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2026.8.dev0\n"
 
-#: ui/first_time_setup.slint:11
-msgctxt "FirstTimeSetup"
-msgid "Aletheia - First Time Setup"
-msgstr "Aletheia - Esimene seadistamine"
-
-#: ui/first_time_setup.slint:42
-msgctxt "FirstTimeSetup"
+#: ui/first_time_setup.slint:37
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Welcome to Aletheia"
+msgctxt "FirstTimeSetupContent"
 msgid "Welcome to Aletheia"
 msgstr "Tere tulemast, see on Aletheia"
 
-#: ui/first_time_setup.slint:50
-msgctxt "FirstTimeSetup"
+#: ui/first_time_setup.slint:45
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Let's get you set up. You can change these settings at any time."
+msgctxt "FirstTimeSetupContent"
 msgid "Let's get you set up. You can change these settings at any time."
 msgstr ""
 "Võtame ette esmase seadistamise. Kõige seda saad hiljem igal ajal muuta."
 
-#: ui/first_time_setup.slint:68
-msgctxt "FirstTimeSetup"
+#: ui/first_time_setup.slint:63
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Backup Location"
+msgctxt "FirstTimeSetupContent"
 msgid "Backup Location"
 msgstr "Varunduse asukoht"
 
-#: ui/first_time_setup.slint:75
-msgctxt "FirstTimeSetup"
+#: ui/first_time_setup.slint:70
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Where your game saves will be stored on disk."
+msgctxt "FirstTimeSetupContent"
 msgid "Where your game saves will be stored on disk."
 msgstr "Sinu mängude salvestamise asukoht andmekandjal."
 
-#: ui/first_time_setup.slint:105
-msgctxt "FirstTimeSetup"
+#: ui/first_time_setup.slint:85
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Browse"
+msgctxt "FirstTimeSetupContent"
 msgid "Browse"
 msgstr "Sirvi"
 
-#: ui/first_time_setup.slint:119
-msgctxt "FirstTimeSetup"
+#: ui/first_time_setup.slint:104
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Backup Retention"
+msgctxt "FirstTimeSetupContent"
 msgid "Backup Retention"
 msgstr "Varukoopiate säilitamine"
 
-#: ui/first_time_setup.slint:126
-msgctxt "FirstTimeSetup"
+#: ui/first_time_setup.slint:111
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "How many backups to keep per game."
+msgctxt "FirstTimeSetupContent"
 msgid "How many backups to keep per game."
 msgstr "Kui mitu varukoopiat peaks mängu kohta säilitama."
 
-#: ui/first_time_setup.slint:146
-msgctxt "FirstTimeSetup"
+#: ui/first_time_setup.slint:132
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Aletheia - First Time Setup"
+msgctxt "FirstTimeSetupContent"
+msgid "Aletheia - First Time Setup"
+msgstr "Aletheia - Esimene seadistamine"
+
+#: ui/first_time_setup.slint:165
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Steam Account"
+msgctxt "FirstTimeSetupContent"
 msgid "Steam Account"
 msgstr "Steami kasutajakonto"
 
-#: ui/first_time_setup.slint:153
-msgctxt "FirstTimeSetup"
+#: ui/first_time_setup.slint:172
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Used to locate saves stored in Steam's userdata directory."
+msgctxt "FirstTimeSetupContent"
 msgid "Used to locate saves stored in Steam's userdata directory."
 msgstr "Mõeldud salvestamiste tuvastamiseks Steami kasutajaprofiilist."
 
-#: ui/first_time_setup.slint:161
-msgctxt "FirstTimeSetup"
+#: ui/first_time_setup.slint:179
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Select an account…"
+msgctxt "FirstTimeSetupContent"
 msgid "Select an account…"
 msgstr "Vali kasutajakonto…"
 
-#: ui/first_time_setup.slint:170
-msgctxt "FirstTimeSetup"
+#: ui/first_time_setup.slint:200
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Continue"
+msgctxt "FirstTimeSetupContent"
 msgid "Continue"
 msgstr "Jätka"
 
-#: ui/updater.slint:12
+#: ui/updater.slint:9
 msgctxt "Updater"
 msgid "Aletheia - Updater"
 msgstr "Aletheia - versiooniuuendaja"
 
-#: ui/updater.slint:30
+#: ui/updater.slint:26
 msgctxt "Updater"
 msgid "Update Available"
 msgstr "Uus versioon on saadaval"
 
-#: ui/updater.slint:52
+#: ui/updater.slint:48
 msgctxt "Updater"
 msgid "Current"
 msgstr "Praegune"
 
-#: ui/updater.slint:79
+#: ui/updater.slint:75
 msgctxt "Updater"
 msgid "New"
 msgstr "Uus"
 
-#: ui/updater.slint:101
+#: ui/updater.slint:97
 msgctxt "Updater"
 msgid "What's New"
 msgstr "Mida on meil uut"
 
-#: ui/updater.slint:136
+#: ui/updater.slint:132
 msgctxt "Updater"
 msgid "Skip"
 msgstr "Jäta vahele"
 
-#: ui/updater.slint:143
+#: ui/updater.slint:140
 msgctxt "Updater"
 msgid "Download"
 msgstr "Laadi alla"
 
-#: ui/screens/settings.slint:63
+#: ui/screens/settings.slint:64
 msgctxt "Settings"
 msgid "Game Data Location"
 msgstr "Mänguandmete asukoht"
 
-#: ui/screens/settings.slint:76
+#: ui/screens/settings.slint:77
 msgctxt "Settings"
 msgid "Choose where your games will be saved"
 msgstr "Määra asukoht oma mängude salvestamiseks"
 
-#: ui/screens/settings.slint:93
+#: ui/screens/settings.slint:94
 msgctxt "Settings"
 msgid "Browse"
 msgstr "Sirvi"
 
-#: ui/screens/settings.slint:122
+#: ui/screens/settings.slint:123
 msgctxt "Settings"
 msgid "Steam Account"
 msgstr "Steami kasutajakonto"
 
-#: ui/screens/settings.slint:138
+#: ui/screens/settings.slint:139
 msgctxt "Settings"
 msgid "Choose the Steam account for your games"
 msgstr "Vali Steami kasutajakonto oma mängude jaoks"
 
-#: ui/screens/settings.slint:144
+#: ui/screens/settings.slint:145
 msgctxt "Settings"
 msgid "Only affects games that save in the Steam userdata directory"
 msgstr "Mõjutab vaid mänge, mis salvestavad andmeid Steami kasutajakausta"
 
-#: ui/screens/settings.slint:155
+#: ui/screens/settings.slint:154
 msgctxt "Settings"
 msgid "Select an account…"
 msgstr "Vali kasutajakonto…"
 
-#: ui/screens/settings.slint:155
-msgctxt "Settings"
-msgid "No accounts found…"
-msgstr "Kasutajakontosid ei leidu…"
-
-#: ui/screens/settings.slint:183
+#: ui/screens/settings.slint:182
 msgctxt "Settings"
 msgid "GameDB"
 msgstr "GameDB"
 
-#: ui/screens/settings.slint:196
+#: ui/screens/settings.slint:195
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
 msgstr "Laadi alla GameDB viimane versioon"
 
-#: ui/screens/settings.slint:204
+#: ui/screens/settings.slint:203
 msgctxt "Settings"
 msgid "Update GameDB"
 msgstr "Uuenda GameDB-d"
 
-#: ui/screens/settings.slint:231
+#: ui/screens/settings.slint:230
 msgctxt "Settings"
 msgid "Backup Retention"
 msgstr "Varukoopiate säilitamine"
 
-#: ui/screens/settings.slint:244
+#: ui/screens/settings.slint:243
 msgctxt "Settings"
 msgid "How many backups to keep per game"
 msgstr "Kui mitu varukoopiat peaks mängu kohta säilitama"
 
-#: ui/screens/settings.slint:280
+#: ui/screens/settings.slint:279
 msgctxt "Settings"
 msgid "Updates"
 msgstr "Uuendused"
 
-#: ui/screens/settings.slint:293
+#: ui/screens/settings.slint:292
 msgctxt "Settings"
 msgid "Configure automatic update checking"
 msgstr "Seadista uuenduste olemasolu automaatset kontrollimist"
 
-#: ui/screens/settings.slint:303
+#: ui/screens/settings.slint:302
 msgctxt "Settings"
 msgid "Check for updates automatically"
 msgstr "Kontrolli uuendusi automaatselt"
 
-#: ui/screens/settings.slint:320
+#: ui/screens/settings.slint:319
 msgctxt "Settings"
 msgid "Save"
 msgstr "Salvesta"
@@ -291,62 +322,65 @@ msgctxt "App"
 msgid "About"
 msgstr "Rakenduse teave"
 
-#: ui/restore_dialog.slint:9
+#: ui/restore_dialog.slint:11
 msgctxt "RestoreDialog"
 msgid "Aletheia - Restore backup"
 msgstr "Aletheia - varukoopiast taastamine"
 
-#: ui/restore_dialog.slint:27
+#: ui/restore_dialog.slint:31
+#, fuzzy
+#| msgctxt "BackupListDialog"
+#| msgid "Restore backup"
 msgctxt "RestoreDialog"
-msgid "Restore Backup?"
-msgstr "Kas taastad varukoopiast?"
+msgid "Restore backup"
+msgstr "Varukoopiast taastamine"
 
-#: ui/restore_dialog.slint:34
+#: ui/restore_dialog.slint:39
 msgctxt "RestoreDialog"
 msgid "Are you sure you want to restore {}?"
 msgstr "Kas oled kindel, et soovid „{}“ taastada?"
 
-#: ui/restore_dialog.slint:48
+#: ui/restore_dialog.slint:73
 msgctxt "RestoreDialog"
 msgid "This will overwrite any existing save data."
 msgstr "Sellega kirjutatakse kõik olemasolevate salvestamiste andmed üle."
 
-#: ui/restore_dialog.slint:78
+#: ui/restore_dialog.slint:87
 msgctxt "RestoreDialog"
 msgid "Cancel"
 msgstr "Katkesta"
 
-#: ui/restore_dialog.slint:78
+#: ui/restore_dialog.slint:87
 msgctxt "RestoreDialog"
 msgid "Close"
 msgstr "Sulge"
 
-#: ui/restore_dialog.slint:86
+#: ui/restore_dialog.slint:95
 msgctxt "RestoreDialog"
 msgid "Restore"
 msgstr "Taastamine"
 
-#: ui/logic/restore.slint:12
+#: ui/logic/restore.slint:11
 msgctxt "RestoreLogic"
 msgid "You do not have {} installed, install it first and try again."
 msgstr "„{}“ pole sul paigaldatud. Esmalt paigalda ta ja siis proovi uuesti."
 
-#: ui/logic/restore.slint:13
+#: ui/logic/restore.slint:12
 msgctxt "RestoreLogic"
 msgid "Archive corrupted"
 msgstr "Arhiivifail on vigane"
 
-#: ui/logic/restore.slint:14
+#: ui/logic/restore.slint:13
 msgctxt "RestoreLogic"
 msgid "Invalid archive"
 msgstr "Vigane arhiivifail"
 
-#: ui/logic/restore.slint:15
+#: ui/logic/restore.slint:14
 msgctxt "RestoreLogic"
 msgid "I/O error"
 msgstr "Sisend- või väljundviga"
 
-#: ui/logic/restore.slint:16
+#: ui/logic/restore.slint:15
 msgctxt "RestoreLogic"
 msgid "Unsupported archive version"
 msgstr "Arhiivifaili versioon pole toetatud"
@@ -411,12 +445,17 @@ msgctxt "NotificationLogic"
 msgid "Game is not installed"
 msgstr "Mäng pole paigaldatud"
 
-#: ui/logic/notification.slint:64
+#: ui/logic/notification.slint:60
+msgctxt "NotificationLogic"
+msgid "Game name is too long"
+msgstr ""
+
+#: ui/logic/notification.slint:65
 msgctxt "NotificationLogic"
 msgid "Backed up {} games"
 msgstr "{} mängu on varundatud"
 
-#: ui/logic/notification.slint:65
+#: ui/logic/notification.slint:66
 msgctxt "NotificationLogic"
 msgid "Restored {} games"
 msgstr "{} mängu on taastatud"
@@ -441,15 +480,23 @@ msgctxt "Dropdown"
 msgid "Select an option…"
 msgstr "Vali oma eelistus…"
 
-#: ui/components/dropdown.slint:89
+#: ui/components/dropdown.slint:90
 msgctxt "Dropdown"
 msgid "Dropdown options"
 msgstr "Allalaadimise valikud"
 
-#: ui/components/dropdown.slint:134
+#: ui/components/dropdown.slint:131
 msgctxt "Dropdown"
 msgid "Selected"
 msgstr "Valitud"
+
+#~ msgctxt "Settings"
+#~ msgid "No accounts found…"
+#~ msgstr "Kasutajakontosid ei leidu…"
+
+#~ msgctxt "RestoreDialog"
+#~ msgid "Restore Backup?"
+#~ msgstr "Kas taastad varukoopiast?"
 
 #~ msgctxt "About"
 #~ msgid "Support the Project"
