@@ -131,13 +131,7 @@ jobs:
           path: aletheia-${{ matrix.arch }}.flatpak
 
   build_mac:
-    strategy:
-      matrix:
-        include:
-          - os: macos-14
-            target: aarch64-apple-darwin
-            artifact: aletheia.app
-    runs-on: ${{ matrix.os }}
+    runs-on: macos-26
     steps:
       - name: Setup Rust toolchain
         uses: dtolnay/rust-toolchain@stable
@@ -147,26 +141,24 @@ jobs:
 
       - name: Setup Rust cache
         uses: Swatinem/rust-cache@v2
-        with:
-          key: ${{ matrix.os }}-${{ matrix.target }}
 
       - name: Build
-        run: cargo build --release --features updater --target=${{ matrix.target }}
+        run: cargo build --release --features updater --target=aarch64-apple-darwin
 
       - name: Create app bundle
         run: |
-          mkdir -p ${{ matrix.artifact }}/Contents/{MacOS,Resources}
-          cp target/${{ matrix.target }}/release/aletheia ${{ matrix.artifact }}/Contents/MacOS/aletheia
-          cp resources/mac/aletheia.icns ${{ matrix.artifact }}/Contents/Resources
-          cp resources/mac/Info.plist ${{ matrix.artifact }}/Contents
-          codesign -s - --deep -f ${{ matrix.artifact }}
-          tar -czf ${{ matrix.artifact }}.tar.gz ${{ matrix.artifact }}
+          mkdir -p aletheia.app/Contents/{MacOS,Resources}
+          cp target/aarch64-apple-darwin/release/aletheia aletheia.app/Contents/MacOS/aletheia
+          cp resources/mac/aletheia.icns aletheia.app/Contents/Resources
+          cp resources/mac/Info.plist aletheia.app/Contents
+          codesign -s - --deep -f aletheia.app
+          tar -czf aletheia.app.tar.gz aletheia.app
 
       - name: Upload
         uses: actions/upload-artifact@v7
         with:
-          name: ${{ matrix.artifact }}.tar.gz
-          path: ${{ matrix.artifact }}.tar.gz
+          name: aletheia.app.tar.gz
+          path: aletheia.app.tar.gz
 
   generate_license_file:
     runs-on: ubuntu-24.04
