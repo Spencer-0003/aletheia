@@ -908,6 +908,10 @@ NEKOPARA Vol. 4:
     windows:
       - "{AppData}/NEKO WORKs/nekopara4/*"
       - "{Documents}/NEKO WORKs/nekopara_vol4/*"
+NUKITASHI:
+  files:
+    windows:
+      - "{GameRoot}/savedata/*"
 Need for Speed Unbound:
   files:
     windows:
