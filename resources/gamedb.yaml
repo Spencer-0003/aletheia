@@ -1389,7 +1389,7 @@ The Song of Saya:
 "Tiny Tina's Wonderlands":
   files:
     windows:
-      - "{Documents}/My Games/Tiny Tina's Wonderlands/Saved/SaveGames/*/*"
+      - "{Documents}/My Games/Tiny Tina's Wonderlands/Saved/SaveGames/{SteamID64}/*"
 Tomb Raider I-III Remastered Starring Lara Croft:
   files:
     windows:
