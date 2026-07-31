@@ -69,6 +69,10 @@ Alone in the Dark:
   files:
     windows:
       - "{SteamUserData}/936190/remote/SAVEDATA/*"
+"Atelier Ryza: Ever Darkness & the Secret Hideout DX":
+  files:
+    windows:
+      - "{LocalAppData}/KoeiTecmo/Atelier Ryza DX/{SteamID64}/SystemData/*"
 "Atelier Shallie: Alchemists of the Dusk Sea DX":
   files:
     windows:
