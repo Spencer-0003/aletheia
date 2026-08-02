@@ -77,6 +77,11 @@ pub fn backup_game(game: &Game, config: &Config, entry: &GameDbEntry) -> Result<
                 continue;
             }
 
+            #[cfg(target_os = "macos")]
+            if file.file_name().unwrap() == ".DS_Store" {
+                continue;
+            }
+
             files.push(file);
         }
     }
