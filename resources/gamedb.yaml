@@ -73,6 +73,8 @@ Alone in the Dark:
   files:
     windows:
       - "{LocalAppData}/KoeiTecmo/Atelier Ryza DX/{SteamID64}/SystemData/*"
+  store_ids:
+    steam: 3365030
 "Atelier Shallie: Alchemists of the Dusk Sea DX":
   files:
     windows:
@@ -140,6 +142,8 @@ Borderlands 2:
       - "{XDGData}/aspyr-media/borderlands 2/willowgame/savedata/*"
     windows:
       - "{Documents}/My Games/Borderlands 2/WillowGame/SaveData/*"
+  store_ids:
+    steam: 49520
 Borderlands 2 VR:
   files:
     windows:
@@ -148,10 +152,14 @@ Borderlands 3:
   files:
     windows:
       - "{Documents}/My Games/Borderlands 3/Saved/SaveGames/*"
+  store_ids:
+    steam: 397540
 Borderlands 4:
   files:
     windows:
       - "{Documents}/My Games/Borderlands 4/Saved/SaveGames/{SteamID64}/Profiles/client/*"
+  store_ids:
+    steam: 1285190
 Bullet Girls Phantasia:
   files:
     windows:
@@ -160,6 +168,8 @@ CODE VEIN:
   files:
     windows:
       - "{LocalAppData}/CodeVein/Saved/SaveGames/*"
+  store_ids:
+    steam: 678960
 Call of Cthulhu:
   files:
     windows:
@@ -168,22 +178,32 @@ Call of Cthulhu:
   files:
     windows:
       - "{GameRoot}/players2/savegame.svg"
+  store_ids:
+    steam: 209160
 "Call of Duty: Infinite Warfare":
   files:
     windows:
       - "{GameRoot}/players2/savegame.svg"
+  store_ids:
+    steam: 292730
 Cars:
   files:
     windows:
       - "{Documents}/THQ/Cars/Save/*"
+  store_ids:
+    steam: 331160
 Cars 2:
   files:
     windows:
       - "{Documents}/Disney Interactive Studios/Cars2/storage/*"
+  store_ids:
+    steam: 301760
 Cars Mater-National Championship:
   files:
     windows:
       - "{Documents}/THQ/Cars2/*"
+  store_ids:
+    steam: 332260
 Castle Crashers:
   files:
     windows:
@@ -266,20 +286,28 @@ DRAGON BALL XENOVERSE 2:
       - "{XDGData}/Danganronpa2/*"
     windows:
       - "{Documents}/My Games/Danganronpa2/*"
+  store_ids:
+    steam: 413420
 "Danganronpa Another Episode: Ultra Despair Girls":
   files:
     windows:
       - "{Documents}/My Games/DanganAnother/*"
+  store_ids:
+    steam: 555950
 "Danganronpa V3: Killing Harmony":
   files:
     windows:
       - "{SteamUserData}/567640/remote/*"
+  store_ids:
+    steam: 567640
 "Danganronpa: Trigger Happy Havoc":
   files:
     linux:
       - "{XDGData}/Danganronpa/*"
     windows:
       - "{Documents}/My Games/Danganronpa/*"
+  store_ids:
+    steam: 413410
 Dark Souls II:
   files:
     windows:
@@ -300,10 +328,14 @@ Dead Island:
   files:
     windows:
       - "{SteamUserData}/91310/remote/out/*"
+  store_ids:
+    steam: 91310
 Dead Island 2:
   files:
     windows:
       - "{LocalAppData}/DeadIslandSteam/Saved/SaveGames/*"
+  store_ids:
+    steam: 934700
 Dead Rising:
   files:
     windows:
@@ -377,6 +409,8 @@ Dispatch:
   files:
     windows:
       - "{LocalAppData}/Dispatch/Saved/SaveGames/*.sav"
+  store_ids:
+    steam: 2592160
 DmC Devil May Cry:
   files:
     windows:
@@ -413,18 +447,26 @@ Elden Bling:
   files:
     windows:
       - "{Documents}/KoeiTecmo/FATAL FRAME MOBW/SAVEDATA/*"
+  store_ids:
+    steam: 1732190
 "FATAL FRAME / PROJECT ZERO: Mask of the Lunar Eclipse":
   files:
     windows:
       - "{Documents}/KoeiTecmo/FATAL FRAME MOL/SAVEDATA/*"
+  store_ids:
+    steam: 2130460
 "FATAL FRAME II: Crimson Butterfly REMAKE":
   files:
     windows:
       - "{LocalAppData}/KoeiTecmo/FatalFrameII/Savedata/{SteamID3}/*/SAVEDATA.BIN"
+  store_ids:
+    steam: 3920610
 "FATAL FRAME II: Crimson Butterfly REMAKE DEMO":
   files:
     windows:
       - "{LocalAppData}/KoeiTecmo/FatalFrameIIDemo/Savedata/{SteamID3}/**/*"
+  store_ids:
+    steam: 4226020
 FULL METAL SCHOOLGIRL:
   files:
     windows:
@@ -437,34 +479,45 @@ Fallout:
   files:
     windows:
       - "{GameRoot}/data/SAVEGAME/*"
+  store_ids:
+    steam: 38400
 Fallout 2:
   files:
     windows:
       - "{GameRoot}/data/SAVEGAME/*"
+  store_ids:
+    steam: 38410
 Fallout 3:
   files:
     windows:
       - "{Documents}/My Games/Fallout3/Saves/*"
+  store_ids:
+    steam: 22300
 Fallout 3 - Game of the Year Edition:
   files:
     windows:
       - "{Documents}/My Games/Fallout3/Saves/*"
+  store_ids:
+    steam: 22370
 Fallout 4:
   files:
     windows:
       - "{Documents}/My Games/Fallout4/Saves/*"
+  store_ids:
+    gog: 1998527297
+    steam: 377160
 Fallout 4 VR:
   files:
     windows:
       - "{Documents}/My Games/Fallout4VR/Saves/*"
-"Fallout 4: Game of the Year Edition":
-  files:
-    windows:
-      - "{Documents}/My Games/Fallout4/Saves/*"
+  store_ids:
+    steam: 611660
 "Fallout: New Vegas":
   files:
     windows:
       - "{Documents}/My Games/FalloutNV/Saves/*"
+  store_ids:
+    steam: 22380
 Fatal Twelve:
   files:
     linux:
@@ -583,6 +636,8 @@ Ground Zero:
   files:
     windows:
       - "{LocalAppData}/GroundZero/Saved/SaveGames/*.sav"
+  store_ids:
+    steam: 2340130
 HITMAN World of Assassination:
   files:
     windows:
@@ -687,6 +742,8 @@ Judgment:
   files:
     windows:
       - "{AppData}/Sega/Judgment/Steam/{SteamID64}/**/*"
+  store_ids:
+    steam: 2058180
 KANADE:
   files:
     linux:
@@ -715,6 +772,12 @@ Kinkoi Golden Time:
   files:
     windows:
       - "{GameRoot}/SaveData/*"
+Kugayama Shiori's Death Diary:
+  files:
+    windows:
+      - "{SteamUserData}/4141950/remote/*"
+  store_ids:
+    steam: 4141950
 "Kumitantei: Old-School Slaughter":
   files:
     windows:
@@ -745,6 +808,8 @@ Life is Strange 2:
       - "{XDGData}/feral-interactive/Life is Strange 2/SaveData/Dontnod/{SteamID64}/LIS2/Saved/SaveGames/*"
     windows:
       - "{LocalAppData}/Dontnod/{SteamID64}/LIS2/Saved/SaveGames/*"
+  store_ids:
+    steam: 532210
 "Like a Dragon Gaiden: The Man Who Erased His Name":
   files:
     windows:
@@ -928,6 +993,8 @@ New Tales from the Borderlands:
   files:
     windows:
       - "{LocalAppData}/Cypress2Game/Saved/SaveGames/Steam/*"
+  store_ids:
+    steam: 1454970
 "NieR: Automata":
   files:
     windows:
@@ -1018,30 +1085,44 @@ Resident Evil 2:
   files:
     windows:
       - "{SteamUserData}/883710/remote/*"
+  store_ids:
+    steam: 883710
 Resident Evil 3:
   files:
     windows:
       - "{SteamUserData}/952060/remote/*"
+  store_ids:
+    steam: 952060
 Resident Evil 4:
   files:
     windows:
       - "{SteamUserData}/2050650/remote/win64_save/*"
+  store_ids:
+    steam: 2050650
 Resident Evil 4 (2005):
   files:
     windows:
       - "{GameRoot}/SaveData.dat"
+  store_ids:
+    steam: 254700
 Resident Evil 5:
   files:
     windows:
       - "{Documents}/capcom/RESIDENT EVIL 5/*"
+  store_ids:
+    steam: 21690
 Resident Evil 6:
   files:
     windows:
       - "{SteamUserData}/221040/remote/*"
+  store_ids:
+    steam: 221040
 Resident Evil 7 Biohazard:
   files:
     windows:
       - "{SteamUserData}/418370/remote/win64_save/*"
+  store_ids:
+    steam: 418370
 Resident Evil HD REMASTER:
   files:
     windows:
@@ -1050,18 +1131,26 @@ Resident Evil Requiem:
   files:
     windows:
       - "{SteamUserData}/3764200/remote/win64_save/*"
+  store_ids:
+    steam: 3764200
 Resident Evil Revelations:
   files:
     windows:
       - "{SteamUserData}/222480/remote/*"
+  store_ids:
+    steam: 222480
 Resident Evil Revelations 2:
   files:
     windows:
       - "{SteamUserData}/287290/remote/*"
+  store_ids:
+    steam: 287290
 Resident Evil Village:
   files:
     windows:
       - "{SteamUserData}/1196590/remote/win64_save/*"
+  store_ids:
+    steam: 1196590
 Rise of the Tomb Raider:
   files:
     windows:
@@ -1277,6 +1366,8 @@ The Awesome Adventures of Captain Spirit:
   files:
     windows:
       - "{LocalAppData}/Dontnod/{SteamID64}/CaptainSpirit/Saved/SaveGames/*"
+  store_ids:
+    steam: 845070
 The Callisto Protocol:
   files:
     windows:
@@ -1334,6 +1425,8 @@ The NOexistenceN of you AND me:
   files:
     windows:
       - "{LocalLow}/Nino/TheNOexistenceNofyouANDme/NaninovelData/Saves/GlobalSave.json"
+  store_ids:
+    steam: 2873080
 The Quarry:
   files:
     windows:
@@ -1520,7 +1613,3 @@ tModLoader:
     windows:
       - "{Documents}/My Games/Terraria/tModLoader/Players/*/*"
       - "{Documents}/My Games/Terraria/tModLoader/Worlds/*/*"
-久我山栞の死様手帖: # Kugayama Shiori's Death Diary
-  files:
-    windows:
-      - "{SteamUserData}/4141950/remote/*"
