@@ -354,15 +354,15 @@ DOOM Eternal:
     windows:
       - "{Home}/Saved Games/id Software/DOOMEternal/base/*"
   store_ids:
-    gog: 1
-    steam: 1
+    gog: 1344230395
+    steam: 782330
 DRAGON BALL FighterZ:
   files:
     windows:
       - "{LocalAppData}/DBFighterZ/Saved/SaveGames/*/REPLAY.sav"
       - "{LocalAppData}/DBFighterZ/Saved/SaveGames/*/SYSTEM.sav"
   store_ids:
-    steam: 1
+    steam: 678950
 DRAGON BALL XENOVERSE:
   files:
     windows:
