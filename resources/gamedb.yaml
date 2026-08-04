@@ -138,38 +138,60 @@ Balatro:
     windows:
       - "{Documents}/Telltale Games/Batman Series/*"
       - "{Documents}/Telltale Games/Batman The Telltale Series/*"
+  store_ids:
+    gog: 2140144872
+    steam: 498240
 "Batman: The Enemy Within - The Telltale Series":
   files:
     windows:
       - "{Documents}/Telltale Games/Batman The Enemy Within - The Telltale Series/*"
+  store_ids:
+    gog: 2135854393
+    steam: 675260
 Battlefield 4:
   files:
     windows:
       - "{Documents}/Battlefield 4/settings/*"
+  store_ids:
+    steam: 1238860
 Bayonetta:
   files:
     windows:
       - "{SteamUserData}/460790/remote/*"
+  store_ids:
+    steam: 460790
 Being a DIK - Season 1:
   files:
     linux:
       - "{GameRoot}/game/game/saves/*"
     windows:
       - "{GameRoot}/game/game/saves/*"
+  store_ids:
+    gog: 1181224050
+    steam: 1126320
 BioShock:
   files:
     windows:
       - "{Documents}/Bioshock/SaveGames/*"
+  store_ids:
+    gog: 2022341186
+    steam: 7670
 BioShock 2:
   files:
     windows:
       - "{Documents}/Bioshock2/SaveGames/*"
       - "{AppData}/Bioshock2Steam/*.profile"
+  store_ids:
+    gog: 1806891286
+    steam: 8850
 BioShock Infinite:
   files:
     windows:
       - "{Documents}/My Games/BioShock Infinite/XGame/SaveData/*"
       - "{SteamUserData}/8870/*"
+  store_ids:
+    gog: 1752654506
+    steam: 8870
 Borderlands:
   files:
     windows:
@@ -202,16 +224,27 @@ Bullet Girls Phantasia:
   files:
     windows:
       - "{Documents}/My Games/BulletGirlsPhantasia/*"
+  store_ids:
+    steam: 1163590
 CODE VEIN:
   files:
     windows:
       - "{LocalAppData}/CodeVein/Saved/SaveGames/*"
   store_ids:
     steam: 678960
+CRYSTAR:
+  files:
+    windows:
+      - "{SteamUserData}/981750/remote/*"
+  store_ids:
+    steam: 981750
 Call of Cthulhu:
   files:
     windows:
       - "{LocalAppData}/CallOfCthulhu/Saved/SaveGames/*"
+  store_ids:
+    gog: 1522289470
+    steam: 399810
 "Call of Duty: Ghosts":
   files:
     windows:
@@ -246,78 +279,114 @@ Castle Crashers:
   files:
     windows:
       - "{SteamUserData}/204360/Remote/*"
+  store_ids:
+    steam: 204360
 Catherine Classic:
   files:
     windows:
       - "{AppData}/TheEccentricApe/Catherine/*"
+  store_ids:
+    steam: 893180
 "Clair Obscur: Expedition 33":
   files:
     windows:
       - "{LocalAppData}/Sandfall/Saved/SaveGames/*/*.sav"
+  store_ids:
+    gog: 2125022825
+    steam: 1903340
 Control Ultimate Edition:
   files:
     windows:
       - "{Documents}/My Games/Control/Saves/*" # GOG variant
       - "{SteamUserData}/870780/remote/*"
+  store_ids:
+    gog: 2049187585
+    steam: 870780
 Corpse Party (2021):
   files:
     linux:
       - "{XDGConfig}/unity3d/MAGES_/Corpse Party/*.bin"
     windows:
       - "{AppData}/CorpseParty/*.bin"
+  store_ids:
+    gog: 1138308214
+    steam: 1273260
 Craftopia:
   files:
     windows:
       - "{LocalLow}/PocketPair/Craftopia/Save/*"
+  store_ids:
+    steam: 1307550
 "Crash Bandicoot 4: It's About Time":
   files:
     windows:
       - "{LocalAppData}/CrashBandicoot4/Saved/SaveGames"
+  store_ids:
+    steam: 1378990
 Crash Bandicoot N. Sane Trilogy:
   files:
     windows:
       - "{AppData}/Crash Bandicoot(TM) N. Sane Trilogy"
-Crystar:
-  files:
-    windows:
-      - "{SteamUserData}/981750/remote/*"
+  store_ids:
+    steam: 731490
 Cyberpunk 2077:
   files:
     windows:
       - "{Home}/Saved Games/CD Projekt Red/Cyberpunk 2077/*"
+  store_ids:
+    gog: 2093619782
+    store: 1091500
 "DATE A LIVE: Rio Reincarnation":
   files:
     windows:
       - "{Documents}/Idea Factory/DATE A LIVE RIO-REINCARNATION/*"
+  store_ids:
+    gog: 1991234548
+    steam: 1047440
 DEAD OR ALIVE 6 Last Round:
   files:
     windows:
       - "{LocalAppData}/KoeiTecmo/DEADORALIVE6 Last Round/{SteamID64}/SYSTEMDATA/*"
+  store_ids:
+    steam: 4144680
 DOOM Eternal:
   files:
     windows:
       - "{Home}/Saved Games/id Software/DOOMEternal/base/*"
+  store_ids:
+    gog: 1
+    steam: 1
 DRAGON BALL FighterZ:
   files:
     windows:
       - "{LocalAppData}/DBFighterZ/Saved/SaveGames/*/REPLAY.sav"
       - "{LocalAppData}/DBFighterZ/Saved/SaveGames/*/SYSTEM.sav"
+  store_ids:
+    steam: 1
 DRAGON BALL XENOVERSE:
   files:
     windows:
       - "{SteamUserData}/323470/remote/DBXV.sav"
+  store_ids:
+    steam: 323470
 DRAGON BALL XENOVERSE 2:
   files:
     windows:
       - "{SteamUserData}/323470/remote/DBXV21/DBXV2.sav"
+  store_ids:
+    steam: 454650
 "DRAGON BALL Z: KAKAROT":
   files:
     windows:
       - "{SteamUserData}/851850/remote/*"
+  store_ids:
+    steam: 851850
 "DRAGON BALL: Sparking! ZERO":
   files:
     windows:
       - "{GameRoot}/SaveGame/{SteamID64}/*"
+  store_ids:
+    steam: 1790600
 "Danganronpa 2: Goodbye Despair":
   files:
     linux:
@@ -350,18 +419,26 @@ Dark Souls II:
   files:
     windows:
       - "{AppData}/DarkSoulsII/*/DARKSII0000.sl2"
+  store_ids:
+    steam: 236430
 Dark Souls III:
   files:
     windows:
       - "{AppData}/DarkSoulsIII/*/DS30000.sl2"
+  store_ids:
+    steam: 374320
 Dark Souls Remastered:
   files:
     windows:
       - "{Documents}/NBGI/DARK SOULS REMASTERED/*"
+  store_ids:
+    steam: 570940
 Dead End Aegis:
   files:
     windows:
       - "{Documents}/metalogiq/DeadEndAegis/sav/*"
+  store_ids:
+    gog: 1676340103
 Dead Island:
   files:
     windows:
@@ -378,71 +455,111 @@ Dead Rising:
   files:
     windows:
       - "{SteamUserData}/427190/remote/*"
+  store_ids:
+    steam: 427190
 Dead Rising 2:
   files:
     windows:
       - "{Documents}/My Games/Dead Rising 2/saves/*"
+  store_ids:
+    steam: 45740
 "Dead Rising 2: Off the Record":
   files:
     windows:
       - "{Documents}/My Games/Dead Rising 2 Off The Record/saves/*"
+  store_ids:
+    steam: 45770
 Dead Rising 3:
   files:
     windows:
       - "{Documents}/My Games/Dead Rising 3/saves/*"
+  store_ids:
+    steam: 265550
 Dead Rising 4:
   files:
     windows:
       - "{Documents}/My Games/Dead Rising 4/saves/*"
+  store_ids:
+    steam: 543460
 Dead Space 3:
   files:
     windows:
       - "{Documents}/EA Games/Dead Space 3/*"
+  store_ids:
+    steam: 1238060
 Dead as Disco:
   files:
     windows:
       - "{LocalAppData}/Pagoda/Saved/SaveGames/*"
+  store_ids:
+    steam: 3404260
 Death end re;Quest:
   files:
     windows:
       - "{SteamUserData}/990050/remote/*"
+  store_ids:
+    gog: 1436109729
+    steam: 990050
 "Death end re;Quest: Code Z":
   files:
     windows:
       - "{LocalLow}/IDEA FACTORY/Death end re;Quest Code Z/*.sav"
+  store_ids:
+    steam: 2914490
 "Detroit: Become Human":
   files:
     windows:
       - "{Home}/Saved Games/Quantic Dream/Detroit Become Human/*"
+  store_ids:
+    steam: 1222140
 Devil May Cry 4 Special Edition:
   files:
     windows:
       - "{Documents}/CAPCOM/DEVILMAYCRY4SPECIALEDITION/*"
+  store_ids:
+    gog: 1874889748
+    steam: 329050
 Devil May Cry 5:
   files:
     windows:
       - "{SteamUserData}/601150/remote/win64_save/*.bin"
+  store_ids:
+    steam: 601150
 Devil May Cry HD Collection:
   files:
     windows:
       - "{GOGAppData}/58418848926304357/Storage/Shared/Files/!(options).sav"
       - "{SteamUserData}/631510/remote/*"
+  store_ids:
+    gog: 1351925727
+    steam: 631510
 Dishonored:
   files:
     windows:
       - "{Documents}/My Games/Dishonored/DishonoredGame/SaveData/*"
+  store_ids:
+    gog: 1701063787
+    steam: 205100
 Dishonored 2:
   files:
     windows:
       - "{Home}/Saved Games/Arkane Studios/dishonored2/base/savegame/*"
+  store_ids:
+    gog: 1431426311
+    steam: 403640
 "Dishonored: Death of the Outsider":
   files:
     windows:
       - "{Home}/Saved Games/Arkane Studios/Dishonored_DO/base/savegame/*"
+  store_ids:
+    gog: 1707860700
+    steam: 614570
 "Disney Epic Mickey 2: The Power of Two":
   files:
     windows:
       - "{AppData}/Disney Interactive Studios/Epic Mickey 2/Save/*"
+  store_ids:
+    steam: 245300
 Dispatch:
   files:
     windows:
@@ -453,28 +570,41 @@ DmC Devil May Cry:
   files:
     windows:
       - "{SteamUserData}/220440/remote/*"
+  store_ids:
+    steam: 220440
 Dying Light:
   files:
     # TODO: Linux
     windows:
       - "{Documents}/DyingLight/out/save/*"
       - "{Documents}/Dying Light/out/save/*"
+  store_ids:
+    gog: 1448452156
+    steam: 239140
 Dying Light 2:
   files:
     windows:
       - "{SteamUserData}/534380/remote/out/save/*"
+  store_ids:
+    steam: 534380
 "Dying Light: The Beast":
   files:
     windows:
       - "{SteamUserData}/3008130/remote/out/save/*"
+  store_ids:
+    steam: 3008130
 ELDEN RING:
   files:
     windows:
       - "{AppData}/EldenRing/{SteamID64}/*.sl2"
+  store_ids:
+    steam: 1245620
 Echoes of Aincrad DEMO Version:
   files:
     windows:
       - "{LocalAppData}/EchoesOfAincrad/Saved/SaveGames/*.sav"
+  store_ids:
+    steam: 4148250
 Elden Bling:
   files:
     windows:
