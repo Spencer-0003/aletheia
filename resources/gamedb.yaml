@@ -736,91 +736,139 @@ Find Love or Die Trying:
   files:
     windows:
       - "{AppData}/MMFApplications/freddy/*"
+  store_ids:
+    steam: 319510
 "Five Nights at Freddy's 2":
   files:
     windows:
       - "{AppData}/MMFApplications/freddy2/*"
+  store_ids:
+    steam: 332800
 "Five Nights at Freddy's 3":
   files:
     windows:
       - "{AppData}/MMFApplications/freddy3/*"
+  store_ids:
+    steam: 354140
 "Five Nights at Freddy's: 4":
   files:
     windows:
       - "{AppData}/MMFApplications/fn4/*"
+  store_ids:
+    steam: 388090
 "Five Nights at Freddy's: Help Wanted":
   files:
     windows:
       - "{LocalAppData}/freddys/Saved/SaveGames/*"
+  store_ids:
+    steam: 732690
 "Five Nights at Freddy's: Help Wanted 2":
   files:
     windows:
       - "{LocalAppData}/HW2/Saved/SaveGames/*"
+  store_ids:
+    steam: 2287520
 "Five Nights at Freddy's: Into the Pit":
   files:
     windows:
       - "{LocalLow}/Mega Cat Studios/Five Nights at Freddy's Into the Pit/*/*"
+  store_ids:
+    steam: 2638370
 "Five Nights at Freddy's: Security Breach":
   files:
     windows:
       - "{LocalAppData}/fnaf9/Saved/SaveGames/*"
+  store_ids:
+    steam: 747660
 "Five Nights at Freddy's: Sister Location":
   files:
     windows:
       - "{AppData}/MMFApplications/sl/*"
+  store_ids:
+    steam: 506610
 "Freddy Fazbear's Pizzeria Simulator":
   files:
     windows:
       - "{AppData}/MMFApplications/FNAF6"
+  store_ids:
+    steam: 738060
 Frostpunk:
   files:
     windows:
       - "{AppData}/11bitstudios/Frostpunk/Default/saves/*.save"
+  store_ids:
+    gog: 1648559910
+    steam: 323190
 GYLT:
   files:
     windows:
       - "{LocalAppData}/Gylt/Saved/SaveGames/*.sav"
+  store_ids:
+    gog: 1185763446
+    steam: 2206210
 Gaming Cafe Simulator:
   files:
     windows:
       - "{LocalAppData}/GamingCafeSimulator/Saved/SaveGames/*"
+  store_ids:
+    steam: 2978540
 "Gears of War: Reloaded":
   files:
     windows:
       - "{LocalAppData}/Packages/Microsoft.Pender_8wekyb3d8bbwe/SystemAppData/xgs/*_0000000000000000000000006D1197D0/WarGame/SaveData/*.ue3profile"
+  store_ids:
+    steam: 2523720
 Ghostrunner:
   files:
     windows:
       - "{LocalAppData}/Ghostrunner/Saved/SaveGames/*"
       - "{LocalAppData}/Ghostrunner/Saved/save.data"
+  store_ids:
+    gog: 1957528513
+    steam: 1139900
 Ghostrunner 2:
   files:
     windows:
       - "{LocalAppData}/Ghostrunner2/Saved/SaveGames/*"
+  store_ids:
+    gog: 1825685277
+    steam: 2144740
 Ghostwire Tokyo:
   files:
     windows:
       - "{Home}/Saved Games/TangoGameworks/GhostWire Tokyo (STEAM)/Saved/SavedGames/*"
+  store_ids:
+    steam: 1475810
 God of War:
   files:
     windows:
       - "{Home}/Saved Games/God of War/*"
+  store_ids:
+    steam: 1593500
 Gotham Knights:
   files:
     windows:
       - "{LocalAppData}/WB Games/Gotham Knights/Steam/Saved/SaveGames/*"
+  store_ids:
+    steam: 1496790
 "Grand Theft Auto IV: The Complete Edition":
   files:
     windows:
       - "{LocalAppData}/Rockstar Games/GTA IV/savegames/*"
+  store_ids:
+    steam: 12210
 Grand Theft Auto V Enhanced:
   files:
     windows:
       - "{Documents}/Rockstar Games/GTAV Enhanced/Profiles/*/*"
+  store_ids:
+    steam: 3240220
 Grand Theft Auto V Legacy:
   files:
     windows:
       - "{Documents}/Rockstar Games/GTA V/Profiles/*/*"
+  store_ids:
+    steam: 271590
 Ground Zero:
   files:
     windows:
@@ -831,11 +879,15 @@ HITMAN World of Assassination:
   files:
     windows:
       - "{SteamUserData}/1659040/remote/*/*"
+  store_ids:
+    steam: 1659040
 Hades:
   files:
     windows:
       - "{Documents}/Saved Games/Hades/Profile*.sjson"
       - "{Documents}/Saved Games/Hades/Profile*.sjson.bak"
+  store_ids:
+    steam: 1145360
 Hades II:
   files:
     windows:
@@ -845,60 +897,94 @@ Hades II:
       - "{Home}/Saved Games/Hades II/Profile*.v.sav.bak"
       - "{Home}/Saved Games/Hades II/Profile*.sjson"
       - "{Home}/Saved Games/Hades II/Profile*.sjson.bak"
+  store_ids:
+    steam: 1145350
 "Halo: The Master Chief Collection":
   files:
     windows:
       - "{SteamUserData}/976730/remote/*/Saves/*"
+  store_ids:
+    steam: 976730
 Heart of the Woods:
   files:
     windows:
       - "{GameRoot}/game/saves/*"
+  store_ids:
+    gog: 1407126652
+    steam: 844660
 Heavy Rain:
   files:
     windows:
       - "{Home}/Saved Games/HeavyRain/*"
+  store_ids:
+    gog: 2055511884
+    steam: 960910
 Helping the Hotties:
   files:
     linux:
       - "{GameRoot}/game/game/saves/*"
     windows:
       - "{GameRoot}/game/game/saves/*"
+  store_ids:
+    gog: 1237982317
+    steam: 1590730
 Hi-Fi RUSH:
   files:
     windows:
       - "{Home}/Saved Games/TangoGameworks/HI-FI RUSH (STEAM)/Saved/SaveGames/*"
+  store_ids:
+    steam: 1817230
 High on Life:
   files:
     windows:
       - "{LocalAppData}/Oregon/Saved/SaveGames/*"
+  store_ids:
+    steam: 1583230
 Hogwarts Legacy:
   files:
     windows:
       - "{LocalAppData}/Hogwarts Legacy/Saved/SaveGames/*/*"
+  store_ids:
+    steam: 990080
 Hollow Knight:
   files:
     linux:
       - "{XDGConfig}/unity3d/Team Cherry/Hollow Knight/*"
     windows:
       - "{LocalLow}/Team Cherry/Hollow Knight/*"
+  store_ids:
+    gog: 1308320804
+    steam: 367520
 House Party:
   files:
     windows:
       - "{LocalLow}/Eek/House Party/Saves/*"
+  store_ids:
+    gog: 2056019722
+    steam: 611790
 HuniePop:
   files:
     linux:
       - "{XDGConfig}/unity3d/HuniePot/HuniePop/*.game"
     windows:
       - "{LocalLow}/HuniePot/HuniePop/*"
+  store_ids:
+    gog: 1443428641
+    steam: 339800
 "HuniePop 2: Double Date":
   files:
     windows:
       - "{LocalLow}/HuniePot/HuniePop 2 - Double Date/*"
+  store_ids:
+    gog: 1455877361
+    steam: 930210
 Hyperdimension Neptunia Re;Birth1:
   files:
     windows:
       - "{Documents}/My Games/Idea Factory International, Inc/Hyperdimension Neptunia Re;Birth1/*"
+  store_ids:
+    gog: 1445338941
+    steam: 282900
 Hytale:
   files:
     linux:
@@ -907,6 +993,8 @@ I Walk Among Zombies Vol. 1:
   files:
     windows:
       - "{AppData}/seacoxx/zombie/*"
+  store_ids:
+    steam: 942850
 IW7-Mod:
   files:
     windows:
@@ -915,18 +1003,27 @@ In Falsus Demo:
   files:
     windows:
       - "{LocalLow}/lowiro/if-app/*.sav"
+  store_ids:
+    steam: 4355100
 Iron Lung:
   files:
     windows:
       - "{GameRoot}/save/progress"
+  store_ids:
+    gog: 1310178756
+    steam: 1846170
 It Takes Two:
   files:
     windows:
       - "{LocalAppData}/ItTakesTwo/*.Nuts"
+  store_ids:
+    steam: 1426210
 JUMP FORCE:
   files:
     windows:
       - "{SteamUserData}/816020/remote/*"
+  store_ids:
+    steam: 816020
 Judgment:
   files:
     windows:
@@ -935,32 +1032,46 @@ Judgment:
     steam: 2058180
 KANADE:
   files:
-    linux:
+    windows:
       - "{SteamUserData}/3104270/remote/*"
+  store_ids:
+    steam: 3104270
 KINGDOM HEARTS -HD 1.5+2.5 ReMIX-:
   files:
     windows:
       - "{Documents}/My Games/KINGDOM HEARTS HD 1.5+2.5 ReMIX/Steam/{SteamID64}/*"
+  store_ids:
+    steam: 2552430
 KINGDOM HEARTS HD 2.8 Final Chapter Prologue:
   files:
     windows:
       - "{Documents}/KINGDOM HEARTS HD 2.8 Final Chapter Prologue/Steam/{SteamID64}/*"
+  store_ids:
+    steam: 2552440
 KINGDOM HEARTS III + Re Mind (DLC):
   files:
     windows:
       - "{Documents}/KINGDOM HEARTS III/Steam/{SteamID64}/*"
+  store_ids:
+    steam: 2552450
 Killer Frequency:
   files:
     windows:
       - "{LocalLow}/Team17/KillerFrequency/{SteamID64}/*.sav"
-Kinkoi:
+  store_ids:
+    steam: 1903620
+"Kinkoi: Golden Loveriche":
   files:
     windows:
       - "{GameRoot}/SaveData/*"
+  store_ids:
+    steam: 1277940
 Kinkoi Golden Time:
   files:
     windows:
       - "{GameRoot}/SaveData/*"
+  store_ids:
+    steam: 1985260
 Kugayama Shiori's Death Diary:
   files:
     windows:
@@ -971,26 +1082,40 @@ Kugayama Shiori's Death Diary:
   files:
     windows:
       - "{AppData}/Mango Factory/Kumitantei/*.dat"
+  store_ids:
+    gog: 1799082941
+    steam: 2759280
 LEGO MARVEL Super Heroes 2:
   files:
     windows:
       - "{SteamUserData}/647830/remote/savedgames/slot*/*"
+  store_ids:
+    steam: 647830
 LOLLIPOP CHAINSAW RePOP:
   files:
     windows:
       - "{LocalAppData}/lollipop/Saved/SaveGames/lollipop.sav"
+  store_ids:
+    gog: 1235084453
+    steam: 2658450
 Leap of Love:
   files:
     linux:
       - "{GameRoot}/game/game/saves/*"
     windows:
       - "{GameRoot}/game/game/saves/*"
+  store_ids:
+    gog: 1111421371
+    steam: 1469300
 Life is Strange:
   files:
     linux:
       - "{XDGData}/feral-interactive/Life Is Strange/VFS/Local/My Games/Life Is Strange/Saves/*"
     windows:
       - "{Documents}/My Games/Life Is Strange/Saves/*"
+  store_ids:
+    gog: 1931614212
+    steam: 319630
 Life is Strange 2:
   files:
     linux:
@@ -1004,32 +1129,47 @@ Life is Strange 2:
     windows:
       - "{AppData}/Sega/LikeADragonGaiden/Steam/*"
       - "{AppData}/Sega/LikeADragonGaiden/WindowsStore/*"
+  store_ids:
+    steam: 2375550
 "Like a Dragon: Infinite Wealth":
   files:
     windows:
       - "{AppData}/Sega/LikeADragon8/Steam/*"
+  store_ids:
+    steam: 2072450
 "Like a Dragon: Pirate Yakuza in Hawaii":
   files:
     windows:
       - "{AppData}/Sega/LikeADragonPirates/Steam/*"
+  store_ids:
+    steam: 3061810
 Lords Of The Fallen:
   files:
     windows:
       - "{SteamUserData}/265300/remote/*"
+  store_ids:
+    steam: 265300
 Lords of the Fallen:
   files:
     windows:
       - "{LocalAppData}/LOTF2/Saved/SaveGames/*"
+  store_ids:
+    steam: 1501750
 "Lost Records: Bloom & Rage":
   files:
     windows:
       - "{LocalAppData}/Bloom&Rage/Saved/SaveGames/*/*.sav"
+  store_ids:
+    steam: 1902960
 Lust Theory - Season 1:
   files:
     linux:
       - "{GameRoot}/game/game/saves/*"
     windows:
       - "{GameRoot}/game/game/saves/*"
+  store_ids:
+    gog: 1582333296
+    steam: 1607130
 "MURDERED: SOUL SUSPECT":
   files:
     windows:
