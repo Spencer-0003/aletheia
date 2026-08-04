@@ -33,10 +33,14 @@ AI Limit:
   files:
     windows:
       - "{Documents}/AKIBA'S TRIP/savedata/*"
+  store_ids:
+    steam: 333980
 "AKIBA’S TRIP: Hellbound & Debriefed":
   files:
     windows:
       - "{GameRoot}/AkibaHD_Data/SaveData/*.bytes"
+  store_ids:
+    steam: 1236780
 Agents of Mayhem:
   files:
     windows:
