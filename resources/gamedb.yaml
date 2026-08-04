@@ -6,21 +6,29 @@ A Way Out:
     windows:
       - "{Documents}/Bioshock2/SaveGames/*"
       - "{AppData}/Bioshock2Steam/*.profile"
+  store_ids:
+    steam: 1222700
 AI Limit:
   files:
     windows:
       - "{LocalLow}/SenseGames/AILIMIT/Archive/*.sav"
+  store_ids:
+    steam: 2407270
 "AI: THE SOMNIUM FILES - nirvanA Initiative":
   files:
     windows:
       - "{LocalAppData}/SpikeChunsoft/AI Nirvana Initiative/Auto.dat"
       - "{LocalAppData}/SpikeChunsoft/AI Nirvana Initiative/Manual.dat"
       - "{LocalAppData}/SpikeChunsoft/AI Nirvana Initiative/System.dat"
+  store_ids:
+    steam: 1449200
 "AI: The Somnium Files":
   files:
     windows:
       - "{AppData}/SpikeChunsoft/AI The Somnium Files/PSYNCAUTOSAVE"
       - "{AppData}/SpikeChunsoft/AI The Somnium Files/PSYNCDEF*"
+  store_ids:
+    steam: 948740
 "AKIBA'S TRIP: Undead & Undressed":
   files:
     windows:
@@ -33,6 +41,8 @@ Agents of Mayhem:
   files:
     windows:
       - "{SteamUserData}/304530/remote/*"
+  store_ids:
+    steam: 304530
 Alan Wake 2:
   files:
     windows:
@@ -41,6 +51,8 @@ Alan Wake 2:
   files:
     windows:
       - "{Documents}/My Games/Alice Madness Returns/AliceGame/CheckPoint/**/*"
+  store_ids:
+    steam: 19680
 "Alien: Isolation":
   files:
     linux:
@@ -48,27 +60,39 @@ Alan Wake 2:
     windows:
       - "{Documents}/My Games/Alien Isolation/*"
       - "{SteamUserData}/214490/remote/*"
+  store_ids:
+    steam: 214490
 "All in Abyss: Judge the Fake":
   files:
     windows:
       - "{LocalLow}/AllianceArts/All in Abyss/SaveData/{SteamID64}/GameData/*.sav"
+  store_ids:
+    steam: 2514640
 Alone in the Dark:
   files:
     windows:
       - "{LocalAppData}/AloneInTheDark/Saved/SaveGames/profile.sav"
       - "{LocalAppData}/AloneInTheDark/Saved/SaveGames/save_*.sav"
+  store_ids:
+    steam: 1310410
 "Atelier Firis: The Alchemist and the Mysterious Journey DX":
   files:
     windows:
       - "{Documents}/KoeiTecmo/Atelier Firis DX/SAVEDATA/*"
+  store_ids:
+    steam: 1502980
 "Atelier Lydie & Suelle: The Alchemists and the Mysterious Paintings DX":
   files:
     windows:
       - "{Documents}/KoeiTecmo/Atelier Lydie and Suelle DX/SAVEDATA/*"
+  store_ids:
+    steam: 1502990
 "Atelier Meruru ~The Apprentice of Arland~ DX":
   files:
     windows:
       - "{SteamUserData}/936190/remote/SAVEDATA/*"
+  store_ids:
+    steam: 936190
 "Atelier Ryza: Ever Darkness & the Secret Hideout DX":
   files:
     windows:
@@ -79,22 +103,32 @@ Alone in the Dark:
   files:
     windows:
       - "{Documents}/KoeiTecmo/Atelier Shallie DX/SAVEDATA/*"
+  store_ids:
+    steam: 1152320
 "Atelier Sophie: The Alchemist of the Mysterious Book DX":
   files:
     windows:
       - "{Documents}/KoeiTecmo/Atelier Sophie DX/SAVEDATA/*"
+  store_ids:
+    steam: 1502970
 BONEWORKS:
   files:
     windows:
       - "{LocalLow}/Stress Level Zero/BONEWORKS/*.dat"
+  store_ids:
+    steam: 823500
 "BPM: BULLETS PER MINUTE":
   files:
     windows:
       - "{Home}/Local Settings/Application Data/BPM/Saved/SaveGames/GameState.sav"
+  store_ids:
+    steam: 1286350
 Balatro:
   files:
     windows:
       - "{AppData}/Balatro/*/*"
+  store_ids:
+    steam: 2379780
 "Batman - The Telltale Series":
   files:
     windows:
