@@ -1481,6 +1481,8 @@ The Song of Saya:
   files:
     windows:
       - "{AppData}/Nitroplus/saya_en/*"
+  store_ids:
+    gog: 1541066319
 "The Stanley Parable: Ultra Deluxe":
   files:
     linux:
