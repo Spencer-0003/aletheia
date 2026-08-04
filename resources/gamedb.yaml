@@ -1175,34 +1175,51 @@ Lust Theory - Season 1:
     windows:
       - "{SteamUserData}/233290/remote/profile.bin"
       - "{SteamUserData}/233290/remote/SaveData/*/*.SAV"
+  store_ids:
+    steam: 233290
 MUSYNX:
   files:
     windows:
       - "{GameRoot}/SavesDir/savedata.sav"
+  store_ids:
+    steam: 952040
 Marvel's Guardians of the Galaxy:
   files:
     windows:
       - "{SteamUserData}/1088850/remote/*"
+  store_ids:
+    steam: 1088850
 Marvel's Spider-Man 2:
   files:
     windows:
       - "{Documents}/Marvel's Spider-Man 2/*"
+  store_ids:
+    steam: 2651280
 Marvel's Spider-Man Remastered:
   files:
     windows:
       - "{Documents}/Marvel's Spider-Man Remastered/*"
+  store_ids:
+    steam: 1817070
 "Marvel's Spider-Man: Miles Morales":
   files:
     windows:
       - "{Documents}/Marvel's Spider-Man Miles Morales/*"
+  store_ids:
+    steam: 1817190
 Mary Skelter 2:
   files:
     windows:
       - "{Documents}/My Games/Ghostlight Ltd/Mary Skelter 2/*"
-"Master Detective Archives: Rain Code Plus":
+  store_ids:
+    gog: 1994849124
+    steam: 1496250
+"Master Detective Archives: RAIN CODE Plus":
   files:
     windows:
       - "{LocalAppData}/RainCodePlus/Saved/SaveGames/*"
+  store_ids:
+    steam: 2903950
 McOsu:
   files:
     linux:
@@ -1211,22 +1228,34 @@ McOsu:
     windows:
       - "{GameRoot}/scores.db"
       - "{GameRoot}/scoresvr.db"
+  store_ids:
+    steam: 607260
 "Metal Gear Rising: Revengeance":
   files:
     windows:
       - "{Documents}/MGR/SaveData/MGR.sav"
+  store_ids:
+    gog: 1777132927
+    steam: 235460
 "Metaphor: ReFantazio":
   files:
     windows:
       - "{AppData}/SEGA/METAPHOR/Steam/{SteamID64}/*.sav"
+  store_ids:
+    steam: 2679460
 Metro 2033 Redux:
   files:
     windows:
       - "{Documents}/4A Games/Metro 2033/*"
+  store_ids:
+    gog: 1436434037
+    steam: 286690
 MiSide:
   files:
     windows:
       - "{LocalLow}/AIHASTO/MiSideFull/Save/*"
+  store_ids:
+    steam: 2527500
 MikuPan:
   files:
     windows:
@@ -1235,89 +1264,130 @@ Minecraft Dungeons:
   files:
     windows:
       - "{Home}/Saved Games/Mojang Studios/Dungeons/*"
+  store_ids:
+    steam: 1672970
 Minecraft Legends:
   files:
     windows:
       - "{AppData}/Minecraft Legends/*"
+  store_ids:
+    steam: 1928870
 "Minecraft: Story Mode - A Telltale Games Series":
   files:
     windows:
       - "{Documents}/Telltale Games/Minecraft Story Mode/*"
+  store_ids:
+    steam: 376870
 "Minecraft: Story Mode - Season Two":
   files:
     windows:
       - "{Documents}/Telltale Games/Minecraft Story Mode - Season Two/*"
+  store_ids:
+    steam: 639170
 Mortal Kombat 1:
   files:
     windows:
       - "{SteamUserData}/1971870/remote/Profile*"
       - "{SteamUserData}/1971870/remote/*SaveData"
+  store_ids:
+    steam: 1971870
 Mortal Kombat 11:
   files:
     windows:
       - "{SteamUserData}/976310/remote/*"
+  store_ids:
+    steam: 976310
 Mortal Kombat X:
   files:
     windows:
       - "{SteamUserData}/307780/remote/user/*"
+  store_ids:
+    steam: 307780
 Mortal Shell II - Open Beta:
   files:
     windows:
       - "{LocalAppData}/MortalShell2/Saved/SaveGames/*"
+  store_ids:
+    steam: 4711740
 Mouthwashing:
   files:
     windows:
       - "{GameRoot}/Mouthwashing_Data_SaveFiles/*"
+  store_ids:
+    steam: 2475490
 My Friend Pedro:
   files:
     windows:
       - "{LocalLow}/DeadToast Entertainment/My Friend Pedro_ Blood Bullets Bananas/Save data/*"
+  store_ids:
+    steam: 557340
 NEKOPALIVE:
   files:
     windows:
       - "{LocalAppData}/Nekopara/Saved/Saved/SaveGames/Nekopara.sav"
+  store_ids:
+    steam: 469990
 NEKOPARA Extra:
   files:
     windows:
       - "{AppData}/NEKO WORKs/nekopara_extra/*"
       - "{Documents}/NEKO WORKs/nekopara_extra/*"
+  store_ids:
+    steam: 899970
 NEKOPARA Vol. 0:
   files:
     windows:
       - "{AppData}/NekoWorks/nekopara_vo0/*"
       - "{Documents}/NekoWorks/nekopara_vol0/*"
+  store_ids:
+    steam: 385800
 NEKOPARA Vol. 1:
   files:
     windows:
       - "{AppData}/NEKO WORKs/nekopara_vol/*"
       - "{Documents}/NEKO WORKs/nekopara_vol1/*"
+  store_ids:
+    steam: 333600
 NEKOPARA Vol. 2:
   files:
     windows:
       - "{AppData}/NekoWorks/nekopara_vol2/*"
       - "{Documents}/NEKO WORKs/nekopara_vol2/*"
+  store_ids:
+    steam: 420110
 NEKOPARA Vol. 3:
   files:
     windows:
       - "{AppData}/NEKO WORKs/nekopara3/*"
       - "{Documents}/NEKO WORKs/nekopara_vol3/*"
+  store_ids:
+    steam: 602520
 NEKOPARA Vol. 4:
   files:
     windows:
       - "{AppData}/NEKO WORKs/nekopara4/*"
       - "{Documents}/NEKO WORKs/nekopara_vol4/*"
+  store_ids:
+    steam: 1406990
 NUKITASHI:
   files:
     windows:
       - "{GameRoot}/savedata/*"
+  store_ids:
+    gog: 1590878628
+    steam: 2399220
 Need for Speed Unbound:
   files:
     windows:
       - "{Documents}/Need For Speed(TM) Unbound/SaveGame/*/*"
+  store_ids:
+    steam: 1846380
 Neon White:
   files:
     windows:
       - "{LocalLow}/Little Flag Software, LLC/Neon White/{SteamID64}/**/*"
+  store_ids:
+    steam: 1533420
 New Tales from the Borderlands:
   files:
     windows:
@@ -1328,6 +1398,8 @@ New Tales from the Borderlands:
   files:
     windows:
       - "{Documents}/My Games/NieR_Automata/*"
+  store_ids:
+    steam: 524220
 Nightmare Kart:
   files:
     windows:
@@ -1336,80 +1408,120 @@ Obscure:
   files:
     windows:
       - "{SteamUserData}/254460/remote/game*.sav"
+  store_ids:
+    gog: 1207658760
+    steam: 254460
 Obscure 2:
   files:
     windows:
       - "{SteamUserData}/254480/remote/*"
+  store_ids:
+    steam: 254480
 "Octodad: Dadliest Catch":
   files:
     windows:
       - "{Home}/Saved Games/Octodad Dadliest Catch/*"
+  store_ids:
+    gog: 1207660553
+    steam: 224480
 PAYDAY 2:
   files:
     linux:
       - "{SteamUserData}/218620/remote/*"
     windows:
       - "{LocalAppData}/PAYDAY 2/saves/{SteamID64}/*"
+  store_ids:
+    steam: 218620
 Palworld:
   files:
     windows:
       - "{LocalAppData}/Pal/Saved/SaveGames/*"
+  store_ids:
+    steam: 1623730
 Persona 3 Reload:
   files:
     windows:
       - "{AppData}/SEGA/P3R/*"
+  store_ids:
+    steam: 2161700
 Persona 4 Golden:
   files:
     windows:
       - "{SteamUserData}/1113000/remote/*"
+  store_ids:
+    steam: 1113000
 Persona 5 Royal:
   files:
     windows:
       - "{AppData}/SEGA/P5R/Steam/*"
+  store_ids:
+    steam: 1687950
 Phasmophobia:
   files:
     windows:
       - "{LocalLow}/Kinetic Games/Phasmophobia/saveData.txt"
+  store_ids:
+    steam: 739630
 Planet Coaster:
   files:
     windows:
       - "{Home}/Saved Games/Frontier Developments/Planet Coaster/*/Saves/*"
+  store_ids:
+    steam: 493340
 Poker Night at the Inventory:
   files:
     windows:
       - "{Documents}/Skunkape Games/Poker Night at the Inventory Remastered/*"
+  store_ids:
+    steam: 3897800
 Prototype:
   files:
     windows:
       - "{Documents}/Prototype/slot-*.bin"
+  store_ids:
+    steam: 10150
 Prototype 2:
   files:
     windows:
       - "{Documents}/Activision/Prototype 2/slot-*.bin"
+  store_ids:
+    steam: 115320
 Quantum Break:
   files:
     windows:
       - "{LocalAppData}/QuantumBreak/*"
+  store_ids:
+    steam: 474960
 RESIDENT EVIL RESISTANCE:
   files:
     windows:
       - "{SteamUserData}/952070/remote/win64_save/*"
+  store_ids:
+    steam: 952070
 RV There Yet?:
   files:
     windows:
       - "{LocalAppData}/Ride/Saved/SaveGames/{SteamID64}/*"
+  store_ids:
+    steam: 3949040
 Rabbit and Steel:
   files:
     windows:
       - "{LocalAppData}/RabbitSteel/SaveFile/*"
+  store_ids:
+    steam: 2132850
 Red Dead Redemption 2:
   files:
     windows:
       - "{Documents}/Rockstar Games/Red Dead Redemption 2/Profiles/*/*"
+  store_ids:
+    steam: 1174180
 Remnant II:
   files:
     windows:
       - "{Home}/Saved Games/Remnant2/Steam/*/*"
+  store_ids:
+    steam: 1282100
 Resident Evil 2:
   files:
     windows:
@@ -1456,6 +1568,9 @@ Resident Evil HD REMASTER:
   files:
     windows:
       - "{GOGAppData}/58424498340553405/Storage/Shared/Files/*"
+  store_ids:
+    gog: 1999933307
+    steam: 304240
 Resident Evil Requiem:
   files:
     windows:
@@ -1485,39 +1600,59 @@ Rise of the Tomb Raider:
     windows:
       - "{GOGAppData}/58668848197088414/Storage/Shared/Files/*"
       - "{SteamUserData}/391220/remote/*"
+  store_ids:
+    gog: 1926077727
+    steam: 391220
 SCARLET NEXUS:
   files:
     windows:
       - "{LocalAppData}/BANDAI NAMCO Entertainment/SCARLET NEXUS/Saved/SaveGames/*/*"
+  store_ids:
+    steam: 775500
 SILENT HILL 2:
   files:
     windows:
       - "{LocalAppData}/SilentHill2/Saved/SaveGames/*.sav" # GOG Offline installer variant
       - "{LocalAppData}/SilentHill2/Saved/SaveGames/197901066483463505/*.sav" # GOG variant
       - "{LocalAppData}/SilentHill2/Saved/SaveGames/{SteamID64}/*.sav"
+  store_ids:
+    gog: 2051029707
+    steam: 2124490
 SILENT HILL f:
   files:
     windows:
       - "{LocalAppData}/Shf/Saved/SaveGames/76561197960265729/*.sav" # GOG variant
       - "{LocalAppData}/SHf/Saved/SaveGames/{SteamID64}/*.sav"
+  store_ids:
+    gog: 1901861030
+    steam: 2947440
 SOULCALIBUR VI:
   files:
     windows:
       - "{LocalAppData}/SoulcaliburVI/Saved/SaveGames/{SteamID64}/**/*"
+  store_ids:
+    steam: 544750
 SUPERHOT:
   files:
     linux:
       - "{XDGConfig}/unity3d/SUPERHOT_Team/SUPERHOT/super.hot"
     windows:
       - "{LocalLow}/SUPERHOT_Team/SUPERHOT/*"
+  store_ids:
+    gog: 1456141688
+    steam: 322500
 SWORD ART ONLINE Alicization Lycoris:
   files:
     windows:
       - "{SteamUserData}/1009290/remote/*"
+  store_ids:
+    steam: 1009290
 SWORD ART ONLINE Last Recollection:
   files:
     windows:
       - "{LocalAppData}/BANDAI NAMCO Entertainment/SAO LastRecollection/Saved/SaveGames/*"
+  store_ids:
+    steam: 1566880
 SaDistic BlooD:
   files:
     windows:
@@ -1527,159 +1662,242 @@ Saints Row The Third Remastered:
     windows:
       - "{GOGAppData}/53610945248137475/Storage/Shared/Files/*.sr3s_pc"
       - "{SteamUserData}/978300/remote/*.sr3s_pc"
+  store_ids:
+    gog: 1435738629
+    steam: 978300
 "Saints Row: The Third":
   files:
     windows:
       - "{LocalAppData}/Saints Row The Third/*"
+  store_ids:
+    gog: 1430740694
+    steam: 55230
 Scrap Mechanic:
   files:
     windows:
       - "{AppData}/Axolot Games/Scrap Mechanic/*"
+  store_ids:
+    steam: 387990
 Severed Steel:
   files:
     windows:
       - "{LocalAppData}/ThankYouVeryCool/Saved/SaveGames/*"
+  store_ids:
+    gog: 1242122770
+    steam: 1227690
 Shenmue I & II:
   files:
     windows:
       - "{SteamUserData}/758330/remote/sm1saves/*"
       - "{SteamUserData}/758330/remote/sm2saves/*"
+  store_ids:
+    steam: 758330
 "Silent Hill 4: The Room":
   files:
     windows:
       - "{GameRoot}/saves/*"
+  store_ids:
+    gog: 1141086411
 Sker Ritual:
   files:
     windows:
       - "{SteamUserData}/1492070/remote/PersistentSaveData"
+  store_ids:
+    steam: 1492070
 "Sleeping Dogs: Definitive Edition":
   files:
     windows:
       - "{GameRoot}/data/HK Autosave*"
       - "{GameRoot}/data/HK GameSlot*"
+  store_ids:
+    gog: 1741843789
+    steam: 307690
 Slitterhead:
   files:
     windows:
       - "{LocalAppData}/YKS/Saved/SaveGames/Steam/*/*.sav"
-"Sonic & All-Stars Racing Transformed Collection":
+  store_ids:
+    steam: 2631250
+"Sonic & All-Stars Racing Transformed":
   files:
     windows:
       - "{SteamUserData}/212480/remote/*"
+  store_ids:
+    steam: 212480
 Sonic Adventure 2:
   files:
     windows:
       - "{GameRoot}/resource/gd_PC/SAVEDATA/*"
+  store_ids:
+    steam: 213610
 Sonic Adventure DX:
   files:
     windows:
       - "{GameRoot}/SAVEDATA/*"
+  store_ids:
+    steam: 71250
 Sonic CD:
   files:
     windows:
       - "{GameRoot}/S_SCORE.dat"
+  store_ids:
+    steam: 200940
 Sonic Forces:
   files:
     windows:
       - "{GameRoot}/savedata/*/savedata.xml"
+  store_ids:
+    steam: 637100
 Sonic Frontiers:
   files:
     windows:
       - "{AppData}/SEGA/SonicFrontiers/steam/*"
+  store_ids:
+    steam: 1237320
 Sonic Generations:
   files:
     windows:
       - "{Documents}/My Games/Sonic Generations/*"
+  store_ids:
+    steam: 71340
 Sonic Lost World:
   files:
     windows:
       - "{GameRoot}/*.sdat"
+  store_ids:
+    steam: 329440
 "Sonic Racing: CrossWorlds":
   files:
     windows:
       - "{AppData}/SEGA/SonicRacingCrossWorlds/steam/{SteamID64}/*.sav"
+  store_ids:
+    steam: 2486820
 Sonic X Shadow Generations:
   files:
     windows:
       - "{AppData}/SEGA/SONIC_X_SHADOW_GENERATIONS/steam/*/game0/gamedata.sav"
       - "{AppData}/SEGA/SONIC_X_SHADOW_GENERATIONS/steam/*/saved/savedata/gene_PC.sav"
+  store_ids:
+    steam: 2513280
 Sonic and SEGA All Stars Racing:
   files:
     windows:
       - "{GameRoot}/ssr_save.bin"
+  store_ids:
+    steam: 34190
 Soulstice:
   files:
     windows:
       - "{GameRoot}/Soulstice/Saved/SaveGames/Cloud/*.sav"
+  store_ids:
+    steam: 1602080
 Spin Rhythm XD:
   files:
     windows:
       - "{LocalLow}/Super Spin Digital/Spin Rhythm XD/*/*"
+  store_ids:
+    steam: 1058830
 Split Fiction:
   files:
     windows:
       - "{LocalAppData}/SplitFiction/SaveData.Split"
+  store_ids:
+    steam: 2001120
 Stardew Valley:
   files:
     linux:
       - "{XDGConfig}/StardewValley/Saves/*"
     windows:
       - "{AppData}/StardewValley/Saves/*"
+  store_ids:
+    gog: 1453375253
+    steam: 413150
 Stories Untold:
   files:
     windows:
       - "{LocalLow}/No Code/Stories Untold SaveGame.dat"
+  store_ids:
+    gog: 1836830469
+    steam: 558420
 Stray:
   files:
     windows:
       - "{LocalAppData}/Hk_project/Saved/SaveGames/*"
+  store_ids:
+    steam: 1332010
 Street Fighter 6:
   files:
     windows:
       - "{SteamUserData}/1364780/remote/win64_save/*"
+  store_ids:
+    steam: 1364780
 Street Fighter V:
   files:
     windows:
       - "{LocalAppData}/StreetFighterV/Saved/SaveGames/*"
+  store_ids:
+    steam: 310950
 "Summer's Gone - Season 1":
   files:
     linux:
       - "{GameRoot}/game/game/saves/*"
     windows:
       - "{GameRoot}/game/game/saves/*"
+  store_ids:
+    gog: 1384091612
+    steam: 2240150
 "Sunrider: Mask of Arcadius":
   files:
     linux:
       - "{GameRoot}/game/game/saves/*"
     windows:
       - "{GameRoot}/game/game/saves/*"
+  store_ids:
+    gog: 1748855533
+    steam: 313730
 Sunset Overdrive:
   files:
     windows:
       - "{LocalAppData}/Sunset/Saves/*"
+  store_ids:
+    steam: 847370
 "Sword Art Online Re: Hollow Fragment":
   files:
     windows:
       - "{SteamUserData}/638650/remote/*"
+  store_ids:
+    steam: 638650
 "Sword Art Online: Fatal Bullet":
   files:
     windows:
       - "{SteamUserData}/626690/remote/*"
-"Sword Art Online: Hollow Realization Deluxe Edition":
+  store_ids:
+    steam: 626690
+"Sword Art Online: Hollow Realization":
   files:
     windows:
       - "{SteamUserData}/607890/remote/*"
+  store_ids:
+    steam: 607890
 "Sword Art Online: Lost Song":
   files:
     windows:
       - "{SteamUserData}/840720/remote/*"
+  store_ids:
+    steam: 840720
 Tales from the Borderlands:
   files:
     windows:
       - "{Documents}/Telltale Games/Tales from the Borderlands/*"
+  store_ids:
+    gog: 1432213337
+    steam: 330830
 Tales of ARISE:
   files:
     windows:
       - "{LocalAppData}/BANDAI NAMCO Entertainment/Tales of Arise/Saved/SaveGames/{SteamID3}/SaveData/*"
+  store_ids:
+    steam: 740130
 Terraria:
   files:
     linux:
@@ -1691,6 +1909,9 @@ Terraria:
     windows:
       - "{Documents}/My Games/Terraria/Players/*"
       - "{Documents}/My Games/Terraria/Worlds/*"
+  store_ids:
+    gog: 1207665503
+    steam: 105600
 The Awesome Adventures of Captain Spirit:
   files:
     windows:
@@ -1701,55 +1922,85 @@ The Callisto Protocol:
   files:
     windows:
       - "{LocalAppData}/CallistoProtocol/Saved/SaveGames/*"
+  store_ids:
+    steam: 1544020
 The Casting of Frank Stone:
   files:
     windows:
       - "{LocalAppData}/TheCastingofFrankStone/Saved/*"
+  store_ids:
+    steam: 2223840
 "The Elder Scrolls V: Skyrim":
   files:
     windows:
       - "{Documents}/My Games/Skyrim/Saves/*"
+  store_ids:
+    steam: 72850
 "The Elder Scrolls V: Skyrim Special Edition":
   files:
     windows:
       - "{Documents}/My Games/Skyrim Special Edition/Saves/*"
       - "{Documents}/My Games/Skyrim Special Edition GOG/Saves/*"
+  store_ids:
+    gog: 1711230643
+    steam: 489830
 "The Elder Scrolls V: Skyrim VR":
   files:
     windows:
       - "{Documents}/My Games/Skyrim VR/Saves/*"
+  store_ids:
+    steam: 611670
 The Escapists:
   files:
     linux:
       - "{XDGConfig}/unity3d/Team 17 Digital ltd_/The Escapists 2/Saves/*"
     windows:
       - "{LocalLow}/Team 17 Digital ltd_/The Escapists 2/Saves/*"
+  store_ids:
+    gog: 1423221839
+    steam: 298630
 The Escapists 2:
   files:
     linux:
       - "{XDGConfig}/unity3d/Team 17 Digital ltd_/The Escapists 2/Saves/*"
     windows:
       - "{LocalLow}/Team 17 Digital ltd_/The Escapists 2/Saves/*"
+  store_ids:
+    gog: 2137491407
+    steam: 641990
 The Evil Within:
   files:
     windows:
       - "{LocalAppData}/Saved Games/TangoGameworks/The Evil Within/base/savegame/*"
+  store_ids:
+    gog: 1171957437
+    steam: 268050
 The Evil Within 2:
   files:
     windows:
       - "{LocalAppData}/Saved Games/TangoGameworks/The Evil Within 2/base/savegame/*"
+  store_ids:
+    gog: 1083619800
+    steam: 601430
 The Forest:
   files:
     windows:
       - "{LocalLow}/SKS/TheForest/*"
+  store_ids:
+    steam: 242760
 The Lego Movie Videogame:
   files:
     windows:
       - "{SteamUserData}/267530/remote/savedgames/*"
+  store_ids:
+    gog: 1476906899
+    steam: 267530
 The Murder of Sonic the Hedgehog:
   files:
     windows:
       - "{LocalLow}/Sonic Social/The Murder of Sonic The Hedgehog/SaveData.data"
+  store_ids:
+    steam: 2324650
 The NOexistenceN of you AND me:
   files:
     windows:
@@ -1760,14 +2011,20 @@ The Quarry:
   files:
     windows:
       - "{LocalAppData}/TheQuarry/Saved/SaveGames/*"
+  store_ids:
+    steam: 1577120
 The Sims 3:
   files:
     windows:
       - "{Documents}/Electronic Arts/The Sims 3/Saves/*"
+  store_ids:
+    steam: 47890
 The Sims 4:
   files:
     windows:
       - "{Documents}/Electronic Arts/The Sims 4/saves/*"
+  store_ids:
+    steam: 1222670
 The Song of Saya:
   files:
     windows:
@@ -1780,64 +2037,103 @@ The Song of Saya:
       - "{XDGConfig}/unity3d/Crows Crows Crows/The Stanley Parable_ Ultra Deluxe/*"
     windows:
       - "{LocalLow}/unity3d/Crows Crows Crows/The Stanley Parable_ Ultra Deluxe/*"
+  store_ids:
+    steam: 1703340
 "The Walking Dead":
   files:
     windows:
       - "{Documents}/Telltale Games/The Walking Dead/*"
+  store_ids:
+    gog: 1432207977
+    steam: 207610
 "The Walking Dead: A New Frontier":
   files:
     windows:
       - "{Documents}/Telltale Games/The Walking Dead A New Frontier/*"
       - "{Documents}/Telltale Games/The Walking Dead - A New Frontier (Season 3)/*"
+  store_ids:
+    gog: 1401438095
+    steam: 536220
 "The Walking Dead: Michonne - A Telltale Miniseries":
   files:
     windows:
       - "{Documents}/Telltale Games/The Walking Dead Michonne/*"
+  store_ids:
+    gog: 1455785261
+    steam: 429570
 "The Walking Dead: Season Two":
   files:
     windows:
       - "{Documents}/Telltale Games/The Walking Dead Season Two/*"
+  store_ids:
+    gog: 1432208124
+    steam: 261030
 "The Walking Dead: The Final Season":
   files:
     windows:
       - "{Documents}/Telltale Games/The Walking Dead The Final Season/*"
+  store_ids:
+    gog: 2031519202
+    steam: 866800
 "The Walking Dead: The Telltale Definitive Series":
   files:
     windows:
       - "{Documents}/Telltale Games/The Walking Dead Definitive/*"
       - "{Documents}/Telltale Games/The Walking Dead The Telltale Definitive Series/*"
+  store_ids:
+    gog: 1487652667
+    steam: 1449690
 "The Witcher 3: Wild Hunt":
   files:
     windows:
       - "{Documents}/The Witcher 3/gamesaves/*"
+  store_ids:
+    gog: 1207664643
+    steam: 292030
 "Tiny Tina's Assault on Dragon Keep: A Wonderlands One-shot Adventure":
   files:
     windows:
       - "{Documents}/My Games/Tiny Tina's Assault On Dragon Keep/WillowGame/SaveData/*/*"
+  store_ids:
+    steam: 1712840
 "Tiny Tina's Wonderlands":
   files:
     windows:
       - "{Documents}/My Games/Tiny Tina's Wonderlands/Saved/SaveGames/{SteamID64}/*"
+  store_ids:
+    steam: 1286680
 Tomb Raider I-III Remastered Starring Lara Croft:
   files:
     windows:
       - "{AppData}/TRX/*/savegame.dat"
+  store_ids:
+    gog: 1407750955
+    steam: 2478970
 Tormented Souls:
   files:
     windows:
       - "{LocalLow}/duale-abstractd/Tormented Souls Release/Saves/*"
+  store_ids:
+    gog: 1243021945
+    steam: 1367590
 Treasure of Nadia:
   files:
     linux:
       - "{GameRoot}/game/game/saves/*"
     windows:
       - "{GameRoot}/game/game/saves/*"
+  store_ids:
+    gog: 1592693763
+    steam: 1737100
 ULTRAKILL:
   files:
     linux:
       - "{GameRoot}/Saves/*"
     windows:
       - "{GameRoot}/Saves/*"
+  store_ids:
+    gog: 1476171749
+    steam: 1229490
 Unleashed Recompiled:
   files:
     linux:
@@ -1848,10 +2144,15 @@ Until Dawn:
   files:
     windows:
       - "{Documents}/My Games/Bates/Saved/SavedGames/*"
+  store_ids:
+    steam: 2172010
 Vampyr:
   files:
     windows:
       - "{LocalAppData}/AVGame/Saved/SaveGames/*"
+  store_ids:
+    gog: 2098644729
+    steam: 427290
 Where Winter Crows Go:
   files:
     linux:
@@ -1860,66 +2161,100 @@ Where Winter Crows Go:
   files:
     windows:
       - "{Home}/Saved Games/MachineGames/Wolfenstein II The New Colossus/base/savegame.user/{SteamID64}/**/*"
+  store_ids:
+    gog: 1847884051
+    steam: 612880
 "Wolfenstein: The New Order":
   files:
     windows:
       - "{Home}/Saved Games/MachineGames/Wolfenstein The New Order/base/savegame/**/*"
+  store_ids:
+    gog: 1943729964
+    steam: 201810
 "Wolfenstein: The Old Blood":
   files:
     windows:
       - "{Home}/Saved Games/MachineGames/Wolfenstein The Old Blood/base/savegame/**/*"
+  store_ids:
+    gog: 1961572821
+    steam: 350080
 "Wolfenstein: Youngblood":
   files:
     windows:
       - "{Home}/Saved Games/MachineGames/Wolfenstein Youngblood/base/savegame.user/{SteamID64}/**/*"
+  store_ids:
+    steam: 1056960
 Yakuza 0:
   files:
     windows:
       - "{GOGAppData}/5966314534907843/Storage/Shared/Files/*"
       - "{SteamUserData}/638970/remote/*"
+  store_ids:
+    gog: 1103602225
+    steam: 638970
 Yakuza 3 Remastered:
   files:
     windows:
       - "{SteamUserData}/1088710/remote/*"
+  store_ids:
+    gog: 1453650568
+    steam: 1088710
 Yakuza 4 Remastered:
   files:
     windows:
       - "{SteamUserData}/1105500/remote/*"
+  store_ids:
+    gog: 1311648027
+    steam: 1105500
 Yakuza 5 Remastered:
   files:
     windows:
       - "{GOGAppData}/56296606225266695/Storage/Shared/Files/*"
       - "{SteamUserData}/1105510/remote/*"
+  store_ids:
+    gog: 1896187920
+    steam: 1105510
 "Yakuza 6: The Song of Life":
   files:
     windows:
       - "{GOGAppData}/56296606511683989/Storage/Shared/Files/**/*"
       - "{SteamUserData}/1388590/remote/**/*"
+  store_ids:
+    gog: 1086074447
+    steam: 1388590
 Yakuza Kiwami:
   files:
     windows:
       - "{GOGAppData}/56296604923139714/Storage/Shared/Files/*"
       - "{SteamUserData}/834530/remote/*"
-Yakuza Kiwami (Legacy):
-  files:
-    windows:
-      - "{SteamUserData}/834530/remote/*"
+  store_ids:
+    gog: 1951443960
+    steam: 834530
 Yakuza Kiwami 2:
   files:
     windows:
       - "{AppData}/Sega/YakuzaKiwami2/*"
+  store_ids:
+    gog: 1478349159
+    steam: 3717340
 Yakuza Kiwami 2 (Legacy):
   files:
     windows:
       - "{AppData}/Sega/YakuzaKiwami2/{SteamID3}/**/*"
+  store_ids:
+    steam: 927380
 Youtubers Life:
   files:
     windows:
       - "{Documents}/U-Play online/Youtubers Life/Saves/*.yls"
+  store_ids:
+    steam: 428690
 "Yu-Gi-Oh! Legacy of the Duelist : Link Evolution":
   files:
     windows:
       - "{SteamUserData}/1150640/remote/*.dat"
+  store_ids:
+    steam: 1150640
 "Zelda 64: Recompiled":
   files:
     linux:
@@ -1930,6 +2265,8 @@ Zombie Army Trilogy:
   files:
     windows:
       - "{SteamUserData}/301640/remote/PC_ProfileSaves/*"
+  store_ids:
+    steam: 301640
 sm64coopdx:
   files:
     linux:
