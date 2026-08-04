@@ -145,16 +145,14 @@ impl Scanner for HeroicScanner {
                 continue;
             };
 
-            #[cfg(unix)]
             games.push(Game {
                 name: game_name,
+                id: game.app_id.parse().ok(),
                 installation_dir: Some(game.install_path),
+                #[cfg(unix)]
                 prefix: Self::get_wine_prefix(&heroic_path, &game.app_id, &game.platform),
                 source: "Heroic".into()
             });
-
-            #[cfg(windows)]
-            games.push(Game { name: game_name, installation_dir: Some(game.install_path), source: "Heroic".into() });
         }
 
         let sideload_path = heroic_path.join("sideload_apps/library.json");
@@ -169,16 +167,14 @@ impl Scanner for HeroicScanner {
         };
 
         for game in sideload_library.games {
-            #[cfg(unix)]
             games.push(Game {
                 name: game.title,
+                id: None,
                 installation_dir: Some(game.folder_name),
+                #[cfg(unix)]
                 prefix: Self::get_wine_prefix(&heroic_path, &game.app_name, &game.install.platform),
                 source: "Heroic".into()
             });
-
-            #[cfg(windows)]
-            games.push(Game { name: game.title, installation_dir: Some(game.folder_name), source: "Heroic".into() });
         }
 
         games

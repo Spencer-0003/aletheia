@@ -63,6 +63,7 @@ impl Scanner for ItchScanner {
             let (title, install_folder) = row.unwrap();
             games.push(Game {
                 name: title,
+                id: None,
                 installation_dir: Some(install_folder.into()),
                 source: "itch.io".to_owned(),
                 #[cfg(unix)]

@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Spencer
+// SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
 use super::{Game, Scanner};
@@ -56,11 +56,14 @@ impl Scanner for GOGScanner {
                 continue;
             };
 
-            #[cfg(windows)]
-            games.push(Game { name: game_info.name, installation_dir: Some(dir), source: "GOG".to_owned() });
-
-            #[cfg(target_os = "macos")]
-            games.push(Game { name: game_info.name, installation_dir: Some(dir), prefix: None, source: "GOG".to_owned() });
+            games.push(Game {
+                name: game_info.name,
+                id: u32::try_from(product_id).ok(),
+                installation_dir: Some(dir),
+                #[cfg(target_os = "macos")]
+                prefix: None,
+                source: "GOG".into()
+            });
         }
 
         games

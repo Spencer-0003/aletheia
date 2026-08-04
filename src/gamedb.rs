@@ -34,7 +34,8 @@ pub type Result<T> = core::result::Result<T, Error>;
 
 #[derive(Clone, Deserialize, Serialize)]
 pub struct GameDbEntry {
-    pub files: GameFiles
+    pub files: GameFiles,
+    pub store_ids: Option<GameStoreIds>
 }
 
 #[derive(Clone, Deserialize, Serialize)]
@@ -44,6 +45,12 @@ pub struct GameFiles {
     pub linux: Option<Vec<String>>,
     #[cfg(target_os = "macos")]
     pub mac: Option<Vec<String>>
+}
+
+#[derive(Clone, Deserialize, Serialize)]
+pub struct GameStoreIds {
+    pub gog: Option<i64>,
+    pub steam: Option<u32>
 }
 
 #[derive(Deserialize, Serialize)]
@@ -86,6 +93,21 @@ pub fn get_installed_games_with_db() -> (HashMap<String, GameDbEntry>, Vec<Game>
 }
 
 fn scan_installed_games(db: &HashMap<String, GameDbEntry>) -> Vec<Game> {
+    let mut steam_index: HashMap<u32, &String> = HashMap::new();
+    let mut gog_index: HashMap<i64, &String> = HashMap::new();
+
+    for (name, entry) in db {
+        if let Some(ids) = &entry.store_ids {
+            if let Some(id) = ids.steam {
+                steam_index.insert(id, name);
+            }
+
+            if let Some(id) = ids.gog {
+                gog_index.insert(id, name);
+            }
+        }
+    }
+
     let mut games = vec![];
 
     #[cfg(all(unix, not(target_os = "macos")))]
@@ -104,6 +126,22 @@ fn scan_installed_games(db: &HashMap<String, GameDbEntry>) -> Vec<Game> {
     games
         .into_iter()
         .filter_map(|mut game| {
+            if let Some(id) = game.id {
+                let entry = match game.source.as_str() {
+                    "GOG" | "Heroic" => gog_index.get(&i64::from(id)),
+                    "Steam" => steam_index.get(&id),
+                    _ => None
+                };
+
+                if let Some(name) = entry {
+                    if game.name.as_str() != name.as_str() {
+                        game.name.clone_from(*name);
+                    }
+
+                    return Some(game);
+                }
+            }
+
             if db.contains_key(&game.name) {
                 return Some(game);
             }

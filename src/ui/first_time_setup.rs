@@ -68,12 +68,10 @@ pub fn run_first_time_setup() {
             let steam_account_id = SteamScanner::id64_to_id3(steam_id.parse::<u64>().unwrap()).to_string();
 
             setup_logic.set_steam_account_id(steam_account_id.clone().into());
-            setup_logic.set_steam_account_options(ModelRc::new(VecModel::from(vec![
-                DropdownOption {
-                    label: user.persona_name.into(),
-                    value: steam_account_id.into()
-                }
-            ])));
+            setup_logic.set_steam_account_options(ModelRc::new(VecModel::from(vec![DropdownOption {
+                label: user.persona_name.into(),
+                value: steam_account_id.into()
+            }])));
         }
     }
 

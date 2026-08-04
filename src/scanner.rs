@@ -31,6 +31,7 @@ pub use itch::ItchScanner;
 #[derive(Clone)]
 pub struct Game {
     pub name: String,
+    pub id: Option<u32>,
     pub installation_dir: Option<PathBuf>,
     #[cfg(unix)]
     pub prefix: Option<PathBuf>,

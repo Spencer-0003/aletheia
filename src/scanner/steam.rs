@@ -78,6 +78,7 @@ impl Scanner for SteamScanner {
 
                 games.push(Game {
                     name: game_name,
+                    id: Some(game.app_id),
                     installation_dir: Some(install_dir),
                     #[cfg(all(unix, not(target_os = "macos")))]
                     prefix: {
@@ -100,6 +101,7 @@ impl Scanner for SteamScanner {
 
             games.push(Game {
                 name: shortcut.app_name,
+                id: None,
                 installation_dir: Some(shortcut.start_dir.into()),
                 #[cfg(unix)]
                 prefix: {

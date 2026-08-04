@@ -64,11 +64,11 @@ impl Scanner for LutrisScanner {
                     .map(PathBuf::from)
                     .map(|p| p.parent().unwrap().to_path_buf());
 
-                games.push(Game { name, installation_dir, prefix: Some(dir), source: "Lutris".into() });
+                games.push(Game { name, id: None, installation_dir, prefix: Some(dir), source: "Lutris".into() });
             } else {
                 let installation_dir = (!dir.as_os_str().is_empty()).then_some(dir);
                 // Flatpak games have their installation directory set as "" instead of None
-                games.push(Game { name, installation_dir, prefix: None, source: "Lutris".into() });
+                games.push(Game { name, id: None, installation_dir, prefix: None, source: "Lutris".into() });
             }
         }
 

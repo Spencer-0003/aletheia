@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Spencer
+// SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
 use super::{Game, Scanner};
@@ -64,7 +64,12 @@ impl Scanner for XboxScanner {
                 continue;
             }
 
-            games.push(Game { name: config.shell_visuals.default_display_name, installation_dir: Some(path), source: "Xbox".into() });
+            games.push(Game {
+                name: config.shell_visuals.default_display_name,
+                id: None,
+                installation_dir: Some(path),
+                source: "Xbox".into()
+            });
         }
 
         games
