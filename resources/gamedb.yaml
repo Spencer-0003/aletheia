@@ -639,21 +639,27 @@ FULL METAL SCHOOLGIRL:
   files:
     windows:
       - "{LocalAppData}/FULL METAL SCHOOLGIRL/SaveData/{SteamID64}/*.sav"
+  store_ids:
+    steam: 3696410
 FUNKO FUSION:
   files:
     windows:
       - "{LocalAppData}/FunkoFusion/Saved/SaveGames/*"
+  store_ids:
+    steam: 1843310
 Fallout:
   files:
     windows:
       - "{GameRoot}/data/SAVEGAME/*"
   store_ids:
+    gog: 1440148836
     steam: 38400
 Fallout 2:
   files:
     windows:
       - "{GameRoot}/data/SAVEGAME/*"
   store_ids:
+    gog:  	1440151285
     steam: 38410
 Fallout 3:
   files:
@@ -666,6 +672,7 @@ Fallout 3 - Game of the Year Edition:
     windows:
       - "{Documents}/My Games/Fallout3/Saves/*"
   store_ids:
+    gog: 1248282609
     steam: 22370
 Fallout 4:
   files:
@@ -685,6 +692,7 @@ Fallout 4 VR:
     windows:
       - "{Documents}/My Games/FalloutNV/Saves/*"
   store_ids:
+    gog: 1454587428
     steam: 22380
 Fatal Twelve:
   files:
@@ -692,25 +700,38 @@ Fatal Twelve:
       - "{GameRoot}/game/game/saves/*"
     windows:
       - "{GameRoot}/game/game/saves/*"
+  store_ids:
+    gog: 1435637537
+    steam: 620210
 Fetish Locator Week One:
   files:
     linux:
       - "{GameRoot}/game/game/saves/*"
     windows:
       - "{GameRoot}/game/game/saves/*"
+  store_ids:
+    gog: 1654462894
+    steam: 1360980
 Fight'N Rage:
   files:
     windows:
       - "{LocalLow}/sebagamesdev/gog/fightnrage/savedata/data.sav" # GOG variant
       - "{LocalLow}/sebagamesdev/fightnrage/savedata/data.sav"
+  store_ids:
+    gog: 1608965204
+    steam: 674520
 Final Exam:
   files:
     windows:
       - "{SteamUserData}/233190/remote/*.sav"
+  store_ids:
+    steam: 233190
 Find Love or Die Trying:
   files:
     windows:
       - "{GameRoot}/game/saves/*"
+  store_ids:
+    steam: 1714320
 "Five Nights at Freddy's":
   files:
     windows:
