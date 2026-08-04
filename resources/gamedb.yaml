@@ -659,7 +659,7 @@ Fallout 2:
     windows:
       - "{GameRoot}/data/SAVEGAME/*"
   store_ids:
-    gog:  	1440151285
+    gog: 1440151285
     steam: 38410
 Fallout 3:
   files:
