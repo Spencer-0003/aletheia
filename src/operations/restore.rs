@@ -95,7 +95,8 @@ mod tests {
                 linux: None,
                 #[cfg(target_os = "macos")]
                 mac: None
-            }
+            },
+            store_ids: None
         }
     }
 
@@ -107,7 +108,8 @@ mod tests {
                 linux: None,
                 #[cfg(target_os = "macos")]
                 mac: None
-            }
+            },
+            store_ids: None
         }
     }
 
