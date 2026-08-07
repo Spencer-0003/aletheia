@@ -4,8 +4,7 @@
 A Way Out:
   files:
     windows:
-      - "{Documents}/Bioshock2/SaveGames/*"
-      - "{AppData}/Bioshock2Steam/*.profile"
+      - "{Documents}/My Games/A Way Out/Saves/*"
   store_ids:
     steam: 1222700
 AI Limit:
