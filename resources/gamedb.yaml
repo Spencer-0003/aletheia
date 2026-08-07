@@ -1953,9 +1953,14 @@ The Casting of Frank Stone:
 The Escapists:
   files:
     linux:
-      - "{XDGConfig}/unity3d/Team 17 Digital ltd_/The Escapists 2/Saves/*"
+      - "{Home}/The Escapists/global.dat"
+      - "{Home}/The Escapists/save*/*"
+    mac:
+      - "{AppData}/The Escapists/global.dat"
+      - "{AppData}/The Escapists/save*/*"
     windows:
-      - "{LocalLow}/Team 17 Digital ltd_/The Escapists 2/Saves/*"
+      - "{Documents}/The Escapists/global.dat"
+      - "{Documents}/The Escapists/save*/*"
   store_ids:
     gog: 1423221839
     steam: 298630
