@@ -117,6 +117,14 @@ pub fn expand_path(path: &Path, installation_dir: Option<&Path>, prefix: Option<
 
     let linux_app_data = app_data();
 
+    let steam_id_3 = steam_account_id.map_or_else(|| PathBuf::from("*"), PathBuf::from);
+    let steam_id_64 = steam_account_id
+        .map_or_else(|| PathBuf::from("*"), |id| PathBuf::from(SteamScanner::id3_to_id64(id.parse().unwrap()).to_string()));
+    let steam_user_data = steam_account_id
+        .map_or_else(|| linux_app_data.join("Steam/userdata/[0-9]*"), |id| linux_app_data.join("Steam/userdata").join(id));
+
+    replacements.extend([("{SteamID3}", steam_id_3), ("{SteamID64}", steam_id_64), ("{SteamUserData}", steam_user_data)]);
+
     if let Some(wine_prefix) = prefix {
         let username = if path_contains_subpath(wine_prefix, "steamapps/compatdata") {
             OsString::from("steamuser")
@@ -129,22 +137,13 @@ pub fn expand_path(path: &Path, installation_dir: Option<&Path>, prefix: Option<
         let windows_app_data = user.join("AppData");
         let documents = user.join("Documents");
 
-        let steam_id_3 = steam_account_id.map_or_else(|| PathBuf::from("*"), PathBuf::from);
-        let steam_id_64 = steam_account_id
-            .map_or_else(|| PathBuf::from("*"), |id| PathBuf::from(SteamScanner::id3_to_id64(id.parse().unwrap()).to_string()));
-        let steam_user_data = steam_account_id
-            .map_or_else(|| linux_app_data.join("Steam/userdata/[0-9]*"), |id| linux_app_data.join("Steam/userdata").join(id));
-
         replacements.extend([
             ("{AppData}", windows_app_data.join("Roaming")),
             ("{Documents}", documents),
             ("{Home}", user),
             ("{LocalAppData}", windows_app_data.join("Local")),
             ("{LocalLow}", windows_app_data.join("LocalLow")),
-            ("{GOGAppData}", windows_app_data.join("Local").join("GOG.com/Galaxy/Applications")),
-            ("{SteamID3}", steam_id_3),
-            ("{SteamID64}", steam_id_64),
-            ("{SteamUserData}", steam_user_data)
+            ("{GOGAppData}", windows_app_data.join("Local").join("GOG.com/Galaxy/Applications"))
         ]);
     } else {
         replacements.push(("{Home}", home()));
@@ -249,6 +248,14 @@ pub fn shrink_path(path: &Path, installation_dir: Option<&Path>, prefix: Option<
 
     let linux_app_data = app_data();
 
+    let steam_id_3 = steam_account_id.map_or_else(|| PathBuf::from("*"), PathBuf::from);
+    let steam_id_64 = steam_account_id
+        .map_or_else(|| PathBuf::from("*"), |id| PathBuf::from(SteamScanner::id3_to_id64(id.parse().unwrap()).to_string()));
+    let steam_user_data = steam_account_id
+        .map_or_else(|| linux_app_data.join("Steam/userdata/[0-9]*"), |id| linux_app_data.join("Steam/userdata").join(id));
+
+    replacements.extend([("{SteamID3}", steam_id_3), ("{SteamID64}", steam_id_64), ("{SteamUserData}", steam_user_data)]);
+
     if let Some(wine_prefix) = prefix {
         let username = if path_contains_subpath(wine_prefix, "steamapps/compatdata") {
             OsString::from("steamuser")
@@ -260,22 +267,13 @@ pub fn shrink_path(path: &Path, installation_dir: Option<&Path>, prefix: Option<
         let user = drive_c.join("users").join(username);
         let windows_app_data = user.join("AppData");
 
-        let steam_id_3 = steam_account_id.map_or_else(|| PathBuf::from("*"), PathBuf::from);
-        let steam_id_64 = steam_account_id
-            .map_or_else(|| PathBuf::from("*"), |id| PathBuf::from(SteamScanner::id3_to_id64(id.parse().unwrap()).to_string()));
-        let steam_user_data = steam_account_id
-            .map_or_else(|| linux_app_data.join("Steam/userdata/[0-9]*"), |id| linux_app_data.join("Steam/userdata").join(id));
-
         replacements.extend([
             ("{LocalLow}", windows_app_data.join("LocalLow")),
             ("{LocalAppData}", windows_app_data.join("Local")),
             ("{AppData}", windows_app_data.join("Roaming")),
             ("{Documents}", user.join("Documents")),
             ("{Home}", user),
-            ("{GOGAppData}", windows_app_data.join("Local").join("GOG.com/Galaxy/Applications")),
-            ("{SteamID3}", steam_id_3),
-            ("{SteamID64}", steam_id_64),
-            ("{SteamUserData}", steam_user_data)
+            ("{GOGAppData}", windows_app_data.join("Local").join("GOG.com/Galaxy/Applications"))
         ]);
     } else {
         replacements.push(("{Home}", home()));
