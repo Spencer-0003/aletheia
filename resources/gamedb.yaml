@@ -1283,6 +1283,12 @@ Minecraft Legends:
       - "{Documents}/Telltale Games/Minecraft Story Mode - Season Two/*"
   store_ids:
     steam: 639170
+Mixtape:
+  files:
+    windows:
+      - "{LocalAppData}/NewMoon/Saved/SaveGames/Steam/{SteamID64}/DefaultSaveGame.sav"
+  store_ids:
+    steam: 2582320
 Mortal Kombat 1:
   files:
     windows:
