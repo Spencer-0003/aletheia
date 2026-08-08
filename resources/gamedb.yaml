@@ -1059,18 +1059,18 @@ Killer Frequency:
       - "{LocalLow}/Team17/KillerFrequency/{SteamID64}/*.sav"
   store_ids:
     steam: 1903620
-"Kinkoi: Golden Loveriche":
-  files:
-    windows:
-      - "{GameRoot}/SaveData/*"
-  store_ids:
-    steam: 1277940
 Kinkoi Golden Time:
   files:
     windows:
       - "{GameRoot}/SaveData/*"
   store_ids:
     steam: 1985260
+"Kinkoi: Golden Loveriche":
+  files:
+    windows:
+      - "{GameRoot}/SaveData/*"
+  store_ids:
+    steam: 1277940
 Kugayama Shiori's Death Diary:
   files:
     windows:
