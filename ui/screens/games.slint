@@ -35,14 +35,32 @@ export component Games {
       horizontal-alignment: center;
     }
 
+    Text {
+      text: @tr("Only games in Aletheia's GameDB can be backed up. Update the GameDB from settings to add new ones.");
+      color: ThemeLogic.colors.text_secondary;
+      font-size: 14px;
+      horizontal-alignment: center;
+      wrap: word-wrap;
+      max-width: 440px;
+    }
+
     HorizontalLayout {
+      spacing: 8px;
       alignment: center;
 
       Button {
-        width: 160px;
+        width: 140px;
         height: 36px;
         text: @tr("Refresh");
         clicked => GameLogic.refresh_games();
+      }
+
+      Button {
+        width: 220px;
+        height: 36px;
+        text: @tr("Contribute to the GameDB");
+        background: ThemeLogic.colors.secondary;
+        clicked => Platform.open-url("https://github.com/Spencer-0003/aletheia/blob/master/CONTRIBUTING.md");
       }
     }
   }
