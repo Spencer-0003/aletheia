@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-07-25 22:24+0000\n"
+"POT-Creation-Date: 2026-08-09 22:41+0000\n"
 "PO-Revision-Date: 2026-06-15 23:24+0000\n"
 "Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/aletheia/ui/ta/>\n"
@@ -232,42 +232,57 @@ msgctxt "Games"
 msgid "No games found"
 msgstr "கேம்கள் எதுவும் இல்லை"
 
-#: ui/screens/games.slint:44
+#: ui/screens/games.slint:39
+msgctxt "Games"
+msgid ""
+"Only games in Aletheia's GameDB can be backed up. Update the GameDB from "
+"settings to add new ones."
+msgstr ""
+
+#: ui/screens/games.slint:54
 msgctxt "Games"
 msgid "Refresh"
 msgstr "புதுப்பிப்பு"
 
 #: ui/screens/games.slint:61
+#, fuzzy
+#| msgctxt "NotificationLogic"
+#| msgid "Failed to update GameDB"
+msgctxt "Games"
+msgid "Contribute to the GameDB"
+msgstr "கேம்டிபியைப் புதுப்பிக்க முடியவில்லை"
+
+#: ui/screens/games.slint:79
 msgctxt "Games"
 msgid "Search games…"
 msgstr "கேம்களைத் தேடு…"
 
-#: ui/screens/games.slint:67
+#: ui/screens/games.slint:85
 msgctxt "Games"
 msgid "Selecting {} / {} games"
 msgstr "{} / {} கேம்களைத் தேர்ந்தெடுக்கிறது"
 
-#: ui/screens/games.slint:80
+#: ui/screens/games.slint:98
 msgctxt "Games"
 msgid "Backup"
 msgstr "காப்புப்பிரதி"
 
-#: ui/screens/games.slint:88
+#: ui/screens/games.slint:106
 msgctxt "Games"
 msgid "Restore"
 msgstr "மீட்டமை"
 
-#: ui/screens/games.slint:97
+#: ui/screens/games.slint:115
 msgctxt "Games"
 msgid "Clear Selection"
 msgstr "தேர்வை அழிக்கவும்"
 
-#: ui/screens/games.slint:97
+#: ui/screens/games.slint:115
 msgctxt "Games"
 msgid "Select All"
 msgstr "அனைத்தையும் தெரிவுசெய்"
 
-#: ui/screens/games.slint:98
+#: ui/screens/games.slint:116
 msgctxt "Games"
 msgid "{} Filtered"
 msgstr "{} வடிகட்டப்பட்டது"
