@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-07-25 22:24+0000\n"
+"POT-Creation-Date: 2026-08-09 22:41+0000\n"
 "PO-Revision-Date: 2026-02-04 11:00+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/aletheia/ui/fr/>\n"
@@ -226,42 +226,57 @@ msgctxt "Games"
 msgid "No games found"
 msgstr "Aucun jeu trouvé"
 
-#: ui/screens/games.slint:44
+#: ui/screens/games.slint:39
+msgctxt "Games"
+msgid ""
+"Only games in Aletheia's GameDB can be backed up. Update the GameDB from "
+"settings to add new ones."
+msgstr ""
+
+#: ui/screens/games.slint:54
 msgctxt "Games"
 msgid "Refresh"
 msgstr "Actualiser"
 
 #: ui/screens/games.slint:61
+#, fuzzy
+#| msgctxt "NotificationLogic"
+#| msgid "Failed to update GameDB"
+msgctxt "Games"
+msgid "Contribute to the GameDB"
+msgstr "Échec de la mise à jour de GameDB"
+
+#: ui/screens/games.slint:79
 msgctxt "Games"
 msgid "Search games…"
 msgstr "Rechercher des jeux…"
 
-#: ui/screens/games.slint:67
+#: ui/screens/games.slint:85
 msgctxt "Games"
 msgid "Selecting {} / {} games"
 msgstr "Sélection de {} / {} jeux"
 
-#: ui/screens/games.slint:80
+#: ui/screens/games.slint:98
 msgctxt "Games"
 msgid "Backup"
 msgstr "Sauvegarde"
 
-#: ui/screens/games.slint:88
+#: ui/screens/games.slint:106
 msgctxt "Games"
 msgid "Restore"
 msgstr "Restaurer"
 
-#: ui/screens/games.slint:97
+#: ui/screens/games.slint:115
 msgctxt "Games"
 msgid "Clear Selection"
 msgstr "Effacer la sélection"
 
-#: ui/screens/games.slint:97
+#: ui/screens/games.slint:115
 msgctxt "Games"
 msgid "Select All"
 msgstr "Tour sélectionner"
 
-#: ui/screens/games.slint:98
+#: ui/screens/games.slint:116
 msgctxt "Games"
 msgid "{} Filtered"
 msgstr "{} filtré"
