@@ -15,6 +15,11 @@ SPDX-License-Identifier: CC0-1.0
     <name>Spencer</name>
   </developer>
 
+  <branding>
+    <color type="primary" scheme_preference="light">#7678ed</color>
+    <color type="primary" scheme_preference="dark">#5658c4</color>
+  </branding>
+
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>AGPL-3.0-only</project_license>
 
