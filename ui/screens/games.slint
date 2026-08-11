@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
+import { ListView } from "std-widgets.slint";
 import { Button } from "../components/button.slint";
 import { GameCard } from "../components/game_card.slint";
 import { SearchBar } from "../components/search_bar.slint";
@@ -68,7 +69,6 @@ export component Games {
   if (GameLogic.games.length > 0): VerticalLayout {
     spacing: 8px;
     padding: 16px;
-    alignment: start;
 
     HorizontalLayout {
       alignment: center;
@@ -120,17 +120,21 @@ export component Games {
       }
     }
 
-    Flickable {
-      VerticalLayout {
-        width: 50%;
-        spacing: 8px;
+    ListView {
+      vertical-scrollbar-policy: always-off;
 
-        accessible-role: list;
-        accessible-orientation: vertical;
-        accessible-item-count: GamesScreenLogic.filtered_games.length;
+      accessible-role: list;
+      accessible-orientation: vertical;
+      accessible-item-count: GamesScreenLogic.filtered_games.length;
 
-        for game in GamesScreenLogic.filtered_games: GameCard {
+      for game in GamesScreenLogic.filtered_games: HorizontalLayout {
+        alignment: center;
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+        GameCard {
           game: game;
+          width: 50%;
           clicked => {
             game.selected = !game.selected;
             GamesScreenLogic.select_game(game);
