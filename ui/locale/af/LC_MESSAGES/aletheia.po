@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-08-09 22:41+0000\n"
+"POT-Creation-Date: 2026-08-11 19:58+0000\n"
 "PO-Revision-Date: 2025-10-24 15:38+0000\n"
 "Last-Translator: Feike Donia <feikedonia@proton.me>\n"
 "Language-Team: Afrikaans <https://hosted.weblate.org/projects/aletheia/ui/af/"
@@ -214,24 +214,24 @@ msgctxt "Settings"
 msgid "Save"
 msgstr ""
 
-#: ui/screens/games.slint:31
+#: ui/screens/games.slint:32
 msgctxt "Games"
 msgid "No games found"
 msgstr ""
 
-#: ui/screens/games.slint:39
+#: ui/screens/games.slint:40
 msgctxt "Games"
 msgid ""
 "Only games in Aletheia's GameDB can be backed up. Update the GameDB from "
 "settings to add new ones."
 msgstr ""
 
-#: ui/screens/games.slint:54
+#: ui/screens/games.slint:55
 msgctxt "Games"
 msgid "Refresh"
 msgstr ""
 
-#: ui/screens/games.slint:61
+#: ui/screens/games.slint:62
 msgctxt "Games"
 msgid "Contribute to the GameDB"
 msgstr ""
@@ -268,7 +268,12 @@ msgstr ""
 
 #: ui/screens/games.slint:116
 msgctxt "Games"
-msgid "{} Filtered"
+msgid "Clear Filtered"
+msgstr ""
+
+#: ui/screens/games.slint:116
+msgctxt "Games"
+msgid "Select Filtered"
 msgstr ""
 
 #: ui/screens/about.slint:36
