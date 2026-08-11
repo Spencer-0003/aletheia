@@ -1703,6 +1703,12 @@ Shenmue I & II:
       - "{GameRoot}/saves/*"
   store_ids:
     gog: 1141086411
+Sister Sophie's Creed to Breed:
+  files:
+    windows:
+      - "{GameRoot}/game/saves/*"
+  store_ids:
+    steam: 3817570
 Sker Ritual:
   files:
     windows:
