@@ -276,6 +276,8 @@ SPDX-License-Identifier: CC0-1.0
   </requires>
 
   <url type="homepage">https://aletheia.spencer.moe</url>
+  <url type="help">https://aletheia.spencer.moe/docs</url>
+  <url type="faq">https://aletheia.spencer.moe/docs/faq</url>
   <url type="bugtracker">https://github.com/Spencer-0003/aletheia/issues</url>
   <url type="vcs-browser">https://github.com/Spencer-0003/aletheia</url>
   <url type="translate">https://hosted.weblate.org/projects/aletheia</url>
