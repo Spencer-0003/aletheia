@@ -113,7 +113,7 @@ export component Games {
         height: 36px;
         text: search_bar.text.is-empty
               ? GamesScreenLogic.all_filtered_selected ? @tr("Clear Selection") : @tr("Select All")
-              : @tr("{} Filtered", GamesScreenLogic.all_filtered_selected ? "Clear" : "Select");
+              : GamesScreenLogic.all_filtered_selected ? @tr("Clear Filtered") : @tr("Select Filtered");
         background: ThemeLogic.colors.secondary;
         enabled: GamesScreenLogic.filtered_games.length > 0;
         clicked => GamesScreenLogic.select_all(!GamesScreenLogic.all_filtered_selected);
