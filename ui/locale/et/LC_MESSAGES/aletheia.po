@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2026-08-09 22:41+0000\n"
-"PO-Revision-Date: 2026-08-09 22:42+0000\n"
+"PO-Revision-Date: 2026-08-11 05:51+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Estonian <https://hosted.weblate.org/projects/aletheia/ui/et/"
-">\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/aletheia/ui/et/>"
+"\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -200,6 +200,8 @@ msgid ""
 "Only games in Aletheia's GameDB can be backed up. Update the GameDB from "
 "settings to add new ones."
 msgstr ""
+"Varundada saad vaid mänge, mis leiduvad Aletheia GameDB-s. Uute mängude "
+"lisamiseks peab GameDB-d täiendama."
 
 #: ui/screens/games.slint:54
 msgctxt "Games"
@@ -207,12 +209,9 @@ msgid "Refresh"
 msgstr "Värskenda andmeid"
 
 #: ui/screens/games.slint:61
-#, fuzzy
-#| msgctxt "NotificationLogic"
-#| msgid "Failed to update GameDB"
 msgctxt "Games"
 msgid "Contribute to the GameDB"
-msgstr "GameDB uuendamine ei õnnestunud"
+msgstr "Tee kastööd GameDB täiendamisel"
 
 #: ui/screens/games.slint:79
 msgctxt "Games"
