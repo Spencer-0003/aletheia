@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-08-09 22:41+0000\n"
+"POT-Creation-Date: 2026-08-11 19:58+0000\n"
 "PO-Revision-Date: 2026-08-11 05:51+0000\n"
 "Last-Translator: Dan <jonweblin2205@protonmail.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/aletheia/ui/"
-"uk/>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/aletheia/ui/uk/"
+">\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -192,12 +192,12 @@ msgctxt "Settings"
 msgid "Save"
 msgstr "Зберегти"
 
-#: ui/screens/games.slint:31
+#: ui/screens/games.slint:32
 msgctxt "Games"
 msgid "No games found"
 msgstr "Ігор не знайдено"
 
-#: ui/screens/games.slint:39
+#: ui/screens/games.slint:40
 msgctxt "Games"
 msgid ""
 "Only games in Aletheia's GameDB can be backed up. Update the GameDB from "
@@ -206,12 +206,12 @@ msgstr ""
 "Можна створювати резервні копії лише тих ігор, які є в GameDB Aletheia. "
 "Оновіть GameDB у налаштуваннях, щоб додати нові."
 
-#: ui/screens/games.slint:54
+#: ui/screens/games.slint:55
 msgctxt "Games"
 msgid "Refresh"
 msgstr "Оновити"
 
-#: ui/screens/games.slint:61
+#: ui/screens/games.slint:62
 msgctxt "Games"
 msgid "Contribute to the GameDB"
 msgstr "Зробити внесок у GameDB"
@@ -247,9 +247,20 @@ msgid "Select All"
 msgstr "Вибрати все"
 
 #: ui/screens/games.slint:116
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "{} Filtered"
 msgctxt "Games"
-msgid "{} Filtered"
+msgid "Clear Filtered"
 msgstr "{} відфільтровано"
+
+#: ui/screens/games.slint:116
+#, fuzzy
+#| msgctxt "Dropdown"
+#| msgid "Selected"
+msgctxt "Games"
+msgid "Select Filtered"
+msgstr "Вибрано"
 
 #: ui/screens/about.slint:36
 msgctxt "About"

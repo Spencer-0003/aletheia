@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-08-09 22:41+0000\n"
+"POT-Creation-Date: 2026-08-11 19:58+0000\n"
 "PO-Revision-Date: 2026-06-15 23:24+0000\n"
 "Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/aletheia/ui/ta/>\n"
@@ -227,24 +227,24 @@ msgctxt "Settings"
 msgid "Save"
 msgstr "சேமி"
 
-#: ui/screens/games.slint:31
+#: ui/screens/games.slint:32
 msgctxt "Games"
 msgid "No games found"
 msgstr "கேம்கள் எதுவும் இல்லை"
 
-#: ui/screens/games.slint:39
+#: ui/screens/games.slint:40
 msgctxt "Games"
 msgid ""
 "Only games in Aletheia's GameDB can be backed up. Update the GameDB from "
 "settings to add new ones."
 msgstr ""
 
-#: ui/screens/games.slint:54
+#: ui/screens/games.slint:55
 msgctxt "Games"
 msgid "Refresh"
 msgstr "புதுப்பிப்பு"
 
-#: ui/screens/games.slint:61
+#: ui/screens/games.slint:62
 #, fuzzy
 #| msgctxt "NotificationLogic"
 #| msgid "Failed to update GameDB"
@@ -283,9 +283,20 @@ msgid "Select All"
 msgstr "அனைத்தையும் தெரிவுசெய்"
 
 #: ui/screens/games.slint:116
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "{} Filtered"
 msgctxt "Games"
-msgid "{} Filtered"
+msgid "Clear Filtered"
 msgstr "{} வடிகட்டப்பட்டது"
+
+#: ui/screens/games.slint:116
+#, fuzzy
+#| msgctxt "Dropdown"
+#| msgid "Selected"
+msgctxt "Games"
+msgid "Select Filtered"
+msgstr "தேர்ந்தெடுக்கப்பட்டது"
 
 #: ui/screens/about.slint:36
 msgctxt "About"
