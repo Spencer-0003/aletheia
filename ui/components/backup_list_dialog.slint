@@ -26,23 +26,9 @@ export component BackupListDialog inherits Rectangle {
       padding: 24px;
       spacing: 16px;
 
-      HorizontalLayout {
-        alignment: start;
-        spacing: 6px;
-
-        Text {
-          text: @tr("Restore");
-          color: ThemeLogic.colors.text_primary;
-          font-size: 18px;
-          font-weight: 600;
-        }
-
-        Text {
-          text: BackupListLogic.game_name;
-          color: ThemeLogic.colors.text_secondary;
-          font-size: 18px;
-          font-weight: 600;
-        }
+      StyledText {
+        text: @markdown("**<font color='\{ThemeLogic.colors.text_primary}'>\{@tr("Restore")}</font> <font color='\{ThemeLogic.colors.text_secondary}'>\{BackupListLogic.game_name}</font>**");
+        default-font-size: 18px;
       }
 
       Rectangle {
