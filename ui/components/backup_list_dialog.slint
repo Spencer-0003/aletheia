@@ -1,15 +1,16 @@
 // SPDX-FileCopyrightText: 2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
+import { ListView } from "std-widgets.slint";
 import { Button } from "./button.slint";
 import { BackupListLogic } from "../logic/backup_list.slint";
-import { Scrollable } from "./scrollable.slint";
 import { ThemeLogic } from "../logic/theme.slint";
 
 export component BackupListDialog inherits Rectangle {
   background: rgba(0, 0, 0, 0.5);
 
   TouchArea {
+    scroll-event => { accept } // Prevent scroll events being passed to the game screen
     clicked => BackupListLogic.cancel();
   }
 
@@ -25,59 +26,61 @@ export component BackupListDialog inherits Rectangle {
       padding: 24px;
       spacing: 16px;
 
-      Text {
-        text: @tr("Restore backup");
-        color: ThemeLogic.colors.text_primary;
-        font-size: 20px;
-        font-weight: 700;
+      StyledText {
+        text: @markdown("**<font color='\{ThemeLogic.colors.text_primary}'>\{@tr("Restore")}</font> <font color='\{ThemeLogic.colors.text_secondary}'>\{BackupListLogic.game_name}</font>**");
+        default-font-size: 18px;
       }
 
-      Text {
-        text: BackupListLogic.game_name;
-        color: ThemeLogic.colors.text_secondary;
-        font-size: 14px;
-        font-weight: 400;
-      }
+      Rectangle {
+        border-color: ThemeLogic.colors.border_hover;
+        border-width: 1px;
+        border-radius: 6px;
+        clip: true;
 
-      Scrollable {
-        VerticalLayout {
-          for backup in BackupListLogic.backups: Rectangle {
-            background: (entry_touch.has-hover || restore_btn.hovered) ? ThemeLogic.colors.surface_hover : transparent;
-            border-radius: 6px;
+        ListView {
+          vertical-scrollbar-policy: always-off;
 
-            entry_touch := TouchArea {}
+          accessible-role: list;
+          accessible-orientation: vertical;
+          accessible-item-count: BackupListLogic.backups.length;
 
-            test := HorizontalLayout {
-              padding: 10px;
+          for backup in BackupListLogic.backups: VerticalLayout {
+            Rectangle {
+              background: (entry_touch.has-hover || restore_btn.hovered) ? ThemeLogic.colors.surface_hover : transparent;
 
-              VerticalLayout {
-                alignment: center;
+              entry_touch := TouchArea {}
 
-                Text {
-                  text: backup.timestamp;
-                  color: ThemeLogic.colors.text_primary;
-                  font-size: 14px;
-                  font-weight: 400;
+              HorizontalLayout {
+                padding: 10px;
+
+                VerticalLayout {
+                  alignment: center;
+
+                  Text {
+                    text: backup.timestamp;
+                    color: ThemeLogic.colors.text_primary;
+                    font-size: 14px;
+                    font-weight: 400;
+                  }
+
+                  Text {
+                    text: backup.size;
+                    color: ThemeLogic.colors.text_muted;
+                    font-size: 12px;
+                  }
                 }
 
-                Text {
-                  text: backup.size;
-                  color: ThemeLogic.colors.text_muted;
-                  font-size: 12px;
-                  font-weight: 400;
+                restore_btn := Button {
+                  text: @tr("Restore");
+                  background: ThemeLogic.colors.secondary;
+                  width: 90px;
+                  height: 32px;
+                  clicked => BackupListLogic.restore(backup.path);
                 }
-              }
-
-              Rectangle { horizontal-stretch: 1; }
-
-              restore_btn := Button {
-                text: @tr("Restore");
-                background: ThemeLogic.colors.secondary;
-                width: 90px;
-                height: 32px;
-                clicked => BackupListLogic.restore(backup.path);
               }
             }
+
+            Rectangle { height: 1px; background: ThemeLogic.colors.border_hover; }
           }
         }
       }
