@@ -22,19 +22,14 @@ export component GameCard inherits Rectangle {
     Rectangle {
       width: 24px;
       height: 24px;
-
-      icon_container := Rectangle {
-        background: ThemeLogic.colors.surface_variant;
-        border-color: ThemeLogic.colors.surface_border;
-        border-radius: 2px;
-        border-width: 1px;
-      }
+      background: ThemeLogic.colors.surface_variant;
+      border-color: ThemeLogic.colors.surface_border;
+      border-radius: 2px;
+      border-width: 1px;
 
       Image {
-        x: 0;
         source: @image-url("../assets/check.svg");
         opacity: root.game.selected ? 100% : 10%;
-
         animate opacity { duration: 150ms; easing: ease-out; }
       }
     }

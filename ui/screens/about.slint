@@ -20,16 +20,11 @@ export component About {
       HorizontalLayout {
         spacing: 12px;
 
-        Rectangle {
+        Image {
           width: 24px;
           height: 24px;
-
-          Image {
-            width: 100%;
-            height: 100%;
-            source: @image-url("../assets/info.svg");
-            colorize: ThemeLogic.colors.text_secondary;
-          }
+          source: @image-url("../assets/info.svg");
+          colorize: ThemeLogic.colors.text_secondary;
         }
 
         Text {

@@ -24,27 +24,22 @@ export component CheckBox {
     spacing: 8px;
     alignment: center;
 
-    Rectangle {
+    checkbox_rect := Rectangle {
       width: 18px;
       height: 18px;
+      background: root.enabled ? ThemeLogic.colors.primary : ThemeLogic.colors.surface;
+      border-radius: 3px;
+      border-width: 1px;
+      border-color: root.enabled ? ThemeLogic.colors.primary : ThemeLogic.colors.border;
 
-      checkbox_rect := Rectangle {
-        width: 100%;
-        height: 100%;
-        background: root.enabled ? ThemeLogic.colors.primary : ThemeLogic.colors.surface;
-        border-radius: 3px;
-        border-width: 1px;
-        border-color: root.enabled ? ThemeLogic.colors.primary : ThemeLogic.colors.border;
+      animate background { duration: 150ms; easing: ease-out; }
+      animate border-color { duration: 150ms; easing: ease-out; }
 
-        animate background { duration: 150ms; easing: ease-out; }
-        animate border-color { duration: 150ms; easing: ease-out; }
-
-        if root.enabled: Image {
-          width: 14px;
-          height: 14px;
-          source: @image-url("../assets/checkmark.svg");
-          colorize: ThemeLogic.colors.text_primary;
-        }
+      if root.enabled: Image {
+        width: 14px;
+        height: 14px;
+        source: @image-url("../assets/checkmark.svg");
+        colorize: ThemeLogic.colors.text_primary;
       }
     }
 
