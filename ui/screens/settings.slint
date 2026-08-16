@@ -30,6 +30,47 @@ export global SettingsScreenLogic {
   callback save_config(Config);
 }
 
+component Section {
+  in property <image> icon;
+  in property <string> title;
+  in property <bool> show_divider: true;
+
+  VerticalLayout {
+    spacing: 16px;
+
+    if root.show_divider: Rectangle {
+      height: 1px;
+      background: ThemeLogic.colors.secondary_hover;
+    }
+
+    HorizontalLayout {
+      spacing: 12px;
+
+      Image {
+        width: 24px;
+        height: 24px;
+        source: root.icon;
+        colorize: ThemeLogic.colors.text_secondary;
+      }
+
+      Text {
+        text: root.title;
+        color: ThemeLogic.colors.text_secondary;
+        font-size: 18px;
+        font-weight: 600;
+        vertical-alignment: center;
+      }
+    }
+
+    VerticalLayout {
+      spacing: 12px;
+      padding-left: 36px;
+
+      @children
+    }
+  }
+}
+
 export component Settings {
   width: 100%;
   height: 100%;
@@ -42,266 +83,120 @@ export component Settings {
         padding-bottom: 12px;
         alignment: start;
 
-        VerticalLayout {
-          spacing: 16px;
+        Section {
+          show_divider: false;
+          icon: @image-url("../assets/folder.svg");
+          title: @tr("Game Data Location");
+
+          Text {
+            text: @tr("Choose where your games will be saved");
+            color: ThemeLogic.colors.text_tertiary;
+            font-size: 14px;
+          }
 
           HorizontalLayout {
-            spacing: 12px;
+            spacing: 8px;
 
-            Rectangle {
-              width: 24px;
-              height: 24px;
-
-              Image {
-                width: 100%;
-                height: 100%;
-                source: @image-url("../assets/folder.svg");
-                colorize: ThemeLogic.colors.text_secondary;
-              }
-            }
-
-            Text {
-              text: @tr("Game Data Location");
-              color: ThemeLogic.colors.text_secondary;
-              font-size: 18px;
-              font-weight: 600;
-              vertical-alignment: center;
-            }
-          }
-
-          VerticalLayout {
-            spacing: 12px;
-            padding-left: 36px;
-
-            Text {
-              text: @tr("Choose where your games will be saved");
-              color: ThemeLogic.colors.text_tertiary;
-              font-size: 14px;
-            }
-
-            HorizontalLayout {
-              spacing: 8px;
-
-              TextLabel {
-                width: 400px;
-                height: 36px;
-                text: SettingsScreenLogic.config.save_dir;
-              }
-
-              Button {
-                width: 100px;
-                height: 36px;
-                text: @tr("Browse");
-                clicked => SettingsScreenLogic.browse();
-              }
-            }
-          }
-        }
-
-        if SettingsScreenLogic.has_steam_accounts: Rectangle { height: 1px; background: ThemeLogic.colors.secondary_hover; }
-
-        if SettingsScreenLogic.has_steam_accounts: VerticalLayout {
-          z: 1; // Dropdown needs to render over other components.
-          spacing: 16px;
-
-          HorizontalLayout {
-            spacing: 12px;
-
-            Rectangle {
-              width: 24px;
-              height: 24px;
-
-              Image {
-                width: 100%;
-                height: 100%;
-                source: @image-url("../assets/switch_account.svg");
-                colorize: ThemeLogic.colors.text_secondary;
-              }
-            }
-
-            Text {
-              text: @tr("Steam Account");
-              color: ThemeLogic.colors.text_secondary;
-              font-size: 18px;
-              font-weight: 600;
-              vertical-alignment: center;
-            }
-          }
-
-          VerticalLayout {
-            spacing: 12px;
-            padding-left: 36px;
-
-            VerticalLayout {
-              spacing: 4px;
-
-              Text {
-                text: @tr("Choose the Steam account for your games");
-                color: ThemeLogic.colors.text_tertiary;
-                font-size: 14px;
-              }
-
-              Text {
-                text: @tr("Only affects games that save in the Steam userdata directory");
-                opacity: 25%;
-                font-size: 10px;
-              }
-            }
-
-            Dropdown {
-              width: 200px;
+            TextLabel {
+              width: 400px;
               height: 36px;
-              placeholder: @tr("Select an account…");
-              options: SettingsScreenLogic.steam_account_options;
-              value <=> SettingsScreenLogic.config.steam_account_id;
-            }
-          }
-        }
-
-        Rectangle { height: 1px; background: ThemeLogic.colors.secondary_hover; }
-
-        VerticalLayout {
-          spacing: 16px;
-
-          HorizontalLayout {
-            spacing: 12px;
-
-            Rectangle {
-              width: 24px;
-              height: 24px;
-
-              Image {
-                width: 100%;
-                height: 100%;
-                source: @image-url("../assets/database.svg");
-                colorize: ThemeLogic.colors.text_secondary;
-              }
-            }
-
-            Text {
-              text: @tr("GameDB");
-              color: ThemeLogic.colors.text_secondary;
-              font-size: 18px;
-              font-weight: 600;
-              vertical-alignment: center;
-            }
-          }
-
-          VerticalLayout {
-            spacing: 12px;
-            padding-left: 36px;
-
-            Text {
-              text: @tr("Download the latest copy of the GameDB");
-              color: ThemeLogic.colors.text_tertiary;
-              font-size: 14px;
+              text: SettingsScreenLogic.config.save_dir;
             }
 
             Button {
-              width: 140px;
+              width: 100px;
               height: 36px;
-              text: @tr("Update GameDB");
-              clicked => SettingsScreenLogic.update_gamedb();
+              text: @tr("Browse");
+              clicked => SettingsScreenLogic.browse();
             }
           }
         }
 
-        Rectangle { height: 1px; background: ThemeLogic.colors.secondary_hover; }
-
-        VerticalLayout {
-          spacing: 16px;
-
-          HorizontalLayout {
-            spacing: 12px;
-
-            Rectangle {
-              width: 24px;
-              height: 24px;
-
-              Image {
-                width: 100%;
-                height: 100%;
-                source: @image-url("../assets/history.svg");
-                colorize: ThemeLogic.colors.text_secondary;
-              }
-            }
-
-            Text {
-              text: @tr("Backup Retention");
-              color: ThemeLogic.colors.text_secondary;
-              font-size: 18px;
-              font-weight: 600;
-              vertical-alignment: center;
-            }
-          }
+        if SettingsScreenLogic.has_steam_accounts: Section {
+          z: 1; // Dropdown needs to render over other components.
+          icon: @image-url("../assets/switch_account.svg");
+          title: @tr("Steam Account");
 
           VerticalLayout {
-            spacing: 12px;
-            padding-left: 36px;
+            spacing: 4px;
 
             Text {
-              text: @tr("How many backups to keep per game");
+              text: @tr("Choose the Steam account for your games");
               color: ThemeLogic.colors.text_tertiary;
               font-size: 14px;
             }
 
-            NumberInput {
-              width: 50px;
-              height: 36px;
-              minimum: 1;
-              maximum: 255;
-              value <=> SettingsScreenLogic.config.max_backups;
+            Text {
+              text: @tr("Only affects games that save in the Steam userdata directory");
+              color: ThemeLogic.colors.text_muted;
+              opacity: 40%;
+              font-size: 10px;
             }
+          }
+
+          Dropdown {
+            width: 200px;
+            height: 36px;
+            placeholder: @tr("Select an account…");
+            options: SettingsScreenLogic.steam_account_options;
+            value <=> SettingsScreenLogic.config.steam_account_id;
           }
         }
 
-        if SettingsScreenLogic.show_update_settings: Rectangle { height: 1px; background: ThemeLogic.colors.secondary_hover; }
+        Section {
+          icon: @image-url("../assets/database.svg");
+          title: @tr("GameDB");
 
-        if SettingsScreenLogic.show_update_settings: VerticalLayout {
-          spacing: 16px;
-
-          HorizontalLayout {
-            spacing: 12px;
-
-            Rectangle {
-              width: 24px;
-              height: 24px;
-
-              Image {
-                width: 100%;
-                height: 100%;
-                source: @image-url("../assets/folder.svg");
-                colorize: ThemeLogic.colors.text_secondary;
-              }
-            }
-
-            Text {
-              text: @tr("Updates");
-              color: ThemeLogic.colors.text_secondary;
-              font-size: 18px;
-              font-weight: 600;
-              vertical-alignment: center;
-            }
+          Text {
+            text: @tr("Download the latest copy of the GameDB");
+            color: ThemeLogic.colors.text_tertiary;
+            font-size: 14px;
           }
 
-          VerticalLayout {
-            spacing: 12px;
-            padding-left: 36px;
+          Button {
+            width: 140px;
+            height: 36px;
+            text: @tr("Update GameDB");
+            clicked => SettingsScreenLogic.update_gamedb();
+          }
+        }
 
-            Text {
-              text: @tr("Configure automatic update checking");
-              color: ThemeLogic.colors.text_tertiary;
-              font-size: 14px;
-            }
+        Section {
+          icon: @image-url("../assets/history.svg");
+          title: @tr("Backup Retention");
 
-            HorizontalLayout {
-              spacing: 8px;
-              alignment: start;
+          Text {
+            text: @tr("How many backups to keep per game");
+            color: ThemeLogic.colors.text_tertiary;
+            font-size: 14px;
+          }
 
-              CheckBox {
-                text: @tr("Check for updates automatically");
-                enabled <=> SettingsScreenLogic.config.check_for_updates;
-              }
+          NumberInput {
+            width: 50px;
+            height: 36px;
+            minimum: 1;
+            maximum: 255;
+            value <=> SettingsScreenLogic.config.max_backups;
+          }
+        }
+
+        if SettingsScreenLogic.show_update_settings: Section {
+          icon: @image-url("../assets/folder.svg");
+          title: @tr("Updates");
+
+          Text {
+            text: @tr("Configure automatic update checking");
+            color: ThemeLogic.colors.text_tertiary;
+            font-size: 14px;
+          }
+
+          HorizontalLayout {
+            spacing: 8px;
+            alignment: start;
+
+            CheckBox {
+              text: @tr("Check for updates automatically");
+              enabled <=> SettingsScreenLogic.config.check_for_updates;
             }
           }
         }
@@ -323,4 +218,3 @@ export component Settings {
     }
   }
 }
-
