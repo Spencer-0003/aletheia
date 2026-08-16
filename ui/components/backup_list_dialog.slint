@@ -10,6 +10,7 @@ export component BackupListDialog inherits Rectangle {
   background: rgba(0, 0, 0, 0.5);
 
   TouchArea {
+    scroll-event => { accept } // Prevent scroll events being passed to the game screen
     clicked => BackupListLogic.cancel();
   }
 
