@@ -104,7 +104,7 @@ export component Games {
         width: 140px;
         height: 36px;
         text: @tr("Restore");
-        enabled: GamesScreenLogic.selected_games.length > 0;
+        enabled: GamesScreenLogic.selected_games.length > 0 && GamesScreenLogic.selected_games[0].backup_size != "0B"; // TODO: Once Slint 1.18 is released, use GamesScreenLogic.selected_games.any(g => g.backup_size != "0B");
         clicked => GamesScreenLogic.perform_operation("restore");
       }
 
