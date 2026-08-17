@@ -50,8 +50,8 @@ export component RestoreDialog inherits Window {
 
     Rectangle {
       background: ok
-                  ? ThemeLogic.colors.restore_dialog_warning_background
-                  : ThemeLogic.colors.restore_dialog_error_background;
+                  ? ThemeLogic.colors.restore_dialog_info_warning
+                  : ThemeLogic.colors.restore_dialog_info_error;
 
       border-radius: 8px;
 
@@ -64,7 +64,7 @@ export component RestoreDialog inherits Window {
 
           Image {
             source: @image-url("assets/info.svg");
-            colorize: ok ? #f5b060 : #ef5350;
+            colorize: ok ? ThemeLogic.colors.restore_dialog_icon_warning : ThemeLogic.colors.restore_dialog_icon_error;
             width: 18px;
             height: 18px;
           }
