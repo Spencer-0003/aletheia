@@ -1084,6 +1084,10 @@ Kugayama Shiori's Death Diary:
   store_ids:
     gog: 1799082941
     steam: 2759280
+Kyokkou no Marriage:
+  files:
+    windows:
+      - "{AppData}/WillPlus/旭光のマリアージュ/*.dat"
 LEGO MARVEL Super Heroes 2:
   files:
     windows:
