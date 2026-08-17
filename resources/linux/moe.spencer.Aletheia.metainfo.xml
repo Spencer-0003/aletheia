@@ -103,7 +103,7 @@ SPDX-License-Identifier: CC0-1.0
         <p>Archive: Prevent panic when saving games with long names.</p>
         <p>GameDB: Add NUKITASHI.</p>
         <p>GameDB: Make Tiny Tina's Wonderlands use SteamID64.</p>
-        <p>GameDB: Add Atelier Ryza: Ever Darkness & the Secret Hideout DX.</p>
+        <p>GameDB: Add Atelier Ryza: Ever Darkness &amp; the Secret Hideout DX.</p>
         <p>Backup: Ignore .DS_Store files on macOS.</p>
         <p>Dirs: Fix steam path placeholders on Linux.</p>
         <p>GameDB: Fix The Escapists.</p>
