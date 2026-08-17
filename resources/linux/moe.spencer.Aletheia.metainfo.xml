@@ -50,6 +50,78 @@ SPDX-License-Identifier: CC0-1.0
   </screenshots>
 
   <releases>
+    <release version="2.1.0" date="TBD">
+      <url type="details">https://github.com/Spencer-0003/aletheia/releases/tag/2.1.0</url>
+      <description>
+        <p>UI: Don't include Inter collection.</p>
+        <p>Games: Fix double reference.</p>
+        <p>GameDB: Add In Falsus Demo.</p>
+        <p>GameDB: Add Mortal Shell II - Open Beta.</p>
+        <p>GameDB: Add Kumitantei: Old-School Slaughter.</p>
+        <p>Scanner: Add itch.io support.</p>
+        <p>GameDB: Add Echoes of Aincrad DEMO Version.</p>
+        <p>Backup: Don't decompress files unnecessarily.</p>
+        <p>UI: Add missing font-size to NavItem.</p>
+        <p>UI: Upgrade to Slint 1.17.</p>
+        <p>Unix: Replace Qt software renderer with FemtoVG hardware renderer.</p>
+        <p>GameDB: Add Soulstice.</p>
+        <p>UI: Add support for translatable dynamic strings.</p>
+        <p>GameDB: Add Kingdom Hearts series.</p>
+        <p>Translations: Improve Estonian.</p>
+        <p>Flatpak: Change runtime and SDK to FreeDesktop.</p>
+        <p>GameDB: Fix Yakuza 6.</p>
+        <p>GameDB: Add Yakuza Kiwami 1 and 2 (legacy).</p>
+        <p>UI: Migrate to Platform.open-url.</p>
+        <p>GameDB: Add Neon White.</p>
+        <p>GameDB: Add Kugayama Shiori's Death Diary.</p>
+        <p>GameDB: Add SaDistic BlooD.</p>
+        <p>Translations: Improve Ukrainian.</p>
+        <p>UI: Remove Qt background workaround.</p>
+        <p>UI: Improve nav bar accessibility.</p>
+        <p>UI: Improve game list accessibility.</p>
+        <p>UI: Improve search bar accessibility.</p>
+        <p>UI: Implement notification accessibility.</p>
+        <p>Backup: Fix crash if a selected game is uninstalled.</p>
+        <p>Backup: Add support for multiple backups per game.</p>
+        <p>Migration: Removed support.</p>
+        <p>GameDB: Add Dead as Disco.</p>
+        <p>Flatpak: Add GPU permission.</p>
+        <p>Logo: Redraw SVG.</p>
+        <p>Translations: Improve Russian.</p>
+        <p>GameDB: Add DEAD OR ALIVE 6 Last Round.</p>
+        <p>GameDB: Fix DATE A LIVE: Rio Reincarnation.</p>
+        <p>UI: Overhaul first time setup design.</p>
+        <p>UI: Add a warning to the restore dialog.</p>
+        <p>UI: Fix updater colour inconsistencies.</p>
+        <p>GameDB: Add Judgment.</p>
+        <p>Archive: Fix panic with malicious index and data sizes.</p>
+        <p>Heroic: Fix Flatpak detection.</p>
+        <p>Archive: Fix repeated decompression.</p>
+        <p>GameDB: Fix crash if a custom manifest returned a malformed response.</p>
+        <p>GameDB: Add Death end re;Quest: Code Z.</p>
+        <p>Restore: Validate file paths against GameDB entries.</p>
+        <p>Archive: Prevent panic when saving games with long names.</p>
+        <p>GameDB: Add NUKITASHI.</p>
+        <p>GameDB: Make Tiny Tina's Wonderlands use SteamID64.</p>
+        <p>GameDB: Add Atelier Ryza: Ever Darkness & the Secret Hideout DX.</p>
+        <p>Backup: Ignore .DS_Store files on macOS.</p>
+        <p>Dirs: Fix steam path placeholders on Linux.</p>
+        <p>GameDB: Fix The Escapists.</p>
+        <p>GameDB: Fix A Way Out.</p>
+        <p>GameDB: Add Mixtape.</p>
+        <p>Games: Improve UX of no games warning.</p>
+        <p>MetaInfo: Add documentation URLs.</p>
+        <p>MetaInfo: Add brand colours.</p>
+        <p>UI: Virtualise game list.</p>
+        <p>UI: Make filtered-game text translatable.</p>
+        <p>Games: Disable restore button if there's no saves to restore.</p>
+        <p>UI: Clean up code.</p>
+        <p>UI: Make game source theme's muted text.</p>
+        <p>UI: Add update icon.</p>
+        <p>UI: Make restore dialog respect ThemeLogic.</p>
+        <p>GameDB: Add Kyokkou no Marriage.</p>
+      </description>
+    </release>
     <release version="2.0.1" date="2026-05-16">
       <url type="details">https://github.com/Spencer-0003/aletheia/releases/tag/2.0.1</url>
       <description>
