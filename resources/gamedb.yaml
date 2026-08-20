@@ -1450,6 +1450,12 @@ PAYDAY 2:
       - "{LocalAppData}/PAYDAY 2/saves/{SteamID64}/*"
   store_ids:
     steam: 218620
+PRAGMATA:
+  files:
+    windows:
+      - "{SteamUserData}/3357650/remote/win64_save/*"
+  store_ids:
+    steam: 3357650
 Palworld:
   files:
     windows:
