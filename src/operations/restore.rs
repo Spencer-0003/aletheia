@@ -89,6 +89,7 @@ mod tests {
 
     fn requiem() -> GameDbEntry {
         GameDbEntry {
+            aliases: None,
             files: GameFiles {
                 windows: Some(vec!["{SteamUserData}/3764200/remote/win64_save/*".to_owned()]),
                 #[cfg(all(unix, not(target_os = "macos")))]
@@ -102,6 +103,7 @@ mod tests {
 
     fn mobw() -> GameDbEntry {
         GameDbEntry {
+            aliases: None,
             files: GameFiles {
                 windows: Some(vec!["{Documents}/KoeiTecmo/FATAL FRAME MOBW/SAVEDATA/*".to_owned()]),
                 #[cfg(all(unix, not(target_os = "macos")))]

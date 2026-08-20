@@ -34,6 +34,7 @@ pub type Result<T> = core::result::Result<T, Error>;
 
 #[derive(Clone, Deserialize, Serialize)]
 pub struct GameDbEntry {
+    pub aliases: Option<Vec<String>>,
     pub files: GameFiles,
     pub store_ids: Option<GameStoreIds>
 }
@@ -95,6 +96,7 @@ pub fn get_installed_games_with_db() -> (HashMap<String, GameDbEntry>, Vec<Game>
 fn scan_installed_games(db: &HashMap<String, GameDbEntry>) -> Vec<Game> {
     let mut steam_index: HashMap<u32, &String> = HashMap::new();
     let mut gog_index: HashMap<i64, &String> = HashMap::new();
+    let mut alias_index: HashMap<&str, &String> = HashMap::new();
 
     for (name, entry) in db {
         if let Some(ids) = &entry.store_ids {
@@ -104,6 +106,12 @@ fn scan_installed_games(db: &HashMap<String, GameDbEntry>) -> Vec<Game> {
 
             if let Some(id) = ids.gog {
                 gog_index.insert(id, name);
+            }
+        }
+
+        if let Some(aliases) = &entry.aliases {
+            for alias in aliases {
+                alias_index.insert(alias.as_str(), name);
             }
         }
     }
@@ -147,8 +155,18 @@ fn scan_installed_games(db: &HashMap<String, GameDbEntry>) -> Vec<Game> {
             }
 
             let clean_name = game.name.replace(['™', '®'], "").trim().to_owned();
-            db.contains_key(&clean_name).then(|| {
+            if db.contains_key(&clean_name) {
                 game.name = clean_name;
+                return Some(game);
+            }
+
+            if let Some(name) = alias_index.get(game.name.as_str()) {
+                game.name.clone_from(*name);
+                return Some(game);
+            }
+
+            alias_index.get(clean_name.as_str()).map(|name| {
+                game.name.clone_from(*name);
                 game
             })
         })
