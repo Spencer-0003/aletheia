@@ -1416,6 +1416,12 @@ Nightmare Kart:
   files:
     windows:
       - "{LocalAppData}/NMKART/Saved/SaveGames/*"
+OCTOPATH TRAVELER II:
+  files:
+    windows:
+      - "{Documents}/My Games/Octopath_Traveler2/Steam/{SteamID64}/SaveGames/*"
+  store_ids:
+    steam: 1971650
 Obscure:
   files:
     windows:
