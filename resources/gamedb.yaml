@@ -78,6 +78,12 @@ Alone in the Dark:
       - "{LocalAppData}/AloneInTheDark/Saved/SaveGames/save_*.sav"
   store_ids:
     steam: 1310410
+Apollo4x:
+  files:
+    windows:
+      - "{LocalLow}/Digi_Ent/Apollo4x/*.dat"
+  store_ids:
+    steam: 365420
 "Atelier Firis: The Alchemist and the Mysterious Journey DX":
   files:
     windows:
@@ -927,6 +933,24 @@ Helping the Hotties:
   store_ids:
     gog: 1237982317
     steam: 1590730
+Hentai Bad Girls:
+  files:
+    windows:
+      - "{LocalLow}/IR Studio/Hentai Bad Girls/GameSetting.data"
+  store_ids:
+    steam: 1111030
+Hentai Furry:
+  files:
+    windows:
+      - "{LocalLow}/IR Studio/Hentai Furry/GameSetting.data"
+  store_ids:
+    steam: 1260390
+Hentai Furry 2:
+  files:
+    windows:
+      - "{LocalLow}/IR Studio/Hentai Furry 2/GameSetting.data"
+  store_ids:
+    steam: 1446850
 Hi-Fi RUSH:
   files:
     windows:
@@ -994,6 +1018,12 @@ I Walk Among Zombies Vol. 1:
       - "{AppData}/seacoxx/zombie/*"
   store_ids:
     steam: 942850
+INDIKA:
+  files:
+    windows:
+      - "{LocalAppData}/INDIKA/Saved/SaveGames/*"
+  store_ids:
+    steam: 1373960
 IW7-Mod:
   files:
     windows:
@@ -1130,6 +1160,12 @@ Life is Strange 2:
       - "{LocalAppData}/Dontnod/{SteamID64}/LIS2/Saved/SaveGames/*"
   store_ids:
     steam: 532210
+"Life is Strange: Double Exposure":
+  files:
+    windows:
+      - "{Documents}/LifeIsStrangeDoubleExposure/Steam/Saved/*"
+  store_ids:
+    steam: 1874000
 "Like a Dragon Gaiden: The Man Who Erased His Name":
   files:
     windows:
@@ -1176,6 +1212,12 @@ Lust Theory - Season 1:
   store_ids:
     gog: 1582333296
     steam: 1607130
+MONSTER HUNTER RISE:
+  files:
+    windows:
+      - "{SteamUserData}/1446780/remote/*"
+  store_ids:
+    steam: 1446780
 "MURDERED: SOUL SUSPECT":
   files:
     windows:
@@ -1296,6 +1338,12 @@ Mixtape:
       - "{LocalAppData}/NewMoon/Saved/SaveGames/Steam/{SteamID64}/DefaultSaveGame.sav"
   store_ids:
     steam: 2582320
+"Monster Hunter: World":
+  files:
+    windows:
+      - "{SteamUserData}/582010/remote/*"
+  store_ids:
+    steam: 582010
 Mortal Kombat 1:
   files:
     windows:
