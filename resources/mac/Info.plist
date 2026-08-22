@@ -31,12 +31,17 @@ SPDX-License-Identifier: CC0-1.0
   <true/>
   <key>CFBundleLocalizations</key>
   <array>
+    <string>af</string>
+    <string>ca</string>
     <string>en</string>
     <string>de</string>
     <string>es</string>
+    <string>et</string>
     <string>fr</string>
     <string>ja</string>
+    <string>ro</string>
     <string>ru</string>
+    <string>ta</string>
     <string>uk</string>
     <string>zh-Hans</string>
   </array>
