@@ -41,7 +41,7 @@ rusqlite = "0.40.1"
 slint = { version = "1.17.1", default-features = false, features = ["accessibility", "backend-winit", "renderer-femtovg-wgpu", "compat-1-2", "std"] }
 
 [target.'cfg(windows)'.dependencies]
-quick-xml = { version = "0.41.0", features = ["serialize"] }
+quick-xml = { version = "0.42.0", features = ["serialize"] }
 rusqlite = { version = "0.40.1", features = ["bundled"] }
 slint = { version = "1.17.1", default-features = false, features = ["accessibility", "backend-winit", "renderer-skia-opengl", "compat-1-2", "std"] }
 
