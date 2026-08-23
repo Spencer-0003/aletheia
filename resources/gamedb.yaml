@@ -250,6 +250,20 @@ Call of Cthulhu:
   store_ids:
     gog: 1522289470
     steam: 399810
+"Call of Duty: Black Ops":
+  files:
+    windows:
+      - "{GameRoot}/players/save/*"
+  store_ids:
+    steam: 42700
+"Call of Duty: Black Ops II":
+  files:
+    windows:
+      - "{GameRoot}/players/hardware.chp"
+      - "{GameRoot}/players/savegame.*"
+      - "{GameRoot}/players/user_*.cgp"
+  store_ids:
+    steam: 202970
 "Call of Duty: Ghosts":
   files:
     windows:
