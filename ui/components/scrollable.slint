@@ -4,12 +4,10 @@
 import { ThemeLogic } from "../logic/theme.slint";
 
 export component Scrollable inherits Rectangle {
-  in property <bool> enabled: true;
   in-out property <length> viewport_y <=> flickable.viewport-y;
   private property <bool> has_vertical_overflow: flickable.viewport-height > flickable.height;
 
   flickable := Flickable {
-    interactive: root.enabled;
     @children
   }
 
@@ -35,7 +33,6 @@ export component Scrollable inherits Rectangle {
       width: parent.width - (2 * self.thumb_inset);
       height: self.thumb_height;
       background: touch_area.has-hover ? ThemeLogic.colors.primary_hover : ThemeLogic.colors.secondary_hover;
-      opacity: root.enabled ? 100% : 50%;
       border-radius: self.width / 2;
 
       animate background { duration: 150ms; }
@@ -43,7 +40,6 @@ export component Scrollable inherits Rectangle {
       touch_area := TouchArea {
         private property <length> press_start_y;
         private property <length> press_start_viewport_y;
-        enabled: root.enabled;
         moved => {
           if (self.pressed) {
             flickable.viewport-y = max(
