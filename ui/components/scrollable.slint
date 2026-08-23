@@ -9,8 +9,6 @@ export component Scrollable inherits Rectangle {
   private property <bool> has_vertical_overflow: flickable.viewport-height > flickable.height;
 
   flickable := Flickable {
-    width: 100%;
-    height: 100%;
     interactive: root.enabled;
     @children
   }
@@ -45,8 +43,6 @@ export component Scrollable inherits Rectangle {
       touch_area := TouchArea {
         private property <length> press_start_y;
         private property <length> press_start_viewport_y;
-        width: 100%;
-        height: 100%;
         enabled: root.enabled;
         moved => {
           if (self.pressed) {
