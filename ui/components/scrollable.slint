@@ -37,6 +37,7 @@ export component Scrollable inherits Rectangle {
       width: parent.width - (2 * self.thumb_inset);
       height: self.thumb_height;
       background: touch_area.has-hover ? ThemeLogic.colors.primary_hover : ThemeLogic.colors.secondary_hover;
+      opacity: root.enabled ? 100% : 50%;
       border-radius: self.width / 2;
 
       animate background { duration: 150ms; }
