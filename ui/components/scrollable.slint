@@ -14,23 +14,24 @@ export component Scrollable inherits Rectangle {
   if root.has_vertical_overflow: Rectangle {
     private property <length> scrollbar_width: 12px;
     private property <length> scrollbar_margin: 4px;
+
     y: self.scrollbar_margin;
     x: parent.width - self.scrollbar_width - self.scrollbar_margin;
     width: self.scrollbar_width;
-    height: parent.height - (2 * self.scrollbar_margin);
+    height: parent.height - (self.scrollbar_margin * 2);
     background: ThemeLogic.colors.surface;
     border-radius: self.scrollbar_width / 2;
 
     thumb := Rectangle {
       private property <length> thumb_inset: 2px;
-      private property <length> track_height: parent.height - (2 * self.thumb_inset);
+      private property <length> track_height: parent.height - (self.thumb_inset * 2);
       private property <length> thumb_height: min(self.track_height, max(20px, (flickable.height / flickable.viewport-height) * self.track_height));
       private property <float> scroll_ratio: -flickable.viewport-y / (flickable.viewport-height - flickable.height);
       private property <length> thumb_y: self.thumb_inset + self.scroll_ratio * (self.track_height - self.thumb_height);
 
       x: self.thumb_inset;
       y: self.thumb_y;
-      width: parent.width - (2 * self.thumb_inset);
+      width: parent.width - (self.thumb_inset * 2);
       height: self.thumb_height;
       background: touch_area.has-hover ? ThemeLogic.colors.primary_hover : ThemeLogic.colors.secondary_hover;
       border-radius: self.width / 2;
@@ -40,6 +41,7 @@ export component Scrollable inherits Rectangle {
       touch_area := TouchArea {
         private property <length> press_start_y;
         private property <length> press_start_viewport_y;
+
         moved => {
           if (self.pressed) {
             flickable.viewport-y = max(
@@ -53,6 +55,7 @@ export component Scrollable inherits Rectangle {
             );
           }
         }
+
         pointer-event(event) => {
           if (event.kind == PointerEventKind.down) {
             self.press_start_y = self.mouse-y;
