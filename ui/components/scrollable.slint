@@ -1,72 +1,66 @@
-// SPDX-FileCopyrightText: 2025 Spencer
+// SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
 import { ThemeLogic } from "../logic/theme.slint";
 
 export component Scrollable inherits Rectangle {
-  in property <bool> enabled: true;
-  in property <length> scrollbar_width: 12px;
-  in-out property <length> viewport_height <=> flickable.viewport-height;
   in-out property <length> viewport_y <=> flickable.viewport-y;
-  private property <bool> has_vertical_overflow: viewport_height > flickable.height;
+  private property <bool> has_vertical_overflow: flickable.viewport-height > flickable.height;
 
   flickable := Flickable {
-    width: parent.width;
-    height: parent.height;
-    interactive: root.enabled;
     @children
   }
 
   if root.has_vertical_overflow: Rectangle {
-    y: 4px;
-    x: parent.width - root.scrollbar_width - self.y;
-    width: root.scrollbar_width;
-    height: parent.height - self.y;
+    private property <length> scrollbar_width: 12px;
+    private property <length> scrollbar_margin: 4px;
 
-    Rectangle {
-      width: 100%;
-      height: 100%;
-      background: ThemeLogic.colors.surface;
-      border-radius: root.scrollbar_width / 2;
-    }
+    y: self.scrollbar_margin;
+    x: parent.width - self.scrollbar_width - self.scrollbar_margin;
+    width: self.scrollbar_width;
+    height: parent.height - (self.scrollbar_margin * 2);
+    background: ThemeLogic.colors.surface;
+    border-radius: self.scrollbar_width / 2;
 
     thumb := Rectangle {
+      private property <length> thumb_inset: 2px;
+      private property <length> track_height: parent.height - (self.thumb_inset * 2);
+      private property <length> thumb_height: min(self.track_height, max(20px, (flickable.height / flickable.viewport-height) * self.track_height));
       private property <float> scroll_ratio: -flickable.viewport-y / (flickable.viewport-height - flickable.height);
-      private property <length> track_height: parent.height - parent.y;
-      private property <length> thumb_height: max(20px, (flickable.height / flickable.viewport-height) * track_height);
-      private property <length> thumb_y: self.x + scroll_ratio * (track_height - thumb_height);
-      x: 2px;
+      private property <length> thumb_y: self.thumb_inset + self.scroll_ratio * (self.track_height - self.thumb_height);
+
+      x: self.thumb_inset;
       y: self.thumb_y;
-      width: parent.width - parent.y;
+      width: parent.width - (self.thumb_inset * 2);
       height: self.thumb_height;
-      background: touch_area.has-hover ? ThemeLogic.colors.primary : ThemeLogic.colors.secondary_hover;
-      border-radius: (root.scrollbar_width - parent.y) / 2;
+      background: touch_area.has-hover ? ThemeLogic.colors.primary_hover : ThemeLogic.colors.secondary_hover;
+      border-radius: self.width / 2;
 
       animate background { duration: 150ms; }
-    }
 
-    touch_area := TouchArea {
-      private property <length> press_start_y;
-      private property <length> press_start_viewport_y;
-      width: parent.width;
-      height: parent.height;
-      moved => {
-        if (self.pressed) {
-          flickable.viewport-y = max(
-            flickable.height - flickable.viewport-height,
-            min(0px,
-              self.press_start_viewport_y -
-              (self.mouse-y - self.press_start_y) *
-              (flickable.viewport-height - flickable.height) /
-              (parent.height - thumb.height - parent.y)
-            )
-          );
+      touch_area := TouchArea {
+        private property <length> press_start_y;
+        private property <length> press_start_viewport_y;
+
+        moved => {
+          if (self.pressed) {
+            flickable.viewport-y = max(
+              flickable.height - flickable.viewport-height,
+              min(0px,
+                self.press_start_viewport_y -
+                (self.mouse-y - self.press_start_y) *
+                (flickable.viewport-height - flickable.height) /
+                (thumb.track_height - thumb.thumb_height)
+              )
+            );
+          }
         }
-      }
-      pointer-event(event) => {
-        if (event.kind == PointerEventKind.down) {
-          self.press_start_y = self.mouse-y;
-          self.press_start_viewport_y = flickable.viewport-y;
+
+        pointer-event(event) => {
+          if (event.kind == PointerEventKind.down) {
+            self.press_start_y = self.mouse-y;
+            self.press_start_viewport_y = flickable.viewport-y;
+          }
         }
       }
     }
