@@ -6,7 +6,7 @@ use crate::config::Config;
 use crate::scanner::SteamScanner;
 use slint::{ComponentHandle, ModelRc, VecModel};
 
-pub fn run_first_time_setup() {
+pub fn run_first_time_setup() -> Option<Config> {
     let default_config = Config::default();
     let first_time_setup = FirstTimeSetup::new().unwrap();
     let setup_logic = first_time_setup.global::<SetupLogic>();
@@ -77,4 +77,6 @@ pub fn run_first_time_setup() {
 
     slint::set_xdg_app_id("moe.spencer.Aletheia").unwrap();
     first_time_setup.run().unwrap();
+
+    Config::load()
 }

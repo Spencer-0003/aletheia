@@ -75,9 +75,7 @@ fn main() {
             "verify" => commands::Verify::run(args, &cfg),
             _ => eprintln!("Command not found.")
         }
-    } else if let Some(ref cfg) = config {
+    } else if let Some(ref cfg) = config.or_else(ui::run_first_time_setup) {
         ui::run(cfg);
-    } else {
-        ui::run_first_time_setup();
     }
 }
