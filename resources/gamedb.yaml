@@ -1959,6 +1959,14 @@ Sunset Overdrive:
       - "{LocalAppData}/Sunset/Saves/*"
   store_ids:
     steam: 847370
+Sutekina Kanojo no Tsukurikata:
+  aliases:
+    - 素敵な彼女の作り方
+  files:
+    windows:
+      - "{GameRoot}/Sutekina_kanojo_no_tsukurikata_Data/Utage/Saveamane_third/*"
+  store_ids:
+    steam: 1396150
 "Sword Art Online Re: Hollow Fragment":
   files:
     windows:
