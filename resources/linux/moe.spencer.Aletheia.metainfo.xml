@@ -120,6 +120,13 @@ SPDX-License-Identifier: CC0-1.0
         <p>UI: Add update icon.</p>
         <p>UI: Make restore dialog respect ThemeLogic.</p>
         <p>GameDB: Add Kyokkou no Marriage.</p>
+        <p>GameDB: Implement alias searching.</p>
+        <p>GameDB: Add PRAGMATA</p>
+        <p>GameDB: Add OCTOPATH TRAVELER II.</p>
+        <p>GameDB: Add Call of Duty Black Ops 1 and 2.</p>
+        <p>UI: Start main window after first time setup.</p>
+        <p>GameDB: Add Sutekina Kanojo no Tsukurikata.</p>
+        <p>GameDB: Add PARANORMASIGHT: The Mermaid's Curse.</p>
       </description>
     </release>
     <release version="2.0.1" date="2026-05-16">
