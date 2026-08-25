@@ -1504,6 +1504,12 @@ Obscure 2:
   store_ids:
     gog: 1207660553
     steam: 224480
+"PARANORMASIGHT: The Mermaid's Curse":
+  files:
+    windows:
+      - "{Documents}/My Games/PARANORMASIGHT_2/Steam/{SteamID64}/save.bytes"
+  store_ids:
+    steam: 2701440
 "PARANORMASIGHT: The Seven Mysteries of Honjo":
   files:
     windows:
