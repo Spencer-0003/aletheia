@@ -1724,18 +1724,18 @@ SILENT HILL f:
   store_ids:
     gog: 1901861030
     steam: 2947440
-"STEINS;GATE":
-  files:
-    windows:
-      - "{Documents}/My Games/mages_steam/STEINS;GATE/*/SAVEDATA.DAT"
-  store_ids:
-    steam: 412830
 SOULCALIBUR VI:
   files:
     windows:
       - "{LocalAppData}/SoulcaliburVI/Saved/SaveGames/{SteamID64}/**/*"
   store_ids:
     steam: 544750
+"STEINS;GATE":
+  files:
+    windows:
+      - "{Documents}/My Games/mages_steam/STEINS;GATE/*/SAVEDATA.DAT"
+  store_ids:
+    steam: 412830
 SUPERHOT:
   files:
     linux:
