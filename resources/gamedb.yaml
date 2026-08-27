@@ -654,6 +654,18 @@ Elden Bling:
       - "{LocalAppData}/KoeiTecmo/FatalFrameIIDemo/Savedata/{SteamID3}/**/*"
   store_ids:
     steam: 4226020
+FINAL FANTASY VII REBIRTH:
+  files:
+    windows:
+      - "{Documents}/My Games/FINAL FANTASY VII REBIRTH/Steam/{SteamID64}/*.sav"
+  store_ids:
+    steam: 2909400
+FINAL FANTASY VII REMAKE INTERGRADE:
+  files:
+    windows:
+      - "{Documents}/My Games/FINAL FANTASY VII REMAKE/Steam/{SteamID64}/*.sav"
+  store_ids:
+    steam: 1462040
 FULL METAL SCHOOLGIRL:
   files:
     windows:
@@ -1193,6 +1205,12 @@ Life is Strange 2:
       - "{AppData}/Sega/LikeADragon8/Steam/*"
   store_ids:
     steam: 2072450
+"Like a Dragon: Ishin!":
+  files:
+    windows:
+      - "{AppData}/Sega/LikeADragonIshin/{SteamID3}/*"
+  store_ids:
+    steam: 1805480
 "Like a Dragon: Pirate Yakuza in Hawaii":
   files:
     windows:
@@ -1551,9 +1569,21 @@ Persona 4 Golden:
 Persona 5 Royal:
   files:
     windows:
-      - "{AppData}/SEGA/P5R/Steam/*"
+      - "{AppData}/SEGA/P5R/Steam/{SteamID64}/savedata/*.dat"
   store_ids:
     steam: 1687950
+Persona 5 Strikers:
+  files:
+    windows:
+      - "{AppData}/SEGA/Steam/P5S/{SteamID3}/SAVEDATA.BIN"
+  store_ids:
+    steam: 1382330
+Persona 5 Tactica:
+  files:
+    windows:
+      - "{AppData}/SEGA/P5T/Steam/{SteamID64}/Save/*"
+  store_ids:
+    steam: 2254740
 Phasmophobia:
   files:
     windows:
@@ -1895,6 +1925,12 @@ Sonic and SEGA All Stars Racing:
       - "{GameRoot}/ssr_save.bin"
   store_ids:
     steam: 34190
+Soul Hackers 2:
+  files:
+    windows:
+      - "{AppData}/SEGA/SOULHACKERS2/Steam/{SteamID3}/SaveData/*"
+  store_ids:
+    steam: 1777620
 Soulstice:
   files:
     windows:
@@ -2016,6 +2052,12 @@ Tales of ARISE:
       - "{LocalAppData}/BANDAI NAMCO Entertainment/Tales of Arise/Saved/SaveGames/{SteamID3}/SaveData/*"
   store_ids:
     steam: 740130
+Tales of Xillia Remastered:
+  files:
+    windows:
+      - "{LocalLow}/BANDAI NAMCO Entertainment/Tales of Xillia Remastered/Save/{SteamID64}/*.dat/*.dataa"
+  store_ids:
+    steam: 2246670
 Terraria:
   files:
     linux:
