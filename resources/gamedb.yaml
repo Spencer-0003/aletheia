@@ -234,7 +234,7 @@ Bullet Girls Phantasia:
 CODE VEIN:
   files:
     windows:
-      - "{LocalAppData}/CodeVein/Saved/SaveGames/*"
+      - "{LocalAppData}/CodeVein/Saved/SaveGames/{SteamID3}/*"
   store_ids:
     steam: 678960
 CRYSTAR:
