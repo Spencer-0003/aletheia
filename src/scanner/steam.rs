@@ -103,13 +103,15 @@ impl Scanner for SteamScanner {
                 name: shortcut.app_name,
                 id: None,
                 installation_dir: Some(shortcut.start_dir.into()),
-                #[cfg(unix)]
+                #[cfg(all(unix, not(target_os = "macos")))]
                 prefix: {
                     let prefix_directory =
                         steam_directory.path().join("steamapps/compatdata").join(shortcut.app_id.to_string()).join("pfx");
 
                     prefix_directory.exists().then_some(prefix_directory)
                 },
+                #[cfg(target_os = "macos")]
+                prefix: None,
                 source: "Steam".into()
             });
         }
