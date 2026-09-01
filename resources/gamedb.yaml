@@ -138,6 +138,14 @@ Balatro:
       - "{AppData}/Balatro/*/*"
   store_ids:
     steam: 2379780
+Ballionaire:
+  files:
+    linux:
+      - "{XDGData}/godot/app_userdata/Ballionaire/*.cloud.sav"
+    windows:
+      - "{AppData}/Godot/app_userdata/ballionaire/*.cloud.sav"
+  store_ids:
+    steam: 2667120
 "Batman - The Telltale Series":
   files:
     windows:
@@ -830,6 +838,19 @@ Frostpunk:
   store_ids:
     gog: 1648559910
     steam: 323190
+Frostpunk 2:
+  files:
+    windows:
+      - "{LocalAppData}/11bitstudios/Frostpunk2/Steam/Saved/SaveGames/*.sav"
+  store_ids:
+    gog: 1728870436
+    steam: 1601580
+GUNTOUCHABLES:
+  files:
+    windows:
+      - "{LocalLow}/Game Swing/GUNTOUCHABLES/Saves/{SteamID64}/*.save"
+  store_ids:
+    steam: 2543510
 GYLT:
   files:
     windows:
@@ -1109,6 +1130,12 @@ KINGDOM HEARTS III + Re Mind (DLC):
       - "{Documents}/KINGDOM HEARTS III/Steam/{SteamID64}/*"
   store_ids:
     steam: 2552450
+Keylocker | Turn Based Cyberpunk Action:
+  files:
+    windows:
+      - "{LocalAppData}/keylocker/*.sav"
+  store_ids:
+    steam: 1325040
 Killer Frequency:
   files:
     windows:
@@ -1602,6 +1629,13 @@ Planet Coaster:
       - "{Home}/Saved Games/Frontier Developments/Planet Coaster/*/Saves/*"
   store_ids:
     steam: 493340
+Pocket Mirror ~ GoldenerTraum:
+  files:
+    windows:
+      - "{GameRoot}/save/file*.rmmzsave"
+      - "{GameRoot}/save/global.rmmzsave"
+  store_ids:
+    steam: 1899060
 Poker Night at the Inventory:
   files:
     windows:
@@ -1760,6 +1794,13 @@ SILENT HILL f:
   store_ids:
     gog: 1901861030
     steam: 2947440
+SONIC X SHADOW GENERATIONS:
+  files:
+    windows:
+      - "{AppData}/SEGA/SONIC_X_SHADOW_GENERATIONS/steam/{SteamID64}/game0/gamedata.sav"
+      - "{AppData}/SEGA/SONIC_X_SHADOW_GENERATIONS/steam/{SteamID64}/saved/savedata/gene_PC.sav"
+  store_ids:
+    steam: 2513280
 SOULCALIBUR VI:
   files:
     windows:
@@ -1918,13 +1959,6 @@ Sonic Lost World:
       - "{AppData}/SEGA/SonicRacingCrossWorlds/steam/{SteamID64}/*.sav"
   store_ids:
     steam: 2486820
-Sonic X Shadow Generations:
-  files:
-    windows:
-      - "{AppData}/SEGA/SONIC_X_SHADOW_GENERATIONS/steam/*/game0/gamedata.sav"
-      - "{AppData}/SEGA/SONIC_X_SHADOW_GENERATIONS/steam/*/saved/savedata/gene_PC.sav"
-  store_ids:
-    steam: 2513280
 Sonic and SEGA All Stars Racing:
   files:
     windows:
@@ -2317,6 +2351,12 @@ Until Dawn:
       - "{Documents}/My Games/Bates/Saved/SavedGames/*"
   store_ids:
     steam: 2172010
+Urban Jungle:
+  files:
+    windows:
+      - "{LocalLow}/Kylyk Games/UrbanJungle/player-progress.json"
+  store_ids:
+    steam: 2744010
 Vampyr:
   files:
     windows:
@@ -2324,6 +2364,12 @@ Vampyr:
   store_ids:
     gog: 2098644729
     steam: 427290
+Voidtrain:
+  files:
+    windows:
+      - "{LocalAppData}/VoidTrain/Saved/SaveGames/SteamCloud/{SteamID64}/*/*.sav"
+  store_ids:
+    steam: 1159690
 Where Winter Crows Go:
   files:
     linux:
