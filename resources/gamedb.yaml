@@ -1642,6 +1642,12 @@ Poker Night at the Inventory:
       - "{Documents}/Skunkape Games/Poker Night at the Inventory Remastered/*"
   store_ids:
     steam: 3897800
+Project Reignition:
+  files:
+    linux:
+      - "{XDGData}/godot/app_userdata/Sonic and the Secret Rings Remake/*.dat"
+    windows:
+      - "{AppData}/Godot/app_userdata/Sonic and the Secret Rings Remake/*.dat"
 Prototype:
   files:
     windows:
