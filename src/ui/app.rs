@@ -17,6 +17,7 @@ pub fn run(config: &AletheiaConfig) {
         && let Ok(updater::UpdateStatus::Available(release)) = updater::check()
     {
         let updater_window = Updater::new().unwrap();
+        let updater_window_weak = updater_window.as_weak();
         let updater_logic = updater_window.global::<UpdaterLogic>();
 
         slint::set_xdg_app_id("moe.spencer.Aletheia").unwrap();
@@ -26,9 +27,14 @@ pub fn run(config: &AletheiaConfig) {
         updater_logic.set_changelog(release.body.into());
         updater_logic.set_release_url(release.url.into());
 
+        updater_window.window().on_close_requested(move || {
+            updater_window_weak.upgrade().unwrap().global::<UpdaterLogic>().set_exit_requested(true);
+            slint::CloseRequestResponse::HideWindow
+        });
+
         updater_window.run().unwrap();
 
-        if updater_logic.get_downloading() {
+        if updater_logic.get_downloading() || updater_logic.get_exit_requested() {
             return;
         }
     }
