@@ -1983,6 +1983,12 @@ Spin Rhythm XD:
       - "{LocalLow}/Super Spin Digital/Spin Rhythm XD/*/*"
   store_ids:
     steam: 1058830
+"Spirit City: Lofi Sessions":
+  files:
+    windows:
+      - "{LocalAppData}/SpiritCity/Saved/SaveGames/*.sav"
+  store_ids:
+    steam: 2113850
 Split Fiction:
   files:
     windows:
