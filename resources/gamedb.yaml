@@ -1959,6 +1959,10 @@ Sonic Lost World:
       - "{GameRoot}/*.sdat"
   store_ids:
     steam: 329440
+Sonic Project Hero Rewired:
+  files:
+    windows:
+      - "{GameRoot}/Sonic Project Hero Rewired_Data/hero_save.bin"
 "Sonic Racing: CrossWorlds":
   files:
     windows:
