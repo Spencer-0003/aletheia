@@ -9,7 +9,6 @@ use slint::{ComponentHandle, Model, ModelRc, SharedString, VecModel};
 use std::cell::RefCell;
 use std::rc::Rc;
 
-#[expect(clippy::too_many_lines, reason = "Only 4 more than allowed")]
 pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
     let app = app.upgrade().unwrap();
     let settings_screen_logic = app.global::<SettingsScreenLogic>();
@@ -61,27 +60,6 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
             *cfg.borrow_mut() = new_config;
 
             notification_logic.invoke_show_success("SAVED_SETTINGS".into());
-        }
-    });
-
-    settings_screen_logic.on_get_steam_users({
-        let app_weak = app.as_weak().unwrap();
-
-        move || {
-            let settings_logic = app_weak.global::<SettingsScreenLogic>();
-
-            if let Some(users) = SteamScanner::get_users() {
-                let mut options: Vec<DropdownOption> = users
-                    .into_iter()
-                    .map(|(steam_id, user)| DropdownOption {
-                        label: user.persona_name.into(),
-                        value: SteamScanner::id64_to_id3(steam_id.parse::<u64>().unwrap()).to_string().into()
-                    })
-                    .collect();
-
-                options.sort_by(|a, b| a.label.cmp(&b.label));
-                settings_logic.set_steam_account_options(ModelRc::new(VecModel::from(options)));
-            }
         }
     });
 
@@ -139,7 +117,18 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
         settings_screen_logic.set_show_update_settings(true);
     }
 
-    settings_screen_logic.invoke_get_steam_users();
+    if let Some(users) = SteamScanner::get_users() {
+        let mut options: Vec<DropdownOption> = users
+            .into_iter()
+            .map(|(steam_id, user)| DropdownOption {
+                label: user.persona_name.into(),
+                value: SteamScanner::id64_to_id3(steam_id.parse::<u64>().unwrap()).to_string().into()
+            })
+            .collect();
+
+        options.sort_by(|a, b| a.label.cmp(&b.label));
+        settings_screen_logic.set_steam_account_options(ModelRc::new(VecModel::from(options)));
+    }
 }
 
 fn get_steam_id(config: &AletheiaConfig) -> Option<String> {
