@@ -4,44 +4,41 @@
 import { NotificationType } from "../components/notification.slint";
 
 export global NotificationLogic {
-  callback show_notification(key: string, type: NotificationType);
-  callback show_notification_fmt(key: string, param: string, type: NotificationType);
-
   private property <bool> notification_visible;
   private property <string> notification_message;
   private property <NotificationType> notification_type: NotificationType.INFO;
 
   public function show_success(message: string) {
-    NotificationLogic.show_notification(message, NotificationType.SUCCESS);
+    show(message, NotificationType.SUCCESS);
   }
 
   public function show_error(message: string) {
-    NotificationLogic.show_notification(message, NotificationType.ERROR);
+    show(message, NotificationType.ERROR);
   }
 
   public function show_info(message: string) {
-    NotificationLogic.show_notification(message, NotificationType.INFO);
+    show(message, NotificationType.INFO);
   }
 
   public function show_warning(message: string) {
-    NotificationLogic.show_notification(message, NotificationType.WARNING);
+    show(message, NotificationType.WARNING);
   }
 
   public function show_success_fmt(key: string, param: string) {
-    NotificationLogic.show_notification_fmt(key, param, NotificationType.SUCCESS);
+    show_fmt(key, param, NotificationType.SUCCESS);
   }
 
   // Unused for now
   // public function show_error_fmt(key: string, param: string) {
-  //   NotificationLogic.show_notification_fmt(key, param, NotificationType.ERROR);
+  //   show_fmt(key, param, NotificationType.ERROR);
   // }
   //
   // public function show_info_fmt(key: string, param: string) {
-  //   NotificationLogic.show_notification_fmt(key, param, NotificationType.INFO);
+  //   show_fmt(key, param, NotificationType.INFO);
   // }
   //
   // public function show_warning_fmt(key: string, param: string) {
-  //   NotificationLogic.show_notification_fmt(key, param, NotificationType.WARNING);
+  //   show_fmt(key, param, NotificationType.WARNING);
   // }
 
   pure function translate(key: string) -> string {
@@ -67,13 +64,13 @@ export global NotificationLogic {
       : key
   }
 
-  show_notification(key, type) => {
+  function show(key: string, type: NotificationType) {
     notification_message = translate(key);
     notification_type = type;
     notification_visible = true;
   }
 
-  show_notification_fmt(key, param, type) => {
+  function show_fmt(key: string, param: string, type: NotificationType) {
     notification_message = translate_fmt(key, param);
     notification_type = type;
     notification_visible = true;
