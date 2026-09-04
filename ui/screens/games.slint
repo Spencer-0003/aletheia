@@ -5,6 +5,7 @@ import { ListView } from "std-widgets.slint";
 import { Button } from "../components/button.slint";
 import { GameCard } from "../components/game_card.slint";
 import { SearchBar } from "../components/search_bar.slint";
+import { Operation } from "../enums/operation.slint";
 import { GameLogic } from "../logic/game.slint";
 import { ThemeLogic } from "../logic/theme.slint";
 import { UiGame } from "../structs/ui_game.slint";
@@ -16,7 +17,7 @@ export global GamesScreenLogic {
   callback filter(string);
   callback select_all(bool);
   callback select_game(UiGame);
-  callback perform_operation(string);
+  callback perform_operation(Operation);
 }
 
 export component Games {
@@ -96,7 +97,7 @@ export component Games {
         height: 36px;
         text: @tr("Backup");
         enabled: GamesScreenLogic.selected_games.length > 0;
-        clicked => GamesScreenLogic.perform_operation("backup");
+        clicked => GamesScreenLogic.perform_operation(Operation.Backup);
       }
 
       Button {
@@ -104,7 +105,7 @@ export component Games {
         height: 36px;
         text: @tr("Restore");
         enabled: GamesScreenLogic.selected_games.length > 0 && GamesScreenLogic.selected_games[0].backup_size != "0B"; // TODO: Once Slint 1.18 is released, use GamesScreenLogic.selected_games.any(g => g.backup_size != "0B");
-        clicked => GamesScreenLogic.perform_operation("restore");
+        clicked => GamesScreenLogic.perform_operation(Operation.Restore);
       }
 
       Button {

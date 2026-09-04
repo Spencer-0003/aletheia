@@ -5,7 +5,7 @@ use crate::archive::{ArchiveReader, Error as ArchiveError};
 use crate::config::Config as AletheiaConfig;
 use crate::gamedb;
 use crate::operations::{RestoreError, backup_game, list_backups, restore_archive, restore_game};
-use crate::ui::app::{App, BackupEntry, BackupListLogic, GameLogic, GamesScreenLogic, NotificationLogic, UiGame};
+use crate::ui::app::{App, BackupEntry, BackupListLogic, GameLogic, GamesScreenLogic, NotificationLogic, Operation, UiGame};
 use crate::utils;
 use slint::{ComponentHandle, Model, ModelRc, VecModel};
 use std::cell::RefCell;
@@ -175,7 +175,7 @@ pub fn setup(app: &slint::Weak<App>, config: &Rc<RefCell<AletheiaConfig>>) {
                 return;
             }
 
-            if action == "backup" {
+            if action == Operation::Backup {
                 let mut backed_up = 0;
 
                 for ui_game in selected_games.iter() {
