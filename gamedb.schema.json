@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Spencer-0003/aletheia/raw/master/gamedb.schema.json",
+  "title": "Aletheia GameDB",
+  "description": "JSON schema for Aletheia's GameDB",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/$defs/entry"
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "description": "A single game's entry: save locations plus optional store IDs and aliases. Only files is required; unknown keys are rejected.",
+      "required": ["files"],
+      "additionalProperties": false,
+      "properties": {
+        "aliases": {
+          "type": "array",
+          "description": "Alternative titles that resolve to this entry after matching. A matching feature, not metadata.",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "files": {
+          "$ref": "#/$defs/files",
+          "description": "Save file locations per platform. Every entry must have at least one platform key."
+        },
+        "store_ids": {
+          "$ref": "#/$defs/store_ids",
+          "description": "Store identifiers used to match a detected game by store. Optional; entries without store_ids are matched by title only."
+        }
+      }
+    },
+    "files": {
+      "type": "object",
+      "description": "Save locations per platform. Paths are glob strings using {Documents}, {LocalAppData}, {LocalLow}, {AppData}, {SteamUserData} and {GameRoot} placeholders.",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "linux": {
+          "$ref": "#/$defs/paths",
+          "description": "Save paths on Linux. Entries for native Linux games may have only this key and no windows paths."
+        },
+        "mac": {
+          "$ref": "#/$defs/paths",
+          "description": "Save paths on macOS."
+        },
+        "windows": {
+          "$ref": "#/$defs/paths",
+          "description": "Save paths on Windows."
+        }
+      }
+    },
+    "store_ids": {
+      "type": "object",
+      "description": "Store identifiers for this game.",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "steam": {
+          "type": "integer",
+          "description": "Steam app ID, matching the u32 type used in src/gamedb.rs.",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "gog": {
+          "type": "integer",
+          "description": "GOG game ID.",
+          "minimum": 0
+        }
+      }
+    },
+    "paths": {
+      "type": "array",
+      "description": "One or more glob paths. Use {Documents}, {LocalAppData}, {LocalLow}, {AppData}, {SteamUserData} or {GameRoot} for well-known directories.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}
