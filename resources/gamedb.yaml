@@ -1,6 +1,14 @@
 # SPDX-FileCopyrightText: 2025-2026 Spencer
 # SPDX-License-Identifier: CC-BY-4.0
 
+"A Clockwork Ley-Line: Daybreak of Remnants Shadow":
+  files:
+    windows:
+      - "{GameRoot}/save/*"
+"A Clockwork Ley-Line: Flowers Falling in the Morning Mist":
+  files:
+    windows:
+      - "{GameRoot}/save/*"
 "A Clockwork Ley-Line: The Borderline of Dusk":
   files:
     windows:
