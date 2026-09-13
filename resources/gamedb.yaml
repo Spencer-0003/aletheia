@@ -976,6 +976,16 @@ Heart of the Woods:
   store_ids:
     gog: 1407126652
     steam: 844660
+"Heartsworn Abyss: NighTmaRes":
+  files:
+    linux:
+      - "{GameRoot}/saves/*"
+    mac:
+      - "{GameRoot}/saves/*"
+    windows:
+      - "{GameRoot}/saves/*"
+  store_ids:
+    steam: 2747810
 Heavy Rain:
   files:
     windows:
