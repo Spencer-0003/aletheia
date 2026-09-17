@@ -50,5 +50,8 @@ install:
 uninstall:
   rm -rf /Applications/Aletheia.app
 
+lint_gamedb:
+  yamllint -d '{extends: default, rules: {document-start: disable, line-length: disable, key-ordering: enable, comments: {min-spaces-from-content: 1}}}' -s resources/gamedb.yaml
+
 generate_translations:
   find -name \*.slint | xargs slint-tr-extractor -o ui/locale/aletheia.pot
