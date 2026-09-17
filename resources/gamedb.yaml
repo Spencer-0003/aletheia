@@ -745,6 +745,12 @@ Fallout 4 VR:
   store_ids:
     gog: 1454587428
     steam: 22380
+"Family Guy: Back to the Multiverse":
+  files:
+    windows:
+      - "{GameRoot}/Save/*"
+  store_ids:
+    steam: 214230
 Fatal Twelve:
   files:
     linux:
