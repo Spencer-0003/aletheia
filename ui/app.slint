@@ -27,8 +27,14 @@ export { FirstTimeSetup, SetupLogic }
 export { RestoreDialog, RestoreLogic }
 export { Updater, UpdaterLogic }
 
+enum Screen {
+  About,
+  Games,
+  Settings
+}
+
 export component App inherits Window {
-  private property <string> current_screen: "games";
+  private property <Screen> current_screen: Screen.Games;
 
   default-font-family: "Inter Variable";
   preferred-width: 1280px;
@@ -50,31 +56,31 @@ export component App inherits Window {
       NavItem {
         text: @tr("Games");
         icon: @image-url("./assets/joystick.svg");
-        active: root.current_screen == "games";
+        active: root.current_screen == Screen.Games;
         index: 0;
         clicked => {
-          if (root.current_screen != "games") {
+          if (root.current_screen != Screen.Games) {
             GamesScreenLogic.filter(""); // Lazy hack to reset search, waiting for https://github.com/slint-ui/slint/pull/6657 to be merged.
           }
 
-          root.current_screen = "games";
+          root.current_screen = Screen.Games;
         }
       }
 
       NavItem {
         text: @tr("Settings");
         icon: @image-url("./assets/settings.svg");
-        active: root.current_screen == "settings";
+        active: root.current_screen == Screen.Settings;
         index: 1;
-        clicked => { root.current_screen = "settings"; }
+        clicked => { root.current_screen = Screen.Settings }
       }
 
       NavItem {
         text: @tr("About");
         icon: @image-url("./assets/about.svg");
-        active: root.current_screen == "about";
+        active: root.current_screen == Screen.About;
         index: 2;
-        clicked => { root.current_screen = "about"; }
+        clicked => { root.current_screen = Screen.About; }
       }
     }
 
@@ -82,9 +88,11 @@ export component App inherits Window {
       background: ThemeLogic.colors.background;
       border-radius: 8px;
 
-      if (root.current_screen == "games"): Games {}
-      if (root.current_screen == "settings"): Settings {}
-      if (root.current_screen == "about"): About {}
+      match root.current_screen {
+        Screen.Games: Games {}
+        Screen.Settings: Settings {}
+        Screen.About: About {}
+      }
     }
   }
 
