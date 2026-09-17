@@ -108,8 +108,8 @@ export component Updater inherits Window {
         Flickable {
           width: 100%;
           height: 100%;
-          viewport-width: self.width;
-          viewport-height: text.preferred-height + 12px;
+          content-width: self.width;
+          content-height: text.preferred-height + 12px;
 
           text := Text {
             width: parent.width - 24px;

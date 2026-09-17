@@ -4,6 +4,10 @@
 fn main() {
     println!("cargo::rustc-check-cfg=cfg(flatpak_build)");
 
+    unsafe {
+        std::env::set_var("SLINT_ENABLE_EXPERIMENTAL_FEATURES", "1"); // Required to use VecModel.any
+    }
+
     let config = slint_build::CompilerConfiguration::new().with_bundled_translations("ui/locale");
     slint_build::compile_with_config("ui/app.slint", config).expect("Slint build failed.");
 

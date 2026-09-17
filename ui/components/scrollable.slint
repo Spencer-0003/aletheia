@@ -4,8 +4,8 @@
 import { ThemeLogic } from "../logic/theme.slint";
 
 export component Scrollable inherits Rectangle {
-  in-out property <length> viewport_y <=> flickable.viewport-y;
-  private property <bool> has_vertical_overflow: flickable.viewport-height > flickable.height;
+  in-out property <length> viewport_y <=> flickable.content-y;
+  private property <bool> has_vertical_overflow: flickable.content-height > flickable.height;
 
   flickable := Flickable {
     @children
@@ -25,8 +25,8 @@ export component Scrollable inherits Rectangle {
     thumb := Rectangle {
       private property <length> thumb_inset: 2px;
       private property <length> track_height: parent.height - (self.thumb_inset * 2);
-      private property <length> thumb_height: min(self.track_height, max(20px, (flickable.height / flickable.viewport-height) * self.track_height));
-      private property <float> scroll_ratio: -flickable.viewport-y / (flickable.viewport-height - flickable.height);
+      private property <length> thumb_height: min(self.track_height, max(20px, (flickable.height / flickable.content-height) * self.track_height));
+      private property <float> scroll_ratio: -flickable.content-y / (flickable.content-height - flickable.height);
       private property <length> thumb_y: self.thumb_inset + self.scroll_ratio * (self.track_height - self.thumb_height);
 
       x: self.thumb_inset;
@@ -44,12 +44,12 @@ export component Scrollable inherits Rectangle {
 
         moved => {
           if (self.pressed) {
-            flickable.viewport-y = max(
-              flickable.height - flickable.viewport-height,
+            flickable.content-y = max(
+              flickable.height - flickable.content-height,
               min(0px,
                 self.press_start_viewport_y -
                 (self.mouse-y - self.press_start_y) *
-                (flickable.viewport-height - flickable.height) /
+                (flickable.content-height - flickable.height) /
                 (thumb.track_height - thumb.thumb_height)
               )
             );
@@ -59,7 +59,7 @@ export component Scrollable inherits Rectangle {
         pointer-event(event) => {
           if (event.kind == PointerEventKind.down) {
             self.press_start_y = self.mouse-y;
-            self.press_start_viewport_y = flickable.viewport-y;
+            self.press_start_viewport_y = flickable.content-y;
           }
         }
       }
