@@ -37,30 +37,30 @@ export component Scrollable inherits Rectangle {
       border-radius: self.width / 2;
 
       animate background { duration: 150ms; }
+    }
 
-      touch_area := TouchArea {
-        private property <length> press_start_y;
-        private property <length> press_start_viewport_y;
+    touch_area := TouchArea {
+      private property <length> press_start_y;
+      private property <length> press_start_viewport_y;
 
-        moved => {
-          if (self.pressed) {
-            flickable.content-y = max(
-              flickable.height - flickable.content-height,
-              min(0px,
-                self.press_start_viewport_y -
-                (self.mouse-y - self.press_start_y) *
-                (flickable.content-height - flickable.height) /
-                (thumb.track_height - thumb.thumb_height)
-              )
-            );
-          }
+      moved => {
+        if (self.pressed) {
+          flickable.content-y = max(
+            flickable.height - flickable.content-height,
+            min(0px,
+              self.press_start_viewport_y -
+              (self.mouse-y - self.press_start_y) *
+              (flickable.content-height - flickable.height) /
+              (thumb.track_height - thumb.thumb_height)
+            )
+          );
         }
+      }
 
-        pointer-event(event) => {
-          if (event.kind == PointerEventKind.down) {
-            self.press_start_y = self.mouse-y;
-            self.press_start_viewport_y = flickable.content-y;
-          }
+      pointer-event(event) => {
+        if (event.kind == PointerEventKind.down) {
+          self.press_start_y = self.mouse-y;
+          self.press_start_viewport_y = flickable.content-y;
         }
       }
     }
