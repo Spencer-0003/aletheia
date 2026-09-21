@@ -2414,6 +2414,12 @@ Voidtrain:
       - "{LocalAppData}/VoidTrain/Saved/SaveGames/SteamCloud/{SteamID64}/*/*.sav"
   store_ids:
     steam: 1159690
+"WUCHANG: Fallen Feathers":
+  files:
+    windows:
+      - "{LocalAppData}/Project_Plague/Saved/{SteamID63}/GameSlots/*/*"
+  store_ids:
+    steam: 2277560
 Where Winter Crows Go:
   files:
     linux:
