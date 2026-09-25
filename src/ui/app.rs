@@ -50,9 +50,19 @@ pub fn run(config: &AletheiaConfig) {
     settings::setup(&app_weak, &cfg);
 
     #[cfg(all(unix, not(target_os = "macos")))]
-    if std::env::var("SteamDeck").as_deref() == Ok("1") || std::env::var("SteamTenfoot").as_deref() == Ok("1") {
-        // Without this, the UI on the Steam Deck/Machine is extremely blurry
-        app.window().set_fullscreen(true);
+    {
+        let is_tenfoot = std::env::var("SteamTenfoot").as_deref() == Ok("1"); // Steam Machine/Bazzite HTPC
+        if std::env::var("SteamDeck").as_deref() == Ok("1") || is_tenfoot {
+            // Without this, the UI on the Steam Deck/Machine is extremely blurry
+            app.window().set_fullscreen(true);
+        }
+
+        if is_tenfoot {
+            unsafe {
+                // Tested on a 55 inch 4K TV running at 1440p
+                std::env::set_var("SLINT_SCALE_FACTOR", "2");
+            }
+        }
     }
 
     app.run().unwrap();
