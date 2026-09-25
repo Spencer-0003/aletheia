@@ -50,8 +50,8 @@ pub fn run(config: &AletheiaConfig) {
     settings::setup(&app_weak, &cfg);
 
     #[cfg(all(unix, not(target_os = "macos")))]
-    if std::env::var("SteamDeck").as_deref() == Ok("1") {
-        // Without this, the UI on the Steam Deck is extremely blurry
+    if std::env::var("SteamDeck").as_deref() == Ok("1") || std::env::var("SteamTenfoot").as_deref() == Ok("1") {
+        // Without this, the UI on the Steam Deck/Machine is extremely blurry
         app.window().set_fullscreen(true);
     }
 
