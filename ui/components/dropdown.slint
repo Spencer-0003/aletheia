@@ -4,24 +4,19 @@
 import { DropdownOption } from "../structs/dropdown_option.slint";
 import { ThemeLogic } from "../logic/theme.slint";
 
-component ForEach {}
-
 export component Dropdown {
   in property <bool> enabled: true;
   in property <[DropdownOption]> options: [];
   in property <string> placeholder: @tr("Select an option…");
   in-out property <string> value: "";
-  out property <string> label: "";
+  out property <string> label: root.label_for(root.value);
   out property <bool> expanded: false;
   private property <bool> expandable: root.options.length > 1;
   callback changed(string);
 
-  for option in options: ForEach {
-    init => {
-      if value == option.value {
-        label = option.label;
-      }
-    }
+  pure function label_for(v: string) -> string {
+    let i = root.options.find-index((o) => o.value == v);
+    return i == -1 ? "" : root.options[i].label;
   }
 
   VerticalLayout {
