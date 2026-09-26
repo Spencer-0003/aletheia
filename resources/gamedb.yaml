@@ -2510,6 +2510,14 @@ Yakuza Kiwami 2 (Legacy):
       - "{AppData}/Sega/YakuzaKiwami2/{SteamID3}/**/*"
   store_ids:
     steam: 927380
+"Yakuza: Like a Dragon":
+  files:
+    windows:
+      - "{AppData}/Sega/YakuzaLikeADragon_GOG/1/*/*"
+      - "{AppData}/Sega/YakuzaLikeADragon/{SteamID3}/*/*"
+  store_ids:
+    gog: 1229228729
+    steam: 1235140
 Youtubers Life:
   files:
     windows:
