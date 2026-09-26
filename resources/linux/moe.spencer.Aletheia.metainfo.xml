@@ -128,6 +128,32 @@ SPDX-License-Identifier: CC0-1.0
         <p>UI: Start main window after first time setup.</p>
         <p>GameDB: Add Sutekina Kanojo no Tsukurikata.</p>
         <p>GameDB: Add PARANORMASIGHT: The Mermaid's Curse.</p>
+        <p>GameDB: Add STEINS;GATE.</p>
+        <p>GameDB: Add more games.</p>
+        <p>UI: Fix incorrect font family.</p>
+        <p>GameDB: Fix CODE VEIN.</p>
+        <p>Translations: Improve Chinese translations.</p>
+        <p>GameDB: Add Otome Switch ~Kare ga Motteru Kanojo no Remocon~.</p>
+        <p>macOS: Disable prefix scanning for non Steam games.</p>
+        <p>GameDB: Add Humble Choice September 2026 games.</p>
+        <p>GameDB: Add Spirit City: Lofi Sessions.</p>
+        <p>Updater: Stop execution on window close.</p>
+        <p>GameDB: Add Project Reignition.</p>
+        <p>GameDB: Add Sonic Project Hero Rewired.</p>
+        <p>UI: Remove get_steam_users callback.</p>
+        <p>UI(NotificationLogic): Replace callbacks with functions.</p>
+        <p>Operations: Use enums instead of strings.</p>
+        <p>GameDB: Add A Clockwork Ley-Line: The Borderline of Dusk.</p>
+        <p>GameDB: Add the other A Clockwork Ley-Line games.</p>
+        <p>GameDB: Add Heartsworn Abyss: NighTmaRes.</p>
+        <p>UI: Update to Slint 1.18.1.</p>
+        <p>UI: Use match for rendering screens.</p>
+        <p>GameDB: Add Family Guy: Back to the Multiverse.</p>
+        <p>GameDB: Add WUCHANG: Fallen Feathers.</p>
+        <p>UI: Replace hacky for-each method with find-index.</p>
+        <p>UI: Fix scaling on Steam Machine and SteamOS-like HTPCs.</p>
+        <p>UI: Improve scaling on TVs.</p>
+        <p>GameDB: Add Yakuza: Like a Dragon.</p>
       </description>
     </release>
     <release version="2.0.1" date="2026-05-16">
