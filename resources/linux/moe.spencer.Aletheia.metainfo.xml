@@ -154,6 +154,7 @@ SPDX-License-Identifier: CC0-1.0
         <p>UI: Fix scaling on Steam Machine and SteamOS-like HTPCs.</p>
         <p>UI: Improve scaling on TVs.</p>
         <p>GameDB: Add Yakuza: Like a Dragon.</p>
+        <p>GameDB: Add SILENT HILL: Townfall.</p>
       </description>
     </release>
     <release version="2.0.1" date="2026-05-16">

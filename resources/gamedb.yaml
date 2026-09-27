@@ -1828,6 +1828,12 @@ SILENT HILL f:
   store_ids:
     gog: 1901861030
     steam: 2947440
+"SILENT HILL: Townfall":
+  files:
+    windows:
+      - "{LocalAppData}/Townfall/Saved/SaveGames/*.sav"
+  store_ids:
+    steam: 1636440
 SONIC X SHADOW GENERATIONS:
   files:
     windows:
