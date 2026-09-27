@@ -17,7 +17,9 @@ pub fn run_restore_dialog(config: &AletheiaConfig, archive_path: &str) {
         return;
     }
 
-    let Ok(reader) = ArchiveReader::open(archive_path) else {
+    let Ok(reader) = ArchiveReader::open(archive_path).inspect_err(|e| {
+        log::error!("Failed to open archive: {e}.");
+    }) else {
         return;
     };
 
