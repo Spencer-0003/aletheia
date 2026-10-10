@@ -333,6 +333,12 @@ Catherine Classic:
   store_ids:
     gog: 2125022825
     steam: 1903340
+"Clive Barker's Hellraiser: Revival":
+  files:
+    windows:
+      - "{LocalAppData}/Hellraiser/Saved/SaveGames/*.sav"
+  store_ids:
+    steam: 1551980
 Control Ultimate Edition:
   files:
     windows:
