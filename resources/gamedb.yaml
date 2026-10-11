@@ -1937,6 +1937,14 @@ Sker Ritual:
       - "{SteamUserData}/1492070/remote/PersistentSaveData"
   store_ids:
     steam: 1492070
+Skullgirls 2nd Encore:
+  files:
+    linux:
+      - "{XDGData}/Skullgirls/SaveData/{SteamID64}/savedata.bin"
+    windows:
+      - "{Documents}/Skullgirls/Save Data/SAVEDATA.BIN"
+  store_ids:
+    steam: 245170
 "Sleeping Dogs: Definitive Edition":
   files:
     windows:
