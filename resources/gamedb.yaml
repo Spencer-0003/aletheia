@@ -1330,6 +1330,12 @@ MUSYNX:
       - "{GameRoot}/SavesDir/savedata.sav"
   store_ids:
     steam: 952040
+Manhunt:
+  files:
+    windows:
+      - "{Documents}/Manhunt User Files/SaveGames/MANHUNT*.SAV"
+  store_ids:
+    steam: 12130
 Marvel's Guardians of the Galaxy:
   files:
     windows:
