@@ -251,6 +251,12 @@ Bullet Girls Phantasia:
       - "{Documents}/My Games/BulletGirlsPhantasia/*"
   store_ids:
     steam: 1163590
+"Bully: Scholarship Edition":
+  files:
+    windows:
+      - "{Documents}/Bully Scholarship Edition/BullyFile*"
+  store_ids:
+    steam: 12200
 CODE VEIN:
   files:
     windows:
