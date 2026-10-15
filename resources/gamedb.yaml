@@ -1917,6 +1917,13 @@ Scrap Mechanic:
       - "{AppData}/Axolot Games/Scrap Mechanic/*"
   store_ids:
     steam: 387990
+"Sea of Stars: Sunset Edition":
+  files:
+    windows:
+      - "{LocalLow}/Sabotage Studio/Sea of Stars/*.sos"
+  store_ids:
+    gog: 1254594850
+    steam: 1244090
 Severed Steel:
   files:
     windows:
