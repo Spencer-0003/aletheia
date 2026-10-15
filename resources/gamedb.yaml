@@ -2397,6 +2397,18 @@ Tormented Souls:
   store_ids:
     gog: 1243021945
     steam: 1367590
+Toy Story 3:
+  files:
+    windows:
+      - "{Documents}/Disney Interactive Studios/Toy Story 3/savedata/*"
+  store_ids:
+    steam: 300820
+Toy Story Mania:
+  files:
+    windows:
+      - "{GameRoot}/SaveGames/*.dat"
+  store_ids:
+    steam: 317580
 Treasure of Nadia:
   files:
     linux:
