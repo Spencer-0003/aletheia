@@ -686,6 +686,12 @@ Elden Bling:
       - "{LocalAppData}/KoeiTecmo/FatalFrameIIDemo/Savedata/{SteamID3}/**/*"
   store_ids:
     steam: 4226020
+FINAL FANTASY RESONANCE:
+  files:
+    windows:
+      - "{LocalAppData}/FFRS/Steam/{SteamID64}/GameSaveData*.sav"
+  store_ids:
+    steam: 3259780
 FINAL FANTASY VII REBIRTH:
   files:
     windows:
