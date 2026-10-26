@@ -161,7 +161,7 @@ jobs:
           path: aletheia.app.tar.gz
 
   generate_license_file:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Install cargo-about
         run: cargo install --locked --features cli cargo-about
@@ -180,7 +180,7 @@ jobs:
 
   create_release:
     needs: [build_linux, build_windows, build_flatpak, build_mac, generate_license_file]
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     permissions:
       contents: write
     steps:
