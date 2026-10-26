@@ -81,6 +81,13 @@ export component About {
             text: @tr("View License");
             clicked => Platform.open-url("https://github.com/Spencer-0003/aletheia/blob/master/LICENSE");
           }
+
+          Button {
+            width: 180px;
+            height: 38px;
+            text: @tr("Support the Project");
+            clicked => Platform.open-url("https://github.com/sponsors/Spencer-0003");
+          }
         }
       }
     }
