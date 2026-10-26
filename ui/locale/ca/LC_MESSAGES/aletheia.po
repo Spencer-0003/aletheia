@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-08-11 19:58+0000\n"
+"POT-Creation-Date: 2026-10-26 01:24+0000\n"
 "PO-Revision-Date: 2026-02-09 16:09+0000\n"
 "Last-Translator: World170 <world170_@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/aletheia/ui/ca/"
@@ -13,179 +13,57 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.16-dev\n"
 
-#: ui/first_time_setup.slint:37
-msgctxt "FirstTimeSetupContent"
-msgid "Welcome to Aletheia"
-msgstr ""
-
-#: ui/first_time_setup.slint:45
-msgctxt "FirstTimeSetupContent"
-msgid "Let's get you set up. You can change these settings at any time."
-msgstr ""
-
-#: ui/first_time_setup.slint:63
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Game Data Location"
-msgctxt "FirstTimeSetupContent"
-msgid "Backup Location"
-msgstr "Ubicació de les dades dels jocs"
-
-#: ui/first_time_setup.slint:70
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Choose where your games will be saved"
-msgctxt "FirstTimeSetupContent"
-msgid "Where your game saves will be stored on disk."
-msgstr "Escull on vols guardats els teus jocs"
-
-#: ui/first_time_setup.slint:85
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Browse"
-msgctxt "FirstTimeSetupContent"
-msgid "Browse"
-msgstr "Navega"
-
-#: ui/first_time_setup.slint:104
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Game Data Location"
-msgctxt "FirstTimeSetupContent"
-msgid "Backup Retention"
-msgstr "Ubicació de les dades dels jocs"
-
-#: ui/first_time_setup.slint:111
-msgctxt "FirstTimeSetupContent"
-msgid "How many backups to keep per game."
-msgstr ""
-
-#: ui/first_time_setup.slint:132
-#, fuzzy
-#| msgctxt "RestoreDialog"
-#| msgid "Aletheia - Restore backup"
-msgctxt "FirstTimeSetupContent"
-msgid "Aletheia - First Time Setup"
-msgstr "Aletheia - Restaurar còpies de seguretat"
-
-#: ui/first_time_setup.slint:165
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Steam Account"
-msgctxt "FirstTimeSetupContent"
-msgid "Steam Account"
-msgstr "Compte de Steam"
-
-#: ui/first_time_setup.slint:172
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Only affects games that save in the Steam userdata directory"
-msgctxt "FirstTimeSetupContent"
-msgid "Used to locate saves stored in Steam's userdata directory."
-msgstr "Només afecta els jocs que guarden dades al directori userdata de Steam"
-
-#: ui/first_time_setup.slint:179
-#, fuzzy
-#| msgctxt "Settings"
-#| msgid "Select an account…"
-msgctxt "FirstTimeSetupContent"
-msgid "Select an account…"
-msgstr "Selecciona un compte…"
-
-#: ui/first_time_setup.slint:200
-msgctxt "FirstTimeSetupContent"
-msgid "Continue"
-msgstr ""
-
-#: ui/updater.slint:9
-#, fuzzy
-#| msgctxt "RestoreDialog"
-#| msgid "Aletheia - Restore backup"
-msgctxt "Updater"
-msgid "Aletheia - Updater"
-msgstr "Aletheia - Restaurar còpies de seguretat"
-
-#: ui/updater.slint:26
-msgctxt "Updater"
-msgid "Update Available"
-msgstr "Actualització disponible"
-
-#: ui/updater.slint:48
-msgctxt "Updater"
-msgid "Current"
-msgstr "Actual"
-
-#: ui/updater.slint:75
-msgctxt "Updater"
-msgid "New"
-msgstr "Nova"
-
-#: ui/updater.slint:97
-msgctxt "Updater"
-msgid "What's New"
-msgstr "Què hi ha de nou"
-
-#: ui/updater.slint:132
-msgctxt "Updater"
-msgid "Skip"
-msgstr "Ometre"
-
-#: ui/updater.slint:140
-msgctxt "Updater"
-msgid "Download"
-msgstr "Descarrega"
-
-#: ui/screens/settings.slint:64
+#: ui/screens/settings.slint:88
 msgctxt "Settings"
 msgid "Game Data Location"
 msgstr "Ubicació de les dades dels jocs"
 
-#: ui/screens/settings.slint:77
+#: ui/screens/settings.slint:91
 msgctxt "Settings"
 msgid "Choose where your games will be saved"
 msgstr "Escull on vols guardats els teus jocs"
 
-#: ui/screens/settings.slint:94
+#: ui/screens/settings.slint:108
 msgctxt "Settings"
 msgid "Browse"
 msgstr "Navega"
 
-#: ui/screens/settings.slint:123
+#: ui/screens/settings.slint:117
 msgctxt "Settings"
 msgid "Steam Account"
 msgstr "Compte de Steam"
 
-#: ui/screens/settings.slint:139
+#: ui/screens/settings.slint:123
 msgctxt "Settings"
 msgid "Choose the Steam account for your games"
 msgstr "Escull el compte de Steam pels teus jocs"
 
-#: ui/screens/settings.slint:145
+#: ui/screens/settings.slint:129
 msgctxt "Settings"
 msgid "Only affects games that save in the Steam userdata directory"
 msgstr "Només afecta els jocs que guarden dades al directori userdata de Steam"
 
-#: ui/screens/settings.slint:154
+#: ui/screens/settings.slint:139
 msgctxt "Settings"
 msgid "Select an account…"
 msgstr "Selecciona un compte…"
 
-#: ui/screens/settings.slint:182
+#: ui/screens/settings.slint:147
 msgctxt "Settings"
 msgid "GameDB"
 msgstr "GameDB"
 
-#: ui/screens/settings.slint:195
+#: ui/screens/settings.slint:150
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
 msgstr "Descarrega l'última còpia del GameDB"
 
-#: ui/screens/settings.slint:203
+#: ui/screens/settings.slint:158
 msgctxt "Settings"
 msgid "Update GameDB"
 msgstr "Actualitzar GameDB"
 
-#: ui/screens/settings.slint:230
+#: ui/screens/settings.slint:165
 #, fuzzy
 #| msgctxt "Settings"
 #| msgid "Game Data Location"
@@ -193,27 +71,27 @@ msgctxt "Settings"
 msgid "Backup Retention"
 msgstr "Ubicació de les dades dels jocs"
 
-#: ui/screens/settings.slint:243
+#: ui/screens/settings.slint:168
 msgctxt "Settings"
 msgid "How many backups to keep per game"
 msgstr ""
 
-#: ui/screens/settings.slint:279
+#: ui/screens/settings.slint:184
 msgctxt "Settings"
 msgid "Updates"
 msgstr "Actualitzacions"
 
-#: ui/screens/settings.slint:292
+#: ui/screens/settings.slint:187
 msgctxt "Settings"
 msgid "Configure automatic update checking"
 msgstr "Configura la comprovació automàtica d’actualitzacions"
 
-#: ui/screens/settings.slint:302
+#: ui/screens/settings.slint:197
 msgctxt "Settings"
 msgid "Check for updates automatically"
 msgstr "Busca actualitzacions automàticament"
 
-#: ui/screens/settings.slint:319
+#: ui/screens/settings.slint:213
 msgctxt "Settings"
 msgid "Save"
 msgstr "Guardar"
@@ -289,57 +167,131 @@ msgctxt "Games"
 msgid "Select Filtered"
 msgstr "Seleccionats"
 
-#: ui/screens/about.slint:36
+#: ui/screens/about.slint:31
 msgctxt "About"
 msgid "Application Info"
 msgstr "Informació de l'aplicació"
 
-#: ui/screens/about.slint:49
+#: ui/screens/about.slint:44
 msgctxt "About"
 msgid "Aletheia is an open-source game save backup tool"
 msgstr ""
 "Aletheia és una eina de codi obert per fer còpies de seguretat de partides "
 "guardades de videojocs"
 
-#: ui/screens/about.slint:55
+#: ui/screens/about.slint:50
 msgctxt "About"
 msgid "Version: {}"
 msgstr "Versió: {}"
 
-#: ui/screens/about.slint:61
+#: ui/screens/about.slint:56
 msgctxt "About"
 msgid "License: {}"
 msgstr "Llicència: {}"
 
-#: ui/screens/about.slint:67
+#: ui/screens/about.slint:62
 msgctxt "About"
 msgid "Logo by: {}"
 msgstr "Logotip fet per: {}"
 
-#: ui/screens/about.slint:79
+#: ui/screens/about.slint:74
 msgctxt "About"
 msgid "View Source Code"
 msgstr "Veure el codi font"
 
-#: ui/screens/about.slint:86
+#: ui/screens/about.slint:81
 msgctxt "About"
 msgid "View License"
 msgstr "Veure llicència"
 
-#: ui/app.slint:52
-msgctxt "App"
-msgid "Games"
-msgstr "Jocs"
+#: ui/screens/about.slint:88
+msgctxt "About"
+msgid "Support the Project"
+msgstr "Dona suport al projecte"
 
-#: ui/app.slint:66
-msgctxt "App"
-msgid "Settings"
-msgstr "Configuració"
+#: ui/first_time_setup.slint:37
+msgctxt "FirstTimeSetupContent"
+msgid "Welcome to Aletheia"
+msgstr ""
 
-#: ui/app.slint:74
-msgctxt "App"
-msgid "About"
-msgstr "Informació"
+#: ui/first_time_setup.slint:45
+msgctxt "FirstTimeSetupContent"
+msgid "Let's get you set up. You can change these settings at any time."
+msgstr ""
+
+#: ui/first_time_setup.slint:63
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Game Data Location"
+msgctxt "FirstTimeSetupContent"
+msgid "Backup Location"
+msgstr "Ubicació de les dades dels jocs"
+
+#: ui/first_time_setup.slint:70
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Choose where your games will be saved"
+msgctxt "FirstTimeSetupContent"
+msgid "Where your game saves will be stored on disk."
+msgstr "Escull on vols guardats els teus jocs"
+
+#: ui/first_time_setup.slint:85
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Browse"
+msgctxt "FirstTimeSetupContent"
+msgid "Browse"
+msgstr "Navega"
+
+#: ui/first_time_setup.slint:104
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Game Data Location"
+msgctxt "FirstTimeSetupContent"
+msgid "Backup Retention"
+msgstr "Ubicació de les dades dels jocs"
+
+#: ui/first_time_setup.slint:111
+msgctxt "FirstTimeSetupContent"
+msgid "How many backups to keep per game."
+msgstr ""
+
+#: ui/first_time_setup.slint:132
+#, fuzzy
+#| msgctxt "RestoreDialog"
+#| msgid "Aletheia - Restore backup"
+msgctxt "FirstTimeSetup"
+msgid "Aletheia - First Time Setup"
+msgstr "Aletheia - Restaurar còpies de seguretat"
+
+#: ui/first_time_setup.slint:165
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Steam Account"
+msgctxt "FirstTimeSetup"
+msgid "Steam Account"
+msgstr "Compte de Steam"
+
+#: ui/first_time_setup.slint:172
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Only affects games that save in the Steam userdata directory"
+msgctxt "FirstTimeSetup"
+msgid "Used to locate saves stored in Steam's userdata directory."
+msgstr "Només afecta els jocs que guarden dades al directori userdata de Steam"
+
+#: ui/first_time_setup.slint:179
+#, fuzzy
+#| msgctxt "Settings"
+#| msgid "Select an account…"
+msgctxt "FirstTimeSetup"
+msgid "Select an account…"
+msgstr "Selecciona un compte…"
+
+#: ui/first_time_setup.slint:200
+msgctxt "FirstTimeSetup"
+msgid "Continue"
+msgstr ""
 
 #: ui/restore_dialog.slint:11
 msgctxt "RestoreDialog"
@@ -379,6 +331,165 @@ msgctxt "RestoreDialog"
 msgid "Restore"
 msgstr "Restaurar"
 
+#: ui/components/backup_list_dialog.slint:28
+#, fuzzy
+#| msgctxt "Games"
+#| msgid "Restore"
+msgctxt "BackupListDialog"
+msgid "Restore"
+msgstr "Restaurar"
+
+#: ui/components/backup_list_dialog.slint:90
+#, fuzzy
+#| msgctxt "RestoreDialog"
+#| msgid "Cancel"
+msgctxt "BackupListDialog"
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ui/components/dropdown.slint:10
+msgctxt "Dropdown"
+msgid "Select an option…"
+msgstr "Selecciona una opció…"
+
+#: ui/components/dropdown.slint:85
+msgctxt "Dropdown"
+msgid "Dropdown options"
+msgstr "Opcions desplegables"
+
+#: ui/components/dropdown.slint:126
+msgctxt "Dropdown"
+msgid "Selected"
+msgstr "Seleccionats"
+
+#: ui/app.slint:57
+msgctxt "App"
+msgid "Games"
+msgstr "Jocs"
+
+#: ui/app.slint:71
+msgctxt "App"
+msgid "Settings"
+msgstr "Configuració"
+
+#: ui/app.slint:79
+msgctxt "App"
+msgid "About"
+msgstr "Informació"
+
+#: ui/updater.slint:9
+#, fuzzy
+#| msgctxt "RestoreDialog"
+#| msgid "Aletheia - Restore backup"
+msgctxt "Updater"
+msgid "Aletheia - Updater"
+msgstr "Aletheia - Restaurar còpies de seguretat"
+
+#: ui/updater.slint:26
+msgctxt "Updater"
+msgid "Update Available"
+msgstr "Actualització disponible"
+
+#: ui/updater.slint:48
+msgctxt "Updater"
+msgid "Current"
+msgstr "Actual"
+
+#: ui/updater.slint:75
+msgctxt "Updater"
+msgid "New"
+msgstr "Nova"
+
+#: ui/updater.slint:97
+msgctxt "Updater"
+msgid "What's New"
+msgstr "Què hi ha de nou"
+
+#: ui/updater.slint:132
+msgctxt "Updater"
+msgid "Skip"
+msgstr "Ometre"
+
+#: ui/updater.slint:140
+msgctxt "Updater"
+msgid "Download"
+msgstr "Descarrega"
+
+#: ui/logic/notification.slint:45
+msgctxt "NotificationLogic"
+msgid "Set your Steam account in settings"
+msgstr "Configura el teu compte de Steam a les configuracions"
+
+#: ui/logic/notification.slint:46
+msgctxt "NotificationLogic"
+msgid "Backup directory does not exist"
+msgstr "El directori de còpies de seguretat no existeix"
+
+#: ui/logic/notification.slint:47
+msgctxt "NotificationLogic"
+msgid "Successfully saved settings"
+msgstr "Configuració desada correctament"
+
+#: ui/logic/notification.slint:48
+msgctxt "NotificationLogic"
+msgid "Successfully updated GameDB"
+msgstr "GameDB actualitzat correctament"
+
+#: ui/logic/notification.slint:49
+msgctxt "NotificationLogic"
+msgid "GameDB is already up to date"
+msgstr "GameDB ja està actualitzat"
+
+#: ui/logic/notification.slint:50
+msgctxt "NotificationLogic"
+msgid "Failed to update GameDB"
+msgstr "Hi ha hagut un error en actualitzar GameDB"
+
+#: ui/logic/notification.slint:51
+msgctxt "NotificationLogic"
+msgid "Archive corrupted"
+msgstr "Arxiu corrupte"
+
+#: ui/logic/notification.slint:52
+msgctxt "NotificationLogic"
+msgid "Invalid archive"
+msgstr "Arxiu no vàlid"
+
+#: ui/logic/notification.slint:53
+msgctxt "NotificationLogic"
+msgid "I/O error"
+msgstr "Error I/O"
+
+#: ui/logic/notification.slint:54
+msgctxt "NotificationLogic"
+msgid "Unsupported archive version"
+msgstr "Versió d'arxiu no admesa"
+
+#: ui/logic/notification.slint:55
+msgctxt "NotificationLogic"
+msgid "No backups found"
+msgstr "No s'han trobat còpies de seguretat"
+
+#: ui/logic/notification.slint:56
+msgctxt "NotificationLogic"
+msgid "Game is not installed"
+msgstr ""
+
+#: ui/logic/notification.slint:57
+msgctxt "NotificationLogic"
+msgid "Game name is too long"
+msgstr ""
+
+#: ui/logic/notification.slint:62
+msgctxt "NotificationLogic"
+msgid "Backed up {} games"
+msgstr ""
+
+#: ui/logic/notification.slint:63
+msgctxt "NotificationLogic"
+msgid "Restored {} games"
+msgstr ""
+
 #: ui/logic/restore.slint:11
 msgctxt "RestoreLogic"
 msgid "You do not have {} installed, install it first and try again."
@@ -404,119 +515,12 @@ msgctxt "RestoreLogic"
 msgid "Unsupported archive version"
 msgstr "Versió d'arxiu no admesa"
 
-#: ui/logic/notification.slint:48
-msgctxt "NotificationLogic"
-msgid "Set your Steam account in settings"
-msgstr "Configura el teu compte de Steam a les configuracions"
-
-#: ui/logic/notification.slint:49
-msgctxt "NotificationLogic"
-msgid "Backup directory does not exist"
-msgstr "El directori de còpies de seguretat no existeix"
-
-#: ui/logic/notification.slint:50
-msgctxt "NotificationLogic"
-msgid "Successfully saved settings"
-msgstr "Configuració desada correctament"
-
-#: ui/logic/notification.slint:51
-msgctxt "NotificationLogic"
-msgid "Successfully updated GameDB"
-msgstr "GameDB actualitzat correctament"
-
-#: ui/logic/notification.slint:52
-msgctxt "NotificationLogic"
-msgid "GameDB is already up to date"
-msgstr "GameDB ja està actualitzat"
-
-#: ui/logic/notification.slint:53
-msgctxt "NotificationLogic"
-msgid "Failed to update GameDB"
-msgstr "Hi ha hagut un error en actualitzar GameDB"
-
-#: ui/logic/notification.slint:54
-msgctxt "NotificationLogic"
-msgid "Archive corrupted"
-msgstr "Arxiu corrupte"
-
-#: ui/logic/notification.slint:55
-msgctxt "NotificationLogic"
-msgid "Invalid archive"
-msgstr "Arxiu no vàlid"
-
-#: ui/logic/notification.slint:56
-msgctxt "NotificationLogic"
-msgid "I/O error"
-msgstr "Error I/O"
-
-#: ui/logic/notification.slint:57
-msgctxt "NotificationLogic"
-msgid "Unsupported archive version"
-msgstr "Versió d'arxiu no admesa"
-
-#: ui/logic/notification.slint:58
-msgctxt "NotificationLogic"
-msgid "No backups found"
-msgstr "No s'han trobat còpies de seguretat"
-
-#: ui/logic/notification.slint:59
-msgctxt "NotificationLogic"
-msgid "Game is not installed"
-msgstr ""
-
-#: ui/logic/notification.slint:60
-msgctxt "NotificationLogic"
-msgid "Game name is too long"
-msgstr ""
-
-#: ui/logic/notification.slint:65
-msgctxt "NotificationLogic"
-msgid "Backed up {} games"
-msgstr ""
-
-#: ui/logic/notification.slint:66
-msgctxt "NotificationLogic"
-msgid "Restored {} games"
-msgstr ""
-
-#: ui/components/backup_list_dialog.slint:29
 #, fuzzy
-#| msgctxt "RestoreDialog"
-#| msgid "Restore Backup?"
-msgctxt "BackupListDialog"
-msgid "Restore backup"
-msgstr "Restaurar còpia de seguretat?"
-
-#: ui/components/backup_list_dialog.slint:74
-#, fuzzy
-#| msgctxt "Games"
-#| msgid "Restore"
-msgctxt "BackupListDialog"
-msgid "Restore"
-msgstr "Restaurar"
-
-#: ui/components/backup_list_dialog.slint:89
-#, fuzzy
-#| msgctxt "RestoreDialog"
-#| msgid "Cancel"
-msgctxt "BackupListDialog"
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: ui/components/dropdown.slint:12
-msgctxt "Dropdown"
-msgid "Select an option…"
-msgstr "Selecciona una opció…"
-
-#: ui/components/dropdown.slint:90
-msgctxt "Dropdown"
-msgid "Dropdown options"
-msgstr "Opcions desplegables"
-
-#: ui/components/dropdown.slint:131
-msgctxt "Dropdown"
-msgid "Selected"
-msgstr "Seleccionats"
+#~| msgctxt "RestoreDialog"
+#~| msgid "Restore Backup?"
+#~ msgctxt "BackupListDialog"
+#~ msgid "Restore backup"
+#~ msgstr "Restaurar còpia de seguretat?"
 
 #~ msgctxt "Settings"
 #~ msgid "No accounts found…"
@@ -525,7 +529,3 @@ msgstr "Seleccionats"
 #~ msgctxt "RestoreDialog"
 #~ msgid "Restore Backup?"
 #~ msgstr "Restaurar còpia de seguretat?"
-
-#~ msgctxt "About"
-#~ msgid "Support the Project"
-#~ msgstr "Dona suport al projecte"

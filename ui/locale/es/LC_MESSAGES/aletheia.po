@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-08-11 19:58+0000\n"
+"POT-Creation-Date: 2026-10-26 01:24+0000\n"
 "PO-Revision-Date: 2026-07-13 17:46+0000\n"
 "Last-Translator: Libre <6n0n1m0s@proton.me>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/aletheia/ui/es/"
@@ -13,218 +13,84 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2026.8.dev0\n"
 
-#: ui/first_time_setup.slint:37
-#, fuzzy
-#| msgctxt "FirstTimeSetup"
-#| msgid "Welcome to Aletheia"
-msgctxt "FirstTimeSetupContent"
-msgid "Welcome to Aletheia"
-msgstr "Bienvenido a Aletheia"
-
-#: ui/first_time_setup.slint:45
-#, fuzzy
-#| msgctxt "FirstTimeSetup"
-#| msgid "Let's get you set up. You can change these settings at any time."
-msgctxt "FirstTimeSetupContent"
-msgid "Let's get you set up. You can change these settings at any time."
-msgstr ""
-"Vamos a configurarlo. Puedes cambiar estos ajustes en cualquier momento."
-
-#: ui/first_time_setup.slint:63
-#, fuzzy
-#| msgctxt "FirstTimeSetup"
-#| msgid "Backup Location"
-msgctxt "FirstTimeSetupContent"
-msgid "Backup Location"
-msgstr "Lugar del Respaldo"
-
-#: ui/first_time_setup.slint:70
-#, fuzzy
-#| msgctxt "FirstTimeSetup"
-#| msgid "Where your game saves will be stored on disk."
-msgctxt "FirstTimeSetupContent"
-msgid "Where your game saves will be stored on disk."
-msgstr "Donde guarde su partida estará almacenado en el disco."
-
-#: ui/first_time_setup.slint:85
-#, fuzzy
-#| msgctxt "FirstTimeSetup"
-#| msgid "Browse"
-msgctxt "FirstTimeSetupContent"
-msgid "Browse"
-msgstr "Examinar"
-
-#: ui/first_time_setup.slint:104
-#, fuzzy
-#| msgctxt "FirstTimeSetup"
-#| msgid "Backup Retention"
-msgctxt "FirstTimeSetupContent"
-msgid "Backup Retention"
-msgstr "Retención de respaldo"
-
-#: ui/first_time_setup.slint:111
-#, fuzzy
-#| msgctxt "FirstTimeSetup"
-#| msgid "How many backups to keep per game."
-msgctxt "FirstTimeSetupContent"
-msgid "How many backups to keep per game."
-msgstr "Cuantos respaldos mantener por juego."
-
-#: ui/first_time_setup.slint:132
-#, fuzzy
-#| msgctxt "FirstTimeSetup"
-#| msgid "Aletheia - First Time Setup"
-msgctxt "FirstTimeSetupContent"
-msgid "Aletheia - First Time Setup"
-msgstr "Aletheia ‐ Configuración por primera vez"
-
-#: ui/first_time_setup.slint:165
-#, fuzzy
-#| msgctxt "FirstTimeSetup"
-#| msgid "Steam Account"
-msgctxt "FirstTimeSetupContent"
-msgid "Steam Account"
-msgstr "Cuenta de Steam"
-
-#: ui/first_time_setup.slint:172
-#, fuzzy
-#| msgctxt "FirstTimeSetup"
-#| msgid "Used to locate saves stored in Steam's userdata directory."
-msgctxt "FirstTimeSetupContent"
-msgid "Used to locate saves stored in Steam's userdata directory."
-msgstr ""
-"Utilizado para el lugar donde guarda en su directorio de datos del usuario "
-"de Steam."
-
-#: ui/first_time_setup.slint:179
-#, fuzzy
-#| msgctxt "FirstTimeSetup"
-#| msgid "Select an account…"
-msgctxt "FirstTimeSetupContent"
-msgid "Select an account…"
-msgstr "Seleccione una cuenta…"
-
-#: ui/first_time_setup.slint:200
-#, fuzzy
-#| msgctxt "FirstTimeSetup"
-#| msgid "Continue"
-msgctxt "FirstTimeSetupContent"
-msgid "Continue"
-msgstr "Continuar"
-
-#: ui/updater.slint:9
-msgctxt "Updater"
-msgid "Aletheia - Updater"
-msgstr "Aletheia ‐ Actualizador"
-
-#: ui/updater.slint:26
-msgctxt "Updater"
-msgid "Update Available"
-msgstr "Actualización Disponible"
-
-#: ui/updater.slint:48
-msgctxt "Updater"
-msgid "Current"
-msgstr "Actual"
-
-#: ui/updater.slint:75
-msgctxt "Updater"
-msgid "New"
-msgstr "Nuevo"
-
-#: ui/updater.slint:97
-msgctxt "Updater"
-msgid "What's New"
-msgstr "Qué hay de nuevo"
-
-#: ui/updater.slint:132
-msgctxt "Updater"
-msgid "Skip"
-msgstr "Brincar"
-
-#: ui/updater.slint:140
-msgctxt "Updater"
-msgid "Download"
-msgstr "Descargar"
-
-#: ui/screens/settings.slint:64
+#: ui/screens/settings.slint:88
 msgctxt "Settings"
 msgid "Game Data Location"
 msgstr "Ubicación de los datos del juego"
 
-#: ui/screens/settings.slint:77
+#: ui/screens/settings.slint:91
 msgctxt "Settings"
 msgid "Choose where your games will be saved"
 msgstr "Elige dónde se guardarán tus juegos"
 
-#: ui/screens/settings.slint:94
+#: ui/screens/settings.slint:108
 msgctxt "Settings"
 msgid "Browse"
 msgstr "Ojear"
 
-#: ui/screens/settings.slint:123
+#: ui/screens/settings.slint:117
 msgctxt "Settings"
 msgid "Steam Account"
 msgstr "Steam Cuenta"
 
-#: ui/screens/settings.slint:139
+#: ui/screens/settings.slint:123
 msgctxt "Settings"
 msgid "Choose the Steam account for your games"
 msgstr "Elige la cuenta de Steam para tus juegos"
 
-#: ui/screens/settings.slint:145
+#: ui/screens/settings.slint:129
 msgctxt "Settings"
 msgid "Only affects games that save in the Steam userdata directory"
 msgstr ""
 "Solo afecta a los juegos que están en el directorio de datos de usuario de "
 "Steam"
 
-#: ui/screens/settings.slint:154
+#: ui/screens/settings.slint:139
 msgctxt "Settings"
 msgid "Select an account…"
 msgstr "Seleccione una cuenta…"
 
-#: ui/screens/settings.slint:182
+#: ui/screens/settings.slint:147
 msgctxt "Settings"
 msgid "GameDB"
 msgstr "GameDB"
 
-#: ui/screens/settings.slint:195
+#: ui/screens/settings.slint:150
 msgctxt "Settings"
 msgid "Download the latest copy of the GameDB"
 msgstr "Descargar la última copia de GameDB"
 
-#: ui/screens/settings.slint:203
+#: ui/screens/settings.slint:158
 msgctxt "Settings"
 msgid "Update GameDB"
 msgstr "Actualizar GameDB"
 
-#: ui/screens/settings.slint:230
+#: ui/screens/settings.slint:165
 msgctxt "Settings"
 msgid "Backup Retention"
 msgstr "Retención del respaldo"
 
-#: ui/screens/settings.slint:243
+#: ui/screens/settings.slint:168
 msgctxt "Settings"
 msgid "How many backups to keep per game"
 msgstr "Cuantos respaldos mantener por juego"
 
-#: ui/screens/settings.slint:279
+#: ui/screens/settings.slint:184
 msgctxt "Settings"
 msgid "Updates"
 msgstr "Actualizaciones"
 
-#: ui/screens/settings.slint:292
+#: ui/screens/settings.slint:187
 msgctxt "Settings"
 msgid "Configure automatic update checking"
 msgstr "Configurar la comprobación automática de actualizaciones"
 
-#: ui/screens/settings.slint:302
+#: ui/screens/settings.slint:197
 msgctxt "Settings"
 msgid "Check for updates automatically"
 msgstr "Comprobar las actualizaciones automáticamente"
 
-#: ui/screens/settings.slint:319
+#: ui/screens/settings.slint:213
 msgctxt "Settings"
 msgid "Save"
 msgstr "Guardar"
@@ -300,57 +166,146 @@ msgctxt "Games"
 msgid "Select Filtered"
 msgstr "Seleccionado"
 
-#: ui/screens/about.slint:36
+#: ui/screens/about.slint:31
 msgctxt "About"
 msgid "Application Info"
 msgstr "Información de la aplicación"
 
-#: ui/screens/about.slint:49
+#: ui/screens/about.slint:44
 msgctxt "About"
 msgid "Aletheia is an open-source game save backup tool"
 msgstr ""
 "Aletheia es una herramienta de código abierto para hacer copias de seguridad "
 "de partidas guardadas de videojuegos"
 
-#: ui/screens/about.slint:55
+#: ui/screens/about.slint:50
 msgctxt "About"
 msgid "Version: {}"
 msgstr "Versión: {}"
 
-#: ui/screens/about.slint:61
+#: ui/screens/about.slint:56
 msgctxt "About"
 msgid "License: {}"
 msgstr "Licencia: {}"
 
-#: ui/screens/about.slint:67
+#: ui/screens/about.slint:62
 msgctxt "About"
 msgid "Logo by: {}"
 msgstr "Logotipo de: {}"
 
-#: ui/screens/about.slint:79
+#: ui/screens/about.slint:74
 msgctxt "About"
 msgid "View Source Code"
 msgstr "Ver código fuente"
 
-#: ui/screens/about.slint:86
+#: ui/screens/about.slint:81
 msgctxt "About"
 msgid "View License"
 msgstr "Ver licencia"
 
-#: ui/app.slint:52
-msgctxt "App"
-msgid "Games"
-msgstr "Juegos"
+#: ui/screens/about.slint:88
+msgctxt "About"
+msgid "Support the Project"
+msgstr "Apoya al proyecto"
 
-#: ui/app.slint:66
-msgctxt "App"
-msgid "Settings"
-msgstr "Configuración"
+#: ui/first_time_setup.slint:37
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Welcome to Aletheia"
+msgctxt "FirstTimeSetupContent"
+msgid "Welcome to Aletheia"
+msgstr "Bienvenido a Aletheia"
 
-#: ui/app.slint:74
-msgctxt "App"
-msgid "About"
-msgstr "Información"
+#: ui/first_time_setup.slint:45
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Let's get you set up. You can change these settings at any time."
+msgctxt "FirstTimeSetupContent"
+msgid "Let's get you set up. You can change these settings at any time."
+msgstr ""
+"Vamos a configurarlo. Puedes cambiar estos ajustes en cualquier momento."
+
+#: ui/first_time_setup.slint:63
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Backup Location"
+msgctxt "FirstTimeSetupContent"
+msgid "Backup Location"
+msgstr "Lugar del Respaldo"
+
+#: ui/first_time_setup.slint:70
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Where your game saves will be stored on disk."
+msgctxt "FirstTimeSetupContent"
+msgid "Where your game saves will be stored on disk."
+msgstr "Donde guarde su partida estará almacenado en el disco."
+
+#: ui/first_time_setup.slint:85
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Browse"
+msgctxt "FirstTimeSetupContent"
+msgid "Browse"
+msgstr "Examinar"
+
+#: ui/first_time_setup.slint:104
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Backup Retention"
+msgctxt "FirstTimeSetupContent"
+msgid "Backup Retention"
+msgstr "Retención de respaldo"
+
+#: ui/first_time_setup.slint:111
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "How many backups to keep per game."
+msgctxt "FirstTimeSetupContent"
+msgid "How many backups to keep per game."
+msgstr "Cuantos respaldos mantener por juego."
+
+#: ui/first_time_setup.slint:132
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Aletheia - First Time Setup"
+msgctxt "FirstTimeSetup"
+msgid "Aletheia - First Time Setup"
+msgstr "Aletheia ‐ Configuración por primera vez"
+
+#: ui/first_time_setup.slint:165
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Steam Account"
+msgctxt "FirstTimeSetup"
+msgid "Steam Account"
+msgstr "Cuenta de Steam"
+
+#: ui/first_time_setup.slint:172
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Used to locate saves stored in Steam's userdata directory."
+msgctxt "FirstTimeSetup"
+msgid "Used to locate saves stored in Steam's userdata directory."
+msgstr ""
+"Utilizado para el lugar donde guarda en su directorio de datos del usuario "
+"de Steam."
+
+#: ui/first_time_setup.slint:179
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Select an account…"
+msgctxt "FirstTimeSetup"
+msgid "Select an account…"
+msgstr "Seleccione una cuenta…"
+
+#: ui/first_time_setup.slint:200
+#, fuzzy
+#| msgctxt "FirstTimeSetup"
+#| msgid "Continue"
+msgctxt "FirstTimeSetup"
+msgid "Continue"
+msgstr "Continuar"
 
 #: ui/restore_dialog.slint:11
 msgctxt "RestoreDialog"
@@ -390,6 +345,156 @@ msgctxt "RestoreDialog"
 msgid "Restore"
 msgstr "Restaurar"
 
+#: ui/components/backup_list_dialog.slint:28
+msgctxt "BackupListDialog"
+msgid "Restore"
+msgstr "Restaurar"
+
+#: ui/components/backup_list_dialog.slint:90
+msgctxt "BackupListDialog"
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ui/components/dropdown.slint:10
+msgctxt "Dropdown"
+msgid "Select an option…"
+msgstr "Selecciona una opción…"
+
+#: ui/components/dropdown.slint:85
+msgctxt "Dropdown"
+msgid "Dropdown options"
+msgstr "Opciones desplegables"
+
+#: ui/components/dropdown.slint:126
+msgctxt "Dropdown"
+msgid "Selected"
+msgstr "Seleccionado"
+
+#: ui/app.slint:57
+msgctxt "App"
+msgid "Games"
+msgstr "Juegos"
+
+#: ui/app.slint:71
+msgctxt "App"
+msgid "Settings"
+msgstr "Configuración"
+
+#: ui/app.slint:79
+msgctxt "App"
+msgid "About"
+msgstr "Información"
+
+#: ui/updater.slint:9
+msgctxt "Updater"
+msgid "Aletheia - Updater"
+msgstr "Aletheia ‐ Actualizador"
+
+#: ui/updater.slint:26
+msgctxt "Updater"
+msgid "Update Available"
+msgstr "Actualización Disponible"
+
+#: ui/updater.slint:48
+msgctxt "Updater"
+msgid "Current"
+msgstr "Actual"
+
+#: ui/updater.slint:75
+msgctxt "Updater"
+msgid "New"
+msgstr "Nuevo"
+
+#: ui/updater.slint:97
+msgctxt "Updater"
+msgid "What's New"
+msgstr "Qué hay de nuevo"
+
+#: ui/updater.slint:132
+msgctxt "Updater"
+msgid "Skip"
+msgstr "Brincar"
+
+#: ui/updater.slint:140
+msgctxt "Updater"
+msgid "Download"
+msgstr "Descargar"
+
+#: ui/logic/notification.slint:45
+msgctxt "NotificationLogic"
+msgid "Set your Steam account in settings"
+msgstr "Configura tu cuenta de Steam en los ajustes"
+
+#: ui/logic/notification.slint:46
+msgctxt "NotificationLogic"
+msgid "Backup directory does not exist"
+msgstr "El directorio de copias de seguridad no existe"
+
+#: ui/logic/notification.slint:47
+msgctxt "NotificationLogic"
+msgid "Successfully saved settings"
+msgstr "Configuración guardada correctamente"
+
+#: ui/logic/notification.slint:48
+msgctxt "NotificationLogic"
+msgid "Successfully updated GameDB"
+msgstr "Actualización correcta de GameDB"
+
+#: ui/logic/notification.slint:49
+msgctxt "NotificationLogic"
+msgid "GameDB is already up to date"
+msgstr "GameDB ya está actualizado"
+
+#: ui/logic/notification.slint:50
+msgctxt "NotificationLogic"
+msgid "Failed to update GameDB"
+msgstr "Ha habido un error al actualizar GameDB"
+
+#: ui/logic/notification.slint:51
+msgctxt "NotificationLogic"
+msgid "Archive corrupted"
+msgstr "Archivo dañado"
+
+#: ui/logic/notification.slint:52
+msgctxt "NotificationLogic"
+msgid "Invalid archive"
+msgstr "Archivo no válido"
+
+#: ui/logic/notification.slint:53
+msgctxt "NotificationLogic"
+msgid "I/O error"
+msgstr "Error de I/O"
+
+#: ui/logic/notification.slint:54
+msgctxt "NotificationLogic"
+msgid "Unsupported archive version"
+msgstr "Versión de archivo no compatible"
+
+#: ui/logic/notification.slint:55
+msgctxt "NotificationLogic"
+msgid "No backups found"
+msgstr "No se han encontrado copias de seguridad"
+
+#: ui/logic/notification.slint:56
+msgctxt "NotificationLogic"
+msgid "Game is not installed"
+msgstr "El juego no está instalado"
+
+#: ui/logic/notification.slint:57
+msgctxt "NotificationLogic"
+msgid "Game name is too long"
+msgstr ""
+
+#: ui/logic/notification.slint:62
+msgctxt "NotificationLogic"
+msgid "Backed up {} games"
+msgstr "Se respaldaron {} juegos"
+
+#: ui/logic/notification.slint:63
+msgctxt "NotificationLogic"
+msgid "Restored {} games"
+msgstr "Se restauraron {} juegos"
+
 #: ui/logic/restore.slint:11
 msgctxt "RestoreLogic"
 msgid "You do not have {} installed, install it first and try again."
@@ -415,110 +520,9 @@ msgctxt "RestoreLogic"
 msgid "Unsupported archive version"
 msgstr "Versión de archivador no compatible"
 
-#: ui/logic/notification.slint:48
-msgctxt "NotificationLogic"
-msgid "Set your Steam account in settings"
-msgstr "Configura tu cuenta de Steam en los ajustes"
-
-#: ui/logic/notification.slint:49
-msgctxt "NotificationLogic"
-msgid "Backup directory does not exist"
-msgstr "El directorio de copias de seguridad no existe"
-
-#: ui/logic/notification.slint:50
-msgctxt "NotificationLogic"
-msgid "Successfully saved settings"
-msgstr "Configuración guardada correctamente"
-
-#: ui/logic/notification.slint:51
-msgctxt "NotificationLogic"
-msgid "Successfully updated GameDB"
-msgstr "Actualización correcta de GameDB"
-
-#: ui/logic/notification.slint:52
-msgctxt "NotificationLogic"
-msgid "GameDB is already up to date"
-msgstr "GameDB ya está actualizado"
-
-#: ui/logic/notification.slint:53
-msgctxt "NotificationLogic"
-msgid "Failed to update GameDB"
-msgstr "Ha habido un error al actualizar GameDB"
-
-#: ui/logic/notification.slint:54
-msgctxt "NotificationLogic"
-msgid "Archive corrupted"
-msgstr "Archivo dañado"
-
-#: ui/logic/notification.slint:55
-msgctxt "NotificationLogic"
-msgid "Invalid archive"
-msgstr "Archivo no válido"
-
-#: ui/logic/notification.slint:56
-msgctxt "NotificationLogic"
-msgid "I/O error"
-msgstr "Error de I/O"
-
-#: ui/logic/notification.slint:57
-msgctxt "NotificationLogic"
-msgid "Unsupported archive version"
-msgstr "Versión de archivo no compatible"
-
-#: ui/logic/notification.slint:58
-msgctxt "NotificationLogic"
-msgid "No backups found"
-msgstr "No se han encontrado copias de seguridad"
-
-#: ui/logic/notification.slint:59
-msgctxt "NotificationLogic"
-msgid "Game is not installed"
-msgstr "El juego no está instalado"
-
-#: ui/logic/notification.slint:60
-msgctxt "NotificationLogic"
-msgid "Game name is too long"
-msgstr ""
-
-#: ui/logic/notification.slint:65
-msgctxt "NotificationLogic"
-msgid "Backed up {} games"
-msgstr "Se respaldaron {} juegos"
-
-#: ui/logic/notification.slint:66
-msgctxt "NotificationLogic"
-msgid "Restored {} games"
-msgstr "Se restauraron {} juegos"
-
-#: ui/components/backup_list_dialog.slint:29
-msgctxt "BackupListDialog"
-msgid "Restore backup"
-msgstr "Restaurar respaldo"
-
-#: ui/components/backup_list_dialog.slint:74
-msgctxt "BackupListDialog"
-msgid "Restore"
-msgstr "Restaurar"
-
-#: ui/components/backup_list_dialog.slint:89
-msgctxt "BackupListDialog"
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: ui/components/dropdown.slint:12
-msgctxt "Dropdown"
-msgid "Select an option…"
-msgstr "Selecciona una opción…"
-
-#: ui/components/dropdown.slint:90
-msgctxt "Dropdown"
-msgid "Dropdown options"
-msgstr "Opciones desplegables"
-
-#: ui/components/dropdown.slint:131
-msgctxt "Dropdown"
-msgid "Selected"
-msgstr "Seleccionado"
+#~ msgctxt "BackupListDialog"
+#~ msgid "Restore backup"
+#~ msgstr "Restaurar respaldo"
 
 #~ msgctxt "Settings"
 #~ msgid "No accounts found…"
@@ -527,7 +531,3 @@ msgstr "Seleccionado"
 #~ msgctxt "RestoreDialog"
 #~ msgid "Restore Backup?"
 #~ msgstr "¿Restaurar Respaldo?"
-
-#~ msgctxt "About"
-#~ msgid "Support the Project"
-#~ msgstr "Apoya al proyecto"
