@@ -2410,6 +2410,13 @@ Tormented Souls:
   store_ids:
     gog: 1243021945
     steam: 1367590
+Tormented Souls 2:
+  files:
+    windows:
+      - "{LocalAppData}/TormentedSouls2/Saved/SaveGames/*.sav"
+  store_ids:
+    gog: 1154651073
+    steam: 2464280
 Toy Story 3:
   files:
     windows:
