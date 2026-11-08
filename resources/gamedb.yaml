@@ -1149,7 +1149,7 @@ JUMP FORCE:
 Judgment:
   files:
     windows:
-      - "{AppData}/Sega/Judgment/Steam/{SteamID64}/**/*"
+      - "{AppData}/Sega/Judgment/Steam/{SteamID3}/**/*"
   store_ids:
     steam: 2058180
 KANADE:
