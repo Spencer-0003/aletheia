@@ -19,6 +19,9 @@ Aletheia is a cross-platform game save sync tool designed to help you easily bac
 -   GOG Galaxy (Windows & macOS)
 -   Xbox (Windows)
 
+#### SteamOS
+A Decky Loader plugin is available: [aletheia-decky](https://github.com/Spencer-0003/aletheia-decky).
+
 ## Contributing
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines before making changes.
 
