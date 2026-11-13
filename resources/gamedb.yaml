@@ -407,6 +407,12 @@ DOOM Eternal:
   store_ids:
     gog: 1344230395
     steam: 782330
+"DOOM: The Dark Ages":
+  files:
+    windows:
+      - "{SteamUserData}/3017860/remote/**/*"
+  store_ids:
+    steam: 3017860
 DRAGON BALL FighterZ:
   files:
     windows:
