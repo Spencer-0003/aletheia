@@ -1,5 +1,5 @@
-[env]
-SLINT_ENABLE_EXPERIMENTAL_FEATURES = "1"
+# SPDX-FileCopyrightText: 2026 Spencer
+# SPDX-License-Identifier: AGPL-3.0-only
 
 [registry]
 global-min-publish-age = "3 days"

@@ -24,6 +24,12 @@ SPDX-FileCopyrightText = "2025-2026 Spencer"
 SPDX-License-Identifier = "AGPL-3.0-only"
 
 [[annotations]]
+path = ["gamedb.schema.json", "slint-project.json"]
+precedence = "override"
+SPDX-FileCopyrightText = "2026 Spencer"
+SPDX-License-Identifier = "AGPL-3.0-only"
+
+[[annotations]]
 path = ["ui/fonts/Inter/Inter.ttc", "ui/fonts/Inter/InterVariable-Italic.ttf", "ui/fonts/Inter/InterVariable.ttf"]
 precedence = "override"
 SPDX-FileCopyrightText = "2017 Rasmus Andersson"
