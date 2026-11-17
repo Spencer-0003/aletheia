@@ -21,9 +21,6 @@ export global GamesScreenLogic {
 }
 
 export component Games {
-  width: 100%;
-  height: 100%;
-
   if (GameLogic.games.length == 0): VerticalLayout {
     spacing: 16px;
     alignment: center;
@@ -42,7 +39,6 @@ export component Games {
       font-size: 14px;
       horizontal-alignment: center;
       wrap: word-wrap;
-      max-width: 440px;
     }
 
     HorizontalLayout {

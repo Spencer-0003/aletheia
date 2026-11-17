@@ -6,9 +6,6 @@ import { AppLogic } from "../logic/app.slint";
 import { ThemeLogic } from "../logic/theme.slint";
 
 export component About {
-  width: 100%;
-  height: 100%;
-
   VerticalLayout {
     spacing: 24px;
     padding: 24px;
@@ -67,6 +64,7 @@ export component About {
         HorizontalLayout {
           spacing: 12px;
           padding-top: 8px;
+          alignment: start;
 
           Button {
             width: 180px;

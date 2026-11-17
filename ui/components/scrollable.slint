@@ -8,6 +8,8 @@ export component Scrollable inherits Rectangle {
   private property <bool> has_vertical_overflow: flickable.content-height > flickable.height;
 
   flickable := Flickable {
+    width: root.width;
+    height: root.height;
     @children
   }
 
