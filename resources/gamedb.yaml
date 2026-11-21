@@ -2471,6 +2471,12 @@ Urban Jungle:
       - "{LocalLow}/Kylyk Games/UrbanJungle/player-progress.json"
   store_ids:
     steam: 2744010
+V Rising:
+  files:
+    windows:
+      - "{LocalLow}/Stunlock Studios/VRising/CloudSaves/{SteamID64}/**/*"
+  store_ids:
+    steam: 1604030
 Vampyr:
   files:
     windows:
