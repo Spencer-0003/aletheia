@@ -62,7 +62,6 @@ SPDX-License-Identifier: CC0-1.0
         <p>GameDB: Add Echoes of Aincrad DEMO Version.</p>
         <p>Backup: Don't decompress files unnecessarily.</p>
         <p>UI: Add missing font-size to NavItem.</p>
-        <p>UI: Upgrade to Slint 1.17.</p>
         <p>Unix: Replace Qt software renderer with FemtoVG hardware renderer.</p>
         <p>GameDB: Add Soulstice.</p>
         <p>UI: Add support for translatable dynamic strings.</p>
@@ -146,7 +145,7 @@ SPDX-License-Identifier: CC0-1.0
         <p>GameDB: Add A Clockwork Ley-Line: The Borderline of Dusk.</p>
         <p>GameDB: Add the other A Clockwork Ley-Line games.</p>
         <p>GameDB: Add Heartsworn Abyss: NighTmaRes.</p>
-        <p>UI: Update to Slint 1.18.1.</p>
+        <p>UI: Update to Slint 1.19.1.</p>
         <p>UI: Use match for rendering screens.</p>
         <p>GameDB: Add Family Guy: Back to the Multiverse.</p>
         <p>GameDB: Add WUCHANG: Fallen Feathers.</p>
@@ -162,6 +161,10 @@ SPDX-License-Identifier: CC0-1.0
         <p>GameDB: Add classic Toy Story games.</p>
         <p>GameDB: Add Sea of Stars: Sunset Edition.</p>
         <p>GameDB: Add FINAL FANTASY RESONANCE.</p>
+        <p>GameDB: Add Tormented Souls 2.</p>
+        <p>GameDB: Fix Judgment.</p>
+        <p>GameDB: Add DOOM: The Dark Ages.</p>
+        <p>GameDB: Add V Rising.</p>
       </description>
     </release>
     <release version="2.0.1" date="2026-05-16">
