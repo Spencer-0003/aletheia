@@ -50,7 +50,7 @@ SPDX-License-Identifier: CC0-1.0
   </screenshots>
 
   <releases>
-    <release version="2.1.0" date="2026-11-23">
+    <release version="2.1.0" date="2026-11-24">
       <url type="details">https://github.com/Spencer-0003/aletheia/releases/tag/2.1.0</url>
       <description>
         <p>UI: Don't include Inter collection.</p>
