@@ -35,7 +35,7 @@ jobs:
           key: ${{ matrix.os }}-${{ matrix.target }}
 
       - name: Build binary
-        run: cargo build --release --features bundled_sqlite updater --target=${{ matrix.target }} && cp target/${{ matrix.target }}/release/aletheia target/${{ matrix.target }}/release/${{ matrix.artifact }}
+        run: cargo build --release --features bundled_sqlite,updater --target=${{ matrix.target }} && cp target/${{ matrix.target }}/release/aletheia target/${{ matrix.target }}/release/${{ matrix.artifact }}
 
       - name: Build AppImage
         run: |
