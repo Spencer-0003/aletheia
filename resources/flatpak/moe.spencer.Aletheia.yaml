@@ -5,15 +5,9 @@ app-id: moe.spencer.Aletheia
 runtime: org.freedesktop.Platform
 runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
+command: aletheia
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
-
-build-options:
-  append-path: /usr/lib/sdk/rust-stable/bin
-  env:
-    CARGO_HOME: /run/build/aletheia/cargo
-  build-args:
-    - --share=network
 
 finish-args:
   # Used to display UI
@@ -38,7 +32,12 @@ finish-args:
   - --filesystem=xdg-config/itch # For cases where Aletheia is installed in Flatpak but itch.io is not
   - --filesystem=~/.var/app/io.itch.itch
 
-command: aletheia
+build-options:
+  append-path: /usr/lib/sdk/rust-stable/bin
+  env:
+    CARGO_HOME: /run/build/aletheia/cargo
+  build-args:
+    - --share=network
 
 modules:
   - name: aletheia
@@ -46,12 +45,12 @@ modules:
     build-commands:
       - cargo build --release --features updater
       - install -Dm755 ${FLATPAK_BUILDER_BUILDDIR}/target/release/aletheia ${FLATPAK_DEST}/bin/aletheia
-    sources:
-      - type: dir
-        path: ../../
     post-install:
       - install -Dm644 ${FLATPAK_BUILDER_BUILDDIR}/resources/linux/moe.spencer.Aletheia.desktop ${FLATPAK_DEST}/share/applications/moe.spencer.Aletheia.desktop
       - install -Dm644 ${FLATPAK_BUILDER_BUILDDIR}/resources/logo/moe.spencer.Aletheia.png ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/moe.spencer.Aletheia.png
       - install -Dm644 ${FLATPAK_BUILDER_BUILDDIR}/resources/logo/moe.spencer.Aletheia.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps
       - install -Dm644 ${FLATPAK_BUILDER_BUILDDIR}/resources/linux/moe.spencer.Aletheia.metainfo.xml ${FLATPAK_DEST}/share/metainfo/moe.spencer.Aletheia.metainfo.xml
       - install -Dm644 ${FLATPAK_BUILDER_BUILDDIR}/resources/linux/moe.spencer.Aletheia.mime.xml ${FLATPAK_DEST}/share/mime/packages/moe.spencer.Aletheia.mime.xml
+    sources:
+      - type: dir
+        path: ../../
