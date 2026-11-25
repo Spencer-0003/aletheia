@@ -5,7 +5,10 @@ use super::{Game, Scanner};
 use serde::Deserialize;
 use std::collections::HashMap;
 use std::fs::File;
-use steamlocate::SteamDir;
+use steamlocate::{Library, SteamDir};
+
+#[cfg(flatpak_build)]
+use crate::portal;
 
 const STEAM_ID64_BASE: u64 = 76561197960265728;
 
@@ -45,6 +48,39 @@ impl SteamScanner {
 
         Some(login_users.users)
     }
+
+    #[cfg(flatpak_build)]
+    fn libraries(steam: &SteamDir) -> Vec<Library> {
+        let Ok(roots) = steam.library_paths() else {
+            log::warn!("Failed to detect Steam libraries.");
+            return vec![];
+        };
+
+        roots
+            .into_iter()
+            .filter_map(|root| {
+                let resolved = Library::from_dir(&root)
+                    .ok()
+                    .or_else(|| portal::granted_for(&root).and_then(|granted| Library::from_dir(&granted).ok()));
+
+                if resolved.is_none() {
+                    log::warn!("Failed to access Steam library, possibly blocked by Flatpak.");
+                }
+
+                resolved
+            })
+            .collect()
+    }
+
+    #[cfg(not(flatpak_build))]
+    fn libraries(steam: &SteamDir) -> Vec<Library> {
+        let Ok(iter) = steam.libraries() else {
+            log::warn!("Failed to detect Steam libraries.");
+            return vec![];
+        };
+
+        iter.filter_map(|lib| lib.map_err(|_| log::warn!("Failed to access Steam library.")).ok()).collect()
+    }
 }
 
 impl Scanner for SteamScanner {
@@ -55,20 +91,7 @@ impl Scanner for SteamScanner {
             return games;
         };
 
-        let Ok(libraries) = steam_directory.libraries() else {
-            log::warn!("Failed to detect Steam libraries.");
-            return games; // This can fail if Steam is downloaded but never signed in
-        };
-
-        for library in libraries {
-            let Ok(lib) = library else {
-                #[cfg(flatpak_build)]
-                log::warn!("Failed to access Steam library, possibly blocked by Flatpak.");
-                #[cfg(not(flatpak_build))]
-                log::warn!("Failed to access Steam library.");
-                continue; // This can fail if running in Flatpak and permissions haven't been granted or if Steam is reporting an old/deleted library on another drive
-            };
-
+        for lib in SteamScanner::libraries(&steam_directory) {
             #[cfg(all(unix, not(target_os = "macos")))]
             let lib_path = lib.path();
             for app in lib.apps() {

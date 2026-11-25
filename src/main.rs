@@ -24,6 +24,9 @@ mod scanner;
 mod ui;
 mod utils;
 
+#[cfg(flatpak_build)]
+mod portal;
+
 #[cfg(all(feature = "updater", not(debug_assertions)))]
 mod updater;
 
