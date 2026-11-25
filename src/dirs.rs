@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2025-2026 Spencer
 // SPDX-License-Identifier: AGPL-3.0-only
 
-use crate::scanner::SteamScanner;
+use crate::scanner::{Game, SteamScanner};
 use std::env::{home_dir, var_os};
 use std::fs::read_dir;
 use std::path::{Path, PathBuf};
@@ -108,14 +108,38 @@ fn path_contains_subpath(haystack: &Path, needle: &str) -> bool {
 }
 
 #[cfg(all(unix, not(target_os = "macos")))]
-pub fn expand_path(path: &Path, installation_dir: Option<&Path>, prefix: Option<&Path>, steam_account_id: Option<&str>) -> PathBuf {
+fn steam_flatpak_root() -> PathBuf {
+    home().join(".var/app/com.valvesoftware.Steam")
+}
+
+#[cfg(all(unix, not(target_os = "macos")))]
+pub fn sandbox_root(game: &Game) -> Option<PathBuf> {
+    if game.source != "Steam" {
+        return None;
+    }
+
+    let root = steam_flatpak_root();
+    let in_sandbox = |path: &Path| path.starts_with(&root);
+
+    let flatpak = game.installation_dir.as_deref().is_some_and(in_sandbox)
+        || game.prefix.as_deref().is_some_and(in_sandbox)
+        || steamlocate::SteamDir::locate().is_ok_and(|dir| in_sandbox(dir.path()));
+
+    flatpak.then_some(root)
+}
+
+#[cfg(all(unix, not(target_os = "macos")))]
+pub fn expand_path(
+    path: &Path, installation_dir: Option<&Path>, prefix: Option<&Path>, steam_account_id: Option<&str>, sandbox: Option<&Path>
+) -> PathBuf {
     let mut replacements: Vec<(&str, PathBuf)> = vec![];
 
     if let Some(install_dir) = installation_dir {
         replacements.push(("{GameRoot}", install_dir.to_owned()));
     }
 
-    let linux_app_data = app_data();
+    let linux_app_data = sandbox.map_or_else(app_data, |root| root.join("data"));
+    let linux_config = sandbox.map_or_else(config, |root| root.join("config"));
 
     let steam_id_3 = steam_account_id.map_or_else(|| PathBuf::from("*"), PathBuf::from);
     let steam_id_64 = steam_account_id
@@ -149,7 +173,7 @@ pub fn expand_path(path: &Path, installation_dir: Option<&Path>, prefix: Option<
         replacements.push(("{Home}", home()));
     }
 
-    replacements.extend([("{XDGConfig}", config()), ("{XDGData}", linux_app_data)]);
+    replacements.extend([("{XDGConfig}", linux_config), ("{XDGData}", linux_app_data)]);
 
     expand_path_components(path, &replacements)
 }
@@ -239,14 +263,17 @@ pub fn expand_path(path: &Path, installation_dir: Option<&Path>, prefix: Option<
 }
 
 #[cfg(all(unix, not(target_os = "macos")))]
-pub fn shrink_path(path: &Path, installation_dir: Option<&Path>, prefix: Option<&Path>, steam_account_id: Option<&str>) -> PathBuf {
+pub fn shrink_path(
+    path: &Path, installation_dir: Option<&Path>, prefix: Option<&Path>, steam_account_id: Option<&str>, sandbox: Option<&Path>
+) -> PathBuf {
     let mut replacements: Vec<(&str, PathBuf)> = vec![];
 
     if let Some(install_dir) = installation_dir {
         replacements.push(("{GameRoot}", install_dir.to_owned()));
     }
 
-    let linux_app_data = app_data();
+    let linux_app_data = sandbox.map_or_else(app_data, |root| root.join("data"));
+    let linux_config = sandbox.map_or_else(config, |root| root.join("config"));
 
     let steam_id_3 = steam_account_id.map_or_else(|| PathBuf::from("*"), PathBuf::from);
     let steam_id_64 = steam_account_id
@@ -279,7 +306,7 @@ pub fn shrink_path(path: &Path, installation_dir: Option<&Path>, prefix: Option<
         replacements.push(("{Home}", home()));
     }
 
-    replacements.extend([("{XDGConfig}", config()), ("{XDGData}", linux_app_data)]);
+    replacements.extend([("{XDGConfig}", linux_config), ("{XDGData}", linux_app_data)]);
 
     shrink_path_components(path, &replacements)
 }
@@ -406,7 +433,7 @@ mod tests {
             let prefix = home_dir.join("Games/UnitTest");
 
             assert_eq!(
-                expand_path(save_file_1, None, Some(&prefix), Some(gabe_steam_id3)),
+                expand_path(save_file_1, None, Some(&prefix), Some(gabe_steam_id3), None),
                 prefix
                     .join("drive_c/users")
                     .join(username)
@@ -414,7 +441,7 @@ mod tests {
                     .join(gabe_steam_id64)
                     .join("GameData/GameSaveData_0.sav")
             );
-            assert_eq!(expand_path(save_file_2, Some(&root_dir), None, None), root_dir.join("SAVEDATA/SonicDX01.snc"));
+            assert_eq!(expand_path(save_file_2, Some(&root_dir), None, None, None), root_dir.join("SAVEDATA/SonicDX01.snc"));
         }
 
         #[cfg(all(unix, not(target_os = "macos")))]
@@ -422,7 +449,7 @@ mod tests {
             let save_file_3 = Path::new("{XDGData}/Terraria/Players/UnitTest.plr");
             let xdg_data = app_data();
 
-            assert_eq!(expand_path(save_file_3, None, None, None), xdg_data.join("Terraria/Players/UnitTest.plr"));
+            assert_eq!(expand_path(save_file_3, None, None, None, None), xdg_data.join("Terraria/Players/UnitTest.plr"));
         }
 
         #[cfg(target_os = "macos")]
@@ -458,7 +485,10 @@ mod tests {
             let save_file_1 = home_dir.join(".local/share/Steam/steamapps/common/Sonic Adventure DX/SAVEDATA/SonicDX01.snc");
             let installation_dir = home_dir.join(".local/share/Steam/steamapps/common/Sonic Adventure DX");
 
-            assert_eq!(shrink_path(&save_file_1, Some(&installation_dir), None, None), Path::new("{GameRoot}/SAVEDATA/SonicDX01.snc"));
+            assert_eq!(
+                shrink_path(&save_file_1, Some(&installation_dir), None, None, None),
+                Path::new("{GameRoot}/SAVEDATA/SonicDX01.snc")
+            );
         }
 
         #[cfg(target_os = "macos")]
@@ -476,5 +506,17 @@ mod tests {
 
             assert_eq!(shrink_path(&save_file_1, Some(&installation_dir), None), Path::new("{GameRoot}/SAVEDATA/SonicDX01.snc"));
         }
+    }
+
+    #[test]
+    #[cfg(all(unix, not(target_os = "macos")))]
+    fn test_path_expansion_xdg_flatpak() {
+        let steam_flatpak = steam_flatpak_root();
+        let save_file = Path::new("{XDGData}/Terraria/Players/UnitTest.plr");
+
+        assert_eq!(
+            expand_path(save_file, None, None, None, Some(&steam_flatpak)),
+            steam_flatpak.join("data/Terraria/Players/UnitTest.plr")
+        );
     }
 }

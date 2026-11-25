@@ -14,6 +14,9 @@ use std::fs::{create_dir_all, remove_file};
 use std::path::Path;
 use std::time::SystemTime;
 
+#[cfg(all(unix, not(target_os = "macos")))]
+use crate::dirs::sandbox_root;
+
 #[derive(Debug, thiserror::Error)]
 pub enum Error {
     #[error("Failed to create backup directory: {0}")]
@@ -54,11 +57,20 @@ pub fn backup_game(game: &Game, config: &Config, entry: &GameDbEntry) -> Result<
         paths.extend(mac_paths);
     }
 
+    #[cfg(all(unix, not(target_os = "macos")))]
+    let sandbox = sandbox_root(game);
     let mut files = vec![];
 
     for path in paths {
         #[cfg(unix)]
-        let expanded = expand_path(Path::new(path), game.installation_dir.as_deref(), game.prefix.as_deref(), steam_id);
+        let expanded = expand_path(
+            Path::new(path),
+            game.installation_dir.as_deref(),
+            game.prefix.as_deref(),
+            steam_id,
+            #[cfg(all(unix, not(target_os = "macos")))]
+            sandbox.as_deref()
+        );
 
         #[cfg(windows)]
         let expanded = expand_path(Path::new(path), game.installation_dir.as_deref(), steam_id);
@@ -98,7 +110,14 @@ pub fn backup_game(game: &Game, config: &Config, entry: &GameDbEntry) -> Result<
 
     for file in files {
         #[cfg(unix)]
-        let shrunk_file = shrink_path(file.as_path(), game.installation_dir.as_deref(), game.prefix.as_deref(), steam_id);
+        let shrunk_file = shrink_path(
+            file.as_path(),
+            game.installation_dir.as_deref(),
+            game.prefix.as_deref(),
+            steam_id,
+            #[cfg(all(unix, not(target_os = "macos")))]
+            sandbox.as_deref()
+        );
 
         #[cfg(windows)]
         let shrunk_file = shrink_path(file.as_path(), game.installation_dir.as_deref(), steam_id);
